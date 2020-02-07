@@ -1,0 +1,2 @@
+\babel@toc {slovak}{}
+\contentsline {chapter}{\numberline {1}\IeC {\'U}vod}{1}{chapter.1}
