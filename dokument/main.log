@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.25)  18 FEB 2020 21:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.25)  19 FEB 2020 13:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -796,12 +796,12 @@ e 219.
 Package natbib Warning: Citation `triplestore' on page 5 undefined on input lin
 e 219.
 
-[5]
+[5] [6 <./images/triple_example.png>]
 
-Package natbib Warning: Citation `sparql' on page 6 undefined on input line 222
+Package natbib Warning: Citation `sparql' on page 7 undefined on input line 228
 .
 
-[6 <./images/triple_example.png>] [7] (main.bbl [8
+[7] [8] (main.bbl [9
 
 
 ]
@@ -809,9 +809,9 @@ Underfull \hbox (badness 1472) in paragraph at lines 67--70
 []\T1/cmr/m/n/12 Andrew M. Kra-y-nik, Do-ug-las A. Re-i-nelt, and Frank van
  []
 
-[9] [10]) [11] (main.lof
+[10] [11]) [12] (main.lof
 
-Package natbib Warning: Citation `semanticweb' on page 12 undefined on input li
+Package natbib Warning: Citation `semanticweb' on page 13 undefined on input li
 ne 4.
 
 )
@@ -822,30 +822,30 @@ ne 4.
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
-[12
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 264.
+[13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B79BC5CF1A370BB17B7F976E456662C3;512.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 264.
  ) 
 Here is how much of TeX's memory you used:
- 10721 strings out of 492969
- 158397 string characters out of 3126585
- 254441 words of memory out of 3000000
+ 10722 strings out of 492969
+ 158404 string characters out of 3126585
+ 254442 words of memory out of 3000000
  14354 multiletter control sequences out of 15000+200000
  16277 words of font info for 43 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,9n,41p,1073b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,9n,41p,1102b,477s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\rycht\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ectt1200.pk> <C:\Users\rycht\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\ecti1200.pk> <C:\Users\rycht\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
@@ -857,9 +857,9 @@ AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Us
 ers\rycht\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.
 pk><C:/Users/rycht/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr8.pfb>
-Output written on main.pdf (20 pages, 2225957 bytes).
+Output written on main.pdf (21 pages, 2228327 bytes).
 PDF statistics:
- 607 PDF objects out of 1000 (max. 8388607)
- 71 named destinations out of 1000 (max. 500000)
+ 612 PDF objects out of 1000 (max. 8388607)
+ 72 named destinations out of 1000 (max. 500000)
  90 words of extra memory for PDF output out of 10000 (max. 10000000)
 
