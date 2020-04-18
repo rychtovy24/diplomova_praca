@@ -134,11 +134,6 @@ Nils Thürey, Filip Sadlo, Simon Schirm, Matthias Müller-Fischer, and
 \newblock In Michael Gleicher and Daniel Thalmann, editors, {\em Symposium on
   Computer Animation}, pages 191--198. Eurographics Association, 2007.
 
-\bibitem[Ďu01]{durikovic2001}
-Roman Ďurikovič.
-\newblock Animation of soap bubble dynamics, cluster formation and collision.
-\newblock {\em Comput. Graph. Forum}, 20(3):67--76, 2001.
-
 \bibitem[vie]{viennacl}
 Vienna{CL}.
 \newblock \url{http://viennacl.sourceforge.net/index.html}.
@@ -152,5 +147,10 @@ Wen Zheng, Jun-Hai Yong, and Jean-Claude Paul.
 \newblock Simulation of bubbles.
 \newblock In Carol O'Sullivan and Frederic~H. Pighin, editors, {\em Symposium
   on Computer Animation}, pages 325--333. Eurographics Association, 2006.
+
+\bibitem[Ďu01]{durikovic2001}
+Roman Ďurikovič.
+\newblock Animation of soap bubble dynamics, cluster formation and collision.
+\newblock {\em Comput. Graph. Forum}, 20(3):67--76, 2001.
 
 \end{thebibliography}

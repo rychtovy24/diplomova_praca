@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: references.bib
 I was expecting a `,' or a `}'---line 107 of file references.bib
@@ -14,6 +16,13 @@ A bad cross reference---entry "zheng2006"
 refers to entry "conf/sca/2006", which doesn't exist
 A bad cross reference---entry "thurey2007"
 refers to entry "conf/sca/2007", which doesn't exist
+Warning--I didn't find a database entry for "semantic"
+Warning--I didn't find a database entry for "semanticweb"
+Warning--I didn't find a database entry for "linkeddata"
+Warning--I didn't find a database entry for "ontologies"
+Warning--I didn't find a database entry for "rdf"
+Warning--I didn't find a database entry for "triplestore"
+Warning--I didn't find a database entry for "sparql"
 Name 1 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
 while executing---line 1185 of file alpha.bst
 Name 2 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
@@ -32,10 +41,10 @@ Name 3 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end 
 while executing---line 1185 of file alpha.bst
 Name 4 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
 while executing---line 1185 of file alpha.bst
-Warning--to sort, need author or key in opengl
-Warning--to sort, need author or key in glfw
-Warning--to sort, need author or key in tnt
 Warning--to sort, need author or key in viennacl
+Warning--to sort, need author or key in opengl
+Warning--to sort, need author or key in tnt
+Warning--to sort, need author or key in glfw
 Name 1 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
 while executing---line 1250 of file alpha.bst
 Name 2 in "Weaire, and Pittet, and Hutzler, and Pardal," has a comma at the end for entry weaire1993
@@ -47,4 +56,45 @@ while executing---line 1250 of file alpha.bst
 Warning--empty title in weaire1993
 Warning--empty journal in weaire1993
 Warning--empty year in weaire1993
+You've used 27 entries,
+            2543 wiz_defined-function locations,
+            723 strings with 8359 characters,
+and the built_in function-call counts, 11423 in all, are:
+= -- 1131
+> -- 565
+< -- 12
++ -- 197
+- -- 196
+* -- 856
+:= -- 1844
+add.period$ -- 86
+call.type$ -- 27
+change.case$ -- 172
+chr.to.int$ -- 27
+cite$ -- 38
+duplicate$ -- 436
+empty$ -- 838
+format.name$ -- 221
+if$ -- 2381
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 24
+newline$ -- 138
+num.names$ -- 77
+pop$ -- 178
+preamble$ -- 1
+purify$ -- 201
+quote$ -- 0
+skip$ -- 362
+stack$ -- 0
+substring$ -- 615
+swap$ -- 84
+text.length$ -- 12
+text.prefix$ -- 5
+top$ -- 0
+type$ -- 212
+warning$ -- 7
+while$ -- 97
+width$ -- 33
+write$ -- 349
 (There were 18 error messages)
