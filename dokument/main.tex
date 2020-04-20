@@ -20,6 +20,11 @@
 \usepackage{caption}
 \usepackage{natbib}
 
+% TODO NOTES
+\usepackage{todonotes}
+%\usepackage[disale]{todonotes}
+\input{todos}
+
 \setstretch{1.5}
 %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
 
@@ -164,6 +169,9 @@ Nejaky strucny uvod do problematiky
 \chapter{Prehľad problematiky}
 \section{Semantický web}
 Semantický web \cite{semantic} poskytuje spoločný framework, ktorý umožňuje zdieľanie a opätovné použitie údajov v rámci aplikácií. Štandardy podporujú spoločné dátové formáty a protokoly, kde najpodstatnejším je Resource Description Framework (RDF). Prvýkrát pojem Semantický web zaviedol Tim Berners-Lee a popisoval "dátový web", ktorý môže byť strojovo čitateľný. Zámerom je zvýšiť použiteľnosť webu a jeho prepojených zdrojov vytvorením sémantického webu. Semantický web má vrstvovú štruktúru ako si môžeme všimnúť na obrázku 2.1. Jednotlivé údaje sú potrebné až vo vyšších vrstvách. XML vrstva zaručuje, že môžeme spájať Semantický web s inými normami založenými napríklad na XML, ktorá je rozšírená a podporovaná a RDF dáta sa v nej dajú dobre prenášať, spracovávať a uchovávať. RDF a RDFS vrstva definuje typ zdrojov. Ontologická vrstva podporuje vývoj ontológií, vďaka ktorým môžeme definovať vzťahy medzi rôznymi pojmami.
+
+\assignment{MH: \UP Toto trochu povrchne: (1) Ucelom SW nie je vyssia pouzitelnost webu (to je nepresne), ale je to lepsia pristupnost informacii publikovanych na webe pre strojove spracovanie. (2) Ak chces popisovat vrstvy SW podla tohto diagramu, bolo by dobre keby si popisal vsetky vrstvy -- U XML by som sa obmedzil na to, ze je to proste dobry format pre textovu reprezentaciu dat v suboroch a pre ich vymenu medzi softvermi -- toto vsak uz je dnes prekonane, uz vymiename SW data aj ako JSON, embedujeme ich do HTML5 (chcelo by to poznamku) -- O RDF a RDFS si vlastne nic uzitocne (z coho citatel nieco vyrozumie) nepovedal -- no a ostatne vrstvy si uplne preskocil}
+
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{images/semantic_web}}
 \label{fig:semantic_web}
@@ -175,6 +183,15 @@ Semantický web \cite{semantic} poskytuje spoločný framework, ktorý umožňuj
 Text uvedený nižšie popisuje niekoľko technológií, ktoré sú potrebné pre tvorbu sémantického webu.
 
 \subsection{Linked Data}
+
+\assignment{MH: \DOWN Tato sekcia je celkom fajn ale chybalo mi trochu
+premostenie od SW -- linked data bola iniciativa, ze ked uz SW formaty mame,
+podme v nich aj data zverenjnovat}
+
+\minor{MH: Inak ked uz si sa rozhodol pisat po slovensky, mal by si pouzivat aj
+slovensku terminologiu (co je celkom peklo) -- ale teda Linked Data su
+\emph{prepojene data}, LD network je \emph{siet prepojenych dat} -- ludia to takto pouzivaju}
+
 Linked Data \cite{linkeddata} je metóda zverjňovania štrukturovaných dát. Ich hlavným cieľom je poprepájať existujúce databázy (primárne písané v RDF formáte), medzi rôznymi údajmi a umožniť ľuďom zdielať štrukturované dáta na webe pomocou HTML. Časť vízie do budúcna je, aby sa Internet stal globálnou databázou. Princípy Linked Data prvýkrát načrtol Tim Berners-Lee. Popísal 4 pravidlá pre zverejňovanie dát na webe:
 \begin{enumerate}
   \item používať URI ako názvy objektov, ktoré sú identifikátormi informácie, jej umiestnenia a ďalších vlastnotí,
@@ -184,11 +201,30 @@ Linked Data \cite{linkeddata} je metóda zverjňovania štrukturovaných dát. I
 \end{enumerate}
 Sú známe aj ako Linked Data princípy.
 
+\assignment{MH: Tu mi chyba informacia, ze sa tato inciativa ujala, a ze vdaka
+tomu vznikla na webe tzv. siet prepojenych dat, ktora obsahuje obrovske mnozstvo
+datovych zdrojov a nieco viac o tej sieti.}
+
+
 \subsection{Ontológie}
+
+\assignment{MH: Predpokladam, ze o ontologiach budeme pisat o znacny kus viac a
+podrobnejsie\ldots Mozes vychadzat z mojej prednasky ale tiez napr z uvodnej
+kapitoly \emph{Handbook on Ontologies}}
+
+\overview{MH: Pozn.\ k strukture prace: Bolo by lepsie, keby \emph{Prehlad problematiky} bola cast \texttt{\textbackslash{}part\{\}}, \emph{Semanticy web} samostatna kapitola\texttt{\textbackslash{}chapter\{\}}, no a potom si myslim, ze \emph{Ontologie} by tiez mali mat vlastnu kapitolu, ktora bude nasledovat hned po SW. Tretou kapitolou by potom mohol byt prehlad ontologii z oblasti bezpecnosti, co by uz do prehladu problematiky mohlo aj stacit}
+
 Výraz ontológia \cite{ontologies} pochádza z gréckeho slova kde '\textit{ontos}' znamená existencia a '\textit{logos}' znamená veda. Ontológia v informatike je uceleným popisom pojmov v určitej oblasti záujmu. Obsahuje určitú klasifikáciu údajov do hierarchicky usporiadaných kategórií a množinu odvodzovacích pravidiel, pomocou ktorých je možné z faktov odvodiť nové skutočnosti. Prostredníctvom ontológií je možné vytvárať spojenia v prirodzenom jazyku, vykonávať analýzu údajov a sprostredkovať výhody webu obohateného o sémantiku. Klasickými komponentami ontológií sú termy a vzťahy. Term označuje dôležitý koncept domény. Ontológia označuje kontextový vzťah za definovanými termami, zvyčajne hierarchiou tried.
 
 \subsection{Resource Description Framework (RDF)}
+
 RDF \cite{rdf} je štandartný model na zakódovanie metadát a ďalších informácií. Je to taktiež formát, ktorý bol navrhnutý a štandardizovaný na reprezentáciu dát pre sémantický web. Zdroje týchto dát sú väčšinou webové zdroje, ktoré môžu byť čokoľvek, napríklad dokumenty, ľudia, fyzické objekty, atď. Taktiež poskytuje spoločný framework na vyjadrenie informácií a možnosť zdieľať ich medzi softvérmi, bez straty ich hodnoty. Dáta sa uchovávajú v Triple Store databázach, ktorých formát je striktne daný. Výhodou je, že dáta môžu byť spracované aj softvérmi, pre ktoré dané dáta neboli vytvorené.
+
+\assignment{MH: \UP Na co RDF sluzi sa uz citatel dozvedel v skorsich castiach
+(ked to tam lepsie ozrejmis). Niektore veci, ktore tu \UP pises su nepresne
+(napr. to o tych metadatach a ``dalsich informaciac'' alebo o zdrojoch. Tiez o Triple Stores predbiehas, budes o tom pisat neskor\ldots Asi by som to tu skratil a len by som nadviazal, ze RDF je zakladny datovy format pre SW a tu ho popiseme\ldots}
+
+\assignment{MH: \DOWN Zvysok ide dobrym smerom, je to presne to, co by som si predstavoval, ze tu budes pisat, len by som to chcel vidiet mozno trochu pomenej, podrobnejsie, systmatickejsie prebrate\ldots Na vacsom priestore, mozno postupne ten priklad budovat\ldots Vysvetlit na nom vsetky zakladne moznosti RDF}
 
 
 RDF súbor je taký dokument, ktorý ukladá RDF grafy do špecifického formátu serializácie pre RDF, ako sú napríklad N-Triple, TURTLE, RDF/XML a mnohé ďalšie. RDF bol postavený na myšlienke vytvárať údaje vo forme predmet-predikát-objekt, ktorý sa volá "triple", ďalej len trojica. Trojica je základná stavebná jednotka akejkoľvek množiny dát zapísaných v RDF. Tieto údaje sú reprezentované ako orientované grafy. Predmet a objekt predstavujú vrcholy a predikát je orientovaná hrana medzi nimi. Predmet môže byť použítý aj ako objekt v inej trojici. Týmto spôsobom sa trojice prepájajú a vzniká z nich grafová databáza. Predmet je vždy definovaný ako URI a popisuje zdroj informácie. Objekt môže byť taktiež nejaké URI popisujúce zdroj, ale taktiež to môže byť primitívna hodnota ako napríklad string, integer, date, atď. Predikát popisuje, aký vzťah alebo rola medzi predmetom a objektom existuje. Predikát je vždy reprezentovaný ako URI, ktoré pochádza z ontolológií (kolekcie viacerých URI).
@@ -221,10 +257,19 @@ Triple store \cite{triplestore} alebo RDF store slúži na uchovávanie a načí
 
 Implemetntácie Triple Store sú rôzne. Môžu byť postavené na tabuľkovej reprezentácií, kde máme tabuľku s tromi stĺpcami, kde každý stĺpec predstavuje jedno z hodnôt trojice. Následné SPARQL dopyty sa transformujú na SQL dopyty. Taktiež sa môžu skladať z dokumentových databáz, kde zdrojovými súbormi môžu byť všetky tie, ktoré dodržiavajú definovanú RDF syntax.
 
+\assignment{MH: \UP Toto zrejme nie je typicka implementacia. Ked chces o tom
+pisat, mozes si to skusit niekde nastudovat. (Mozes samozrejme spomenut aj tuto
+moznost, ale nie ako jedinu.)}
+\overview{MH: Inak zrovna pre tuto pravcu mozno nie su triple
+stores az take nosne, mozno by sme sa im v prehlade ani venovat nemuseli --
+aspon zatial, mozeme neskor doplnit ak by bolo treba}
 
 V triple Store je aj možnosť pomenovávať jednotlivé časti grafov. Napríklad ak si chceme celý Triple Store rozdeliť na časti, pomenujeme graf, a pomocou tohoto mena definujeme trojice. Z trojíc sa stávajú štvorice, kde jedným prvkom je názov grafu, pod ktorý trojica spadá.
 
 \subsection{SPARQL}
+
+\overview{MH: Podobne ako v pripade triple stores, zatial by som to neriesil, mozno to pre nas nebude dolezite. Ak ano, potom by som to doplnil (a rozpisal viac dopodrobna)}
+
 SPARQL \cite{sparql} je dopytovací jazyk pre RDF databázy, ktorý umožňuje získavanie a manipuláciu s databázou. Bol vytvorený skupinou DAWG, ktorá je súčasťou W3C a je uznávaný ako kľúčová technológia sémantického webu. 
 
 

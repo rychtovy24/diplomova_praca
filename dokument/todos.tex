@@ -1,0 +1,36 @@
+\usepackage{xcolor}
+\usepackage[normalem]{ulem}
+\usepackage{soul}
+
+%%% TODO Notes
+\newcommand{\assignment}[2][]{\todo[caption={},inline,bordercolor=green!67!yellow!75!black!50,color=green!67!yellow!25,size=\footnotesize,#1]{#2}}
+\newcommand{\overview}[2][]{\todo[caption={},inline,color=blue!85!green!25,bordercolor=blue!85!green!50!black!50,size=\footnotesize,#1]{#2}}
+\newcommand{\minor}[2][]{\todo[caption={},color=gray!30,bordercolor=gray,inline,size=\footnotesize,#1]{#2}}
+\newcommand{\cutting}[2][]{\todo[color=yellow!30,bordercolor=yellow!50!black!50,inline,size=\footnotesize,#1]{#2}}
+\newcommand{\bigassignment}[2][]{\todo[inline, caption={Big assignment},
+    color=green!40, #1]{\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+\newskip\movedskip
+\newcommand{\movespaceafter}[1]{%
+    \movedskip=0pt%
+    \ifhmode\ifdim\lastskip=0pt\else\movedskip=\lastskip\unskip\fi\fi
+    #1\ifdim\movedskip=0pt\else\hskip\movedskip\fi
+    \ignorespaces}
+\newcommand{\reviewnote}[3][]{%
+  \movespaceafter{\todo[inline,color=yellow!75!white,linecolor=yellow!85!black,#1]
+      {\textsf{\bfseries Review #2:} \ignorespaces#3\par}}%
+}
+%\newcommand{\comment}[3][]{%
+%  \movespaceafter{\todo[color=green!40,#1]
+%      {\textsf{\bfseries #2:} \ignorespaces#3\par}}%
+%}
+
+\definecolor{mossgreen}{HTML}{146614}
+\newcommand{\del}[1]{\color{red}\sout{#1}\color{black}\@}
+\newcommand{\ins}[1]{\color{mossgreen}\uwave{#1}\color{black}\@}
+\newcommand{\sug}[2]{\del{#1}\ins{#2}}
+
+\newcommand{\UP}{$\uparrow$}
+\newcommand{\DOWN}{$\downarrow$}
+\newcommand{\UD}{$\updownarrow$}
+
+
