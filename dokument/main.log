@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.25)  15 JUN 2020 09:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6880 64-bit) (preloaded format=pdflatex 2018.11.25)  17 JUN 2020 16:21
 entering extended mode
 **./main.tex
 (main.tex
@@ -1269,12 +1269,30 @@ Package hyperref Warning: Composite letter `\textasciicaron+c'
 
 [12
 
-] (main.bbl [13
+]
+Overfull \hbox (1.94162pt too wide) in paragraph at lines 326--327
+[]\T1/cmr/m/n/12 Vývojári ex-tra-ho-vali dáta z Na-ti-onal Vul-ne-ra-bi-lity Da
+-ta-base (NVD), ktorá
+ []
 
 
-]) [14] (main.lof
+Overfull \hbox (87.02911pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 KAPITOLA 4.  EXISTUJÚCE ONTOLOGICKÉ RIE’ENIA V OBLASTI BEZPEƒNO
+STI \T1/cmr/m/n/12 13
+ []
 
-Package natbib Warning: Citation `semanticweb' on page 15 undefined on input li
+[13]
+Overfull \hbox (87.02911pt too wide) has occurred while \output is active
+\T1/cmr/m/sl/12 KAPITOLA 4.  EXISTUJÚCE ONTOLOGICKÉ RIE’ENIA V OBLASTI BEZPEƒNO
+STI \T1/cmr/m/n/12 14
+ []
+
+[14] (main.bbl [15
+
+
+]) [16] (main.lof
+
+Package natbib Warning: Citation `semanticweb' on page 17 undefined on input li
 ne 4.
 
 )
@@ -1285,25 +1303,25 @@ ne 4.
 
 Package natbib Warning: There were undefined citations.
 
-[15
+[17
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 314.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 314.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 340.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 340.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 314.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 314.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 340.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 340.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 4FAAF844078C9AB336FB6B024D6BA008;951.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 314.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
  ) 
 Here is how much of TeX's memory you used:
- 22435 strings out of 492969
- 407772 string characters out of 3126585
+ 22437 strings out of 492969
+ 407786 string characters out of 3126585
  480031 words of memory out of 3000000
  25788 multiletter control sequences out of 15000+200000
  20521 words of font info for 57 fonts, out of 3000000 for 9000
@@ -1326,9 +1344,9 @@ s\pk\ljfour\jknappen\ec\dpi600\ecbx1728.pk> <C:\Users\rycht\AppData\Local\MiKTe
 X\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk><C:/Users/rycht/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/rycht
 /AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.pdf (23 pages, 871088 bytes).
+Output written on main.pdf (25 pages, 878962 bytes).
 PDF statistics:
- 851 PDF objects out of 1000 (max. 8388607)
- 67 named destinations out of 1000 (max. 500000)
+ 870 PDF objects out of 1000 (max. 8388607)
+ 69 named destinations out of 1000 (max. 500000)
  269 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -297,7 +297,33 @@ STRUCNY POPIS KAPITOLY
 TEN BY SOM MOZNO ZAHRNUL SEM CI?
 
 \section{UCO}
+Unified Cybersecurity Ontology alebo skrátene UCO je rozšírením pôvodného projektu Intrusion Detection System (IDS), ktorého tvorcom je rovnaká skupina. Spája viaceré bežne dostupné bezpečnostné štandardy používané v kybernetickej bezpečnosti. Prevažne pokrýva STIX, ktorý je najväčším a najkomplexnejším štandardom, pokrývajúcim najväčšiu časť kybernetickej bezpečnostnej domény ale taktiež poskytuje iné relevatné štandardy ako CVE4, CCE5, CVSS6, CAPEC7, CYBOX8, KillChain9 a STUCCO10.
 
+
+Aj keď je STIX najkomplexnejším štandardom a zjednocuje všetky informácie o kybernetických hrozbách, má tieto dáta uložené v XML súboroch, takže nepodporuje výhody uvažovania v ontológiách, čo UCO poskytuje.
+
+
+Okrem týchto štandardov obsahuje aj mapovanie na všeobecné svetové databázy ako sú Google Knowledge Graph, DBPedia a Yago. Vďaka týmto mapovaniam je možné mať prístup k verejným databázam r rôznych domén záujmu.
+
+
+Základnými triedami, využívanými v UCO sú: 
+\begin{itemize}
+\item \textit{Means} -- Čo je zamýšľané daným útokom.
+\item \textit{Consequences} -- Dôsledky útoku.
+\item \textit{Attack} -- Typ útoku.
+\item \textit{Attacker} -- Kto je inicitorom daného útoku.
+\item \textit{Attack-Pattern} -- Vzorec útoku, podľa ktorého je útok riadený.
+\item \textit{Exploit} -- K čomu útok slúži.
+\item \textit{Exploit Target} -- K čomu slúži cieľ alebo výsledok útoku.
+\item \textit{Indicators} -- Indikátor útoku.
+\end{itemize}
+Každá z týchto tried je mapovaná na už reálne existujúcu triedu v niektorom z vyššie uvedených štandardov, prevažne na STIX schému.
+
+
+Ontológia UCO umožňuje analytikom zachytávať špecifické vedomosti o kybernetickej bezpečnosti pomocov termínov a tried z ontológie a taktiež umožňuje písať pravidlá, ktoré sa môžu použiť na odvodenie nových poznatkov.
+
+
+Vývojári extrahovali dáta z National Vulnerability Database (NVD), ktorá je uložená v XML súboroch. Potom boli namapované na triple store DBPedia a dáta boli uložené na FUSEKI server, ktorý podporuje dopytovanie z rôznych zdrojov rovnako ako ich odvodzovanie.
 \section{ICAS}
 
 \section{•}
