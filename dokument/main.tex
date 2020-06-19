@@ -125,7 +125,7 @@
 
 \thispagestyle{empty}
 
-\includepdf[pages=1,scale=1]{zadanie.pdf}
+%\includepdf[pages=1,scale=1]{zadanie.pdf}
 
 {~}\vspace{12cm}
 
@@ -165,7 +165,8 @@ Nejaky strucny uvod do problematiky
 \chapter{Sémantický web}
 Semantický web \cite{semantic} poskytuje spoločný framework, ktorý umožňuje zdieľanie a opätovné použitie údajov v rámci aplikácií. Štandardy podporujú spoločné dátové formáty a protokoly, kde najpodstatnejším je Resource Description Framework (RDF). Prvýkrát pojem Semantický web zaviedol Tim Berners-Lee a popisoval "dátový web", ktorý môže byť strojovo čitateľný. Zámerom je zvýšiť použiteľnosť webu a jeho prepojených zdrojov vytvorením sémantického webu. Semantický web má vrstvovú štruktúru ako si môžeme všimnúť na obrázku 2.1. Jednotlivé údaje sú potrebné až vo vyšších vrstvách. XML vrstva zaručuje, že môžeme spájať Semantický web s inými normami založenými napríklad na XML, ktorá je rozšírená a podporovaná a RDF dáta sa v nej dajú dobre prenášať, spracovávať a uchovávať. RDF a RDFS vrstva definuje typ zdrojov. Ontologická vrstva podporuje vývoj ontológií, vďaka ktorým môžeme definovať vzťahy medzi rôznymi pojmami.
 
-\assignment{MH: \UP Toto trochu povrchne: (1) Ucelom SW nie je vyssia pouzitelnost webu (to je nepresne), ale je to lepsia pristupnost informacii publikovanych na webe pre strojove spracovanie. (2) Ak chces popisovat vrstvy SW podla tohto diagramu, bolo by dobre keby si popisal vsetky vrstvy -- U XML by som sa obmedzil na to, ze je to proste dobry format pre textovu reprezentaciu dat v suboroch a pre ich vymenu medzi softvermi -- toto vsak uz je dnes prekonane, uz vymiename SW data aj ako JSON, embedujeme ich do HTML5 (chcelo by to poznamku) -- O RDF a RDFS si vlastne nic uzitocne (z coho citatel nieco vyrozumie) nepovedal -- no a ostatne vrstvy si uplne preskocil}
+\assignment{MH: \UP Toto trochu povrchne: (1) Ucelom SW nie je vyssia pouzitelnost webu (to je nepresne), ale je to lepsia pristupnost informacii publikovanych na webe pre strojove spracovanie. (2) Ak chces popisovat vrstvy SW podla tohto diagramu, bolo by dobre keby si popisal vsetky vrstvy -- U XML by som sa obmedzil na to, ze je to proste dobry format pre textovu reprezentaciu dat v suboroch a pre ich vymenu medzi softvermi -- toto vsak uz je dnes prekonane, uz vymiename SW data aj ako JSON, embedujeme ich do HTML5 (chcelo by to poznamku) -- O RDF a RDFS si vlastne nic uzitocne (z coho citatel nieco vyrozumie) nepovedal -- no a ostatne vrstvy si uplne preskocil\\
+MH: Toto si menil? Zda sa mi, ze trochu asi aj ano, ale o tych dalsich vrstvach si nic nenapisal}
 
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{images/semantic_web}}
@@ -248,6 +249,8 @@ kapitoly \emph{Handbook on Ontologies}}
 
 Výraz ontológia \cite{ontologies} pochádza z gréckeho slova kde '\textit{ontos}' znamená existencia a '\textit{logos}' znamená veda. Ontológia v informatike je uceleným popisom pojmov v určitej oblasti záujmu. Obsahuje určitú klasifikáciu údajov do hierarchicky usporiadaných kategórií a množinu odvodzovacích pravidiel, pomocou ktorých je možné z faktov odvodiť nové skutočnosti. Prostredníctvom ontológií je možné vytvárať spojenia v prirodzenom jazyku, vykonávať analýzu údajov a sprostredkovať výhody webu obohateného o sémantiku. 
 
+\assignment{MH: nerozumiem co myslis pod \uv{vytvárať spojenia v prirodzenomjazyku} a tiez tvrdenie \uv{sprostredkovať výhody webu obohateného o sémantiku} je velmi abstraktne neviem celkom prist na to co si tym asi myslel}
+
 \section{Základné pojmy}
 Ontológia sa skladá zo základných stavebných prvkov \textit{Trieda}, \textit{Entita}, \textit{Atribút}, \textit{Väzba}. 
 
@@ -257,26 +260,41 @@ Ontológia sa skladá zo základných stavebných prvkov \textit{Trieda}, \texti
 
 \textbf{Entity} sú individuálne inštancie nejakej nami zadefinovanej triedy. Ak by sme mali entitu \textit{Jablko}, a triedy \textit{Ovocie} a \textit{Jedlo}, kde \textit{Ovocie} je podtriedou \textit{Jedlo}, tak nám z ontológie vyplýva, že ak je entita \textit{Jabllko individuálnou inštanciou triedy \textit{Ovocie}, tak je aj individuálnou inštanciou triedy \textit{Jedlo}.}
 
+\minor{MH: $\uparrow$ \emph{Jablko} nie je velmi dobry priklad na entitu, kedze vacsinou ho uvazujeme ako triedu (a teda podtriedu triedy Ovocie)}
+
 
 \textbf{Atribúty} sú vlastnosti \textit{Tried} a \textit{Entít} a môžu niesť rôzne informácie o danom objekte. \textit{Atribúty} môžu mať rôzne hodnoty, ako reťazec, číslo, dátum, pravdivostnú hodnotu alebo inú premennú. Ak by sme si zobrali predchádzajúcu entitu \textit{Jablko}, jej číselná vlastnosť môže byť napríklad mesiac kedy sa oberá alebo jej reťazcová vlastnosť farba.
 
+\assignment{MH: $\uparrow$ Je pomerne nezvycajne aby mali atributy ako hodnotu inu premennu}
 
 \textbf{Väzby} sú najpodstatnejšou súčasťou ontológie. Poskytujú prepájanie jednotlivých objektov tried. Je to jednosmerné spojenie, ktoré určuje vzťah, v akom sú dve dané triedy. Tým vznikne trojica \textit{trieda:vzťah:trieda}, ktorá sa nazýva triplet. Medzi triplet sa radí aj trojica \textit{trieda:atribút:hodnota}. Väzby sa zvyknú definovať aj inverzne.
 
+\assignment{MH: $\uparrow$ nazov \emph{vazby} je velmi exoticky. Ak ti ide o object properties, pouzil by som slovo \emph{vztahy}.}
+\assignment{MH: $\uparrow$ to co je \emph{triplet} by si mal zadefinovat vyssie, kde pises o RDF.}
+\assignment{MH: $\uparrow$ Co su \uv{objekty tried}? Kusok vyssie si si pre objekty zvolil nazov \emph{entity}, mal by si ho teda pouzivat. Ak ti ide o vztahy medzi triedami, ako napr. vztah podtriedy a nadtriedy, v RDF je to sice vyjadrene pomocou vlasntosti, ale z logickeho hladiska to chapeme ako \emph{axiom}}
 
 Ontológia má veľa vlastností, ktoré musia byť dodržané. Každý prvok musí byť jasne indetifikovateľný. Taktiež zakazuje zapisovanie duplicitných dát, čo nám zaobstará vlastnosť efektívneho ukladania informácií, kde to môže nie len uľahčiť vyhľadávanie ale aj obsah pamäti na disku. 
 
+\assignment{MH: $\uparrow$ Neviem, ci zrovna tieto vlastnosi ontologii su tie najpodstatnjsie, a teda treba ich spominat na tomto mieste.}
+
 \section{Využitie ontológií}
+
+\minor{MH: $\downarrow$ Asi by som sa neodvazoval tvrdit to co pises v prvej vete. Ak zoberieme ako ranne vyuzitie napr. SNOMED, nie je to pravda, kedze sa vyuzival v medicinskej praxi. S druhou vetou mozno nesuhlasit. Kto je bezny pouzivatel? Nikomu takemu sa nerozsirila do pocitaca nejaka ontologia (ze by o tom vedel)\ldots}
 Ontológie sa začali využívať najmä v organizáciách, ktoré sa šoecializovali na umelú inteligenciu. Neskôr sa to rozšírilo aj do počítačov bežných používateľov. Napríklad firma Amazon používa ontológie na kategorizovanie tovaru v ich elektronickom obchode.
 
 
 Na zápis týchto ontológií sa používa niekoľko jazykov, kde najznámejším je asi Resource Description Framework (RDF), ktorý je rpimárne určený na využitie vo webových stránkach, pre hľadanie informácií strojmi. Ontológie si našli uplatnenie aj v medicínskej oblasti a to napríklad SNOMED, čo je najväčším viacjazyčným medicínskym slovníkom na svete. 
 
+\assignment{MH: $\uparrow$ Tu chces asi pisat o vyuziti ontologii, takze zmienka o jazyku RDF sem nepatri, navyse RDF nie je jazyk na zapis ontologii (tym je RDFS) a o RDF su uz pisal vyssie}
+
 
 Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google, kde ako bočný panel sú zobrazené informácie o vyhľadávanom objekte (obrázok nižšie). Tieto dáta je možné zobraziť preto, lebo výsledkom takéhoto panelu je vyhľadávanie informácií na webovej stránke, ktorá obsahuje sémantické dáta.
 
+\minor{MH: $\uparrow$ SNOMED a Google spominas dobre, a v druhom pripade si nespomenuk ziadnu ontologiu a pritom ju dobre pozname (Schema.org)}
 
 Na získavanie dát zo sémantických webov a z RDF úložísk sú využívane SPARQL dopyty. Syntax jazyku SPARQL je veľmi podobná klasickému SQL jazyku, kde aj SPARQL umožňuje okrem dopytovania aj vkladanie, editáciu a vymazávanie dát.
+
+\assignment{MH: $\uparrow$ toto mi sem opat nesedi, zrejme tomu chces venovat nejaku kratku podsekciu skor v predchadzajucej kapitole (?)}
 
 
 \section{Ciele ontológie}
@@ -286,9 +304,12 @@ Zadefinovanie a zdieľanie jednotného zápisu informácií pre danú doménu. A
 Taktiež je jej cieľom opätovné použitie ontológie, napríklad ak máme dobre zadefinovanú ontológiu, môžu ontologický inžinieri doplniť do našej ontológie ďalšie vlastnosti a tým by základ ontológie bol rovnaký ale bol by rozšírený o určité dáta, podľa potreby ontologických inžinierov.
 
 
+\assignment{MH: $\uparrow$ Tuto cast mozno lespie najko pouzit v uvode predch. casti (?)}
+
 \section{Syntax ontológií}
 \textbf{MAM SPRAVIT AJ TOTO?}
 
+\assignment{MH: Kedze cela Tvoja praca je o ontologiach a budes ich zrejme nejako zapisovat mozno by si mohol nieco povedat aj o jazykoch na zaspis ontologii, minimalen apson o jednom, s ktorym budes pracovat dalej (cize zrejme OWL)}
 
 \chapter{Existujúce ontologické riešenia v oblasti bezpečnosti}
 STRUCNY POPIS KAPITOLY
@@ -297,13 +318,18 @@ STRUCNY POPIS KAPITOLY
 TEN BY SOM MOZNO ZAHRNUL SEM CI?
 
 \section{UCO}
+\minor{MH: Lepsie ked v nadpisoch nebudes pouzivat skratky}
+\assignment{MH: Chybaju tu akekolvek referencie}
+
 Unified Cybersecurity Ontology alebo skrátene UCO je rozšírením pôvodného projektu Intrusion Detection System (IDS), ktorého tvorcom je rovnaká skupina. Spája viaceré bežne dostupné bezpečnostné štandardy používané v kybernetickej bezpečnosti. Prevažne pokrýva STIX, ktorý je najväčším a najkomplexnejším štandardom, pokrývajúcim najväčšiu časť kybernetickej bezpečnostnej domény ale taktiež poskytuje iné relevatné štandardy ako CVE4, CCE5, CVSS6, CAPEC7, CYBOX8, KillChain9 a STUCCO10.
 
+\minor{MH: $\uparrow$ Zrejme muslis \emph{pokryva} ine relevantne standardy? Ak nie, nerozumiem, v akom zmysle ich poskytuje?}
 
 Aj keď je STIX najkomplexnejším štandardom a zjednocuje všetky informácie o kybernetických hrozbách, má tieto dáta uložené v XML súboroch, takže nepodporuje výhody uvažovania v ontológiách, čo UCO poskytuje.
 
+\minor{MH: $\uparrow$ \emph{uvazovanie v ontologiach} nie je spravny slovensky vyraz pre reasoning -- skus napr. \emph{inferencia}}
 
-Okrem týchto štandardov obsahuje aj mapovanie na všeobecné svetové databázy ako sú Google Knowledge Graph, DBPedia a Yago. Vďaka týmto mapovaniam je možné mať prístup k verejným databázam r rôznych domén záujmu.
+Okrem týchto štandardov obsahuje aj mapovanie na všeobecné \del{svetové} databázy ako sú Google Knowledge Graph, DBPedia a Yago. Vďaka týmto mapovaniam je možné mať prístup k verejným databázam r rôznych domén záujmu.
 
 
 Základnými triedami, využívanými v UCO sú: 
