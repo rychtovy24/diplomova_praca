@@ -3,13 +3,15 @@
 \BOOKMARK [0][-]{chapter.2}{S\351mantick\375 web}{part.1}% 3
 \BOOKMARK [1][-]{section.2.1}{Linked Data}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.2}{Resource Description Framework \(RDF\)}{chapter.2}% 5
-\BOOKMARK [0][-]{chapter.3}{Ontol\363gie}{part.1}% 6
-\BOOKMARK [1][-]{section.3.1}{Z\341kladn\351 pojmy}{chapter.3}% 7
-\BOOKMARK [1][-]{section.3.2}{Vyu\236itie ontol\363gi\355}{chapter.3}% 8
-\BOOKMARK [1][-]{section.3.3}{Ciele ontol\363gie}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.4}{Syntax ontol\363gi\355}{chapter.3}% 10
-\BOOKMARK [0][-]{chapter.4}{Existuj\372ce ontologick\351 rie\235enia v oblasti bezpecnosti}{part.1}% 11
-\BOOKMARK [1][-]{section.4.1}{CTI model}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{UCO}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.3}{ICAS}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.4}{\200}{chapter.4}% 15
+\BOOKMARK [1][-]{section.2.3}{SPARQL}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.3.1}{SPARQL}{section.2.3}% 7
+\BOOKMARK [0][-]{chapter.3}{Ontol\363gie}{part.1}% 8
+\BOOKMARK [1][-]{section.3.1}{Z\341kladn\351 pojmy}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Vyu\236itie ontol\363gi\355}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.3}{Syntax ontol\363gi\355}{chapter.3}% 11
+\BOOKMARK [2][-]{subsection.3.3.1}{Web Ontology Language}{section.3.3}% 12
+\BOOKMARK [0][-]{chapter.4}{Existuj\372ce ontologick\351 rie\235enia v oblasti bezpecnosti}{part.1}% 13
+\BOOKMARK [1][-]{section.4.1}{CTI model}{chapter.4}% 14
+\BOOKMARK [1][-]{section.4.2}{Unified Cybersecurity Ontology}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.3}{ICAS}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.4}{\200}{chapter.4}% 17
