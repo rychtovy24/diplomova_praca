@@ -22,10 +22,9 @@
 \usepackage{pdfpages}
 
 % TODO NOTES
-\usepackage{todonotes}
-%\usepackage[disale]{todonotes}
+%\usepackage{todonotes}
+\usepackage[disable]{todonotes}
 \input{todos}
-
 \setstretch{1.5}
 %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
 
@@ -400,9 +399,19 @@ Ontológia UCO umožňuje analytikom zachytávať špecifické vedomosti o kyber
 
 
 Vývojári extrahovali dáta z National Vulnerability Database (NVD), ktorá je uložená v XML súboroch. Potom boli namapované na triple store DBPedia a dáta boli uložené na FUSEKI server, ktorý podporuje dopytovanie z rôznych zdrojov rovnako ako ich odvodzovanie.
-\section{ICAS}
 
-\section{•}
+
+Aj keď toto riešenie vyzerá byť veľmi schopné, vývoj tejto ontológie už nepokračuje a vôbec už sa nevyužíva. Posledný záznam o úprave bol v roku 2018.
+\section{Integrated Cyber Analysis System}
+Integrated Cyber Analysis System alebo ICAS je ontológia vytvorená pre TAPIO (Targeted Attack Premonition using Integrated Operational data) nástroj, ktorý je schopný extrahovať dáta z počítačov v jednej sieti do jedného sémantického grafu a tým zjednodušil a urýchlil prácu bezpečnostným tímom pri vyhľadávaní ohrození systému, čím by zvýšila prehľadnosť dát a tiež znížila dopady útoku. 
+
+
+Samotná ontológia ICAS je veľmi komplexnou, nakoľko obsahuje približne 30 podontológií, kde každá sa špecializuje na inú oblasť v doméne informačnej bezpečnosti.
+
+
+Nástroj TAPIO spolu s ontológiou ICAS bol vyvýjaný organizáciou DAPRA, ale dátum poslednej úpravy bol v roku 2017, čiže podobne ako UCO sa jedná o projekt ktorý už nie je aktuálny.
+
+\section{Daedafusion}
 
 
 \backmatter
