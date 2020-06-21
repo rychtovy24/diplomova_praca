@@ -22,8 +22,8 @@
 \usepackage{pdfpages}
 
 % TODO NOTES
-%\usepackage{todonotes}
-\usepackage[disable]{todonotes}
+\usepackage{todonotes}
+%\usepackage[disable]{todonotes}
 \input{todos}
 \setstretch{1.5}
 %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
@@ -357,6 +357,7 @@ Ontologiký prístup taktiež poskytuje jednoduchšiu rozšíriteľnosť už exi
 
 Vďaka URI reprezentácií jednotlivých entít, ktoré sú používané ako identifikátory jednotlivých objektov, nemôže nastať problém nepochopenia dát ako k tomu môže doochádzať v ľudskej reči. Napríklad ak by sme povedali slovo \textit{koruna}, nikto nevie, či máme na mysli korunu stromov alebo kráľovskú korunu. Avšak vďaka atribútom vieme toto slovo lepšie pochoiť, keďže nám ho atribúty bližšie definujú.
 
+\minor{MH: $\uparrow$ Tento text sa skor hodi do uvodu, pripadne cast do casti kde opisujes ontologie. Tuto kapitolu by som ocakaval, ze otvoris nejak zhruba odtialto $\downarrow$ (Akoze toto $\uparrow$ sa uz citatel (mal) dovediet niekde predtym a je zbytocne to tu opakovat\ldots)}
 
 V súčastosti existuje veľa rôznych štandardov a ontologických riešení pre doménu kzber bezpečnosti, avšak veľa z nich už ani nie je vyvýjaných. Organizácie, ktoré vyvýjali tieto ontológie, buď stratili o ďalší vývoj záujem, alebo už len nezverejňujú svoje pokroky v danej doméne, teda prešli na closed-source systém.
 
@@ -366,9 +367,12 @@ V nasledujúcich kapitolách si povieme niečo o zaužívaných štandardoch, z�
 \section{CTI model}
 TEN BY SOM MOZNO ZAHRNUL SEM CI?
 
+\assignment{MH: Ano, urcite}
+
 \section{Unified Cybersecurity Ontology}
 %\minor{MH: Lepsie ked v nadpisoch nebudes pouzivat skratky}
-\assignment{MH: Chybaju tu akekolvek referencie\\ MR: refernecie mam uz v .bib subore ale este som ich nedodaval.}
+\assignment{MH: Chybaju tu akekolvek referencie\\ MR: refernecie mam uz v .bib subore ale este som ich nedodaval.\\
+MH: Dodaj, Durikovic to tu bude chciet vidiet}
 
 Unified Cybersecurity Ontology alebo skrátene UCO je rozšírením pôvodného projektu Intrusion Detection System (IDS), ktorého tvorcom je rovnaká skupina. Spája viaceré bežne dostupné bezpečnostné štandardy používané v kybernetickej bezpečnosti. Prevažne pokrýva STIX, ktorý je najväčším a najkomplexnejším štandardom, pokrývajúcim najväčšiu časť kybernetickej bezpečnostnej domény ale taktiež pokrýva iné relevatné štandardy ako CVE4, CCE5, CVSS6, CAPEC7, CYBOX8, KillChain9 a STUCCO10.
 
@@ -408,8 +412,11 @@ Integrated Cyber Analysis System alebo ICAS je ontológia vytvorená pre TAPIO (
 
 Samotná ontológia ICAS je veľmi komplexnou, nakoľko obsahuje približne 30 podontológií, kde každá sa špecializuje na inú oblasť v doméne informačnej bezpečnosti.
 
+\minor{MH: $\uparrow$ vieme povedat, ze ci nejaka cast z toho je relevantna pre nas}
 
 Nástroj TAPIO spolu s ontológiou ICAS bol vyvýjaný organizáciou DAPRA, ale dátum poslednej úpravy bol v roku 2017, čiže podobne ako UCO sa jedná o projekt ktorý už nie je aktuálny.
+
+\assignment{MH: $\uparrow$ Tu by som bol opatrnejsi, tvrdit, ze nieco nie je aktualne, lebo posledny update bol pred 3 rokmi je zvlastne. Co ked pred troma rokmi to dotiahli uz do dokonalosti a teraz uz len pouzivaju?}
 
 \section{STUCCO}
 STUCCO, ktorej autorom je Iannacone at al. je ontológiou, ktorá je určená na prácu so znalostnými grafovými databázami. Jej základ tvoria scenáre použitia ľudskými používateľmi alebo automatizovanými strojmi. Obsahuje dáta z 13 rôznych štruktúr, ktoré majú rôzne formáty a ktoré sú uložené v rôznych typoch databáz. 
