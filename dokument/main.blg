@@ -1,10 +1,20 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "semantic"
-Warning--I didn't find a database entry for "semanticweb"
-Warning--I didn't find a database entry for "linkeddata"
-Warning--I didn't find a database entry for "rdf"
-Warning--I didn't find a database entry for "sparql"
-Warning--I didn't find a database entry for "ontologies"
-(There were 6 warnings)
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1250 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1250 of file alpha.bst
+(There were 8 error messages)
