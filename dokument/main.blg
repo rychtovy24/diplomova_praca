@@ -3,51 +3,61 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "semantic"
-Warning--I didn't find a database entry for "semanticweb"
-Warning--I didn't find a database entry for "linkeddata"
-Warning--I didn't find a database entry for "rdf"
-Warning--I didn't find a database entry for "sparql"
-Warning--I didn't find a database entry for "ontologies"
-You've used 6 entries,
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1185 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry sparql
+while executing---line 1250 of file alpha.bst
+Too many commas in name 2 of "Schreiber, A.T. and Raimond, Y., 2014. RDF 1.1 Primer. W3C working group note, 24 June 2014." for entry rdf
+while executing---line 1250 of file alpha.bst
+You've used 14 entries,
             2543 wiz_defined-function locations,
-            607 strings with 5967 characters,
-and the built_in function-call counts, 3081 in all, are:
-= -- 294
-> -- 190
-< -- 4
-+ -- 70
-- -- 69
-* -- 229
-:= -- 512
-add.period$ -- 21
-call.type$ -- 6
-change.case$ -- 46
-chr.to.int$ -- 6
-cite$ -- 6
-duplicate$ -- 120
-empty$ -- 210
-format.name$ -- 74
-if$ -- 637
-int.to.chr$ -- 1
+            646 strings with 7179 characters,
+and the built_in function-call counts, 6759 in all, are:
+= -- 666
+> -- 391
+< -- 8
++ -- 142
+- -- 139
+* -- 470
+:= -- 1096
+add.period$ -- 50
+call.type$ -- 14
+change.case$ -- 103
+chr.to.int$ -- 13
+cite$ -- 14
+duplicate$ -- 260
+empty$ -- 475
+format.name$ -- 151
+if$ -- 1417
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 6
-newline$ -- 34
-num.names$ -- 22
-pop$ -- 52
+missing$ -- 11
+newline$ -- 77
+num.names$ -- 46
+pop$ -- 135
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 117
 quote$ -- 0
-skip$ -- 98
+skip$ -- 217
 stack$ -- 0
-substring$ -- 115
-swap$ -- 34
-text.length$ -- 4
+substring$ -- 282
+swap$ -- 70
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 112
 warning$ -- 0
-while$ -- 29
-width$ -- 8
-write$ -- 83
-(There were 6 warnings)
+while$ -- 67
+width$ -- 16
+write$ -- 189
+(There were 8 error messages)
