@@ -64,15 +64,13 @@ Zareen Syed, Ankur Padia, Tim Finin, M.~Lisa Mathews, and Anupam Joshi.
   2016}, volume {WS-16-03} of {\em {AAAI} Workshops}. {AAAI} Press, 2016.
 
 \bibitem[SRa]{sparql}
-A.T. Schreiber and 2014. RDF 1.1 Primer. W3C working group note 24 June~2014.
-  Raimond, Y.
+A.T. Schreiber and Raimond.
 \newblock Ontotext ad, sparql overview.
 \newblock \url{https://www.w3.org/TR/2013/REC-sparql11-overview-20130321/}.
 \newblock Navštívené: 01.02.2020.
 
 \bibitem[SRb]{rdf}
-A.T. Schreiber and 2014. RDF 1.1 Primer. W3C working group note 24 June~2014.
-  Raimond, Y.
+A.T. Schreiber and Raimond.
 \newblock Rdf framework.
 \newblock \url{https://www.w3.org/TR/rdf11-primer/}.
 \newblock Navštívené: 01.02.2020.
