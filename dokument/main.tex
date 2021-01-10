@@ -162,10 +162,7 @@ Nejaky strucny uvod do problematiky
 
 \part{Prehľad problematiky}
 \chapter{Sémantický web}
-Sémantický web \cite{semantic} poskytuje spoločný framework, ktorý umožňuje zdieľanie a opätovné použitie údajov v rámci aplikácií. Štandardy podporujú spoločné dátové formáty a protokoly, kde najpodstatnejším je Resource Description Framework (RDF). Prvýkrát pojem Sémantický web zaviedol Tim Berners-Lee a popisoval "dátový web", ktorý môže byť strojovo čitateľný. Zámerom je zvýšiť použiteľnosť webu a jeho prepojených zdrojov vytvorením sémantického webu. Sémantický web má vrstvovú štruktúru ako si môžeme všimnúť na obrázku 2.1. Jednotlivé údaje sú potrebné až vo vyšších vrstvách. XML vrstva zaručuje, že môžeme spájať Sémantický web s inými normami, založenými napríklad na XML, ktorá je rozšírená a podporovaná a RDF dáta sa v nej dajú dobre prenášať, spracovávať a uchovávať. RDF a RDFS vrstva definuje typ zdrojov. Ontologická vrstva podporuje vývoj ontológií, vďaka ktorým môžeme definovať vzťahy medzi rôznymi pojmami.
-
-\assignment{MH: \UP Toto trochu povrchne: (1) Ucelom SW nie je vyssia pouzitelnost webu (to je nepresne), ale je to lepsia pristupnost informacii publikovanych na webe pre strojove spracovanie. (2) Ak chces popisovat vrstvy SW podla tohto diagramu, bolo by dobre keby si popisal vsetky vrstvy -- U XML by som sa obmedzil na to, ze je to proste dobry format pre textovu reprezentaciu dat v suboroch a pre ich vymenu medzi softvermi -- toto vsak uz je dnes prekonane, uz vymiename SW data aj ako JSON, embedujeme ich do HTML5 (chcelo by to poznamku) -- O RDF a RDFS si vlastne nic uzitocne (z coho citatel nieco vyrozumie) nepovedal -- no a ostatne vrstvy si uplne preskocil\\
-MH: Toto si menil? Zda sa mi, ze trochu asi aj ano, ale o tych dalsich vrstvach si nic nenapisal}
+Sémantický web \cite{semantic} poskytuje spoločný framework, ktorý umožňuje zdieľanie a opätovné použitie údajov v rámci aplikácií. Štandardy podporujú spoločné dátové formáty a protokoly, kde najpodstatnejším je Resource Description Framework (RDF). Prvýkrát pojem Sémantický web zaviedol Tim Berners-Lee a popisoval "dátový web", ktorý môže byť strojovo čitateľný. Zámerom je zlepšiť prístupnosť informácií publikovaných na webe pre strojové spracovanie. Sémantický web má vrstvovú štruktúru ako si môžeme všimnúť na obrázku 2.1. Jednotlivé údaje sú potrebné až vo vyšších vrstvách. 
 
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{images/semantic_web}}
@@ -173,6 +170,29 @@ MH: Toto si menil? Zda sa mi, ze trochu asi aj ano, ale o tych dalsich vrstvach 
 \caption{Semantic Web - vrstvy.\\Zdroj: \cite{semanticweb}}
 
 \end{figure}
+
+XML vrstva zaručuje, že môžeme spájať Sémantický web s inými normami, založenými napríklad na XML, ktorá je rozšírená a podporovaná a RDF dáta sa v nej dajú dobre prenášať, spracovávať a uchovávať. Toto je už ale pre dnešné časy neštandartné a viac sa využíva výmena dát pomocou JSON formátu. 
+
+
+RDF je metóda popisovania vecí pomocou vzťahu medzi dvoma objektami. Napríklad koncepčne povedané ''Jožko má jablko'' je zadefinovaním spojenia medzi objektami ''Jožko'' a ''jablko'' pomocou vzťahu ''má''.
+Toto spojenie je známe ako triplet, ktorý je základnou stavebnou jednotkou sémantického webu. 
+
+
+RDF je aj názov slovníka, ktorý obsahuje množinu preddefinovaných termínov. Tieto termíny sú všeobecne používané na popis dát. Napríklad obsahuje najzákladnejšiu vlastnosť pre objekty a to vlastnosť typu objektu -- \textit{rdf:type}. 
+
+
+RDFS je taktiež slovník. V RDF slovníku máme termíny, ktoré nám pomáhajú určovať definície a popisy jednotlivých objektov. V RDFS získavame možnosť popisovať triedy. Pokiaľ si zoberieme triedu ''Osoba'' a triedu ''Žena'', vieme pomocou RDFS slovníka zadefinovať vzťah podtriedy vlastnosťou ''rdfs:subClassOff''. Vďaka slovníkom RDF a RDFS môžeme tvoriť detailné popísanie našich dát.
+
+
+Ontológia je v našom ponímaní synonymom k slovu slovník. Slovník RDFS môže byť použitý na tvorbu vlastnej ontológie. Sú v nej definované 
+
+
+Vďaka takejto reprezentácii dát je možné písať pravidlá, ktoré má daný súbor dát spĺnať. Vďaka logickej vrstve vieme napríklad zadefinovať pravidlá ako: Všetky objekty typu ''Muž'' a ''Žena'' sú zároveň typom ''Osoba'' alebo Množina objektov s typom ''Muž'' je disjunktná s množinou objektov ''Žena''. Tieto pravidlá slúžia na kontrolu konzistentnosti našich dát.
+
+
+\assignment{MH: \UP Toto trochu povrchne: (1) Ucelom SW nie je vyssia pouzitelnost webu (to je nepresne), ale je to lepsia pristupnost informacii publikovanych na webe pre strojove spracovanie. (2) Ak chces popisovat vrstvy SW podla tohto diagramu, bolo by dobre keby si popisal vsetky vrstvy -- U XML by som sa obmedzil na to, ze je to proste dobry format pre textovu reprezentaciu dat v suboroch a pre ich vymenu medzi softvermi -- toto vsak uz je dnes prekonane, uz vymiename SW data aj ako JSON, embedujeme ich do HTML5 (chcelo by to poznamku) -- O RDF a RDFS si vlastne nic uzitocne (z coho citatel nieco vyrozumie) nepovedal -- no a ostatne vrstvy si uplne preskocil\\
+MH: Toto si menil? Zda sa mi, ze trochu asi aj ano, ale o tych dalsich vrstvach si nic nenapisal}
+
 
 
 Text uvedený nižšie popisuje niekoľko technológií, ktoré sú potrebné pre tvorbu sémantického webu.
@@ -289,13 +309,13 @@ Ontológia sa skladá zo základných stavebných prvkov \textit{Trieda}, \texti
 
 \textbf{Entity} sú individuálne inštancie nejakej nami zadefinovanej triedy. Ak by sme mali entitu \textit{Bratislava}, a triedy \textit{Mesto} a \textit{Hlavné mesto}, kde \textit{Mesto} je podtriedou \textit{Hlavné mesto}, tak nám z ontológie vyplýva, že ak je entita \textit{Bratislava} individuálnou inštanciou triedy \textit{Hlavné mesto}, tak je aj individuálnou inštanciou triedy \textit{Mesto}.
 
-\minor{MH: $\uparrow$ \emph{Jablko} nie je velmi dobry priklad na entitu, kedze vacsinou ho uvazujeme ako triedu (a teda podtriedu triedy Ovocie)\\
-MR: upravene na Bratislava, to sa da lahko tvorit.}
+%\minor{MH: $\uparrow$ \emph{Jablko} nie je velmi dobry priklad na entitu, kedze vacsinou ho uvazujeme ako triedu (a teda podtriedu triedy Ovocie)\\
+%MR: upravene na Bratislava, to sa da lahko tvorit.}
 
 
 \textbf{Atribúty} sú vlastnosti \textit{Tried} a \textit{Entít} a môžu niesť rôzne informácie o danom objekte. \textit{Atribúty} môžu mať rôzne hodnoty, ako reťazec, číslo, dátum alebo pravdivostnú hodnotu. Ak by sme si zobrali predchádzajúcu entitu \textit{Bratislava}, jej číselná vlastnosť môže byť napríklad počet obyvateľov.
 
-\assignment{MH: $\uparrow$ Je pomerne nezvycajne aby mali atributy ako hodnotu inu premennu}
+%\assignment{MH: $\uparrow$ Je pomerne nezvycajne aby mali atributy ako hodnotu inu premennu}
 
 \textbf{Vzťahy} sú najpodstatnejšou súčasťou ontológie. Poskytujú prepájanie jednotlivých entít. Je to jednosmerné spojenie, ktoré určuje vzťah, v akom sú dve dané triedy. Tým vznikne triplet \textit{trieda:vzťah:trieda}. Medzi triplet sa radí aj trojica \textit{trieda:atribút:hodnota}. Väzby sa zvyknú definovať aj inverzne. Z logického hľadiska sú vzťahy axiómami. Pokiaľ máme triedu \textit{Krajina} a \textit{Hlavné mesto}, tak by vzťah mohol vyzerať nasledovne: Krajina:má:Hlavné mesto.
 
