@@ -298,7 +298,7 @@ Jej cieľmi je zadefinovanie a zdieľanie jednotného zápisu informácií pre d
 Taktiež je jej cieľom opätovné použitie ontológie, napríklad ak máme dobre zadefinovanú ontológiu, môžu ontologický inžinieri doplniť do našej ontológie ďalšie vlastnosti a tým by základ ontológie bol rovnaký ale bol by rozšírený o určité dáta, podľa potreby ontologických inžinierov.
 
 
-\assignment{MH: nerozumiem co myslis pod \uv{vytvárať spojenia v prirodzenomjazyku} a tiez tvrdenie \uv{sprostredkovať výhody webu obohateného o sémantiku} je velmi abstraktne neviem celkom prist na to co si tym asi myslel}
+%\assignment{MH: nerozumiem co myslis pod \uv{vytvárať spojenia v prirodzenomjazyku} a tiez tvrdenie \uv{sprostredkovať výhody webu obohateného o sémantiku} je velmi abstraktne neviem celkom prist na to co si tym asi myslel}
 
 \section{Základné pojmy}
 Ontológia sa skladá zo základných stavebných prvkov \textit{Trieda}, \textit{Entita}, \textit{Atribút}, \textit{Vzťah}. 
@@ -318,6 +318,12 @@ Ontológia sa skladá zo základných stavebných prvkov \textit{Trieda}, \texti
 %\assignment{MH: $\uparrow$ Je pomerne nezvycajne aby mali atributy ako hodnotu inu premennu}
 
 \textbf{Vzťahy} sú najpodstatnejšou súčasťou ontológie. Poskytujú prepájanie jednotlivých entít. Je to jednosmerné spojenie, ktoré určuje vzťah, v akom sú dve dané triedy. Tým vznikne triplet \textit{trieda:vzťah:trieda}. Medzi triplet sa radí aj trojica \textit{trieda:atribút:hodnota}. Väzby sa zvyknú definovať aj inverzne. Z logického hľadiska sú vzťahy axiómami. Pokiaľ máme triedu \textit{Krajina} a \textit{Hlavné mesto}, tak by vzťah mohol vyzerať nasledovne: Krajina:má:Hlavné mesto.
+
+
+\textbf{TBox} je množina definícií tried a ich vzťahov medzi nimi. V množine je obsiahnutá znalosť taxonómie tried, taktiež v nej môže byť zadefinovaná disjunktnosť jednotlivých tried, vymenovanie konkrétnych entít obsiahnutých v danej triede, reštrickie pre jednotlivé triedy a ich vzťahy
+
+
+\textbf{ABox} je množina znalostí o jednotlivých entitách.
 
 %\assignment{MH: $\uparrow$ nazov \emph{vazby} je velmi exoticky. Ak ti ide o object properties, pouzil by som slovo \emph{vztahy}.}
 %\assignment{MH: $\uparrow$ to co je \emph{triplet} by si mal zadefinovat vyssie, kde pises o RDF.}
@@ -363,6 +369,10 @@ Web Ontology Language alebo OWL
 
 \assignment{MH: Kedze cela Tvoja praca je o ontologiach a budes ich zrejme nejako zapisovat mozno by si mohol nieco povedat aj o jazykoch na zaspis ontologii, minimalen apson o jednom, s ktorym budes pracovat dalej (cize zrejme OWL)}
 
+
+\section{Deskripčná logika}
+zakladna syntax ktoru budeme pouzivat neskor na popisanie nasej ontologie
+
 \chapter{Existujúce ontologické riešenia}
 Množstvo kyber útokov v dnešnej dobe narastá závratnou rýchlosťou, čo značí že dnešné spôsoby a metódy ochrany nie sú dostatočné a preto je potrebné sa zamyslieť nad novými spôsobmi ochrany. Jeden z prístupov by mohol byť založený práve na ontológiách. Ontológie a systémy postavené nad nimi majú výhodu sémantiky, ktorá je schopná rozlišovať situácie kedy je počítačový systém normálny alebo škodlivý.
 
@@ -384,43 +394,16 @@ V nasledujúcich kapitolách si povieme niečo o zaužívaných štandardoch, z�
 
 \section{CTI model}
 TEN BY SOM MOZNO ZAHRNUL SEM CI? \citep{MavroeidisB17}
+\begin{figure}
+\makebox[\textwidth]{\includegraphics[scale=0.5]{images/cti-model}}
+\label{fig:semantic_web}
+\caption{CTI model.\\Zdroj: \citep{MavroeidisB17}}
+
+\end{figure}
 
 \assignment{MH: Ano, urcite}
 
-\section{Unified Cybersecurity Ontology}
 
-Unified Cybersecurity Ontology \citep{SyedPFMJ16} alebo skrátene UCO je rozšírením pôvodného projektu Intrusion Detection System (IDS), ktorého tvorcom je rovnaká skupina. Spája viaceré bežne dostupné bezpečnostné štandardy používané v kybernetickej bezpečnosti. Prevažne pokrýva STIX, ktorý je najväčším a najkomplexnejším štandardom, pokrývajúcim najväčšiu časť kybernetickej bezpečnostnej domény ale taktiež pokrýva iné relevatné štandardy ako CVE4, CCE5, CVSS6, CAPEC7, CYBOX8, KillChain9 a STUCCO10.
-
-%\minor{MH: $\uparrow$ Zrejme muslis \emph{pokryva} ine relevantne standardy? Ak nie, nerozumiem, v akom zmysle ich poskytuje?}
-
-Aj keď je STIX najkomplexnejším štandardom a zjednocuje všetky informácie o kybernetických hrozbách, má tieto dáta uložené v XML súboroch, takže nepodporuje výhody inferencie v ontológiách, čo UCO poskytuje.
-
-%\minor{MH: $\uparrow$ \emph{uvazovanie v ontologiach} nie je spravny slovensky vyraz pre reasoning -- skus napr. \emph{inferencia}}
-
-Okrem týchto štandardov obsahuje aj mapovanie na všeobecné databázy ako sú Google Knowledge Graph, DBPedia a Yago. Vďaka týmto mapovaniam je možné mať prístup k verejným databázam r rôznych domén záujmu.
-
-
-Základnými triedami, využívanými v UCO sú: 
-\begin{itemize}
-\item \textit{Means} -- Čo je zamýšľané daným útokom.
-\item \textit{Consequences} -- Dôsledky útoku.
-\item \textit{Attack} -- Typ útoku.
-\item \textit{Attacker} -- Kto je iniciátorom daného útoku.
-\item \textit{Attack-Pattern} -- Vzorec útoku, podľa ktorého je útok riadený.
-\item \textit{Exploit} -- K čomu útok slúži.
-\item \textit{Exploit Target} -- K čomu slúži cieľ alebo výsledok útoku.
-\item \textit{Indicators} -- Indikátor útoku.
-\end{itemize}
-Každá z týchto tried je mapovaná na už reálne existujúcu triedu v niektorom z vyššie uvedených štandardov, prevažne na STIX schému.
-
-
-Ontológia UCO umožňuje analytikom zachytávať špecifické vedomosti o kybernetickej bezpečnosti pomocov termínov a tried z ontológie a taktiež umožňuje písať pravidlá, ktoré sa môžu použiť na odvodenie nových poznatkov.
-
-
-Vývojári extrahovali dáta z National Vulnerability Database (NVD), ktorá je uložená v XML súboroch. Potom boli namapované na triple store DBPedia a dáta boli uložené na FUSEKI server, ktorý podporuje dopytovanie z rôznych zdrojov rovnako ako ich odvodzovanie.
-
-
-Aj keď toto riešenie vyzerá byť veľmi schopné, vývoj tejto ontológie už nepokračuje a vôbec sa už nevyužíva. Posledný záznam o úprave bol v roku 2018.
 \section{Integrated Cyber Analysis System}
 Integrated Cyber Analysis System\citep{salem2015enabling} alebo ICAS je ontológia vytvorená pre TAPIO (Targeted Attack Premonition using Integrated Operational data) nástroj, ktorý je schopný extrahovať dáta z počítačov v jednej sieti do jedného sémantického grafu a tým zjednoduší a urýchli prácu bezpečnostným tímom pri vyhľadávaní ohrození systému, čím by sa zvýšila prehľadnosť dát a tiež znížil dopad útoku. 
 
@@ -444,6 +427,91 @@ STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezp
 \item Nástroje -- Aké nástroje sú potrebné pre úspešné vykonaie útoku.
 \item Atomické indikátory -- Sem môžu spadať súbory, IP adresy, doménové mená atď. Nanešťastie tieto dáta majú krátku životnosť nakoľko sa stále menia.
 \end{itemize}
+
+\part{Návrh riešenia}
+\chapter{Unified Cybersecurity Ontology}
+V tejto časti popíšeme ontológiu, ktorú sme si vybrali pre ďalší vývoj a budeme porovnávať UCO ontológiu vzhľadom na CTI model. Popíšeme taktiež nedostatky danej ontológie vzhľadom na model CTI a naše úprávy v danej ontológii.
+
+
+\section{Popis ontológie}
+Unified Cybersecurity Ontology \citep{SyedPFMJ16} alebo skrátene UCO je rozšírením pôvodného projektu Intrusion Detection System (IDS), ktorého tvorcom je rovnaká skupina. Spája viaceré bežne dostupné bezpečnostné štandardy používané v kybernetickej bezpečnosti. Prevažne pokrýva STIX, ktorý je najväčším a najkomplexnejším štandardom, pokrývajúcim najväčšiu časť kybernetickej bezpečnostnej domény ale taktiež pokrýva iné relevatné štandardy ako CVE4, CCE5, CVSS6, CAPEC7, CYBOX8, KillChain9 a STUCCO10.
+
+%\minor{MH: $\uparrow$ Zrejme muslis \emph{pokryva} ine relevantne standardy? Ak nie, nerozumiem, v akom zmysle ich poskytuje?}
+
+Aj keď je STIX najkomplexnejším štandardom a zjednocuje všetky informácie o kybernetických hrozbách, má tieto dáta uložené v XML súboroch, takže nepodporuje výhody inferencie v ontológiách, čo UCO poskytuje.
+
+%\minor{MH: $\uparrow$ \emph{uvazovanie v ontologiach} nie je spravny slovensky vyraz pre reasoning -- skus napr. \emph{inferencia}}
+
+Okrem týchto štandardov obsahuje aj mapovanie na všeobecné databázy ako sú Google Knowledge Graph, DBPedia a Yago. Vďaka týmto mapovaniam je možné mať prístup k verejným databázam z rôznych domén záujmu.
+
+
+Základnými triedami, využívanými v UCO sú: 
+\begin{itemize}
+\item \textit{Means} -- Čo je zamýšľané daným útokom.
+\item \textit{Consequences} -- Dôsledky útoku.
+\item \textit{Attack} -- Typ útoku.
+\item \textit{Attacker} -- Kto je iniciátorom daného útoku.
+\item \textit{Attack-Pattern} -- Vzorec útoku, podľa ktorého je útok riadený.
+\item \textit{Exploit} -- K čomu útok slúži.
+\item \textit{Exploit Target} -- K čomu slúži cieľ alebo výsledok útoku.
+\item \textit{Indicators} -- Indikátor útoku.
+\end{itemize}
+Každá z týchto tried je mapovaná na už reálne existujúcu triedu v niektorom z vyššie uvedených štandardov, prevažne na STIX schému.
+
+
+Ontológia UCO umožňuje analytikom zachytávať špecifické vedomosti o kybernetickej bezpečnosti pomocov termínov a tried z ontológie a taktiež umožňuje písať pravidlá, ktoré sa môžu použiť na odvodenie nových poznatkov.
+
+
+Vývojári extrahovali dáta z National Vulnerability Database (NVD), ktorá je uložená v XML súboroch. Potom boli namapované na triple store DBPedia a dáta boli uložené na FUSEKI server, ktorý podporuje dopytovanie z rôznych zdrojov rovnako ako ich odvodzovanie.
+
+
+\section{Model}
+Základnou triedou tejto ontológie je \textit{UCO Thing}, ktorá je nadrtiedou každej triedy v ontológii.
+
+
+Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadefinuje si ju aj pre svoju doménu a vďaka slovníku OWL jej zadefinuje ekvivalentnú triedu, čím zabezpčí opätovné použitie dát pre iný zdroj. Napríklad trieda \textit{Indicator} je vďaka tomuto vzťahu prepojená s ontológiou CAPEC.
+
+
+\textbf{Identita} je v ontológii UCO reprezentovaná triedou \textit{Attacker}, ktorá je namapovaná na triedu \textit{ThreatActor} zo STIX-u.\\
+\begin{tabular}{ |p{6cm}||p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{3}{|c|}{Identita} \\
+ \hline
+ Vlastnosť & Doména & Rozsah\\
+ \hline
+ hasAssociatedCampaign & Attacker & Campaign\\
+ hasConfidenceValue & Attacker & ConfidenceType\\
+ hasIntendedEffect & Attacker & StatementType\\
+ hasMotivation & Attacker & StatementType\\
+ hasObservedMeans & Attacker & Means\\
+ hasRelatedIncidents & Attacker & Incident\\
+ hasSophistication & Attacker & StatementType\\
+ hasType & Attacker & StatementType\\
+ hasTitle & Attacker & xsd:string\\
+ \hline
+\end{tabular}\\
+
+
+
+\textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémou alebo známych malwaroch. Nakoľko vďaka jazyku owl vieme definovať napríklad inverzné vlastnosti je žiadúce aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
+\begin{tabular}{ |p{6cm}||p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{3}{|c|}{Útok} \\
+ \hline
+ Vlastnosť & Doména & Rozsah\\
+ \hline
+ hasAttacker & Attack & Attacker\\
+ hasConfidenceValue & Attack & ConfidenceType\\
+ hasIndicator & Attack & Indicator\\
+ hasMeans & Attack & Means\\
+ hasObservable & Attack & Observable\\
+ hasRequestedCOA & Attack & CourseofAction\\
+ hasSource & Attack & Source\\
+ hasTakenCOA & Attack & CourseofAction\\
+ isLaunchedBy & Attack & Attacker\\
+ \hline
+\end{tabular}\\
+
 
 \backmatter
 
