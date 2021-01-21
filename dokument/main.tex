@@ -473,7 +473,7 @@ Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadef
 
 
 \textbf{Identita} je v ontológii UCO reprezentovaná triedou \textit{Attacker}, ktorá je namapovaná na triedu \textit{ThreatActor} zo STIX-u.\\
-\begin{tabular}{ |p{6cm}||p{3cm}|p{3cm}|  }
+\begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
  \hline
  \multicolumn{3}{|c|}{Identita} \\
  \hline
@@ -494,7 +494,7 @@ Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadef
 
 
 \textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémou alebo známych malwaroch. Nakoľko vďaka jazyku owl vieme definovať napríklad inverzné vlastnosti je žiadúce aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
-\begin{tabular}{ |p{6cm}||p{3cm}|p{3cm}|  }
+\begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
  \hline
  \multicolumn{3}{|c|}{Útok} \\
  \hline
@@ -511,6 +511,32 @@ Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadef
  isLaunchedBy & Attack & Attacker\\
  \hline
 \end{tabular}\\
+
+
+\textbf{Kampaň} je zahrnutá v triede \textit{Campaign}, ktorá môže existovať iba v prípade, že už bola použitá v nejakom útoku. Každá kampaň môže taktiež mať nejakú ďalšiu kampaň, ktoré medzi sebou súvisia, kde táto vlastnosť je obojsmerná. Taktiež má vlastnosť hasCampaign, ktorej doménou je trieda \textit{Indicator}. Táto trieda pochádza z ontológie CAPEC, ktorá obsahuje známe vzory útokov.\\
+\begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{3}{|c|}{Kampaň} \\
+ \hline
+ Vlastnosť & Doména & Rozsah\\
+ \hline
+ hasAssociatedCampaign & Campaign & Campaign\\
+ hasCampaign & Indicator & Campaign\\
+ hasIndicator & Campaign & Indicator\\
+ hasIncident & Campaign & Incident\\
+ hasMenas & Campaign & Means\\
+ hasStatus & Campaign & \\
+ isLaunchedBy & Campaign & Attacker\\
+ usesAttacks & Campaign & Attack\\
+ \hline
+\end{tabular}\\
+
+
+\textbf{Slabiny} sú zahrnuté v triede \textit{Vulnerability}, ktorá nie je namapovaná na žiadnnu existujúcu ontológiu, avšak dáta už existujú v rámci databázy CWE, ktorá predstavuje dáta o softvérových a hardvérvých chybách. Tieto slabiny sú naviazané na objekty typu \textit{Product}, ktoré môžu byť buď hardvérové alebo softvérové a každá slabina ovplyvňuje niektorý produkt (vlastnosť \textit{affectsProduct}).\\
+\textbf{TODO} - zakomponovat mozno zmenu a prepojit to s touto existujúcou databázou. \url{https://cwe.mitre.org/index.html}
+
+
+
 
 
 \backmatter
