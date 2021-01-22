@@ -22,8 +22,8 @@
 \usepackage{pdfpages}
 
 % TODO NOTES
-%\usepackage{todonotes}
-\usepackage[disable]{todonotes}
+\usepackage{todonotes}
+%\usepackage[disable]{todonotes}
 \input{todos}
 \setstretch{1.5}
 %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
@@ -430,6 +430,7 @@ STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezp
 
 \part{Návrh riešenia}
 \chapter{Unified Cybersecurity Ontology}
+\assignment{MH: Takze si to vlastne sem cele presnul a v Casti I uz o tom nie je ani zmienka? Tu by to malo byt uvedene sposobom, ze tu ju podrobne pispiseme a zanalyzujeme... Cize malo by to byt v Casti II vedene ako analyza UCO, nie jej len popis}
 V tejto časti popíšeme ontológiu, ktorú sme si vybrali pre ďalší vývoj a budeme porovnávať UCO ontológiu vzhľadom na CTI model. Popíšeme taktiež nedostatky danej ontológie vzhľadom na model CTI a naše úprávy v danej ontológii.
 
 
@@ -464,15 +465,25 @@ Ontológia UCO umožňuje analytikom zachytávať špecifické vedomosti o kyber
 
 Vývojári extrahovali dáta z National Vulnerability Database (NVD), ktorá je uložená v XML súboroch. Potom boli namapované na triple store DBPedia a dáta boli uložené na FUSEKI server, ktorý podporuje dopytovanie z rôznych zdrojov rovnako ako ich odvodzovanie.
 
+\minor{MH: $\uparrow$ Zmienky o nejakych datach sa tu zjavia z cista-jasna... Doteraz sme hvorili stale o ontologii, nezapada to... (Mozno treba len previazat a upresnit?)}
+
 
 \section{Model}
+\assignment{MH: Ta terminologia, Utok, Indikator, Slabiny, to bude jasne z prech. kapitol?}
+
 Základnou triedou tejto ontológie je \textit{UCO Thing}, ktorá je nadrtiedou každej triedy v ontológii.
 
 
 Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadefinuje si ju aj pre svoju doménu a vďaka slovníku OWL jej zadefinuje ekvivalentnú triedu, čím zabezpčí opätovné použitie dát pre iný zdroj. Napríklad trieda \textit{Indicator} je vďaka tomuto vzťahu prepojená s ontológiou CAPEC.
 
+\minor{MH: $\uparrow$ ``vdaka slovniku OWL'' je tazko rozumitelne (skor ``pomocou jazyka OWL''): Lepsie by ale bolo, keby tieto veci su v uvodnych prehladovych castiach dostocne vysvetlene natlolo, ze tu uz len staci povedat, ze sa vytvori ekvivalentna trieda}
+
 
 \textbf{Identita} je v ontológii UCO reprezentovaná triedou \textit{Attacker}, ktorá je namapovaná na triedu \textit{ThreatActor} zo STIX-u.\\
+%
+\minor{MH: $\updownarrow$ chyba premostenie na tabulku vlasntosti}
+\minor{MH: $\updownarrow$ Naduzivas \texttt{\textbackslash\textbackslash}}
+%
 \begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
  \hline
  \multicolumn{3}{|c|}{Identita} \\
@@ -494,6 +505,9 @@ Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadef
 
 
 \textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémou alebo známych malwaroch. Nakoľko vďaka jazyku owl vieme definovať napríklad inverzné vlastnosti je žiadúce aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
+%
+\assignment{MH: $\uparrow$ Tu zasa strasne skaces, viac vysvetluj... Kde sa vzalo TTP? Tiez pises, ze \emph{hasAttacker} nie je definovane, ale v tabulke to je...}
+%
 \begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
  \hline
  \multicolumn{3}{|c|}{Útok} \\
@@ -514,6 +528,7 @@ Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadef
 
 
 \textbf{Kampaň} je zahrnutá v triede \textit{Campaign}, ktorá môže existovať iba v prípade, že už bola použitá v nejakom útoku. Každá kampaň môže taktiež mať nejakú ďalšiu kampaň, ktoré medzi sebou súvisia, kde táto vlastnosť je obojsmerná. Taktiež má vlastnosť hasCampaign, ktorej doménou je trieda \textit{Indicator}. Táto trieda pochádza z ontológie CAPEC, ktorá obsahuje známe vzory útokov.\\
+\assignment{MH: $\uparrow$ Opat sa stracam, co je Indicator?}
 \begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
  \hline
  \multicolumn{3}{|c|}{Kampaň} \\
