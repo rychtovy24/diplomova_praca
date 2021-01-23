@@ -12,10 +12,18 @@
 \contentsline {subsection}{\numberline {3.3.1}Web Ontology Language}{13}{subsection.3.3.1}
 \contentsline {section}{\numberline {3.4}Deskrip\IeC {\v c}n\IeC {\'a} logika}{13}{section.3.4}
 \contentsline {chapter}{\numberline {4}Existuj\IeC {\'u}ce ontologick\IeC {\'e} rie\IeC {\v s}enia}{14}{chapter.4}
-\contentsline {section}{\numberline {4.1}CTI model}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Integrated Cyber Analysis System}{15}{section.4.2}
-\contentsline {section}{\numberline {4.3}STUCCO}{17}{section.4.3}
-\contentsline {part}{II\hspace {1em}N\IeC {\'a}vrh rie\IeC {\v s}enia}{18}{part.2}
-\contentsline {chapter}{\numberline {5}Unified Cybersecurity Ontology}{19}{chapter.5}
-\contentsline {section}{\numberline {5.1}Popis ontol\IeC {\'o}gie}{19}{section.5.1}
-\contentsline {section}{\numberline {5.2}Model}{21}{section.5.2}
+\contentsline {section}{\numberline {4.1}CTI model}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Identita}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}\IeC {\'U}tok}{17}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Kampa\IeC {\v n}}{17}{subsection.4.1.3}
+\contentsline {subsubsection}{Strat\IeC {\'e}gia}{17}{section*.10}
+\contentsline {subsubsection}{TTP}{17}{section*.11}
+\contentsline {subsection}{\numberline {4.1.4}Slabina}{17}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Indik\IeC {\'a}tor}{17}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}N\IeC {\'a}stroj}{17}{subsection.4.1.6}
+\contentsline {section}{\numberline {4.2}Unified Cybersecurity Ontology}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Integrated Cyber Analysis System}{19}{section.4.3}
+\contentsline {section}{\numberline {4.4}STUCCO}{19}{section.4.4}
+\contentsline {part}{II\hspace {1em}N\IeC {\'a}vrh rie\IeC {\v s}enia}{21}{part.2}
+\contentsline {chapter}{\numberline {5}Anal\IeC {\'y}za UCO}{22}{chapter.5}
+\contentsline {section}{\numberline {5.1}Model}{22}{section.5.1}

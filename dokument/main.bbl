@@ -30,6 +30,11 @@ Marja-Riitta Koivunen and Eric Miller.
 \newblock \url{https://www.w3.org/2001/12/semweb-fin/w3csw}.
 \newblock Navštívené: 01.02.2020.
 
+\bibitem[Lab17]{ucoSource}
+UMBC~Ebiquity Lab.
+\newblock Uco2.
+\newblock \url{https://github.com/Ebiquity/uco2}, 2017.
+
 \bibitem[MB17]{MavroeidisB17}
 Vasileios Mavroeidis and Siri Bromander.
 \newblock Cyber threat intelligence model: An evaluation of taxonomies, sharing
