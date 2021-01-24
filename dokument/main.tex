@@ -72,6 +72,7 @@
 \begin{center}
 	\begin{minipage}{0.8\textwidth}
 		\centerline{\textbf{\Large\MakeUppercase{\mftitle}}}
+		\centerline{\textbf{\Large\MakeUppercase{\mftitlen}}}
 		\smallskip
 		\centerline{\mfthesistype}
 	\end{minipage}
@@ -102,6 +103,7 @@
 \begin{center}
 \begin{minipage}{0.8\textwidth}
 \centerline{\textbf{\Large\MakeUppercase{\mftitle}}}
+\centerline{\textbf{\Large\MakeUppercase{\mftitlen}}}
 \smallskip
 \centerline{\mfthesistype}
 \end{minipage}
@@ -126,6 +128,7 @@
 %\vfill
 %\eject
 % koniec zadania
+\includepdf[pages={1}]{zadanie.pdf}
 
 \thispagestyle{empty}
 
@@ -151,10 +154,10 @@ Touto cestou by som sa chcel v prvom rade poďakovať môjmu školiteľovi doc. 
 % koniec podakovania
 
 \chapter*{Abstrakt}\label{chap:abstract_sk}
-
+Abstrakt v slovenčine
 
 \chapter*{Abstract}\label{chap:abstract_en}
-
+An abstract in english language
 % koniec abstraktov
 
 \tableofcontents
@@ -499,7 +502,7 @@ STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezp
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \part{Návrh riešenia}
-\chapter{Analýza UCO}
+\chapter{Výskum a Analýza UCO}
 \assignment{MH: Takze si to vlastne sem cele presnul a v Casti I uz o tom nie je ani zmienka? Tu by to malo byt uvedene sposobom, ze tu ju podrobne pispiseme a zanalyzujeme... Cize malo by to byt v Casti II vedene ako analyza UCO, nie jej len popis\\
 MR: Done}
 
@@ -675,7 +678,33 @@ Taktiež existuje trieda \textit{CWE}, ktorá je prepojená s triedou \textit{We
 \textbf{Nástroje}
 TODO -- chcem sa pobavit s panom baloghon co by radil medzi ne z uco ontologie, nakolko sa nevidim tolko do tejto domeny aby som vedel povedat ktora do toho spada.
 
+
+\chapter{Pravidlá}
+pravidlá definované v ontológii
+
+
+\chapter{Dáta}
+ake data sme importovali, z kadial, akou metodou, kde su ulozene ako sa nad nimi dopytovat, ake odpovede dostaneme -- priklady s jazykom SPARQL
+
 \backmatter
+
+
+\part{Testovanie}
+\chapter{Konzistetnosť}
+\section{Ontológia}
+postup a popis vyhodnocovania konzistentnosti TBox-u
+
+\section{Dáta}
+postup a popis vyhodnocovania konzistentnosti ABox-u
+
+
+\part{Výsledky práce}
+\chapter{Zhrnutie}
+Co sme dosiahli, ako je nase riesenie splnene v porovnani s CTI modelom
+
+
+\chapter{Záver}
+co sme dosiahli v praci, navrhy na vylepsenia
 
 \nocite{*}
 \bibliographystyle{alpha}
