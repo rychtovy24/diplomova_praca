@@ -245,6 +245,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#anyURI">https://cve.mitre.org/about/terminology.html</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>https://oval.mitre.org/language/version5.11/OVAL</IRI>
+        <Literal>The OVAL System Characteristics schema defines a standard XML format for representing system configuration information.  This configuration information includes OS parameters, installed software application settings, and other security relevant configuration values.  The purpose of this schema is to provide a “database” of system characteristics  against  which  the  OVAL  Definitions can  be  compared  in  order  to  analyze  a  system  for vulnerabilities, configuration issues, and patches.  In essence, the schema defines a standard system characteristics exchange format that can be incorporated into a variety of tools, such as those listed in the OVAL-Compatible Products and Services section on the OVAL Web site.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>https://oval.mitre.org/language/version5.11/OVAL</IRI>
         <Literal>OVAL</Literal>
