@@ -13,6 +13,12 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Criteria"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CriteriaDefinition"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Family"/>
     </Declaration>
     <Declaration>
@@ -40,16 +46,37 @@
         <ObjectProperty IRI="#affectedProduct"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasAndCriteria"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasCVE"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCriteria"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDefinition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDefinitionOvalRef"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasOVAL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOrCriteria"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPlatform"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasReference"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTestOVALRef"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasComment"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasDescription"/>
@@ -140,12 +167,32 @@
         <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAndCriteria"/>
+        <Class IRI="#Criteria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCVE"/>
         <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCriteria"/>
+        <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDefinition"/>
+        <Class IRI="#Criteria"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDefinitionOvalRef"/>
+        <Class IRI="#CriteriaDefinition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasOVAL"/>
         <Class IRI="https://cve.mitre.org/about/terminology.html#CVE"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasOrCriteria"/>
+        <Class IRI="#Criteria"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPlatform"/>
@@ -154,6 +201,14 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasReference"/>
         <Class IRI="https://cve.mitre.org/about/terminology.html#CVE"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReference"/>
+        <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTestOVALRef"/>
+        <Class IRI="#CriteriaDefinition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#affectedFamily"/>
@@ -168,12 +223,32 @@
         <Class IRI="#Product"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAndCriteria"/>
+        <Class IRI="#Criteria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCVE"/>
         <Class IRI="https://cve.mitre.org/about/terminology.html#CVE"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCriteria"/>
+        <Class IRI="#Criteria"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDefinition"/>
+        <Class IRI="#CriteriaDefinition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDefinitionOvalRef"/>
+        <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasOVAL"/>
         <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasOrCriteria"/>
+        <Class IRI="#Criteria"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPlatform"/>
@@ -183,6 +258,22 @@
         <ObjectProperty IRI="#hasReference"/>
         <Class IRI="#Reference"/>
     </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTestOVALRef"/>
+        <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasComment"/>
+        <Class IRI="#Criteria"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasComment"/>
+        <Class IRI="#CriteriaDefinition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDescription"/>
+        <Class IRI="#Reference"/>
+    </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasDescription"/>
         <Class IRI="https://cve.mitre.org/about/terminology.html#CVE"/>
@@ -203,6 +294,10 @@
         <DataProperty IRI="#hasTitle"/>
         <Class IRI="https://oval.mitre.org/language/version5.11/OVAL"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasComment"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasDescription"/>
         <Datatype abbreviatedIRI="xsd:string"/>
