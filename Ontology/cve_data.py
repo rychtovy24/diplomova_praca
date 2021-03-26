@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from rdflib.namespace import RDF
+from rdflib.namespace import RDF, RDFS
 from rdflib import URIRef, BNode, Literal, Namespace
 from rdflib import Graph
 
@@ -59,6 +59,7 @@ class CVE:
 
     def write_CVE(self, graph):
         graph.add( (self.iri, RDF.type, CVE_OWL) )
+        graph.add( (self.iri, RDFS.label, Literal(self.id)) )
         graph.add( (self.iri, CVE_has_description, Literal(self.description)) )
         graph.add( (self.iri, CVE_has_title, Literal(self.id)) )
         for reference in self.references:
@@ -103,8 +104,10 @@ for i in range(1999, 2022):
 for key in cve_dic:
     year = key.split('-')[1]
     cve_dic[key].write_CVE(graphs[year])
-for year in range(1999, 2022):
-    with open('cve_generate_data_'+str(year)+'.xml', 'w', encoding="utf-8") as f:
-        print(graphs[str(year)].serialize(format="pretty-xml").decode("utf-8"), file=f)
+for i in range(1999, 2022):
+    year = str(i)
+    with open('cve_generate_data_'+year+'.rdf', 'w', encoding="utf-8") as f:
+        print(graphs[year].serialize(format="turtle").decode("utf-8"), file=f)
+    del graphs[year]
     
 
