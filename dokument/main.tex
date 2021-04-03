@@ -704,7 +704,47 @@ Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje zákl
 
 
 
-\chapter{OVAL ontológia}
+\chapter{OVAL}
+Open Vulnerability and Assessment Language(OVAL) je štandard, ktorý umožňuje popísanie zraniteľností jednotlivých produktov (softvérov). Tieto informácie sú písané vo formáte XML. Obsahuje tri hlavné kroky posudzovania.
+
+
+Prvým krokom sú základné informácie o systémoch, ako napríklad o aký operačný systém sa jedná, ktoré jeho verzie ohrozuje a aké konkrétne produkty sú ohrozené, pokiaľ je splnená konfigurácia rôznych systémov. Taktiež obsahuje rôzne odkazy na ďaľšie informácie o jednotlivých zraniteľnostiach. 
+
+
+Druhé posudzovanie analyzuje systém podľa špecifikovaného nastavenia a zisťuje či je daný systém ohorzený alebo nie. 
+
+
+Posledný krok tvorí správu o výsledku tejto analýzy. Na výstupe je informácia o aktuálnom konfiguračnom nastavení systému.
+
+
+\section{Ontológia}
+Pre našu ontológiu nemusíme reprezentovať všetky znalosti o OVAL-e. Vybrali sme si konkrétne časti, ktoré je potrebné publikovať v našich spravodajských dátach. 
+
+
+\begin{figure}
+\makebox[\textwidth]{\includegraphics[scale=0.7]{images/oval-ontology}}
+\label{fig:semantic_web}
+\caption{OVAL ontológia}
+\end{figure}
+
+
+Každý OVAL objekt je reprezentovaný pomocou URN \textit{oval:org.cisecurity:\{def\}:127} kde \textit{\{def\}} musí byť z nasledujúcich možností:
+\begin{itemize}
+\item \textbf{def} -- jedná sa o záznam definujúci zraniteľnosť
+\item \textbf{tst} -- záznam, ktorý definuje test
+\end{itemize}
+Samotný záznam sa skladá z:
+\begin{itemize}
+\item \textit{hasTitle} -- názov záznamu
+\item \textit{hasDescription} -- popis záznamu
+\item \textit{affectedFamily} -- operačný systém, ktorý ovplyvňuje
+\item \textit{affectedPlatform} -- akú platformu operačného systému ovplyvňuje
+\item \textit{affectedProduct} -- ktorý produkt ovplyvňuje
+\item \textit{HasReference} -- odkaz na externý zdroj informácií súvisiaci so záznamom
+\item \textit{hasCriteria} -- zoznam logických testov potrebených na zistenie či daný záznam ovplyvňuje systém
+\end{itemize}
+
+
 
 \backmatter
 

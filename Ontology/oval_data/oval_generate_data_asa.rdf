@@ -1,0 +1,179 @@
+@prefix ns1: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<oval:org.cisecurity:def:4204> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Software SharePoint RAMFS Integrity and Lua Injection Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the SSL VPN code of Cisco ASA Software could allow an authenticated, remote attacker to overwrite arbitrary files present on the RAMFS file system or inject Lua scripts.  The vulnerability is due to insufficient validation of the code that handles session information for the SSL VPN when a SharePoint handler is created. A SharePoint handler is created when a valid SharePoint connection is initiated. An attacker could exploit this vulnerability by sending crafted HTTP requests to the affected system. The SSL VPN feature must be configured for the system to be vulnerable.  An exploit could allow the attacker to overwrite arbitrary files on the RAMFS cache or inject Lua scripts, causing a denial of service (DoS) condition for the Clientless SSL VPN portal or causing the system to reload.  This vulnerability was reported to Cisco by Alec Stuart-Muirk." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141006-CVE-2014-3399> ;
+    ns1:hasTitle "Cisco ASA Software SharePoint RAMFS Integrity and Lua Injection Vulnerability" .
+
+<oval:org.cisecurity:def:4223> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Challenge-Response Tunnel Group Selection Bypass Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the authentication code of Cisco ASA Software could allow an authenticated, remote attacker to access resources of a VPN tunnel group.  The vulnerability is due to improper implementation of the tunnel group selection when a user authenticates to the remote access VPN via the challenge-response mechanism. This vulnerability may affect Cisco ASA configured to authenticate remote access VPN users via LDAP, RADIUS, TACACS+, and RSA if a challenge-response is needed for authentication. Cisco ASA Software configured for Clientless or AnyConnect SSL VPN is affected by this vulnerability.  An attacker could exploit this vulnerability by crafting a response to the Cisco ASA with a different tunnel group parameter. A successful exploit could allow the attacker to bypass the tunnel group restriction and authenticate to a different tunnel group than the one selected during the authentication phase. This could result in accessing a different set of resources." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20150216-CVE-2014-8023> ;
+    ns1:hasTitle "Cisco ASA Challenge-Response Tunnel Group Selection Bypass Vulnerability" .
+
+<oval:org.cisecurity:def:4237> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Software and Cisco FTD Software TCP Normalizer Denial of Service Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the TCP normalizer of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause Cisco ASA and FTD to drop any further incoming traffic on all interfaces, resulting in a denial of service (DoS) condition.  The vulnerability is due to improper limitation of the global out-of-order TCP queue for specific block sizes. An attacker could exploit this vulnerability by sending a large number of unique permitted TCP connections with out-of-order segments. An exploit could allow the attacker to exhaust available blocks in the global out-of-order TCP queue, causing the dropping of any further incoming traffic on all interfaces and resulting in a DoS condition." ;
+    ns1:hasReference <https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-norm> ;
+    ns1:hasTitle "Cisco ASA Software and Cisco FTD Software TCP Normalizer Denial of Service Vulnerability" .
+
+<oval:org.cisecurity:def:4238> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco Adaptive Security Appliance (ASA) Software OSPFv2 Denial of Service Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the Open Shortest Path First version 2 (OSPFv2) code of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, adjacent attacker to cause the reload of the affected system.  The vulnerability is due to improper handling of OSPFv2 packets. An attacker could exploit this vulnerability by sending crafted packets to the affected system. A successful exploit could cause the system to crash, resulting in a denial of service (DoS) condition." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20150707-CVE-2015-4241> ;
+    ns1:hasTitle "Cisco Adaptive Security Appliance (ASA) Software OSPFv2 Denial of Service Vulnerability" .
+
+<oval:org.cisecurity:def:4253> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SQL*Net Inspection Engine Denial of Service Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in SQL*Net inspection engine code could allow an unauthenticated, remote attacker to cause a reload of the affected system.  The vulnerability is due to improper handling of segmented Transparent Network Substrate (TNS) packets. An attacker could exploit this vulnerability by sending a crafted sequence of segmented TNS packets through the affected system." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-fwsm> ;
+    ns1:hasTitle "SQL*Net Inspection Engine Denial of Service Vulnerability" .
+
+<oval:org.cisecurity:def:4326> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco Adaptive Security Appliance RADIUS Change of Authorization Message Replay Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in RADIUS Change of Authorization (CoA) messages of the Identity Firewall (IDFW) feature of the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to modify the contents of the IDFW user cache.  The vulnerability is due to insufficient validation of received RADIUS CoA messages. An attacker could exploit this vulnerability by replaying crafted RAIDUS CoA messages. An exploit could allow the attacker to modify the IDFW user cache of the ASA." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20140108-CVE-2014-0655> ;
+    ns1:hasTitle "Cisco Adaptive Security Appliance RADIUS Change of Authorization Message Replay Vulnerability" .
+
+<oval:org.cisecurity:def:4356> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA VPN Denial of Service Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the VPN authentication code that handles parsing of the username from the certificate on the Cisco ASA firewall could allow an unauthenticated, remote attacker to cause a reload of the affected device.  The vulnerability is due to parallel processing of a large number of Internet Key Exchange (IKE) requests for which username-from-cert is configured. An attacker could exploit this vulnerability by sending a large number of IKE requests when the affected device is configured with the username-from-cert command. An exploit could allow the attacker to cause a reload of the affected device, leading to a denial of service (DoS) condition." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20131022-CVE-2013-5544> ;
+    ns1:hasTitle "Cisco ASA VPN Denial of Service Vulnerability" .
+
+<oval:org.cisecurity:def:4360> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Identity Firewall Feature Buffer Overflow Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the Identity Firewall feature of Cisco ASA Software could allow an unauthenticated, remote attacker to cause a reload of the affected system or to remotely execute code.  The vulnerability is due to a buffer overflow in the affected code area. An attacker could exploit this vulnerability by sending a crafted NetBIOS packet in response to a NetBIOS probe sent by the ASA software. An exploit could allow the attacker to execute arbitrary code and obtain full control of the system or cause a reload of the affected system.  Note: Only traffic directed to the affected system can be used to exploit this vulnerability. This vulnerability affects systems configured in routed and transparent firewall mode and in single or multiple context mode. This vulnerability can be triggered by IPv4 traffic." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161019-asa-idfw> ;
+    ns1:hasTitle "Cisco ASA Identity Firewall Feature Buffer Overflow Vulnerability" .
+
+<oval:org.cisecurity:def:4370> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Information Disclosure Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the authorization code of Cisco ASA Software could allow an authenticated, remote attacker to access information stored on the file system of an affected system.  The vulnerability is due to improper implementation of authorization controls when an unprivileged user tries to access files stored on the file system. This vulnerability can be exploited after authentication and only if HTTP server is enabled. An attacker could exploit this vulnerability by sending a crafted URL to the affected system. If the Cisco ASA is configured in multiple context mode, only the user of the admin context will be able to exploit this vulnerability. An exploit could allow the attacker to access files stored on the device file system, which may include the running configuration." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20140507-CVE-2014-2181> ;
+    ns1:hasTitle "Cisco ASA Information Disclosure Vulnerability" .
+
+<oval:org.cisecurity:def:4398> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco Adaptive Security Appliance VPN Memory Block Exhaustion Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the IPsec code of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, remote attacker to cause the depletion of a memory block, which may cause the system to stop forwarding traffic and result in a denial of service (DoS) condition.  The vulnerability is due to an error in the implementation of ICMP error handling for IPsec packets. An attacker could exploit this vulnerability by sending crafted packets through an established LAN-to-LAN or Remote Access VPN tunnel. A successful exploit could allow the attacker to deplete available memory and cause system instability or cause the system to stop forwarding traffic." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160517-asa-vpn> ;
+    ns1:hasTitle "Cisco Adaptive Security Appliance VPN Memory Block Exhaustion Vulnerability" .
+
+<oval:org.cisecurity:def:4456> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Unicast Reverse Path Forwarding (uRPF) Bypass Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the Unicast Reverse Path Forwarding (uRPF) feature in the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to bypass the uRPF validation checks.  The vulnerability is due to incorrect uRPF validation where IP packets from an outside interface, whose IP address is both in the ASA routing table and associated with an internal interface, are not dropped. An attacker could exploit this vulnerability by sending spoofed IP packets to the ASA in a subnet range that should be dropped. An exploit could allow the attacker to bypass uRPF validation on the ASA and the packet will be incorrectly forwarded on the internal network." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20150812-CVE-2015-4321> ;
+    ns1:hasTitle "Cisco ASA Unicast Reverse Path Forwarding (uRPF) Bypass Vulnerability" .
+
+<oval:org.cisecurity:def:4500> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco Adaptive Security Appliance Information Disclosure Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to access sensitive data, including the ASA Software version that is currently running on the appliance.  The vulnerability occurs because the Cisco ASA does not sufficiently protect sensitive data during a Cisco AnyConnect client authentication attempt. An attacker could exploit the vulnerability by attempting to authenticate to the Cisco ASA with AnyConnect." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160115-asa> ;
+    ns1:hasTitle "Cisco Adaptive Security Appliance Information Disclosure Vulnerability" .
+
+<oval:org.cisecurity:def:4505> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Software DHCP Relay Denial of Service Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the DHCP Relay feature of Cisco ASA Software could allow an unauthenticated, adjacent attacker to cause a denial of service (DoS) condition by causing an interface wedge.  The vulnerability is due to improper handling of resources linked with the DHCP Relay feature. An attacker could exploit this vulnerability by sending DHCP packets at specific rates. An exploit could allow an attacker to cause an interface to become wedged, and stop processing incoming traffic. Once this state is reached, restoration of service can only be achieved by reloading the device." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-asa-dhcp> ;
+    ns1:hasTitle "Cisco ASA Software DHCP Relay Denial of Service Vulnerability" .
+
+<oval:org.cisecurity:def:4531> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA Local Path Inclusion Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> ;
+    ns1:hasDescription "A vulnerability in the function that exports environment variables of Cisco ASA Software could allow an authenticated, local attacker to inject a malicious library and take complete control of the system.  The vulnerability is due to improper setting of the LD_LIBRARY_PATH environment. An attacker could exploit this vulnerability by copying a malicious library onto the affected system's external memory and triggering a reload of the system. An exploit could allow the attacker to force the affected system to load a malicious library and access the underlying Linux OS, which could lead to a full compromise of the system." ;
+    ns1:hasReference <http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141008-CVE-2014-3391> ;
+    ns1:hasTitle "Cisco ASA Local Path Inclusion Vulnerability" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20131022-CVE-2013-5544> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20131022-cve-2013-5544" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20140108-CVE-2014-0655> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20140108-cve-2014-0655" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20140507-CVE-2014-2181> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20140507-cve-2014-2181" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141006-CVE-2014-3399> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20141006-cve-2014-3399" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20141008-CVE-2014-3391> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20141008-cve-2014-3391" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20150216-CVE-2014-8023> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20150216-cve-2014-8023" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20150707-CVE-2015-4241> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20150707-cve-2015-4241" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20150812-CVE-2015-4321> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20150812-cve-2015-4321" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20131009-fwsm> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20131009-fwsm" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160115-asa> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20160115-asa" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160517-asa-vpn> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20160517-asa-vpn" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-asa-dhcp> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20161005-asa-dhcp" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161019-asa-idfw> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20161019-asa-idfw" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-norm> a ns1:Reference ;
+    ns1:hasRefID "cisco-sa-20170419-asa-norm" ;
+    ns1:hasSource "Vendor Advisory" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#asa> a ns1:Family ;
+    rdfs:label "asa" ;
+    ns1:hasPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_ASA> a ns1:Platform ;
+    rdfs:label "Cisco ASA" .
+
+

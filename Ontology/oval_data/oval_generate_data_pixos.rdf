@@ -1,0 +1,50 @@
+@prefix ns1: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<oval:org.mitre.oval:def:5499> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco PIX and ASA IPv6 Denial of Service Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#pixos> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_PIX> ;
+    ns1:hasCVE <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3816> ;
+    ns1:hasDescription "Unspecified vulnerability in Cisco Adaptive Security Appliances (ASA) 5500 Series and PIX Security Appliances 7.2(4)9 and 7.2(4)10 allows remote attackers to cause a denial of service (device reload) via a crafted IPv6 packet." ;
+    ns1:hasReference <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3816> ;
+    ns1:hasTitle "Cisco PIX and ASA IPv6 Denial of Service Vulnerability" .
+
+<oval:org.mitre.oval:def:5597> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco ASA and PIX Crypto Accelerator Memory Leak Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#pixos> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_PIX> ;
+    ns1:hasCVE <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3817> ;
+    ns1:hasDescription "Memory leak in Cisco Adaptive Security Appliances (ASA) 5500 Series and PIX Security Appliances 8.0 before 8.0(4) and 8.1 before 8.1(2) allows remote attackers to cause a denial of service (memory consumption) via an unspecified sequence of packets, related to the \"initialization code for the hardware crypto accelerator.\"" ;
+    ns1:hasReference <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3817> ;
+    ns1:hasTitle "Cisco ASA and PIX Crypto Accelerator Memory Leak Vulnerability" .
+
+<oval:org.mitre.oval:def:5983> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "Cisco PIX and ASA Windows NT Domain Authentication Bypass Vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#pixos> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_PIX> ;
+    ns1:hasCVE <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3815> ;
+    ns1:hasDescription "Unspecified vulnerability in Cisco Adaptive Security Appliances (ASA) 5500 Series and PIX Security Appliances 7.0 before 7.0(8)3, 7.1 before 7.1(2)78, 7.2 before 7.2(4)16, 8.0 before 8.0(4)6, and 8.1 before 8.1(1)13, when configured as a VPN using Microsoft Windows NT Domain authentication, allows remote attackers to bypass VPN authentication via unknown vectors." ;
+    ns1:hasReference <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3815> ;
+    ns1:hasTitle "Cisco PIX and ASA Windows NT Domain Authentication Bypass Vulnerability" .
+
+<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3815> a ns1:Reference ;
+    ns1:hasRefID "CVE-2008-3815" ;
+    ns1:hasSource "CVE" .
+
+<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3816> a ns1:Reference ;
+    ns1:hasRefID "CVE-2008-3816" ;
+    ns1:hasSource "CVE" .
+
+<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3817> a ns1:Reference ;
+    ns1:hasRefID "CVE-2008-3817" ;
+    ns1:hasSource "CVE" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#pixos> a ns1:Family ;
+    rdfs:label "pixos" ;
+    ns1:hasPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_PIX> .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Cisco_PIX> a ns1:Platform ;
+    rdfs:label "Cisco PIX" .
+
+

@@ -1,0 +1,1534 @@
+@prefix cve: <https://cve.mitre.org/about/terminology.html#> .
+@prefix ns1: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<oval:org.cisecurity:def:127> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3251-1 -- dnsmasq -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_8>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#dnsmasq> ;
+    ns1:hasDescription "Nick Sampanis discovered that dnsmasq, a small caching DNS proxy and DHCP/TFTP server, did not properly check the return value of the setup_reply() function called during a TCP connection, which is used then as a size argument in a function which writes data on the client's connection. A remote attacker could exploit this issue via a specially crafted DNS request to cause dnsmasq to crash, or potentially to obtain sensitive information from process memory." ;
+    ns1:hasTitle "DSA-3251-1 -- dnsmasq -- security update" .
+
+<oval:org.cisecurity:def:1695> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3750-1 -- libphp-phpmailer -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_8> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libphp-phpmailer> ;
+    ns1:hasDescription "Dawid Golunski discovered that PHPMailer, a popular library to send email from PHP applications, allowed a remote attacker to execute code if they were able to provide a crafted Sender address." ;
+    ns1:hasTitle "DSA-3750-1 -- libphp-phpmailer -- security update" .
+
+<oval:org.cisecurity:def:249> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3140-1 -- xen -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xen> ;
+    ns1:hasDescription "Multiple security issues have been discovered in the Xen virtualisation solution which may result in denial of service, information disclosure or privilege escalation." ;
+    ns1:hasTitle "DSA-3140-1 -- xen -- security update" .
+
+<oval:org.cisecurity:def:272> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3372-1 -- linux -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_8>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#linux> ;
+    ns1:hasDescription "Several vulnerabilities have been discovered in the Linux kernel that may lead to a privilege escalation, denial of service, unauthorised information disclosure or unauthorised information modification." ;
+    ns1:hasTitle "DSA-3372-1 -- linux -- security update" .
+
+<oval:org.cisecurity:def:2992> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3943-1 -- gajim -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_8> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gajim> ;
+    ns1:hasDescription "Gajim, a GTK+-based XMPP/Jabber client, unconditionally implements the \"XEP-0146: Remote Controlling Clients\" extension, allowing a malicious XMPP server to trigger commands to leak private conversations from encrypted sessions. With this update XEP-0146 support has been disabled by default and made opt-in via the <q>remote_commands</q> option." ;
+    ns1:hasTitle "DSA-3943-1 -- gajim -- security update" .
+
+<oval:org.cisecurity:def:542> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3549-1 -- chromium-browser -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_8> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#chromium-browser> ;
+    ns1:hasDescription "Several vulnerabilities have been discovered in the chromium web browser." ;
+    ns1:hasTitle "DSA-3549-1 -- chromium-browser -- security update" .
+
+<oval:org.cisecurity:def:6033> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-4395-1 -- chromium -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_9> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#chromium> ;
+    ns1:hasDescription "Several vulnerabilities have been discovered in the chromium web browser." ;
+    ns1:hasTitle "DSA-4395-1 -- chromium -- security update" .
+
+<oval:org.cisecurity:def:6177> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-4488-1 -- exim4 -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_9> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#exim4> ;
+    ns1:hasDescription "Jeremy Harris discovered that Exim, a mail transport agent, does not properly handle the ${sort } expansion. This flaw can be exploited by a remote attacker to execute programs with root privileges in non-default (and unusual) configurations where ${sort } expansion is used for items that can be controlled by an attacker." ;
+    ns1:hasTitle "DSA-4488-1 -- exim4 -- security update" .
+
+<oval:org.cisecurity:def:6983> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "MGASA-2019-0312 -- обновление безопасности для libsoup" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Mageia_7> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libsoup> ;
+    ns1:hasDescription "Updated libsoup package fixes security vulnerability." ;
+    ns1:hasTitle "MGASA-2019-0312 -- обновление безопасности для libsoup" .
+
+<oval:org.cisecurity:def:7077> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "MGASA-2019-0358 -- security update for ansible" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Mageia_7> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ansible> ;
+    ns1:hasDescription "Updated ansible package fixes security vulnerability." ;
+    ns1:hasTitle "MGASA-2019-0358 -- security update for ansible" .
+
+<oval:org.cisecurity:def:7084> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "MGASA-2019-0330 -- обновление безопасности для systemd" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Mageia_7> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#systemd> ;
+    ns1:hasDescription "Updated systemd packages fix security vulnerability." ;
+    ns1:hasTitle "MGASA-2019-0330 -- обновление безопасности для systemd" .
+
+<oval:org.cisecurity:def:7284> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-4629-1 -- python-django -- security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_9> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#python-django> ;
+    ns1:hasDescription "Simon Charette discovered that Django, a high-level Python web development framework, did not properly handle input in its PostgreSQL module. A remote attacker could leverage this to perform SQL injection attacks." ;
+    ns1:hasTitle "DSA-4629-1 -- python-django -- security update" .
+
+<oval:org.mitre.oval:def:11783> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2054 bind9 -- DNS cache poisoning" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#bind9> ;
+    ns1:hasDescription "Several cache-poisoning vulnerabilities have been discovered in BIND. These vulnerabilities apply only if DNSSEC validation is enabled and trust anchors have been installed, which is not the default. The Common Vulnerabilities and Exposures project identifies the following problems: CVE-2010-0097 BIND does not properly validate DNSSEC NSEC records, which allows remote attackers to add the Authenticated Data flag to a forged NXDOMAIN response for an existing domain. When processing crafted responses containing CNAME or DNAME records, BIND is subject to a DNS cache poisoning vulnerability, provided that DNSSEC validation is enabled and trust anchors have been installed. When processing certain responses containing out-of-bailiwick data, BIND is subject to a DNS cache poisoning vulnerability, provided that DNSSEC validation is enabled and trust anchors have been installed. In addition, this update introduce a more conservative query behavior in the presence of repeated DNSSEC validation failures, addressing the \"roll over and die\" phenomenon. The new version also supports the cryptographic algorithm used by the upcoming signed ICANN DNS root , and the NSEC3 secure denial of existence algorithm used by some signed top-level domains. This update is based on a new upstream version of BIND 9, 9.6-ESV-R1. Because of the scope of changes, extra care is recommended when installing the update. Due to ABI changes, new Debian packages are included, and the update has to be installed using \"apt-get dist-upgrade\"." ;
+    ns1:hasTitle "DSA-2054 bind9 -- DNS cache poisoning" .
+
+<oval:org.mitre.oval:def:11794> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2071 libmikmod -- buffer overflows" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libmikmod> ;
+    ns1:hasDescription "Dyon Balding discovered buffer overflows in the MikMod sound library, which could lead to the execution of arbitrary code if a user is tricked into opening malformed Impulse Tracker or Ultratracker sound files." ;
+    ns1:hasTitle "DSA-2071 libmikmod -- buffer overflows" .
+
+<oval:org.mitre.oval:def:12471> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2197-1 quagga -- denial of service" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_6.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_6.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#quagga> ;
+    ns1:hasDescription "It has been discovered that the Quagga routing daemon contains two denial-of-service vulnerabilities in its BGP implementation: CVE-2010-1674 A crafted Extended Communities attribute triggers a null pointer dereference which causes the BGP daemon to crash. The crafted attributes are not propagated by the Internet core, so only explicitly configured direct peers are able to exploit this vulnerability in typical configurations. CVE-2010-1675 The BGP daemon resets BGP sessions when it encounters malformed AS_PATHLIMIT attributes, introducing a distributed BGP session reset vulnerability which disrupts packet forwarding. Such malformed attributes are propagated by the Internet core, and exploitation of this vulnerability is not restricted to directly configured BGP peers. This security update removes AS_PATHLIMIT processing from the BGP implementation, preserving the configuration statements for backwards compatibility" ;
+    ns1:hasTitle "DSA-2197-1 quagga -- denial of service" .
+
+<oval:org.mitre.oval:def:13022> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2280-1 libvirt -- several" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_6.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_6.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libvirt> ;
+    ns1:hasDescription "It was discovered that libvirt, a library for interfacing with different virtualization systems, is prone to an integer overflow. Additionally, the stable version is prone to a denial of service, because its error reporting is not thread-safe. For the stable distribution, these problems have been fixed in version 0.8.3-5+squeeze2." ;
+    ns1:hasTitle "DSA-2280-1 libvirt -- several" .
+
+<oval:org.mitre.oval:def:13214> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2039-1 cacti -- missing input sanitising" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cacti> ;
+    ns1:hasDescription "It was discovered that Cacti, a frontend to rrdtool for monitoring systems and services missed input sanitising, making an SQL injection attack possible. For the stable distribution, this problem has been fixed in version 0.8.7b-2.1+lenny2. For the unstable distribution, this problem will be fixed soon. We recommend that you upgrade your cacti package." ;
+    ns1:hasTitle "DSA-2039-1 cacti -- missing input sanitising" .
+
+<oval:org.mitre.oval:def:13327> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1123-1 -- xulrunner-1.9.1 vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_9.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xulrunner-1.9.1> ;
+    ns1:hasDescription "xulrunner-1.9.1: XUL + XPCOM application runner Multiple xulrunner-1.9.1 vulnerabilities" ;
+    ns1:hasTitle "USN-1123-1 -- xulrunner-1.9.1 vulnerabilities" .
+
+<oval:org.mitre.oval:def:13410> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1052-1 -- openjdk-6, openjdk-6b18 vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_9.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#openjdk-6>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#openjdk-6b18> ;
+    ns1:hasDescription "It was discovered that the JNLP SecurityManager in IcedTea for Java OpenJDK in some instances failed to properly apply the intended scurity policy in its checkPermission method. This could allow an attacker execute code with privileges that should have been prevented" ;
+    ns1:hasTitle "USN-1052-1 -- openjdk-6, openjdk-6b18 vulnerability" .
+
+<oval:org.mitre.oval:def:13498> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2038-2 pidgin -- several" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#pidgin> ;
+    ns1:hasDescription "The packages for Pidgin released as DSA 2038-1 had a regression, as they unintentionally disabled the Zephyr instant messaging protocol. This update restores Zephyr functionality. For reference the original advisory text below. Several remote vulnerabilities have been discovered in Pidgin, a multi protocol instant messaging client. The Common Vulnerabilities and Exposures project identifies the following problems: CVE-2010-0420 Crafted nicknames in the XMPP protocol can crash Pidgin remotely. CVE-2010-0423 Remote contacts may send too many custom smilies, crashing Pidgin. Since a few months, Microsoft’s servers for MSN have changed the protocol, making Pidgin non-functional for use with MSN. It is not feasible to port these changes to the version of Pidgin in Debian Lenny. This update formalises that situation by disabling the protocol in the client. Users of the MSN protocol are advised to use the version of Pidgin in the repositories of www.backports.org. For the stable distribution, these problems have been fixed in version 2.4.3-4lenny7. For the unstable distribution, these problems have been fixed in version 2.6.6-1. We recommend that you upgrade your pidgin package." ;
+    ns1:hasTitle "DSA-2038-2 pidgin -- several" .
+
+<oval:org.mitre.oval:def:13555> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-737-1 -- libsoup vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_6.06>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_7.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libsoup> ;
+    ns1:hasDescription "It was discovered that the Base64 encoding functions in libsoup did not properly handle large strings. If a user were tricked into connecting to a malicious server, an attacker could possibly execute arbitrary code with user privileges." ;
+    ns1:hasTitle "USN-737-1 -- libsoup vulnerability" .
+
+<oval:org.mitre.oval:def:13614> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1788-1 quagga -- improper assertion" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#quagga> ;
+    ns1:hasDescription "It was discovered that Quagga, an IP routing daemon, could no longer process the Internet routing table due to broken handling of multiple 4-byte AS numbers in an AS path. If such a prefix is received, the BGP daemon crashes with an assert failure, leading to a denial of service. The old stable distribution is not affected by this issue. For the stable distribution, this problem has been fixed in version 0.99.10-1lenny2. For the unstable distribution, this problem has been fixed in version 0.99.11-2. We recommend that you upgrade your quagga package." ;
+    ns1:hasTitle "DSA-1788-1 quagga -- improper assertion" .
+
+<oval:org.mitre.oval:def:13768> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-849-1 -- libsndfile vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_8.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_8.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_9.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libsndfile> ;
+    ns1:hasDescription "Tobias Klein discovered a heap-based buffer overflow in libsndfile. If a user or automated system processed a crafted VOC file, an attacker could cause a denial of service via application crash, or possibly execute arbitrary code with the privileges of the user invoking the program. Erik de Castro Lopo discovered a similar heap-based buffer overflow when processing AIFF files. If a user or automated system processed a crafted AIFF file, an attacker could cause a denial of service via application crash, or possibly execute arbitrary code with the privileges of the user invoking the program" ;
+    ns1:hasTitle "USN-849-1 -- libsndfile vulnerabilities" .
+
+<oval:org.mitre.oval:def:13786> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1099-1 -- gdm vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_9.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gdm> ;
+    ns1:hasDescription "Sebastian Krahmer discovered that GDM did not properly drop privileges when handling the cache directories used to store users\" dmrc and face icon files. This could allow a local attacker to change the ownership of arbitrary files, thereby gaining root privileges." ;
+    ns1:hasTitle "USN-1099-1 -- gdm vulnerability" .
+
+<oval:org.mitre.oval:def:14127> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1122-2 -- thunderbird vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_11.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#thunderbird> ;
+    ns1:hasDescription "thunderbird: mail/news client with RSS and integrated spam filter support Details: USN-1122-1 fixed vulnerabilities in Thunderbird for Lucid and Maverick. This update provides the corresponding fixes for Natty. Original advisory Thunderbird could be made to run programs as your login if it opened specially crafted mail." ;
+    ns1:hasTitle "USN-1122-2 -- thunderbird vulnerabilities" .
+
+<oval:org.mitre.oval:def:15065> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2395-1 wireshark -- buffer underflow" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_6.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_6.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#wireshark> ;
+    ns1:hasDescription "Laurent Butti discovered a buffer underflow in the LANalyzer dissector of the Wireshark network traffic analyzer, which could lead to the execution of arbitrary code. This update also addresses several bugs, which can lead to crashes of Wireshark. These are not treated as security issues, but are fixed nonetheless if security updates are scheduled: CVE-2011-3483, CVE-2012-0041, CVE-2012-0042, CVE-2012-0066 and CVE-2012-0067." ;
+    ns1:hasTitle "DSA-2395-1 wireshark -- buffer underflow" .
+
+<oval:org.mitre.oval:def:15153> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2314-1 puppet -- multiple" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_6.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_6.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#puppet> ;
+    ns1:hasDescription "Multiple security issues have been discovered in puppet, a centralized configuration management system. The Common Vulnerabilities and Exposures project identifies the following problems: CVE-2011-3848 Kristian Erik Hermansen reported that an unauthenticated directory traversal could drop any valid X.509 Certificate Signing Request at any location on disk, with the privileges of the Puppet Master application. CVE-2011-3870 Ricky Zhou discovered a potential local privilege escalation in the ssh_authorised_keys resource and theoretically in the Solaris and AIX providers, where file ownership was given away before it was written, leading to a possibility for a user to overwrite arbitrary files as root, if their authorised_keys file was managed. CVE-2011-3869 A predictable file name in the k5login type leads to the possibility of symlink attacks which would allow the owner of the home directory to symlink to anything on the system, and have it replaced with the &quot;correct&quot; content of the file, which can lead to a privilege escalation on puppet runs. CVE-2011-3871 A potential local privilege escalation was found in the --edit mode of \"puppet resource\" due to a persistant, predictable file name, which can result in editing an arbitrary target file, and thus be be tricked into running that arbitrary file as the invoking user. This command is most commonly run as root, this leads to a potential privilege escalation. Additionally, this update hardens the indirector file backed terminus base class against injection attacks based on trusted path names." ;
+    ns1:hasTitle "DSA-2314-1 puppet -- multiple" .
+
+<oval:org.mitre.oval:def:15199> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1388-1 -- Linux kernel (EC2) vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Linux> ;
+    ns1:hasDescription "linux-ec2: Linux kernel for EC2 Several security issues were fixed in the kernel." ;
+    ns1:hasTitle "USN-1388-1 -- Linux kernel (EC2) vulnerabilities" .
+
+<oval:org.mitre.oval:def:15518> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1407-1 -- Linux kernel vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Linux> ;
+    ns1:hasDescription "linux: Linux kernel Several security issues were fixed in the kernel." ;
+    ns1:hasTitle "USN-1407-1 -- Linux kernel vulnerabilities" .
+
+<oval:org.mitre.oval:def:17416> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1495-1 -- libreoffice, libreoffice-l10n vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_11.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_11.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libreoffice>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libreoffice-l10n> ;
+    ns1:hasDescription "LibreOffice could be made to crash or potentially run programs as your login if it opened a specially crafted file." ;
+    ns1:hasTitle "USN-1495-1 -- libreoffice, libreoffice-l10n vulnerabilities" .
+
+<oval:org.mitre.oval:def:17650> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-615-1 -- evolution vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_6.06>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_7.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_7.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_8.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#evolution> ;
+    ns1:hasDescription "Alin Rad Pop of Secunia Research discovered that Evolution did not properly validate timezone data when processing iCalendar attachments." ;
+    ns1:hasTitle "USN-615-1 -- evolution vulnerabilities" .
+
+<oval:org.mitre.oval:def:17718> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1808-1 -- linux-ec2 vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#linux-ec2> ;
+    ns1:hasDescription "Several security issues were fixed in the kernel." ;
+    ns1:hasTitle "USN-1808-1 -- linux-ec2 vulnerabilities" .
+
+<oval:org.mitre.oval:def:17947> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-684-1 -- clamav vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_8.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#clamav> ;
+    ns1:hasDescription "Ilja van Sprundel discovered that ClamAV did not handle recursive JPEG information." ;
+    ns1:hasTitle "USN-684-1 -- clamav vulnerability" .
+
+<oval:org.mitre.oval:def:17950> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1681-2 -- thunderbird vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_11.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#thunderbird> ;
+    ns1:hasDescription "Several security issues were fixed in Thunderbird." ;
+    ns1:hasTitle "USN-1681-2 -- thunderbird vulnerabilities" .
+
+<oval:org.mitre.oval:def:18407> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1688-1 courier-authlib - SQL injection" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#courier-authlib> ;
+    ns1:hasDescription "Two SQL injection vulnerabilities have been found in courier-authlib, the courier authentification library. The MySQL database interface used insufficient escaping mechanisms when constructing SQL statements, leading to SQL injection vulnerabilities if certain charsets are used (<a href=\"http://security-tracker.debian.org/tracker/CVE-2008-2380\">CVE-2008-2380</a>). A similar issue affects the PostgreSQL database interface (<a href=\"http://security-tracker.debian.org/tracker/CVE-2008-2667\">CVE-2008-2667</a>)." ;
+    ns1:hasTitle "DSA-1688-1 courier-authlib - SQL injection" .
+
+<oval:org.mitre.oval:def:18807> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-2000-1 -- nova vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#nova> ;
+    ns1:hasDescription "Nova could be made to crash if it received specially crafted network requests." ;
+    ns1:hasTitle "USN-2000-1 -- nova vulnerabilities" .
+
+<oval:org.mitre.oval:def:18882> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2730-1 gnupg - information leak" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_6.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_6.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gnupg> ;
+    ns1:hasDescription "Yarom and Falkner discovered that RSA secret keys could be leaked via a side channel attack, where a malicious local user could obtain private key information from another user on the system." ;
+    ns1:hasTitle "DSA-2730-1 gnupg - information leak" .
+
+<oval:org.mitre.oval:def:19204> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1965-1 -- pyopenssl vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#pyopenssl> ;
+    ns1:hasDescription "Fraudulent security certificates could allow sensitive information to be exposed when accessing the Internet." ;
+    ns1:hasTitle "USN-1965-1 -- pyopenssl vulnerability" .
+
+<oval:org.mitre.oval:def:19878> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2745-1 linux - several" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#linux> ;
+    ns1:hasDescription "Several vulnerabilities have been discovered in the Linux kernel that may lead to a denial of service, information leak or privilege escalation." ;
+    ns1:hasTitle "DSA-2745-1 linux - several" .
+
+<oval:org.mitre.oval:def:19948> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1663-1 net-snmp - several vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#net-snmp> ;
+    ns1:hasDescription "Several vulnerabilities have been discovered in NET SNMP, a suite of Simple Network Management Protocol applications." ;
+    ns1:hasTitle "DSA-1663-1 net-snmp - several vulnerabilities" .
+
+<oval:org.mitre.oval:def:20003> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-2027-1 -- spice vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#spice> ;
+    ns1:hasDescription "SPICE could be made to crash if it received specially crafted network traffic." ;
+    ns1:hasTitle "USN-2027-1 -- spice vulnerability" .
+
+<oval:org.mitre.oval:def:20052> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2576-1 trousers - denial of service" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_6.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_6.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#trousers> ;
+    ns1:hasDescription "Andy Lutomirski discovered that tcsd (the TPM userspace daemon) was missing input validation. Using carefully crafted input, it can lead to a denial of service by making the daemon crash with a segmentation fault." ;
+    ns1:hasTitle "DSA-2576-1 trousers - denial of service" .
+
+<oval:org.mitre.oval:def:20376> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1396-1 iceweasel" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#iceweasel> ;
+    ns1:hasDescription "Several remote vulnerabilities have been discovered in the Iceweasel web browser, an unbranded version of the Firefox browser." ;
+    ns1:hasTitle "DSA-1396-1 iceweasel" .
+
+<oval:org.mitre.oval:def:20407> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1386-1 wesnoth" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#wesnoth> ;
+    ns1:hasDescription "A problem has been discovered in the processing of chat messages. Overly long messages are truncated by the server to a fixed length, without paying attention to the multibyte characters. This leads to invalid UTF-8 on clients and causes an uncaught exception. Note that both wesnoth and the wesnoth server are affected." ;
+    ns1:hasTitle "DSA-1386-1 wesnoth" .
+
+<oval:org.mitre.oval:def:20473> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1341-2 bind9 - DNS cache poisoning vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#bind9> ;
+    ns1:hasDescription "This update provides fixed packages for the oldstable distribution (sarge). For reference the original advisory text." ;
+    ns1:hasTitle "DSA-1341-2 bind9 - DNS cache poisoning vulnerability" .
+
+<oval:org.mitre.oval:def:20719> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2012:0079: firefox security update (Critical)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_6>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#firefox>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xulrunner> ;
+    ns1:hasDescription "Mozilla Firefox before 3.6.26 and 4.x through 9.0, Thunderbird before 3.1.18 and 5.0 through 9.0, and SeaMonkey before 2.7 allow remote attackers to cause a denial of service (memory corruption and application crash) or possibly execute arbitrary code via a malformed XSLT stylesheet that is embedded in a document." ;
+    ns1:hasTitle "RHSA-2012:0079: firefox security update (Critical)" .
+
+<oval:org.mitre.oval:def:20763> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2013:0666: Oracle Java SE 6 - notification of end of public updates (Low)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.6.0-sun> ;
+    ns1:hasDescription """Oracle Java SE version 6 includes the Oracle Java Runtime Environment and
+		the Oracle Java Software Development Kit.
+		
+		Oracle Java SE 6 will not receive updates after February 28, 2013. The
+		Oracle Java SE 6 packages on the Red Hat Enterprise Linux 5 and 6
+		Supplementary media and in Red Hat Network (RHN) channels will continue to
+		be available.
+		
+		Red Hat will continue to provide these packages only as a courtesy to
+		customers. Red Hat will not provide updates to these packages after this
+		date.
+		
+		Once customers update their system by installing the packages associated
+		with this advisory, the Oracle Java Web Plug-in will be disabled. As a
+		result, customers who rely on Java-based browser applets may need to
+		re-configure their browser to use one of the Java implementations listed
+		in the Solution section below.
+		
+		All users of java-1.6.0-sun are advised to upgrade to these updated
+		packages.""" ;
+    ns1:hasTitle "RHSA-2013:0666: Oracle Java SE 6 - notification of end of public updates (Low)" .
+
+<oval:org.mitre.oval:def:20850> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2013:0223: kernel security and bug fix update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_6>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel> ;
+    ns1:hasDescription "The load_script function in fs/binfmt_script.c in the Linux kernel before 3.7.2 does not properly handle recursion, which allows local users to obtain sensitive information from kernel stack memory via a crafted application." ;
+    ns1:hasTitle "RHSA-2013:0223: kernel security and bug fix update (Moderate)" .
+
+<oval:org.mitre.oval:def:20910> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2013:0941: flash-plugin security update (Critical)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#flash-plugin> ;
+    ns1:hasDescription "Adobe Flash Player before 10.3.183.90 and 11.x before 11.7.700.224 on Windows, before 10.3.183.90 and 11.x before 11.7.700.225 on Mac OS X, before 10.3.183.90 and 11.x before 11.2.202.291 on Linux, before 11.1.111.59 on Android 2.x and 3.x, and before 11.1.115.63 on Android 4.x; Adobe AIR before 3.7.0.2090 on Windows and Android and before 3.7.0.2100 on Mac OS X; and Adobe AIR SDK & Compiler before 3.7.0.2090 on Windows and before 3.7.0.2100 on Mac OS X allow attackers to execute arbitrary code or cause a denial of service (memory corruption) via unspecified vectors." ;
+    ns1:hasTitle "RHSA-2013:0941: flash-plugin security update (Critical)" .
+
+<oval:org.mitre.oval:def:21230> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2012:0085: thunderbird security update (Critical)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#thunderbird> ;
+    ns1:hasDescription "Multiple unspecified vulnerabilities in the browser engine in Mozilla Firefox before 3.6.26 and 4.x through 9.0, Thunderbird before 3.1.18 and 5.0 through 9.0, and SeaMonkey before 2.7 allow remote attackers to cause a denial of service (memory corruption and application crash) or possibly execute arbitrary code via unknown vectors." ;
+    ns1:hasTitle "RHSA-2012:0085: thunderbird security update (Critical)" .
+
+<oval:org.mitre.oval:def:21254> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-1899-1 -- linux vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#linux> ;
+    ns1:hasDescription "Several security issues were fixed in the kernel." ;
+    ns1:hasTitle "USN-1899-1 -- linux vulnerabilities" .
+
+<oval:org.mitre.oval:def:21325> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2012:1201: tetex security update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#tetex> ;
+    ns1:hasDescription "Off-by-one error in t1lib 5.1.2 and earlier, as used in Xpdf before 3.02pl6, teTeX, and other products, allows remote attackers to cause a denial of service (application crash) via a PDF document containing a crafted Type 1 font that triggers an invalid memory read, integer overflow, and invalid pointer dereference, a different vulnerability than CVE-2011-0764." ;
+    ns1:hasTitle "RHSA-2012:1201: tetex security update (Moderate)" .
+
+<oval:org.mitre.oval:def:21459> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2012:0393: glibc security and bug fix update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_6>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#glibc> ;
+    ns1:hasDescription "Integer overflow in the vfprintf function in stdio-common/vfprintf.c in glibc 2.14 and other versions allows context-dependent attackers to bypass the FORTIFY_SOURCE protection mechanism, conduct format string attacks, and write to arbitrary memory via a large number of arguments." ;
+    ns1:hasTitle "RHSA-2012:0393: glibc security and bug fix update (Moderate)" .
+
+<oval:org.mitre.oval:def:21778> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2007:0501: libexif integer overflow (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libexif> ;
+    ns1:hasDescription "Integer overflow in the exif_data_load_data_entry function in libexif/exif-data.c in Libexif before 0.6.16 allows remote attackers to cause a denial of service (application crash) or execute arbitrary code via an image with many EXIF components, which triggers a heap-based buffer overflow." ;
+    ns1:hasTitle "ELSA-2007:0501: libexif integer overflow (Moderate)" .
+
+<oval:org.mitre.oval:def:22057> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2009:1127: kdelibs security update (Critical)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kdelibs> ;
+    ns1:hasDescription "WebKit in Apple Safari before 4.0, iPhone OS 1.0 through 2.2.1, and iPhone OS for iPod touch 1.1 through 2.2.1 does not initialize a pointer during handling of a Cascading Style Sheets (CSS) attr function call with a large numerical argument, which allows remote attackers to execute arbitrary code or cause a denial of service (memory corruption and application crash) via a crafted HTML document." ;
+    ns1:hasTitle "ELSA-2009:1127: kdelibs security update (Critical)" .
+
+<oval:org.mitre.oval:def:22120> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2010:0615: libvirt security and bug fix update (Low)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libvirt> ;
+    ns1:hasDescription "Red Hat libvirt 0.2.0 through 0.8.2 creates iptables rules with improper mappings of privileged source ports, which allows guest OS users to bypass intended access restrictions by leveraging IP address and source-port values, as demonstrated by copying and deleting an NFS directory tree." ;
+    ns1:hasTitle "RHSA-2010:0615: libvirt security and bug fix update (Low)" .
+
+<oval:org.mitre.oval:def:22352> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2011:0833: kernel security and bug fix update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel> ;
+    ns1:hasDescription "The get_free_port function in Xen allows local authenticated DomU users to cause a denial of service or possibly gain privileges via unspecified vectors involving a new event channel port." ;
+    ns1:hasTitle "ELSA-2011:0833: kernel security and bug fix update (Important)" .
+
+<oval:org.mitre.oval:def:22384> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "USN-2082-1 -- cups vulnerability" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.04>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cups> ;
+    ns1:hasDescription "CUPS could be made to expose sensitive information." ;
+    ns1:hasTitle "USN-2082-1 -- cups vulnerability" .
+
+<oval:org.mitre.oval:def:22418> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2007:0720: cups security update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cups> ;
+    ns1:hasDescription "Integer overflow in the StreamPredictor::StreamPredictor function in xpdf 3.02, as used in (1) poppler before 0.5.91, (2) gpdf before 2.8.2, (3) kpdf, (4) kdegraphics, (5) CUPS, (6) PDFedit, and other products, might allow remote attackers to execute arbitrary code via a crafted PDF file that triggers a stack-based buffer overflow in the StreamPredictor::getNextLine function." ;
+    ns1:hasTitle "ELSA-2007:0720: cups security update (Important)" .
+
+<oval:org.mitre.oval:def:22796> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2009:1116: cyrus-imapd security update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cyrus-imapd> ;
+    ns1:hasDescription "Multiple buffer overflows in the CMU Cyrus SASL library before 2.1.23 might allow remote attackers to execute arbitrary code or cause a denial of service (application crash) via strings that are used as input to the sasl_encode64 function in lib/saslutil.c." ;
+    ns1:hasTitle "ELSA-2009:1116: cyrus-imapd security update (Important)" .
+
+<oval:org.mitre.oval:def:22813> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2010:0679: rpm security and bug fix update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#rpm> ;
+    ns1:hasDescription "lib/fsm.c in RPM 4.8.0 and unspecified 4.7.x and 4.6.x versions, and RPM before 4.4.3, does not properly reset the metadata of an executable file during replacement of the file in an RPM package upgrade, which might allow local users to gain privileges by creating a hard link to a vulnerable (1) setuid or (2) setgid file." ;
+    ns1:hasTitle "ELSA-2010:0679: rpm security and bug fix update (Moderate)" .
+
+<oval:org.mitre.oval:def:22960> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2010:0632: qspice-client security update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#qspice-client> ;
+    ns1:hasDescription "Race condition in the SPICE (aka spice-xpi) plug-in 2.2 for Firefox allows local users to obtain sensitive information, and conduct man-in-the-middle attacks, by providing a UNIX socket for communication between this plug-in and the client (aka qspice-client) in qspice 0.3.0, and then accessing this socket." ;
+    ns1:hasTitle "ELSA-2010:0632: qspice-client security update (Moderate)" .
+
+<oval:org.mitre.oval:def:22996> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2012:1236: xen security update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xen> ;
+    ns1:hasDescription "Qemu, as used in Xen 4.0, 4.1 and possibly other products, when emulating certain devices with a virtual console backend, allows local OS guest users to gain privileges via a crafted escape VT100 sequence that triggers the overwrite of a \"device model's address space.\"" ;
+    ns1:hasTitle "ELSA-2012:1236: xen security update (Important)" .
+
+<oval:org.mitre.oval:def:23041> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2010:0545: thunderbird security update (Critical)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#thunderbird> ;
+    ns1:hasDescription "dom/base/nsJSEnvironment.cpp in Mozilla Firefox 3.5.x before 3.5.11 and 3.6.x before 3.6.7, Thunderbird 3.0.x before 3.0.6 and 3.1.x before 3.1.1, and SeaMonkey before 2.0.6 does not properly suppress a script's URL in certain circumstances involving a redirect and an error message, which allows remote attackers to obtain sensitive information about script parameters via a crafted HTML document, related to the window.onerror handler." ;
+    ns1:hasTitle "ELSA-2010:0545: thunderbird security update (Critical)" .
+
+<oval:org.mitre.oval:def:23208> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DEPRECATED: ELSA-2011:1317: cyrus-imapd security update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cyrus-imapd> ;
+    ns1:hasDescription "Stack-based buffer overflow in the split_wildmats function in nntpd.c in nntpd in Cyrus IMAP Server before 2.3.17 and 2.4.x before 2.4.11 allows remote attackers to execute arbitrary code via a crafted NNTP command." ;
+    ns1:hasTitle "DEPRECATED: ELSA-2011:1317: cyrus-imapd security update (Important)" .
+
+<oval:org.mitre.oval:def:23245> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2010:0935: java-1.4.2-ibm security update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.4.2-ibm> ;
+    ns1:hasDescription "Unspecified vulnerability in the Networking component in Oracle Java SE and Java for Business 6 Update 21, 5.0 Update 25, 1.4.2_27, and 1.3.1_28 allows remote attackers to affect confidentiality, integrity, and availability via unknown vectors.  NOTE: the previous information was obtained from the October 2010 CPU.  Oracle has not commented on claims from a reliable downstream vendor that HttpURLConnection does not properly check for the allowHttpTrace permission, which allows untrusted code to perform HTTP TRACE requests." ;
+    ns1:hasTitle "ELSA-2010:0935: java-1.4.2-ibm security update (Moderate)" .
+
+<oval:org.mitre.oval:def:23378> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DEPRECATED: ELSA-2011:1241: ecryptfs-utils security update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ecryptfs-utils> ;
+    ns1:hasDescription "** RESERVED ** This candidate has been reserved by an organization or individual that will use it when announcing a new security problem.	When the candidate has been publicized, the details for this candidate will be provided." ;
+    ns1:hasTitle "DEPRECATED: ELSA-2011:1241: ecryptfs-utils security update (Moderate)" .
+
+<oval:org.mitre.oval:def:23398> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DEPRECATED: ELSA-2013:1778: gimp security update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gimp> ;
+    ns1:hasDescription "Heap-based buffer overflow in the read_xwd_cols function in file-xwd.c in the X Window Dump (XWD) plug-in in GIMP 2.6.9 and earlier allows remote attackers to cause a denial of service (crash) and possibly execute arbitrary code via an X Window System (XWD) image dump with more colors than color map entries." ;
+    ns1:hasTitle "DEPRECATED: ELSA-2013:1778: gimp security update (Moderate)" .
+
+<oval:org.mitre.oval:def:23516> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DEPRECATED: ELSA-2014:0310: firefox security update (Critical)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#firefox> ;
+    ns1:hasDescription "vmtypedarrayobject.cpp in Mozilla Firefox before 28.0, Firefox ESR 24.x before 24.4, Thunderbird before 24.4, and SeaMonkey before 2.25 does not validate the length of the destination array before a copy operation, which allows remote attackers to execute arbitrary code or cause a denial of service (out-of-bounds write and application crash) by triggering incorrect use of the TypedArrayObject class." ;
+    ns1:hasTitle "DEPRECATED: ELSA-2014:0310: firefox security update (Critical)" .
+
+<oval:org.mitre.oval:def:23661> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2011:0586: libguestfs security, bug fix, and enhancement update (Low)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libguestfs> ;
+    ns1:hasDescription "libguestfs before 1.5.23, as used in virt-v2v, virt-inspector 1.5.3 and earlier, and possibly other products, when a raw-format disk image is used, allows local guest OS administrators to read files from the host via a crafted (1) qcow2, (2) VMDK, or (3) VDI header, related to lack of support for a disk format specifier." ;
+    ns1:hasTitle "ELSA-2011:0586: libguestfs security, bug fix, and enhancement update (Low)" .
+
+<oval:org.mitre.oval:def:23728> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2012:0468: libtiff security update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libtiff> ;
+    ns1:hasDescription "Multiple integer overflows in tiff_getimage.c in LibTIFF 3.9.4 allow remote attackers to execute arbitrary code via a crafted tile size in a TIFF file, which is not properly handled by the (1) gtTileSeparate or (2) gtStripSeparate function, leading to a heap-based buffer overflow." ;
+    ns1:hasTitle "ELSA-2012:0468: libtiff security update (Important)" .
+
+<oval:org.mitre.oval:def:24021> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2013:0884: libtirpc security update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libtirpc> ;
+    ns1:hasDescription "The svc_dg_getargs function in libtirpc 0.2.3 and earlier allows remote attackers to cause a denial of service (rpcbind crash) via a Sun RPC request with crafted arguments that trigger a free of an invalid pointer." ;
+    ns1:hasTitle "ELSA-2013:0884: libtirpc security update (Moderate)" .
+
+<oval:org.mitre.oval:def:24739> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2014:0414: java-1.6.0-sun security update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.6.0-sun> ;
+    ns1:hasDescription """Oracle Java SE version 6 includes the Oracle Java Runtime Environment and
+		the Oracle Java Software Development Kit.
+		This update fixes several vulnerabilities in the Oracle Java Runtime
+		Environment and the Oracle Java Software Development Kit. Further
+		information about these flaws can be found on the Oracle Java SE Critical
+		Patch Update Advisory pages, listed in the References section.
+		(CVE-2013-1500, CVE-2013-1571, CVE-2013-2407, CVE-2013-2412, CVE-2013-2437,
+		CVE-2013-2442, CVE-2013-2443, CVE-2013-2444, CVE-2013-2445, CVE-2013-2446,
+		CVE-2013-2447, CVE-2013-2448, CVE-2013-2450, CVE-2013-2451, CVE-2013-2452,
+		CVE-2013-2453, CVE-2013-2454, CVE-2013-2455, CVE-2013-2456, CVE-2013-2457,
+		CVE-2013-2459, CVE-2013-2461, CVE-2013-2463, CVE-2013-2464, CVE-2013-2465,
+		CVE-2013-2466, CVE-2013-2468, CVE-2013-2469, CVE-2013-2470, CVE-2013-2471,
+		CVE-2013-2472, CVE-2013-2473, CVE-2013-3743, CVE-2013-3829, CVE-2013-4002,
+		CVE-2013-5772, CVE-2013-5774, CVE-2013-5776, CVE-2013-5778, CVE-2013-5780,
+		CVE-2013-5782, CVE-2013-5783, CVE-2013-5784, CVE-2013-5787, CVE-2013-5789,
+		CVE-2013-5790, CVE-2013-5797, CVE-2013-5801, CVE-2013-5802, CVE-2013-5803,
+		CVE-2013-5804, CVE-2013-5809, CVE-2013-5812, CVE-2013-5814, CVE-2013-5817,
+		CVE-2013-5818, CVE-2013-5819, CVE-2013-5820, CVE-2013-5823, CVE-2013-5824,
+		CVE-2013-5825, CVE-2013-5829, CVE-2013-5830, CVE-2013-5831, CVE-2013-5832,
+		CVE-2013-5840, CVE-2013-5842, CVE-2013-5843, CVE-2013-5848, CVE-2013-5849,
+		CVE-2013-5850, CVE-2013-5852, CVE-2013-5878, CVE-2013-5884, CVE-2013-5887,
+		CVE-2013-5888, CVE-2013-5889, CVE-2013-5896, CVE-2013-5898, CVE-2013-5899,
+		CVE-2013-5902, CVE-2013-5905, CVE-2013-5906, CVE-2013-5907, CVE-2013-5910,
+		CVE-2013-6629, CVE-2013-6954, CVE-2014-0368, CVE-2014-0373, CVE-2014-0375,
+		CVE-2014-0376, CVE-2014-0387, CVE-2014-0403, CVE-2014-0410, CVE-2014-0411,
+		CVE-2014-0415, CVE-2014-0416, CVE-2014-0417, CVE-2014-0418, CVE-2014-0422,
+		CVE-2014-0423, CVE-2014-0424, CVE-2014-0428, CVE-2014-0429, CVE-2014-0446,
+		CVE-2014-0449, CVE-2014-0451, CVE-2014-0452, CVE-2014-0453, CVE-2014-0456,
+		CVE-2014-0457, CVE-2014-0458, CVE-2014-0460, CVE-2014-0461, CVE-2014-1876,
+		CVE-2014-2398, CVE-2014-2401, CVE-2014-2403, CVE-2014-2409, CVE-2014-2412,
+		CVE-2014-2414, CVE-2014-2420, CVE-2014-2421, CVE-2014-2423, CVE-2014-2427,
+		CVE-2014-2428)
+		All users of java-1.6.0-sun are advised to upgrade to these updated
+		packages, which provide Oracle Java 6 Update 75 and resolve these issues.
+		All running instances of Oracle Java must be restarted for the update to
+		take effect.""" ;
+    ns1:hasTitle "ELSA-2014:0414: java-1.6.0-sun security update (Important)" .
+
+<oval:org.mitre.oval:def:24759> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2014:0413: java-1.7.0-oracle security update (Critical)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.7.0-oracle> ;
+    ns1:hasDescription """Oracle Java SE version 7 includes the Oracle Java Runtime Environment and
+		the Oracle Java Software Development Kit.
+		This update fixes several vulnerabilities in the Oracle Java Runtime
+		Environment and the Oracle Java Software Development Kit. Further
+		information about these flaws can be found on the Oracle Java SE Critical
+		Patch Update Advisory page, listed in the References section.
+		(CVE-2013-6629, CVE-2013-6954, CVE-2014-0429, CVE-2014-0432, CVE-2014-0446,
+		CVE-2014-0448, CVE-2014-0449, CVE-2014-0451, CVE-2014-0452, CVE-2014-0453,
+		CVE-2014-0454, CVE-2014-0455, CVE-2014-0456, CVE-2014-0457, CVE-2014-0458,
+		CVE-2014-0459, CVE-2014-0460, CVE-2014-0461, CVE-2014-1876, CVE-2014-2397,
+		CVE-2014-2398, CVE-2014-2401, CVE-2014-2402, CVE-2014-2403, CVE-2014-2409,
+		CVE-2014-2412, CVE-2014-2413, CVE-2014-2414, CVE-2014-2420, CVE-2014-2421,
+		CVE-2014-2422, CVE-2014-2423, CVE-2014-2427, CVE-2014-2428)
+		All users of java-1.7.0-oracle are advised to upgrade to these updated
+		packages, which provide Oracle Java 7 Update 55 and resolve these issues.
+		All running instances of Oracle Java must be restarted for the update to
+		take effect.""" ;
+    ns1:hasTitle "ELSA-2014:0413: java-1.7.0-oracle security update (Critical)" .
+
+<oval:org.mitre.oval:def:24764> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-2947-1 libav - security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libav> ;
+    ns1:hasDescription "Several security issues have been corrected in multiple demuxers and decoders of the libav multimedia library." ;
+    ns1:hasTitle "DSA-2947-1 libav - security update" .
+
+<oval:org.mitre.oval:def:25205> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-SU-2013:1276-1 -- Security update for wireshark" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_10>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#wireshark> ;
+    ns1:hasDescription """This wireshark version update to 1.6.16 includes several
+		security and  general bug fixes.
+		
+		http://www.wireshark.org/docs/relnotes/wireshark-1.6.16.html
+		<http://www.wireshark.org/docs/relnotes/wireshark-1.6.16.htm
+		l>
+		
+		    * The CAPWAP dissector could crash. Discovered by
+		Laurent Butti. (CVE-2013-4074)
+		    * The HTTP dissector could overrun the stack.
+		Discovered by David Keeler. (CVE-2013-4081)
+		    * The DCP ETSI dissector could crash. (CVE-2013-4083)
+		
+		http://www.wireshark.org/docs/relnotes/wireshark-1.6.15.html
+		<http://www.wireshark.org/docs/relnotes/wireshark-1.6.15.htm
+		l>
+		
+		    * The ASN.1 BER dissector could crash. ( CVE-2013-3556
+		CVE-2013-3557 )
+		
+		The releases also fix various non-security issues.
+		
+		Additionally, a crash in processing SCTP filters has been
+		fixed.  (bug#816887)""" ;
+    ns1:hasTitle "SUSE-SU-2013:1276-1 -- Security update for wireshark" .
+
+<oval:org.mitre.oval:def:25417> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-SU-2014:0331-1 -- Security update for openssl-certs" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_11>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#openssl-certs> ;
+    ns1:hasDescription """The openssl-certs package was updated to match the
+		certificates contained  in the Mozilla NSS 3.15.4 release.""" ;
+    ns1:hasTitle "SUSE-SU-2014:0331-1 -- Security update for openssl-certs" .
+
+<oval:org.mitre.oval:def:25777> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "End of life cycle for Adobe Reader 7" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#windows> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_2000>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_7>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2003>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2008>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Vista>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_XP> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Adobe_Reader_7> ;
+    ns1:hasDescription "Product Adobe Reader 7 not longer supported" ;
+    ns1:hasTitle "End of life cycle for Adobe Reader 7" .
+
+<oval:org.mitre.oval:def:25815> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-SU-2013:0306-1 -- Security update for Mozilla Firefox" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_10> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Mozilla_Firefox> ;
+    ns1:hasDescription """Mozilla Firefox is updated to the 10.0.12ESR version.
+		
+		This is a roll-up update for LTSS.
+		
+		It fixes a lot of security issues and bugs.""" ;
+    ns1:hasTitle "SUSE-SU-2013:0306-1 -- Security update for Mozilla Firefox" .
+
+<oval:org.mitre.oval:def:25820> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "End of life cycle for Microsoft IIS 4.0" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#windows> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_NT> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Microsoft_IIS_4.0> ;
+    ns1:hasDescription "Product Microsoft IIS 4.0 not longer supported" ;
+    ns1:hasTitle "End of life cycle for Microsoft IIS 4.0" .
+
+<oval:org.mitre.oval:def:25886> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-SU-2013:0859-1 -- Security update for Xorg" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_11>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Xorg> ;
+    ns1:hasDescription """This update of xorg-x11-server fixes one security issue and
+		two bugs.""" ;
+    ns1:hasTitle "SUSE-SU-2013:0859-1 -- Security update for Xorg" .
+
+<oval:org.mitre.oval:def:25943> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-RU-2014:0834-1 -- Recommended update for yast2-network" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_11>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#yast2-network> ;
+    ns1:hasDescription "This collective update for yast2-network fixes the several issues." ;
+    ns1:hasTitle "SUSE-RU-2014:0834-1 -- Recommended update for yast2-network" .
+
+<oval:org.mitre.oval:def:26074> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-RU-2013:0749-1 -- Recommended update for python-ethtool" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_11>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#python-ethtool> ;
+    ns1:hasDescription """This update for python-ethtool allows pifconfig to display
+		information  about single network interfaces.""" ;
+    ns1:hasTitle "SUSE-RU-2013:0749-1 -- Recommended update for python-ethtool" .
+
+<oval:org.mitre.oval:def:26098> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-SU-2013:0759-2 -- Security update for Linux kernel" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_11>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Linux_kernel> ;
+    ns1:hasDescription """The SUSE Linux Enterprise 11 SP2 kernel has been updated to
+		3.0.74 fix  various security issues and bugs.""" ;
+    ns1:hasTitle "SUSE-SU-2013:0759-2 -- Security update for Linux kernel" .
+
+<oval:org.mitre.oval:def:26179> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "ELSA-2014-1634 -- java-1.6.0-openjdk security and bug fix update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_7> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.6.0-openjdk> ;
+    ns1:hasDescription """[1:1.6.0.33-1.13.5.0]
+		
+		- Update to IcedTea 1.13.5
+		
+		- Remove upstreamed patches.
+		
+		- Regenerate add-final-location-rpaths patch against new release.
+		
+		- Change versioning to match java-1.7.0-openjdk so revisions work.
+		
+		- Use xz for tarballs to reduce file size.
+		
+		- No need to explicitly disable system LCMS any more (bug fixed upstream).
+		
+		- Add icedteasnapshot to setup lines so they work with pre-release tarballs.
+		
+		- Resolves: rhbz#1148901""" ;
+    ns1:hasTitle "ELSA-2014-1634 -- java-1.6.0-openjdk security and bug fix update" .
+
+<oval:org.mitre.oval:def:26240> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-SU-2014:0880-1 -- Security update for puppet" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_11>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#puppet> ;
+    ns1:hasDescription "Puppet was updated to fix the several security issues." ;
+    ns1:hasTitle "SUSE-SU-2014:0880-1 -- Security update for puppet" .
+
+<oval:org.mitre.oval:def:26397> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "End of life cycle for Microsoft Visio Viewer 2002" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#windows> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_2000>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_7>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2003>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2008>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2008_R2>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Vista>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_XP> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Microsoft_Visio_Viewer_2002> ;
+    ns1:hasDescription "Product Microsoft Visio Viewer 2002 not longer supported" ;
+    ns1:hasTitle "End of life cycle for Microsoft Visio Viewer 2002" .
+
+<oval:org.mitre.oval:def:26627> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "SUSE-SU-2014:1122-1 -- Security update for glibc" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#glibc> ;
+    ns1:hasDescription """This glibc update fixes a critical privilege escalation vulnerability and
+		the following security and non-security issues:
+		
+		    * bnc#892073: An off-by-one error leading to a heap-based buffer
+		      overflow was found in __gconv_translit_find(). An exploit that
+		targets the problem is publicly available. (CVE-2014-5119)
+		    * bnc#886416: Avoid redundant shift character in iconv output at block
+		      boundary.
+		    * bnc#883022: Initialize errcode in sysdeps/unix/opendir.c.
+		    * bnc#882600: Copy filename argument in
+		      posix_spawn_file_actions_addopen. (CVE-2014-4043)
+		    * bnc#864081: Take lock in pthread_cond_wait cleanup handler only when
+		      needed.
+		    * bnc#843735: Don't crash on unresolved weak symbol reference.
+		    * bnc#839870: Fix integer overflows in malloc. (CVE-2013-4332)
+		    * bnc#836746: Avoid race between {,__de}allocate_stack and
+		      __reclaim_stacks during fork.
+		    * bnc#834594: Fix readdir_r with long file names. (CVE-2013-4237)
+		    * bnc#830268: Initialize pointer guard also in static executables.
+		      (CVE-2013-4788)
+		    * bnc#801246: Fix buffer overrun in regexp matcher. (CVE-2013-0242)
+		    * bnc#779320: Fix buffer overflow in strcoll. (CVE-2012-4412)
+		    * bnc#750741: Use absolute timeout in x86 pthread_cond_timedwait.
+		
+		Security Issues:
+		
+		    * CVE-2014-5119
+		      <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-5119>
+		    * CVE-2014-4043
+		      <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-4043>
+		    * CVE-2012-4412
+		      <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-4412>
+		    * CVE-2013-0242
+		      <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-0242>
+		    * CVE-2013-4788
+		      <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4788>
+		    * CVE-2013-4237
+		      <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4237>
+		    * CVE-2013-4332
+		      <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-4332>""" ;
+    ns1:hasTitle "SUSE-SU-2014:1122-1 -- Security update for glibc" .
+
+<oval:org.mitre.oval:def:26900> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3055-1 pidgin - security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#pidgin> ;
+    ns1:hasDescription "Multiple vulnerabilities have been discovered in Pidgin, a multi-protocol instant messaging client." ;
+    ns1:hasTitle "DSA-3055-1 pidgin - security update" .
+
+<oval:org.mitre.oval:def:27511> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-3062-1 -- wget security update" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#wget> ;
+    ns1:hasDescription "HD Moore of Rapid7 discovered a symlink attack in Wget, a command-line utility to retrieve files via HTTP, HTTPS, and FTP. The vulnerability allows to create arbitrary files on the user's system when Wget runs in recursive mode against a malicious FTP server. Arbitrary file creation may override content of user's files or permit remote code execution with the user privilege." ;
+    ns1:hasTitle "DSA-3062-1 -- wget security update" .
+
+<oval:org.mitre.oval:def:27550> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label """ELSA-2012-2020 -- Unbreakable Enterprise kernel security and bugfix update
+		          (important)""" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-debug>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-debug-devel>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-devel>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-doc>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-firmware>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-headers>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#mlnx_en>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ofa> ;
+    ns1:hasDescription """kernel-uek: [2.6.32-300.27.1.el6uek] - net: sock: validate data_len before
+		          allocating skb (Jason Wang) [Bugdb: 13966]{CVE-2012-2136} - fcaps: clear the same
+		          personality flags as suid when fcaps are used (Eric Paris) [Bugdb: 13966] {CVE-2012-2123}
+		          - Revert 'nfs: when attempting to open a directory, fall back on normal lookup (Todd
+		          Vierling) [Orabug 14141154] [2.6.32-300.26.1.el6uek] - mptsas: do not call __mptsas_probe
+		          in kthread (Maxim Uvarov) [Orabug: 14175509] - mm: check if any page in a pageblock is
+		          reserved before marking it MIGRATE_RESERVE (Maxim Uvarov) [Orabug: 14073214] - mm: reduce
+		          the amount of work done when updating min_free_kbytes (Mel Gorman) [Orabug: 14073214] -
+		          vmxnet3: Updated to el6-u2 (Guangyu Sun) [Orabug: 14027961] - xen: expose host uuid via
+		          sysfs. (Zhigang Wang) - sched: Fix cgroup movement of waking process (Daisuke Nishimura)
+		          [Orabug: 13946210] - sched: Fix cgroup movement of newly created process (Daisuke
+		          Nishimura) [Orabug: 13946210] - sched: Fix cgroup movement of forking process (Daisuke
+		          Nishimura) [Orabug: 13946210] - x86, boot: Wait for boot cpu to show up if nr_cpus limit
+		          is about to hit (Zhenzhong Duan) [Orabug: 13629087] - smp: Use nr_cpus= to set nr_cpu_ids
+		          early (Zhenzhong Duan) [Orabug: 13629087] - net: ipv4: relax AF_INET check in bind()
+		          (Maxim Uvarov) [Orabug: 14054411] ofa-2.6.32-300.27.1.el6uek: [1.5.1-4.0.58] - Add Patch
+		          158-169""" ;
+    ns1:hasTitle """ELSA-2012-2020 -- Unbreakable Enterprise kernel security and bugfix update
+		          (important)""" .
+
+<oval:org.mitre.oval:def:28125> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DEPRECATED: ELSA-2011-1423 -- php53 and php security update (moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#php>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#php53> ;
+    ns1:hasDescription """[5.3.3-3.3]
+		- improve CVE-2011-1466 fix to cover CAL_GREGORIAN, CAL_JEWISH
+		
+		[5.3.3-3.1]
+		- add security fixes for CVE-2011-2483, CVE-2011-0708, CVE-2011-1148,
+		  CVE-2011-1466, CVE-2011-1468, CVE-2011-1469, CVE-2011-1470,
+		  CVE-2011-1471, CVE-2011-1938, and CVE-2011-2202 (#740731)""" ;
+    ns1:hasTitle "DEPRECATED: ELSA-2011-1423 -- php53 and php security update (moderate)" .
+
+<oval:org.mitre.oval:def:28135> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DEPRECATED: ELSA-2011-0930 -- NetworkManager security update (moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#NetworkManager> ;
+    ns1:hasDescription """[0.8.1-9_el6_1.1]
+		- core: CVE-2011-2176: check for authorization when activating shared wifi connections (rh #705806)""" ;
+    ns1:hasTitle "DEPRECATED: ELSA-2011-0930 -- NetworkManager security update (moderate)" .
+
+<oval:org.mitre.oval:def:29154> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2009:1193 -- kernel security and bug fix update (Important)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_5>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel> ;
+    ns1:hasDescription """Updated kernel packages that fix several security issues and several bugs
+		are now available for Red Hat Enterprise Linux 5.
+		This update has been rated as having important security impact by the Red
+		Hat Security Response Team.
+		The kernel packages contain the Linux kernel, the core of any Linux
+		operating system.""" ;
+    ns1:hasTitle "RHSA-2009:1193 -- kernel security and bug fix update (Important)" .
+
+<oval:org.mitre.oval:def:29236> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "RHSA-2009:0339 -- lcms security update (Moderate)" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#lcms> ;
+    ns1:hasDescription """Updated lcms packages that resolve several security issues are now
+		available for Red Hat Enterprise Linux 5.
+		This update has been rated as having moderate security impact by the Red
+		Hat Security Response Team.
+		Little Color Management System (LittleCMS) is a
+		small-footprint, speed-optimized open source color management engine.
+		Multiple integer overflow flaws which could lead to heap-based buffer
+		overflows, as well as multiple insufficient input validation flaws, were
+		found in LittleCMS. An attacker could use these flaws to create a
+		specially-crafted image file which could cause an application using
+		LittleCMS to crash, or, possibly, execute arbitrary code when opened by a
+		victim. (CVE-2009-0723, CVE-2009-0733)""" ;
+    ns1:hasTitle "RHSA-2009:0339 -- lcms security update (Moderate)" .
+
+<oval:org.mitre.oval:def:7105> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1980 ircd-hybrid/ircd-ratbox -- integer underflow/denial of service" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ircd-hybrid/ircd-ratbox> ;
+    ns1:hasDescription "David Leadbeater discovered an integer underflow that could be triggered via the LINKS command and can lead to a denial of service or the execution of arbitrary code. This issue affects both, ircd-hybrid and ircd-ratbox. It was discovered that the ratbox IRC server is prone to a denial of service attack via the HELP command. The ircd-hybrid package is not vulnerable to this issue." ;
+    ns1:hasTitle "DSA-1980 ircd-hybrid/ircd-ratbox -- integer underflow/denial of service" .
+
+<oval:org.mitre.oval:def:7752> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1882 xapian-omega -- missing input sanitisation" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xapian-omega> ;
+    ns1:hasDescription "It was discovered that xapian-omega, a CGI interface for searching xapian databases, is not properly escaping user supplied input when printing exceptions. An attacker can use this to conduct cross-site scripting attacks via crafted search queries resulting in an exception and steal potentially sensitive data from web applications running on the same domain or embedding the search engine into a website." ;
+    ns1:hasTitle "DSA-1882 xapian-omega -- missing input sanitisation" .
+
+<oval:org.mitre.oval:def:7843> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1781 ffmpeg-debian -- several vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ffmpeg-debian> ;
+    ns1:hasDescription "Several vulnerabilities have been discovered in ffmpeg, a multimedia player, server and encoder. The Common Vulnerabilities and Exposures project identifies the following problems: It was discovered that watching a malformed 4X movie file could lead to the execution of arbitrary code. It was discovered that using a crafted STR file can lead to the execution of arbitrary code." ;
+    ns1:hasTitle "DSA-1781 ffmpeg-debian -- several vulnerabilities" .
+
+<oval:org.mitre.oval:def:8160> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1854 apr, apr-util -- heap buffer overflow" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#apr>,
+        <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#apr-util> ;
+    ns1:hasDescription "Matt Lewis discovered that the memory management code in the Apache Portable Runtime (APR) library does not guard against a wrap-around during size computations. This could cause the library to return a memory area, which smaller than requested, resulting a heap overflow and possibly arbitrary code execution." ;
+    ns1:hasTitle "DSA-1854 apr, apr-util -- heap buffer overflow" .
+
+<oval:org.mitre.oval:def:8176> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1729 gst-plugins-bad0.10 -- several vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gst-plugins-bad0.10> ;
+    ns1:hasDescription "Several vulnerabilities have been found in gst-plugins-bad0.10, a collection of various GStreamer plugins. The Common Vulnerabilities and Exposures project identifies the following problems: Tobias Klein discovered a buffer overflow in the quicktime stream demuxer (qtdemux), which could potentially lead to the execution of arbitrary code via crafted .mov files. Tobias Klein discovered an array index error in the quicktime stream demuxer (qtdemux), which could potentially lead to the execution of arbitrary code via crafted .mov files. Tobias Klein discovered a buffer overflow in the quicktime stream demuxer (qtdemux) similar to the issue reported in CVE-2009-0386, which could also lead to the execution of arbitrary code via crafted .mov files." ;
+    ns1:hasTitle "DSA-1729 gst-plugins-bad0.10 -- several vulnerabilities" .
+
+<oval:org.mitre.oval:def:8291> a <https://oval.mitre.org/language/version5.11/OVAL> ;
+    rdfs:label "DSA-1597 mt-daapd -- multiple vulnerabilities" ;
+    ns1:affectedFamily <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> ;
+    ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> ;
+    ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#mt-daapd> ;
+    ns1:hasDescription "Three vulnerabilities have been discovered in the mt-daapd DAAP audio server (also known as the Firefly Media Server). The Common Vulnerabilities and Exposures project identifies the following three problems: Insufficient validation and bounds checking of the Authorization: HTTP header enables a heap buffer overflow, potentially enabling the execution of arbitrary code. Format string vulnerabilities in debug logging within the authentication of XML-RPC requests could enable the execution of arbitrary code. An integer overflow weakness in the handling of HTTP POST variables could allow a heap buffer overflow and potentially arbitrary code execution." ;
+    ns1:hasTitle "DSA-1597 mt-daapd -- multiple vulnerabilities" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_NT> a ns1:Platform ;
+    rdfs:label "Microsoft Windows NT" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2008_R2> a ns1:Platform ;
+    rdfs:label "Microsoft Windows Server 2008 R2" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_7> a ns1:Platform ;
+    rdfs:label "Oracle Linux 7" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_10> a ns1:Platform ;
+    rdfs:label "SUSE Linux Enterprise Desktop 10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_7.04> a ns1:Platform ;
+    rdfs:label "Ubuntu 7.04" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_9.04> a ns1:Platform ;
+    rdfs:label "Ubuntu 9.04" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Adobe_Reader_7> a ns1:Product ;
+    rdfs:label "Adobe Reader 7" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Linux_kernel> a ns1:Product ;
+    rdfs:label "Linux kernel" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Microsoft_IIS_4.0> a ns1:Product ;
+    rdfs:label "Microsoft IIS 4.0" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Microsoft_Visio_Viewer_2002> a ns1:Product ;
+    rdfs:label "Microsoft Visio Viewer 2002" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Mozilla_Firefox> a ns1:Product ;
+    rdfs:label "Mozilla Firefox" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#NetworkManager> a ns1:Product ;
+    rdfs:label "NetworkManager" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Xorg> a ns1:Product ;
+    rdfs:label "Xorg" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ansible> a ns1:Product ;
+    rdfs:label "ansible" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#apr> a ns1:Product ;
+    rdfs:label "apr" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#apr-util> a ns1:Product ;
+    rdfs:label "apr-util" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cacti> a ns1:Product ;
+    rdfs:label "cacti" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#chromium> a ns1:Product ;
+    rdfs:label "chromium" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#chromium-browser> a ns1:Product ;
+    rdfs:label "chromium-browser" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#clamav> a ns1:Product ;
+    rdfs:label "clamav" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#courier-authlib> a ns1:Product ;
+    rdfs:label "courier-authlib" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#dnsmasq> a ns1:Product ;
+    rdfs:label "dnsmasq" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ecryptfs-utils> a ns1:Product ;
+    rdfs:label "ecryptfs-utils" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#evolution> a ns1:Product ;
+    rdfs:label "evolution" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#exim4> a ns1:Product ;
+    rdfs:label "exim4" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ffmpeg-debian> a ns1:Product ;
+    rdfs:label "ffmpeg-debian" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#flash-plugin> a ns1:Product ;
+    rdfs:label "flash-plugin" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gajim> a ns1:Product ;
+    rdfs:label "gajim" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gdm> a ns1:Product ;
+    rdfs:label "gdm" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gimp> a ns1:Product ;
+    rdfs:label "gimp" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gnupg> a ns1:Product ;
+    rdfs:label "gnupg" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#gst-plugins-bad0.10> a ns1:Product ;
+    rdfs:label "gst-plugins-bad0.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#iceweasel> a ns1:Product ;
+    rdfs:label "iceweasel" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ircd-hybrid/ircd-ratbox> a ns1:Product ;
+    rdfs:label "ircd-hybrid/ircd-ratbox" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.4.2-ibm> a ns1:Product ;
+    rdfs:label "java-1.4.2-ibm" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.6.0-openjdk> a ns1:Product ;
+    rdfs:label "java-1.6.0-openjdk" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.7.0-oracle> a ns1:Product ;
+    rdfs:label "java-1.7.0-oracle" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kdelibs> a ns1:Product ;
+    rdfs:label "kdelibs" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek> a ns1:Product ;
+    rdfs:label "kernel-uek" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-debug> a ns1:Product ;
+    rdfs:label "kernel-uek-debug" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-debug-devel> a ns1:Product ;
+    rdfs:label "kernel-uek-debug-devel" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-devel> a ns1:Product ;
+    rdfs:label "kernel-uek-devel" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-doc> a ns1:Product ;
+    rdfs:label "kernel-uek-doc" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-firmware> a ns1:Product ;
+    rdfs:label "kernel-uek-firmware" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel-uek-headers> a ns1:Product ;
+    rdfs:label "kernel-uek-headers" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#lcms> a ns1:Product ;
+    rdfs:label "lcms" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libav> a ns1:Product ;
+    rdfs:label "libav" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libexif> a ns1:Product ;
+    rdfs:label "libexif" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libguestfs> a ns1:Product ;
+    rdfs:label "libguestfs" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libmikmod> a ns1:Product ;
+    rdfs:label "libmikmod" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libphp-phpmailer> a ns1:Product ;
+    rdfs:label "libphp-phpmailer" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libreoffice> a ns1:Product ;
+    rdfs:label "libreoffice" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libreoffice-l10n> a ns1:Product ;
+    rdfs:label "libreoffice-l10n" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libsndfile> a ns1:Product ;
+    rdfs:label "libsndfile" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libtiff> a ns1:Product ;
+    rdfs:label "libtiff" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libtirpc> a ns1:Product ;
+    rdfs:label "libtirpc" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#linux-ec2> a ns1:Product ;
+    rdfs:label "linux-ec2" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#mlnx_en> a ns1:Product ;
+    rdfs:label "mlnx_en" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#mt-daapd> a ns1:Product ;
+    rdfs:label "mt-daapd" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#net-snmp> a ns1:Product ;
+    rdfs:label "net-snmp" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#nova> a ns1:Product ;
+    rdfs:label "nova" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#ofa> a ns1:Product ;
+    rdfs:label "ofa" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#openjdk-6> a ns1:Product ;
+    rdfs:label "openjdk-6" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#openjdk-6b18> a ns1:Product ;
+    rdfs:label "openjdk-6b18" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#openssl-certs> a ns1:Product ;
+    rdfs:label "openssl-certs" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#php> a ns1:Product ;
+    rdfs:label "php" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#php53> a ns1:Product ;
+    rdfs:label "php53" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#pyopenssl> a ns1:Product ;
+    rdfs:label "pyopenssl" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#python-django> a ns1:Product ;
+    rdfs:label "python-django" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#python-ethtool> a ns1:Product ;
+    rdfs:label "python-ethtool" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#qspice-client> a ns1:Product ;
+    rdfs:label "qspice-client" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#rpm> a ns1:Product ;
+    rdfs:label "rpm" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#spice> a ns1:Product ;
+    rdfs:label "spice" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#systemd> a ns1:Product ;
+    rdfs:label "systemd" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#tetex> a ns1:Product ;
+    rdfs:label "tetex" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#trousers> a ns1:Product ;
+    rdfs:label "trousers" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#wesnoth> a ns1:Product ;
+    rdfs:label "wesnoth" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#wget> a ns1:Product ;
+    rdfs:label "wget" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xapian-omega> a ns1:Product ;
+    rdfs:label "xapian-omega" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xulrunner> a ns1:Product ;
+    rdfs:label "xulrunner" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xulrunner-1.9.1> a ns1:Product ;
+    rdfs:label "xulrunner-1.9.1" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#yast2-network> a ns1:Product ;
+    rdfs:label "yast2-network" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_10> a ns1:Platform ;
+    rdfs:label "Debian 10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7> a ns1:Platform ;
+    rdfs:label "Debian GNU/Linux 7" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7> a ns1:Platform ;
+    rdfs:label "Debian GNU/kFreeBSD 7" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_2000> a ns1:Platform ;
+    rdfs:label "Microsoft Windows 2000" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_7> a ns1:Platform ;
+    rdfs:label "Microsoft Windows 7" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2003> a ns1:Platform ;
+    rdfs:label "Microsoft Windows Server 2003" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Server_2008> a ns1:Platform ;
+    rdfs:label "Microsoft Windows Server 2008" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_Vista> a ns1:Platform ;
+    rdfs:label "Microsoft Windows Vista" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Microsoft_Windows_XP> a ns1:Platform ;
+    rdfs:label "Microsoft Windows XP" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_10> a ns1:Platform ;
+    rdfs:label "SUSE Linux Enterprise Server 10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_11.04> a ns1:Platform ;
+    rdfs:label "Ubuntu 11.04" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_11.10> a ns1:Platform ;
+    rdfs:label "Ubuntu 11.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.10> a ns1:Platform ;
+    rdfs:label "Ubuntu 13.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_6.06> a ns1:Platform ;
+    rdfs:label "Ubuntu 6.06" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_7.10> a ns1:Platform ;
+    rdfs:label "Ubuntu 7.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_8.04> a ns1:Platform ;
+    rdfs:label "Ubuntu 8.04" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_8.10> a ns1:Platform ;
+    rdfs:label "Ubuntu 8.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Linux> a ns1:Product ;
+    rdfs:label "Linux" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#bind9> a ns1:Product ;
+    rdfs:label "bind9" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cups> a ns1:Product ;
+    rdfs:label "cups" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#cyrus-imapd> a ns1:Product ;
+    rdfs:label "cyrus-imapd" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#firefox> a ns1:Product ;
+    rdfs:label "firefox" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#glibc> a ns1:Product ;
+    rdfs:label "glibc" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#java-1.6.0-sun> a ns1:Product ;
+    rdfs:label "java-1.6.0-sun" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libsoup> a ns1:Product ;
+    rdfs:label "libsoup" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#libvirt> a ns1:Product ;
+    rdfs:label "libvirt" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#pidgin> a ns1:Product ;
+    rdfs:label "pidgin" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#puppet> a ns1:Product ;
+    rdfs:label "puppet" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#quagga> a ns1:Product ;
+    rdfs:label "quagga" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#wireshark> a ns1:Product ;
+    rdfs:label "wireshark" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#xen> a ns1:Product ;
+    rdfs:label "xen" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#windows> a ns1:Family ;
+    rdfs:label "windows" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_6> a ns1:Platform ;
+    rdfs:label "CentOS Linux 6" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_9> a ns1:Platform ;
+    rdfs:label "Debian 9" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Mageia_7> a ns1:Platform ;
+    rdfs:label "Mageia 7" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.10> a ns1:Platform ;
+    rdfs:label "Ubuntu 10.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.04> a ns1:Platform ;
+    rdfs:label "Ubuntu 12.04" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_9.10> a ns1:Platform ;
+    rdfs:label "Ubuntu 9.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#kernel> a ns1:Product ;
+    rdfs:label "kernel" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#linux> a ns1:Product ;
+    rdfs:label "linux" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_12.10> a ns1:Platform ;
+    rdfs:label "Ubuntu 12.10" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_13.04> a ns1:Platform ;
+    rdfs:label "Ubuntu 13.04" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#thunderbird> a ns1:Product ;
+    rdfs:label "thunderbird" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#CentOS_Linux_5> a ns1:Platform ;
+    rdfs:label "CentOS Linux 5" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_8> a ns1:Platform ;
+    rdfs:label "Debian 8" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_6> a ns1:Platform ;
+    rdfs:label "Red Hat Enterprise Linux 6" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_6.0> a ns1:Platform ;
+    rdfs:label "Debian GNU/Linux 6.0" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_7.0> a ns1:Platform ;
+    rdfs:label "Debian GNU/Linux 7.0" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_6.0> a ns1:Platform ;
+    rdfs:label "Debian GNU/kFreeBSD 6.0" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/kFreeBSD_7.0> a ns1:Platform ;
+    rdfs:label "Debian GNU/kFreeBSD 7.0" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Desktop_11> a ns1:Platform ;
+    rdfs:label "SUSE Linux Enterprise Desktop 11" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Red_Hat_Enterprise_Linux_5> a ns1:Platform ;
+    rdfs:label "Red Hat Enterprise Linux 5" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#SUSE_Linux_Enterprise_Server_11> a ns1:Platform ;
+    rdfs:label "SUSE Linux Enterprise Server 11" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Ubuntu_10.04> a ns1:Platform ;
+    rdfs:label "Ubuntu 10.04" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_4.0> a ns1:Platform ;
+    rdfs:label "Debian GNU/Linux 4.0" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Debian_GNU/Linux_5.0> a ns1:Platform ;
+    rdfs:label "Debian GNU/Linux 5.0" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_6> a ns1:Platform ;
+    rdfs:label "Oracle Linux 6" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Oracle_Linux_5> a ns1:Platform ;
+    rdfs:label "Oracle Linux 5" .
+
+<http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/family#unix> a ns1:Family ;
+    rdfs:label "unix" .
+
+

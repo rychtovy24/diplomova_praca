@@ -29,13 +29,14 @@
 \contentsline {section}{\numberline {5.1}Model}{22}{section.5.1}
 \contentsline {chapter}{\numberline {6}CVE}{27}{chapter.6}
 \contentsline {section}{\numberline {6.1}Ontol\IeC {\'o}gia}{28}{section.6.1}
-\contentsline {chapter}{\numberline {7}OVAL ontol\IeC {\'o}gia}{29}{chapter.7}
-\contentsline {part}{III\hspace {1em}Implement\IeC {\'a}cia}{30}{part.3}
-\contentsline {chapter}{D\IeC {\'a}ta}{31}{chapter*.19}
-\contentsline {part}{IV\hspace {1em}Testovanie}{32}{part.4}
-\contentsline {chapter}{Konzistetnos\IeC {\v t}}{33}{chapter*.20}
-\contentsline {section}{\numberline {7.1}Ontol\IeC {\'o}gia}{33}{section.7.1}
-\contentsline {section}{\numberline {7.2}D\IeC {\'a}ta}{33}{section.7.2}
-\contentsline {part}{V\hspace {1em}V\IeC {\'y}sledky pr\IeC {\'a}ce}{34}{part.5}
-\contentsline {chapter}{Zhrnutie}{35}{chapter*.21}
-\contentsline {chapter}{Z\IeC {\'a}ver}{36}{chapter*.22}
+\contentsline {chapter}{\numberline {7}OVAL}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}Ontol\IeC {\'o}gia}{30}{section.7.1}
+\contentsline {part}{III\hspace {1em}Implement\IeC {\'a}cia}{32}{part.3}
+\contentsline {chapter}{D\IeC {\'a}ta}{33}{chapter*.20}
+\contentsline {part}{IV\hspace {1em}Testovanie}{34}{part.4}
+\contentsline {chapter}{Konzistetnos\IeC {\v t}}{35}{chapter*.21}
+\contentsline {section}{\numberline {7.2}Ontol\IeC {\'o}gia}{35}{section.7.2}
+\contentsline {section}{\numberline {7.3}D\IeC {\'a}ta}{35}{section.7.3}
+\contentsline {part}{V\hspace {1em}V\IeC {\'y}sledky pr\IeC {\'a}ce}{36}{part.5}
+\contentsline {chapter}{Zhrnutie}{37}{chapter*.22}
+\contentsline {chapter}{Z\IeC {\'a}ver}{38}{chapter*.23}
