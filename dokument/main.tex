@@ -679,14 +679,39 @@ Taktiež existuje trieda \textit{CWE}, ktorá je prepojená s triedou \textit{We
 TODO -- chcem sa pobavit s panom baloghon co by radil medzi ne z uco ontologie, nakolko sa nevidim tolko do tejto domeny aby som vedel povedat ktora do toho spada.
 
 
-\chapter{Pravidlá}
-pravidlá definované v ontológii
+\chapter{CVE}
+Common Vulnerabilities and Exposures(CVE) je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
 
 
-\chapter{Dáta}
-ake data sme importovali, z kadial, akou metodou, kde su ulozene ako sa nad nimi dopytovat, ake odpovede dostaneme -- priklady s jazykom SPARQL
+Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje nejakú zraniteľnosť z roku 2020 v databáze CVE.
+
+
+Každý jeden záznam má taktiež popis, ktorý musí obsahovať dostatok informácií o tom, na ktoré systémy má daná zranitenosť vplyv, pokiaľ sa vzťahuje aj na konkrétnu verziu, tak aj táto verzia by mla byť uvedená. Musí obsahovať aj infomácie o type zraniteľnosti, jej príčinu a dopad. Daný popis musí byť napísaný v angličtine.
+
+
+Záznamy majú aj zoznam referencií, ktoré sú používané ako externé zdroje k zraniteľnosti. Sú to externé odkazy s infomáciou o zdrojovom systéme. Tieto odkazy musia používať iba protokoly \textit{http}, \textit{ftp}, \textit{https}, alebo \textit{ftps}.
+
+
+\section{Ontológia}
+Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje základné inforácie zraniteľnosti, podľa požiadaviek štandardu. Ako definíciu zraniteľnosti, používame jej URI, ktorá poskytuje prepoužitie a odkazovanie sa na ňu. Táto zraniteľnosť má taktiež svoj názov, ktorý reprezentujeme ako CVE identifikátor. Každá zraniteľnosť má svoj popis a zoznam referencií. Ako rozšírenie sme použili vlastnosť \textit{hasRefId}, ktorá definuje unikátny identifikátor, v referencovanom systéme. Tento parameter nie je povinný.
+
+\begin{figure}
+\makebox[\textwidth]{\includegraphics[scale=0.7]{images/cve-ontology}}
+\label{fig:semantic_web}
+\caption{CVE ontológia}
+
+\end{figure}
+
+
+
+\chapter{OVAL ontológia}
 
 \backmatter
+
+
+\part{Implementácia}
+\chapter{Dáta}
+ake data sme importovali, z kadial, akou metodou, kde su ulozene ako sa nad nimi dopytovat, ake odpovede dostaneme -- priklady s jazykom SPARQL
 
 
 \part{Testovanie}
