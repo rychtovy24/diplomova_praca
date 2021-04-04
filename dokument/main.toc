@@ -27,16 +27,17 @@
 \contentsline {part}{II\hspace {1em}N\IeC {\'a}vrh rie\IeC {\v s}enia}{21}{part.2}
 \contentsline {chapter}{\numberline {5}V\IeC {\'y}skum a Anal\IeC {\'y}za UCO}{22}{chapter.5}
 \contentsline {section}{\numberline {5.1}Model}{22}{section.5.1}
-\contentsline {chapter}{\numberline {6}CVE}{27}{chapter.6}
-\contentsline {section}{\numberline {6.1}Ontol\IeC {\'o}gia}{28}{section.6.1}
-\contentsline {chapter}{\numberline {7}OVAL}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}Ontol\IeC {\'o}gia}{30}{section.7.1}
-\contentsline {part}{III\hspace {1em}Implement\IeC {\'a}cia}{32}{part.3}
-\contentsline {chapter}{D\IeC {\'a}ta}{33}{chapter*.20}
-\contentsline {part}{IV\hspace {1em}Testovanie}{34}{part.4}
-\contentsline {chapter}{Konzistetnos\IeC {\v t}}{35}{chapter*.21}
-\contentsline {section}{\numberline {7.2}Ontol\IeC {\'o}gia}{35}{section.7.2}
-\contentsline {section}{\numberline {7.3}D\IeC {\'a}ta}{35}{section.7.3}
-\contentsline {part}{V\hspace {1em}V\IeC {\'y}sledky pr\IeC {\'a}ce}{36}{part.5}
-\contentsline {chapter}{Zhrnutie}{37}{chapter*.22}
-\contentsline {chapter}{Z\IeC {\'a}ver}{38}{chapter*.23}
+\contentsline {chapter}{\numberline {6}CVE}{30}{chapter.6}
+\contentsline {section}{\numberline {6.1}Ontol\IeC {\'o}gia}{31}{section.6.1}
+\contentsline {chapter}{\numberline {7}OVAL}{32}{chapter.7}
+\contentsline {section}{\numberline {7.1}Ontol\IeC {\'o}gia}{33}{section.7.1}
+\contentsline {part}{III\hspace {1em}Implement\IeC {\'a}cia}{35}{part.3}
+\contentsline {chapter}{D\IeC {\'a}ta}{36}{chapter*.23}
+\contentsline {section}{\numberline {7.2}Web}{36}{section.7.2}
+\contentsline {part}{IV\hspace {1em}Testovanie}{38}{part.4}
+\contentsline {chapter}{Konzistetnos\IeC {\v t}}{39}{chapter*.24}
+\contentsline {section}{\numberline {7.3}Ontol\IeC {\'o}gia}{39}{section.7.3}
+\contentsline {section}{\numberline {7.4}D\IeC {\'a}ta}{39}{section.7.4}
+\contentsline {part}{V\hspace {1em}V\IeC {\'y}sledky pr\IeC {\'a}ce}{40}{part.5}
+\contentsline {chapter}{Zhrnutie}{41}{chapter*.25}
+\contentsline {chapter}{Z\IeC {\'a}ver}{42}{chapter*.26}

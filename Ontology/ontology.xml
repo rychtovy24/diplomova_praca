@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology"
+     xml:base="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#affectedFamily -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#affectedFamily">
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#affectedPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#affectedPlatform">
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#affectedProduct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#affectedProduct">
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasAndCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasAndCriteria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasCVE -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasCVE">
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="https://cve.mitre.org/about/terminology.html#CVE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasCriteria">
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasDefinition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasDefinition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#CriteriaDefinition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasDefinitionOvalRef -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasDefinitionOvalRef">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#CriteriaDefinition"/>
+        <rdfs:range rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasOVAL -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasOVAL">
+        <rdfs:domain rdf:resource="https://cve.mitre.org/about/terminology.html#CVE"/>
+        <rdfs:range rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasOrCriteria -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasOrCriteria">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasPlatform -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasPlatform">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Platform"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasReference -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasReference">
+        <rdfs:domain rdf:resource="https://cve.mitre.org/about/terminology.html#CVE"/>
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Reference"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasTestOVALRef -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasTestOVALRef">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#CriteriaDefinition"/>
+        <rdfs:range rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasComment -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasComment">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#CriteriaDefinition"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Reference"/>
+        <rdfs:domain rdf:resource="https://cve.mitre.org/about/terminology.html#CVE"/>
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasRefID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasRefID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Reference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasSource -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasSource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Reference"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasTitle">
+        <rdfs:domain rdf:resource="https://oval.mitre.org/language/version5.11/OVAL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Criteria"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#CriteriaDefinition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#CriteriaDefinition"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#asa"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#ios"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#iosxe"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#macos"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#pixos"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#unix"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#windows"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Platform -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Platform"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Product -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Product"/>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Reference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Reference">
+        <rdfs:label>Reference</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cve.mitre.org/cve/cna/rules.html#section_8-3_cve_entry_reference_requirements</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://cve.mitre.org/about/terminology.html#CVE -->
+
+    <owl:Class rdf:about="https://cve.mitre.org/about/terminology.html#CVE">
+        <dc:description>A flaw in a software, firmware, hardware, or service component resulting from a weakness that can be exploited, causing a negative impact to the confidentiality, integrity, or availability of an impacted component or components.</dc:description>
+        <rdfs:label>CVE</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cve.mitre.org/about/terminology.html</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://oval.mitre.org/language/version5.11/OVAL -->
+
+    <owl:Class rdf:about="https://oval.mitre.org/language/version5.11/OVAL">
+        <rdfs:comment>The OVAL System Characteristics schema defines a standard XML format for representing system configuration information.  This configuration information includes OS parameters, installed software application settings, and other security relevant configuration values.  The purpose of this schema is to provide a “database” of system characteristics  against  which  the  OVAL  Definitions can  be  compared  in  order  to  analyze  a  system  for vulnerabilities, configuration issues, and patches.  In essence, the schema defines a standard system characteristics exchange format that can be incorporated into a variety of tools, such as those listed in the OVAL-Compatible Products and Services section on the OVAL Web site.</rdfs:comment>
+        <rdfs:label>OVAL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#asa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#asa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#ios -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#ios">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#iosxe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#iosxe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#macos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#macos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#pixos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#pixos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#unix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#unix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#windows -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#windows">
+        <rdf:type rdf:resource="http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#Family"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

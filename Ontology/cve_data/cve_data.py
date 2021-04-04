@@ -106,8 +106,8 @@ for key in cve_dic:
     cve_dic[key].write_CVE(graphs[year])
 for i in range(1999, 2022):
     year = str(i)
-    with open('cve_generate_data_'+year+'.rdf', 'w', encoding="utf-8") as f:
-        print(graphs[year].serialize(format="turtle").decode("utf-8"), file=f)
+    with open('cve_generate_data_'+year+'.xml', 'w', encoding="utf-8") as f:
+        print(graphs[year].serialize(format="xml").decode("utf-8"), file=f)
     del graphs[year]
     
 

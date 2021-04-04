@@ -162,12 +162,12 @@ class OVAL:
 
     
 
-#PLATFORM = "asa"
-#PLATFORM = "ios"
-#PLATFORM = "iosxe"
-#PLATFORM = "macos"
-#PLATFORM = "pixos"
-#PLATFORM = "unix"
+PLATFORM = "asa"
+PLATFORM = "ios"
+PLATFORM = "iosxe"
+PLATFORM = "macos"
+PLATFORM = "pixos"
+PLATFORM = "unix"
 PLATFORM = "windows"
 tree = ET.parse(PLATFORM+'.xml')
 root = tree.getroot()

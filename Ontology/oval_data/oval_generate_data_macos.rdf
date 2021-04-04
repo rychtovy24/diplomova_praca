@@ -1517,9 +1517,9 @@
     ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Apple_Mac_OS_X>,
         <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Apple_Mac_OS_X_Server> ;
     ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Microsoft_Silverlight_5_for_Mac> ;
-    ns1:hasCVE <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3178> ;
+    ns1:hasCVE <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3178> ;
     ns1:hasDescription "Microsoft Silverlight 5 before 5.1.20513.0 does not properly initialize arrays, which allows remote attackers to execute arbitrary code or cause a denial of service (NULL pointer dereference) via a crafted Silverlight application, aka \"Null Pointer Vulnerability.\"" ;
-    ns1:hasReference <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3178> ;
+    ns1:hasReference <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3178> ;
     ns1:hasTitle "Null pointer vulnerability in Microsoft Silverlight - CVE-2013-3178, MS13-052 (Mac OS)" .
 
 <oval:org.mitre.oval:def:17032> a <https://oval.mitre.org/language/version5.11/OVAL> ;
@@ -1528,9 +1528,9 @@
     ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Apple_Mac_OS_X>,
         <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Apple_Mac_OS_X_Server> ;
     ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Microsoft_Silverlight_5_for_Mac> ;
-    ns1:hasCVE <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3131> ;
+    ns1:hasCVE <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3131> ;
     ns1:hasDescription "Microsoft .NET Framework 2.0 SP2, 3.5, 3.5.1, 4, and 4.5, and Silverlight 5 before 5.1.20513.0, does not properly prevent changes to data in multidimensional arrays of structures, which allows remote attackers to execute arbitrary code via (1) a crafted .NET Framework application or (2) a crafted Silverlight application, aka \"Array Access Violation Vulnerability.\"" ;
-    ns1:hasReference <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3131> ;
+    ns1:hasReference <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3131> ;
     ns1:hasTitle "Array access violation vulnerability in Microsoft Silverlight CVE-2013-3131, MS13-052 (Mac OS)" .
 
 <oval:org.mitre.oval:def:17323> a <https://oval.mitre.org/language/version5.11/OVAL> ;
@@ -1539,9 +1539,9 @@
     ns1:affectedPlatform <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Apple_Mac_OS_X>,
         <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#Apple_Mac_OS_X_Server> ;
     ns1:affectedProduct <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#Microsoft_Silverlight_5_for_Mac> ;
-    ns1:hasCVE <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3129> ;
+    ns1:hasCVE <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3129> ;
     ns1:hasDescription "Microsoft .NET Framework 3.0 SP2, 3.5, 3.5.1, 4, and 4.5; Silverlight 5 before 5.1.20513.0; win32k.sys in the kernel-mode drivers, and GDI+, DirectWrite, and Journal, in Windows XP SP2 and SP3, Windows Server 2003 SP2, Windows Vista SP2, Windows Server 2008 SP2 and R2 SP1, Windows 7 SP1, Windows 8, Windows Server 2012, and Windows RT; GDI+ in Office 2003 SP3, 2007 SP3, and 2010 SP1; GDI+ in Visual Studio .NET 2003 SP1; and GDI+ in Lync 2010, 2010 Attendee, 2013, and Basic 2013 allow remote attackers to execute arbitrary code via a crafted TrueType Font (TTF) file, aka \"TrueType Font Parsing Vulnerability.\"" ;
-    ns1:hasReference <http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3129> ;
+    ns1:hasReference <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3129> ;
     ns1:hasTitle "TrueType font parsing vulnerability in Microsoft Silverlight - CVE-2013-3129, MS13-052 (Mac OS)" .
 
 <oval:org.mitre.oval:def:18543> a <https://oval.mitre.org/language/version5.11/OVAL> ;
@@ -1697,18 +1697,6 @@
     ns1:hasDescription "Microsoft Word 2007 SP3, Office 2010 SP2, Word 2010 SP2, Word 2013 SP1, Word 2013 RT SP1, Office for Mac 2011, and Word Viewer allow remote attackers to execute arbitrary code or cause a denial of service (memory corruption) via a crafted Office document, aka \"Microsoft Office Memory Corruption Vulnerability.\"" ;
     ns1:hasReference <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2379> ;
     ns1:hasTitle "Microsoft Office memory corruption vulnerability – CVE-2015-2379 (MS15-070) (Mac OS X)" .
-
-<http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3129> a ns1:Reference ;
-    ns1:hasRefID "CVE-2013-3129" ;
-    ns1:hasSource "CVE" .
-
-<http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3131> a ns1:Reference ;
-    ns1:hasRefID "CVE-2013-3131" ;
-    ns1:hasSource "CVE" .
-
-<http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2013-3178> a ns1:Reference ;
-    ns1:hasRefID "CVE-2013-3178" ;
-    ns1:hasSource "CVE" .
 
 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-4546> a ns1:Reference ;
     ns1:hasRefID "CVE-2008-4546" ;
@@ -2284,6 +2272,18 @@
 
 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-1331> a ns1:Reference ;
     ns1:hasRefID "CVE-2013-1331" ;
+    ns1:hasSource "CVE" .
+
+<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3129> a ns1:Reference ;
+    ns1:hasRefID "CVE-2013-3129" ;
+    ns1:hasSource "CVE" .
+
+<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3131> a ns1:Reference ;
+    ns1:hasRefID "CVE-2013-3131" ;
+    ns1:hasSource "CVE" .
+
+<https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3178> a ns1:Reference ;
+    ns1:hasRefID "CVE-2013-3178" ;
     ns1:hasSource "CVE" .
 
 <https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2013-3889> a ns1:Reference ;

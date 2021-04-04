@@ -549,7 +549,11 @@ MR: mam pripravene casti o OWL v kapitole syntax ontologii kde neskor doplnim aj
 \caption{Tabuľka vlastností popisujúcej časť \textbf{Identita} z CTI modelu.}
 \label{tab:template}
 \end{table}
-
+\begin{figure}
+\makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Attacker}}
+\label{fig:semantic_web}
+\caption{UCO ontológia -- časť Identita}
+\end{figure}
 
 
 \textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémou alebo známych malwaroch. Nakoľko vďaka jazyku owl vieme definovať napríklad inverzné vlastnosti je žiadúce aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
@@ -579,7 +583,11 @@ MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnost
 \caption{Tabuľka vlastností popisujúcej časť \textbf{Útok} z CTI modelu.}
 \label{tab:template}
 \end{table}
-
+\begin{figure}
+\makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Attack}}
+\label{fig:semantic_web}
+\caption{UCO ontológia -- časť Útok}
+\end{figure}
 
 \textbf{Kampaň} je zahrnutá v triede \textit{Campaign}, ktorá môže existovať iba v prípade, že už bola použitá v nejakom útoku. Každá kampaň môže taktiež mať nejakú ďalšiu kampaň, ktoré medzi sebou súvisia, kde táto vlastnosť je obojsmerná. Taktiež má vlastnosť hasCampaign, ktorej doménou je trieda \textit{Indicator}. Táto trieda pochádza z ontológie CAPEC, ktorá obsahuje známe vzory útokov.
 \assignment{MH: $\uparrow$ Opat sa stracam, co je Indicator?}
@@ -631,7 +639,11 @@ MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnost
 \caption{Tabuľka vlastností popisujúcej časť \textbf{Slabina} z CTI modelu.}
 \label{tab:template}
 \end{table}
-
+\begin{figure}
+\makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Vulnerability}}
+\label{fig:semantic_web}
+\caption{UCO ontológia -- časť Slabiny}
+\end{figure}
 
 Taktiež existuje trieda \textit{CWE}, ktorá je prepojená s triedou \textit{Weakness} z už existujúcej CWE databázy. Taktiež ako trieda \textit{Vulnerability}, popisuje slabiny z CTI modelu. Trieda \textit{CWE} popisuje známe typy slabostí hardvérov a softvérov. Obsahuje informáciu o čase zistenia (\textit{timeOfIntroduction}) a stručný popis (\textit{description}). Zvyšné vlastnosti nemajú definované rozsahy, čo je výrazným nedostatkom a je potrebné tieto vlastnosti dodefinovať.
 \assignment{MH: $\uparrow$ V tabulke 5.4 vsak ale vsetky vlastnosti maju aj rozsak, o ktore zvysne teda ide?}
@@ -751,8 +763,14 @@ Samotný záznam sa skladá z:
 
 \part{Implementácia}
 \chapter{Dáta}
-ake data sme importovali, z kadial, akou metodou, kde su ulozene ako sa nad nimi dopytovat, ake odpovede dostaneme -- priklady s jazykom SPARQL
+Dáta, ktoré sme spracovávali pochádzajú z verejne dostupného zdroja štandardov OVAL a CVE. Tieto dáta mali pôvodne štruktúru XML, ktorá ale nebola písaná OWL syntaxov. Tieto dáta sme spracovali pomocou programovacieho jazyka Python. Jednotlivé triedy v nami navrhnutých ontológiách sme si implementovali a následne sme spracovali dané dátové súbory pomocou knižnice \textit{xml}. Po spasovaní dát sme tieto dáta definovali pomocou tripletov a následne ich zapísali pomocou knižnice \textit{rdflib} do súboru vo formáte \textit{turtle}. 
 
+
+Tento formát sme vybrali najmä kôli menšiemu objemu dát, nakoľko bolo potrebných viac optimalizácií pre generovanie. Ale aj po tejto optimalizácii sme nevedeli spracovať dané záznamy, preto sme sa  rozhodli ich rozdeliť. CVE dáta sme spracovali tak, že sme ich rozdelili podľa rokov vytvorenia. OVAL dáta sme rozdelili podľa operaného systému, ktorého sa týkajú. Po zapísaní časti dát, sme túto časť premazali.
+
+
+\section{Web}
+V spolupráci so študentami môjho konzultanta, sme vytvorili webovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka poskytuje zobrazenie CVE a OVAL dát, kde je možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
 
 \part{Testovanie}
 \chapter{Konzistetnosť}
