@@ -405,6 +405,8 @@ V súčastosti existuje veľa rôznych štandardov a ontologických riešení pr
 V nasledujúcich kapitolách si povieme niečo o zaužívaných štandardoch, základnom modeli, z ktorého vychádzame a podľa, ktorého posudzujeme, či je daná ontológia dobrá. Taktiež rozoberieme existujúce riešenia v doméne kyber bezpečnosti.
 
 \section{CTI model}
+Cyber Threat Intelligance model \citep{MavroeidisB17} (CTI model) má za cieľ objasňovať rôzne typy informácií, ktoré potrebujú organizácie zhromažďovať o kybernetických hrozbách. V nasledujúcich častiach popíšeme obr. 4.1, ktorý znázorňuje jednotlivé prvky modelu.
+
 
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.5]{images/cti-model}}
@@ -414,25 +416,43 @@ V nasledujúcich kapitolách si povieme niečo o zaužívaných štandardoch, z�
 \end{figure}
 
 \subsection{Identita}
+Identita môže byť definovaná rôznymi typmi identifikátorov. Ak sa pozná presná totožnosť osoby alebo organizácie, ktorá útok iniciuje, identifikátorom je názov osoby alebo spoločnosti.
 
 
-\subsection{Útok}
+Pokiaľ takýto identifikátor nevieme určiť, prideľujeme im anonymnú identitu, ktorú následne vieme spájať vyhodnotením útoku. Pokiaľ zoberieme do úvahy všetky ostatné časti CTI modelu a vyhodnotíme zhodujúce sa časti, vieme povedať, za ktoré útoky zodpovedá rovnaká osoba alebo organizácia.
+
 
 
 \subsection{Kampaň}
+Kampaň popisuje samtotný útok z dvoch pohľadov. Netechnický, ktorý je reprezentovaný stratégiou a technický, ktorý definuje taktiky, techniky a procedúry využívané v útoku.
 
 \subsubsection{Stratégia}
+Stratégia predstavuje netechnický popis útoku na hornej úrovni. Pokiaľ si zoberieme nejakého útočníka, tak tento útočník zvyčajne dosahuje ciele útoku viacerými spôsobmi a stratégia definuje, čo a ako je potrebné pozorovať.
 
 \subsubsection{TTP}
+Taktiky, techniky a procedúry (TTP) sa zamieravajú na dáta čitateľné strojmi. Popisujú spôsoby útoku z hľadiska toho čo chcú dosiahnuť a ako to robia.
 
 
-\subsection{Slabina}
+\textbf{Vzorec útoku} je jedným z hľadisiek TTP. Definuje akým spôsobom je útok použitý. Napríklad sa tu nachádzajú rôzne úpravy názvov súborov, rôzne prenastavenie časovania a stavov zariadenia, atď.
 
+
+\textbf{Malware} je taktiež hľadisko z TTP. Definuje typ softvéru, ktorý sa vkladá do systému s úmyslom poškodiť cieľ útoku z hľadiska dôvernosti, integrity alebo dostupnosti.
+
+\subsection{Zraniteľnosť}
+Zraniteľnosti definujú slabiny systému. Tieto slabiny môžu byť definované rôznymi stavmi zariadenia ako napríklad, ktoré systémy bežia, ale môžu predstavovať aj nastavenia rôznych aplikácií, napríklad rôzne 
 
 \subsection{Indikátor}
+Indikátory predstavujú množinu rôznych vlastností zariadenia, kedy je zariadenie náchylné na útok. Tieto indikátory popisujú rôzne nastavenia zariadenia, jeho technické parametre alebo nainštalovaný softvér a vďaka nemu sú schopné definovať rôzne útoky.
+
+
+\textbf{Atomické indikátory} sú najpremenlivejšie ukazovatele, nakoľko sa po čase menia. Napríklad ak niektoré útoky prebiehajú z určitej IP adresy, tak táto adresa sa môže časom zmeniť. Tieto typy dát môžu pomáhať pri identifikovaní útočníka iba v určitom čase.
 
 
 \subsection{Nástroj}
+Nástroje sú pomôcky, ktoré útočníci inštalujú v zariadení obete. Väčšinou zahŕňa špecializovaný softvér priamo určený na spôsobenie škôd, ako napríklad vzdialené vykonávanie procesov alebo sieťové skenovanie. Taktiež môže byť použitý pre zabránenie detekcie útoku inými systémami.
+
+\subsection{Útok}
+Samotný útok, by mal predstavovať konkrétny útok, ktorý už prebehol. Mal by zahŕňať mapovania na každú časť CTI modelu, ako aj nejaké statické informácie o útoku, napríklad čas útoku, ako daný útok dopadol a podobne.
 
 
 
