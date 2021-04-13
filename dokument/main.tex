@@ -27,8 +27,8 @@
 \hbadness=10000
 
 % TODO NOTES
-%\usepackage{todonotes}
-\usepackage[disable]{todonotes}
+\usepackage{todonotes}
+%\usepackage[disable]{todonotes}
 \input{todos}
 \setstretch{1.5}
 %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
@@ -524,25 +524,32 @@ STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezp
 \part{Návrh riešenia}
 \chapter{Výskum a Analýza UCO}
 \assignment{MH: Takze si to vlastne sem cele presnul a v Casti I uz o tom nie je ani zmienka? Tu by to malo byt uvedene sposobom, ze tu ju podrobne pispiseme a zanalyzujeme... Cize malo by to byt v Casti II vedene ako analyza UCO, nie jej len popis\\
-MR: Done}
+MR: Done\\
+MH: Namiesto $\downarrow$ \uv{popiseme a budeme porovnavat} napise \uv{podrobne analyzujeme a vyhodnocujeme vzhladom na}.. Nech je to este jasnejsie.}
 
 V tejto časti popíšeme ontológiu\citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme porovnávať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami a či sú ich vlastnosti a hierarchia dostatočné. 
 
 
 \section{Model}
-\assignment{MH: Ta terminologia, Utok, Indikator, Slabiny, to bude jasne z prech. kapitol?\\
-MR: budem sa presnejsie odkazovat na CTI ktore bude popisane v casti CTI model}
+%\assignment{MH: Ta terminologia, Utok, Indikator, Slabiny, to bude jasne z prech. kapitol?\\
+%MR: budem sa presnejsie odkazovat na CTI ktore bude popisane v casti CTI model\\
+%MH: OK}
 
 Základnou triedou tejto ontológie je \textit{UCO Thing}, ktorá je nadrtiedou každej triedy v ontológii.
 
 
 Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadefinuje si ju aj pre svoju doménu a pomocou jayzka OWL jej zadefinuje ekvivalentnú triedu, čím zabezpčí opätovné použitie dát pre iný zdroj. Napríklad trieda \textit{Indicator} je vďaka tomuto vzťahu prepojená s ontológiou CAPEC.
 
-\minor{MH: $\uparrow$ ``vdaka slovniku OWL'' je tazko rozumitelne (skor ``pomocou jazyka OWL''): Lepsie by ale bolo, keby tieto veci su v uvodnych prehladovych castiach dostocne vysvetlene natlolo, ze tu uz len staci povedat, ze sa vytvori ekvivalentna trieda\\
-MR: mam pripravene casti o OWL v kapitole syntax ontologii kde neskor doplnim aj syntax (asi manchester) ktoru pouzijeme na niektore upravy a zapis niektorych casti ontologie do prace}
+%\minor{MH: $\uparrow$ ``vdaka slovniku OWL'' je tazko rozumitelne (skor ``pomocou jazyka OWL''): Lepsie by ale bolo, keby tieto veci su v uvodnych prehladovych castiach dostocne vysvetlene natlolo, ze tu uz len staci povedat, ze sa vytvori ekvivalentna trieda\\
+%MR: mam pripravene casti o OWL v kapitole syntax ontologii kde neskor doplnim aj syntax (asi manchester) ktoru pouzijeme na niektore upravy a zapis niektorych casti ontologie do prace\\
+%MH: OK}
 
 
-\textbf{Identita} je v ontológii UCO reprezentovaná triedou \textit{Attacker}, ďalej útočník, ktorý je namapovaný na existujúcu triedu \textit{ThreatActor} zo STIX-u. Každý útočník má nejaké meno (hasTitle) a je priradený k existujúcim incidentom reprezentovaných triedou \textit{Incident} priradených vlastnoťou \textit{hasRelatedIncident}. Má aj určitú mieru doveryhodnosti (hasConfidenceType). Každý útočník má priradené nejaké zavedené postupy a stratégie pri útoku, ktoré sú inštanciou triedy \textit{Campaign} priradené vlastnosťou \textit{hasAssociatedCampaign}.
+\textbf{Identita} je v ontológii UCO reprezentovaná triedou \textit{Attacker}, ďalej útočník, ktorý je namapovaný na existujúcu triedu \textit{ThreatActor} zo STIX-u.
+%
+\minor{MH: Mozno by sme mohli na obrazku tie triedy z inych ontologii nejako lepsie vyznacit? Je blbost vyrobit vacsi obdlznikovity biely tvar s nadpisom STIX zapuzdujuci veci zo STIXU (hoc by tam bola aj len 1 trieda)?}
+%
+Každý útočník má nejaké meno (hasTitle) a je priradený k existujúcim incidentom reprezentovaných triedou \textit{Incident} priradených vlastnoťou \textit{hasRelatedIncident}. Má aj určitú mieru doveryhodnosti (hasConfidenceType). Každý útočník má priradené nejaké zavedené postupy a stratégie pri útoku, ktoré sú inštanciou triedy \textit{Campaign} priradené vlastnosťou \textit{hasAssociatedCampaign}.
 %
 \minor{MH: $\updownarrow$ chyba premostenie na tabulku vlasntosti, mozno aj viac ich popisat v texte (?)}
 %\minor{MH: $\updownarrow$ Naduzivas \texttt{\textbackslash\textbackslash}}
@@ -576,10 +583,11 @@ MR: mam pripravene casti o OWL v kapitole syntax ontologii kde neskor doplnim aj
 \end{figure}
 
 
-\textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémou alebo známych malwaroch. Nakoľko vďaka jazyku owl vieme definovať napríklad inverzné vlastnosti je žiadúce aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
+\textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémov alebo známych malwaroch. Nakoľko vďaka jazyku OWL vieme definovať napríklad inverzné vlastnosti je žiadúce aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
 %
 \assignment{MH: $\uparrow$ Tu zasa strasne skaces, viac vysvetluj... Kde sa vzalo TTP? Tiez pises, ze \emph{hasAttacker} nie je definovane, ale v tabulke to je...\\
-MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnosti \textit{hasAttacker}}
+MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnosti \textit{hasAttacker}\\
+MH: Ano, ale je to tu take vlepene, citatel nechape, preco prave tu uvadzas takuto poznmaku, navyse, asi sa to tyka aj inych vlasnosti, ku ktorym by sa dala dodefinovat inverzna (?) A dalsia vec, nadvazujeme niekde na to? Navrhujeme vylepsenia tohto druhu?}
 %
 \begin{table}[hbt!]
 \centering
@@ -610,7 +618,7 @@ MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnost
 \end{figure}
 
 \textbf{Kampaň} je zahrnutá v triede \textit{Campaign}, ktorá môže existovať iba v prípade, že už bola použitá v nejakom útoku. Každá kampaň môže taktiež mať nejakú ďalšiu kampaň, ktoré medzi sebou súvisia, kde táto vlastnosť je obojsmerná. Taktiež má vlastnosť hasCampaign, ktorej doménou je trieda \textit{Indicator}. Táto trieda pochádza z ontológie CAPEC, ktorá obsahuje známe vzory útokov.
-\assignment{MH: $\uparrow$ Opat sa stracam, co je Indicator?}
+\assignment{MH: $\updownarrow$ Tu (ale aj inde) je taky problem, ze v tabulke je mnozstvo vlastnosti triedy Attack, ci Campaign, ale v texte vysvetlujes len niektore. Nemusis vsetky vymenovavat, ale mozno by sa dalo aspon zhrnut, zgurpit ich... Nieco ako: Ostatne vlasntosti triedy Attak definuju/umoznuju priradit/... ...}
 \begin{table}[hbt!]
 \centering
 \begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
@@ -634,7 +642,7 @@ MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnost
 \end{table}
 
 
-\textbf{Slabiny} sú zahrnuté v triede \textit{Vulnerability}, ktorá nie je namapovaná na žiadnnu existujúcu ontológiu, avšak dáta už existujú v rámci databázy CVE, ktorá predstavuje dáta o softvérových a hardvérvých chybách. Tieto slabiny sú naviazané na objekty typu \textit{Product} vlastnosťou \textit{affectProduct}, ktoré môžu byť buď hardvérové alebo softvérové a každá slabina ovplyvňuje niektorý produkt. Taktiež je v nej zaznamený čas objavenia (\textit{discoveryTime}), spôsob narušenia alebo preniknutia do systému (\textit{hasAccessVector}), zložitosť preniknutia do systému (\textit{hasAccessComplexity}), rôzne typy dopadov alebo skóre úspešnosti (\textit{score}). Môže niesť aj informáciu o zdroji slabiny. Taktiež definuje objekty, ktoré je potrebné pozorovať, ktoré sú typu \textit{Observable}. Táto trieda zatiaľ nie je namapovaná na žiadnu existujúcu, ale vieme že existuje ontológia CyBox, ktorý tieto dáta uchováva. 
+\textbf{Slabiny} sú zahrnuté v triede \textit{Vulnerability}, ktorá nie je namapovaná na žiadnnu existujúcu ontológiu, avšak dáta už existujú v rámci databázy CVE, ktorá predstavuje dáta o softvérových a hardvérvých chybách. Tieto slabiny sú naviazané na objekty typu \textit{Product} vlastnosťou \textit{affectsProduct}, ktoré môžu byť buď hardvérové alebo softvérové a každá slabina ovplyvňuje niektorý produkt. Taktiež je v nej zaznamený čas objavenia (\textit{discoveryTime}), spôsob narušenia alebo preniknutia do systému (\textit{hasAccessVector}), zložitosť preniknutia do systému (\textit{hasAccessComplexity}), rôzne typy dopadov alebo skóre úspešnosti (\textit{score}). Môže niesť aj informáciu o zdroji slabiny. Taktiež definuje objekty, ktoré je potrebné pozorovať, ktoré sú typu \textit{Observable}. Táto trieda zatiaľ nie je namapovaná na žiadnu existujúcu, ale vieme že existuje ontológia CyBox, ktorá tieto dáta uchováva. 
 \begin{table}[hbt!]
 \centering
 \begin{tabular}{ |p{5cm}||p{3cm}|p{3cm}|  }
@@ -663,10 +671,11 @@ MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnost
 \makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Vulnerability}}
 \label{fig:semantic_web}
 \caption{UCO ontológia -- časť Slabiny}
+\minor{MH: CVE -> CWE?}
 \end{figure}
 
 Taktiež existuje trieda \textit{CWE}, ktorá je prepojená s triedou \textit{Weakness} z už existujúcej CWE databázy. Taktiež ako trieda \textit{Vulnerability}, popisuje slabiny z CTI modelu. Trieda \textit{CWE} popisuje známe typy slabostí hardvérov a softvérov. Obsahuje informáciu o čase zistenia (\textit{timeOfIntroduction}) a stručný popis (\textit{description}). Zvyšné vlastnosti nemajú definované rozsahy, čo je výrazným nedostatkom a je potrebné tieto vlastnosti dodefinovať.
-\assignment{MH: $\uparrow$ V tabulke 5.4 vsak ale vsetky vlastnosti maju aj rozsak, o ktore zvysne teda ide?}
+\assignment{MH: $\uparrow$ V tabulke 5.4 vsak ale vsetky vlastnosti maju aj rozsah, o ktore zvysne teda ide?}
 %\textbf{TODO} - zakomponovat mozno zmenu a prepojit to s touto existujúcou databázou. \url{https://cwe.mitre.org/index.html}
 \begin{table}[hbt!]
 \centering
