@@ -405,7 +405,16 @@ V súčastosti existuje veľa rôznych štandardov a ontologických riešení pr
 V nasledujúcich kapitolách si povieme niečo o zaužívaných štandardoch, základnom modeli, z ktorého vychádzame a podľa, ktorého posudzujeme, či je daná ontológia dobrá. Taktiež rozoberieme existujúce riešenia v doméne kyber bezpečnosti.
 
 \section{CTI model}
-Cyber Threat Intelligance model \citep{MavroeidisB17} (CTI model) má za cieľ objasňovať rôzne typy informácií, ktoré potrebujú organizácie zhromažďovať o kybernetických hrozbách. V nasledujúcich častiach popíšeme obr. 4.1, ktorý znázorňuje jednotlivé prvky modelu.
+Cyber Threat Intelligance model \citep{MavroeidisB17} (CTI model) má za cieľ objasňovať rôzne typy informácií, ktoré potrebujú organizácie zhromažďovať o kybernetických hrozbách. Cieľom modelu je jednotne definovať a podrobne popísať okruhy v danej doméne. Výhodou takéhoto modelu je zlepšenie schopností pri prevencii, detekcii a reakcii na bezpečnostné hrozby.
+
+
+Tento model bol vyvinutý so zámerom, aby slúžil ako predloha pre ontologické riešenia, nakoľko autori zahrnuli fakt, že ontologické riešenia sú najlepšie pri publikovaní a zdieľaní dát a sú strojovo čitateľné vďaka typu reprezentácie.
+
+
+Model zahŕňa informácie o autorovi útoku, motivácie a ciele útoku, stratégiu akou je útok vedený, aké technológie a postupy používa, ktorým základným vzorcom útoku sa riadi, aké slabiny jednotlivé útoky využili, aké atomické indikátory dokážu predpovedať útok a akú cieľovú skupinu útok postihuje.
+
+
+V nasledujúcich častiach popíšeme niektoré okruhy z obr. 4.1, ktorý znázorňuje jednotlivé prvky modelu.
 
 
 \begin{figure}
@@ -429,17 +438,21 @@ Kampaň popisuje samtotný útok z dvoch pohľadov. Netechnický, ktorý je repr
 \subsubsection{Stratégia}
 Stratégia predstavuje netechnický popis útoku na hornej úrovni. Pokiaľ si zoberieme nejakého útočníka, tak tento útočník zvyčajne dosahuje ciele útoku viacerými spôsobmi a stratégia definuje, čo a ako je potrebné pozorovať.
 
+\subsection{Zraniteľnosť}
+Zraniteľnosti definujú slabiny systému. Tieto slabiny môžu byť definované rôznymi stavmi zariadenia ako napríklad, ktoré systémy bežia, ale môžu predstavovať aj nastavenia rôznych aplikácií, napríklad rôzne prístupové nastavenia a povolenia pre webové prehliadače. Taktiež môžu popisovať rôzne funkcie, ktoré umožňujú vykonávať jednotlivé systémy, ako napríklad spúšťanie rôznych príkazov ktoré ovplyvňujú a menia systémové nastavenia zariadenie.
+
 \subsubsection{TTP}
 Taktiky, techniky a procedúry (TTP) sa zamieravajú na dáta čitateľné strojmi. Popisujú spôsoby útoku z hľadiska toho čo chcú dosiahnuť a ako to robia.
 
 
-\textbf{Vzorec útoku} je jedným z hľadisiek TTP. Definuje akým spôsobom je útok použitý. Napríklad sa tu nachádzajú rôzne úpravy názvov súborov, rôzne prenastavenie časovania a stavov zariadenia, atď.
+\textbf{Vzorec útoku} je jedným z hľadisiek TTP. Definuje akým spôsobom je útok použitý. Napríklad sa tu nachádzajú rôzne úpravy názvov súborov, rôzne prenastavenie časovania a stavov zariadenia, atď. 
 
 
-\textbf{Malware} je taktiež hľadisko z TTP. Definuje typ softvéru, ktorý sa vkladá do systému s úmyslom poškodiť cieľ útoku z hľadiska dôvernosti, integrity alebo dostupnosti.
+\textbf{Malware} je taktiež hľadisko z TTP. Definuje typ softvéru, ktorý sa vkladá do systému s úmyslom poškodiť cieľ útoku z hľadiska dôvernosti, integrity alebo dostupnosti. Medzi typické malware patrí vírus, trójsky kôň, červ, metódy tajných vstupov, spyware atď.
 
-\subsection{Zraniteľnosť}
-Zraniteľnosti definujú slabiny systému. Tieto slabiny môžu byť definované rôznymi stavmi zariadenia ako napríklad, ktoré systémy bežia, ale môžu predstavovať aj nastavenia rôznych aplikácií, napríklad rôzne 
+
+Každý okruh z TTP využíva niektoré zraniteľnosti systémov.
+
 
 \subsection{Indikátor}
 Indikátory predstavujú množinu rôznych vlastností zariadenia, kedy je zariadenie náchylné na útok. Tieto indikátory popisujú rôzne nastavenia zariadenia, jeho technické parametre alebo nainštalovaný softvér a vďaka nemu sú schopné definovať rôzne útoky.
@@ -451,8 +464,16 @@ Indikátory predstavujú množinu rôznych vlastností zariadenia, kedy je zaria
 \subsection{Nástroj}
 Nástroje sú pomôcky, ktoré útočníci inštalujú v zariadení obete. Väčšinou zahŕňa špecializovaný softvér priamo určený na spôsobenie škôd, ako napríklad vzdialené vykonávanie procesov alebo sieťové skenovanie. Taktiež môže byť použitý pre zabránenie detekcie útoku inými systémami.
 
-\subsection{Útok}
-Samotný útok, by mal predstavovať konkrétny útok, ktorý už prebehol. Mal by zahŕňať mapovania na každú časť CTI modelu, ako aj nejaké statické informácie o útoku, napríklad čas útoku, ako daný útok dopadol a podobne.
+
+\subsection{Zámer}
+Zámer pomenováva koncový stav objektu útoku. Zámer nemusí byť vopred daný alebo zrejmý. Jednotlivé útoky môžu prebiehať aj s tým, že až počas útoku je zámer známy. Zámerom môže byť napríklad ukradnutie duševného vlastníctva, poškodenie systému, získanie kompromitujúcich dát a podobne.
+
+
+\subsection{Cieľ}
+Cieľom je myslená entita, na ktorú je útok namierený. Takouto entitou môže byť napríklad organizácia, štát alebo konkrétna osoba.
+
+%\subsection{Útok}
+%Samotný útok, by mal predstavovať konkrétny útok, ktorý už prebehol. Mal by zahŕňať mapovania na každú časť CTI modelu, ako aj nejaké statické informácie o útoku, napríklad čas útoku, ako daný útok dopadol a podobne.
 
 
 
@@ -525,9 +546,10 @@ STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezp
 \chapter{Výskum a Analýza UCO}
 \assignment{MH: Takze si to vlastne sem cele presnul a v Casti I uz o tom nie je ani zmienka? Tu by to malo byt uvedene sposobom, ze tu ju podrobne pispiseme a zanalyzujeme... Cize malo by to byt v Casti II vedene ako analyza UCO, nie jej len popis\\
 MR: Done\\
-MH: Namiesto $\downarrow$ \uv{popiseme a budeme porovnavat} napise \uv{podrobne analyzujeme a vyhodnocujeme vzhladom na}.. Nech je to este jasnejsie.}
+MH: Namiesto $\downarrow$ \uv{popiseme a budeme porovnavat} napise \uv{podrobne analyzujeme a vyhodnocujeme vzhladom na}.. Nech je to este jasnejsie.\\
+MR: Done}
 
-V tejto časti popíšeme ontológiu\citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme porovnávať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami a či sú ich vlastnosti a hierarchia dostatočné. 
+V tejto časti podrobne analyzujeme a vyhodnocujeme ontológiu\citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme vyhodnocovať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami a či sú ich vlastnosti a hierarchia dostatočné. 
 
 
 \section{Model}
@@ -752,14 +774,17 @@ Open Vulnerability and Assessment Language(OVAL) je štandard, ktorý umožňuje
 Prvým krokom sú základné informácie o systémoch, ako napríklad o aký operačný systém sa jedná, ktoré jeho verzie ohrozuje a aké konkrétne produkty sú ohrozené, pokiaľ je splnená konfigurácia rôznych systémov. Taktiež obsahuje rôzne odkazy na ďaľšie informácie o jednotlivých zraniteľnostiach. 
 
 
-Druhé posudzovanie analyzuje systém podľa špecifikovaného nastavenia a zisťuje či je daný systém ohorzený alebo nie. 
+Druhé posudzovanie analyzuje systém podľa špecifikovaného nastavenia a zisťuje či je daný systém ohrozený alebo nie. 
 
 
 Posledný krok tvorí správu o výsledku tejto analýzy. Na výstupe je informácia o aktuálnom konfiguračnom nastavení systému.
 
 
 \section{Ontológia}
-Pre našu ontológiu nemusíme reprezentovať všetky znalosti o OVAL-e. Vybrali sme si konkrétne časti, ktoré je potrebné publikovať v našich spravodajských dátach. 
+Pre našu ontológiu nie je potrebné reprezentovať všetky znalosti o OVAL-e. Vybrali sme si konkrétne časti, ktoré je potrebné publikovať v našich spravodajských dátach. 
+
+
+V ontológii reprezentujeme všeobecné informácie popisujúce a definujúce OVAL záznamy, ich vzťahy s jednotlivými operačnými systémami, ich verziami a produktami. Zahŕňame aj informácie o externých zdrojoch pre záznamy. Taktiež predpripravíme ontológiu na reprezentovanie kritérií, ktoré predstavujú logické testy. Tieto testy majú v sebe aj výrokovú logiku reprezentovanú pomocou logických operátorov AND a OR, kde je možné definovať viacúrovňové logické výrazy.
 
 
 \begin{figure}
@@ -781,8 +806,18 @@ Samotný záznam sa skladá z:
 \item \textit{affectedFamily} -- operačný systém, ktorý ovplyvňuje
 \item \textit{affectedPlatform} -- akú platformu operačného systému ovplyvňuje
 \item \textit{affectedProduct} -- ktorý produkt ovplyvňuje
-\item \textit{HasReference} -- odkaz na externý zdroj informácií súvisiaci so záznamom
+\item \textit{hasReference} -- odkaz na externý zdroj informácií súvisiaci so záznamom
 \item \textit{hasCriteria} -- zoznam logických testov potrebených na zistenie či daný záznam ovplyvňuje systém
+\end{itemize}
+
+
+Kritériá popisujúce test majú nasledujúce vlastnosti:
+\begin{itemize}
+\item hasAndCriteria -- logické pravidlo spojené s rodičom AND operátorom
+\item hasOrCriteria -- logické pravidlo spojené s rodičom OR operátorom
+\item hasDefinition -- definícia kritéria
+\item hasComment -- popis kritéria alebo definície kritéria
+\item hasTest -- definícia vykonania a kontroly výstupu z testu
 \end{itemize}
 
 
