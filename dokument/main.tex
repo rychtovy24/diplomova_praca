@@ -27,8 +27,8 @@
 \hbadness=10000
 
 % TODO NOTES
-\usepackage{todonotes}
-%\usepackage[disable]{todonotes}
+%\usepackage{todonotes}
+\usepackage[disable]{todonotes}
 \input{todos}
 \setstretch{1.5}
 %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
@@ -377,7 +377,84 @@ Na získavanie dát zo sémantických webov a z RDF úložísk sú využívane S
 Popis moznosti
 
 \subsection{Web Ontology Language}
-Web Ontology Language alebo OWL
+Jazyk Web Ontology Language alebo OWL slúži na vytváranie a definovanie inštancií webových ontológií. Poskytuje nástroje na popis tried, vlastností a ich samotných inštancií. Oproti klasickým jazykom poskytje možnosť, špecifikovať logické vlastnosti jednotlivých objektov vyskytujúcich sa v ontológií, to znamená, že dokáže popísať aj fakty, ktoré v ontológií nie sú definované priamo, ale sú spojené logickými vlastnosťami. Napríklad, ak máme osoby Janka, Martin a Jozef, kde Janka je rodičom Martina a Jozef je rodičom Janky, pomocou OWL vieme definovať že Jozef je starým rodičom Martina, pričom nepotrebujeme vlastnosť popisujúcu tento vzťah priamo.
+
+
+\subsection{Druhy OWL}
+Jazyk OWL poskztuje 3 podjazyky, ktoré sú použitľné v rôznych situáciách.
+
+
+OWL Lite poskytuje definície na tvorbu hierarchického rozdelenia objektov a jednoduché obmedzenia. Jednoduchými obmedzeniami sa myslí napríklad obmedzenie kardinálnej vlastnosti a to iba na hodnoty 0 a 1. 
+
+
+OWL DL 
+
+
+OWL Full
+
+
+Každý, kto sa rozhodne vyvýjať ontológiu použitím OWL, by mal zvážiť, ktorý typ je najlepší pre danú ontológiu. Najmä treba zvážiť aké obmedzenia je potrebné pre ich ontológiu definovať. 
+
+
+\subsection{Syntax}
+Normovaná syntax OWL jazyka je RDF/XML. OWL je jazyk, ktorý rozširuje jazyk RDF. 
+
+
+Základná časť každej ontológie by mala obsahovať menný priestor, kde si definujeme množinu slovníkov používaných v našej ontológií.
+\begin{verbatim}
+<rdf: RDF
+  xmlns     = "http://www.semanticweb.org/example"
+  xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs= "http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl = "http://www.w3.org/2002/07/owl#"
+>
+\end{verbatim}
+Prvá deklarácia definuje menný priestor našej ontológie. Zvyšné deklarácie definujú ďalšie slovníky použité v ontológii.
+
+
+Po vytvorení menného priestoru si potrebujeme všeobecne definovať našu vlastnú ontológiu. V tejto definícii sa nachádzajú informácie ako komentár k ontológii a názov ontológii a taktiež vieme definovať rôzne ontológie, ktoré budú súčasťou ontológie.
+\begin{verbatim}
+<owl:Ontology rdf:about = ""> 
+  <rdfs:comment>Príklad ontológie OWL o osobách</rdfs:comment>
+  <owl:priorVersion 
+     rdf:resource = "http://www.semanticweb.org/example/1.15" /> 
+  <owl:import rdf:resource = "http://www.semanticweb.org/food" /> 
+  <rdfs:label>Ontológia osôb</rdfs:label> 
+<owl:Ontology>
+\end{verbatim}
+
+
+Vlastnosť \textit{owl:import} pridá externú ontológiu do našej pomocou definovaného zdroja cez vlastnosť \textit{rdf:resource}. Pomocou owl:priorVersion vieme definovať verziovanie ontológií.
+
+
+Ďalej si potrebujeme vedieť definovať triedy v ontológii. Na to nám slúži element owl:Class, v ktorom vieme zadeklarovať definíciu danej triedy pomocou vlastnosti rdf:ID.
+\begin{verbatim}
+<owl:Class rdf:ID = "Muž" />
+<owl:Class rdf:ID = "Žena" />
+\end{verbatim}
+
+
+Hierachické usporiadanie tried vieme ďalej definovať pomocou vlastnosti rdfs:subClassOf, ktorej definujeme jej nadtriedu pomocou vlastnosti rdf:resource. Týchto nadtried vieme definovať viac.
+\begin{verbatim}
+<owl:Class rdf:ID = "Manžel">
+  <rdfs:subClassOf rdf:resource = "Muž">
+  ...
+</owl:Class>
+\end{verbatim}
+
+
+Pre triedu vieme definovať aj slovný popis a názov. Tento názov vieme definovať v rôznych jazykoch použitím vlastnosti xml:lang. Vlastnosť rdfs:label definuje pre bežného človeka ľahko čitateľný názov triedy. Najčastejšie sa využíva táto vlastnosť pri prezentačných nástrojoch ontológií.
+
+
+\begin{verbatim}
+<owl:Class rdf:ID = "Manžel">
+  <rdfs:subClassOf rdf:resource = "Muž">
+  <rdfs:label xml:lang="en">Husband</rdfs:label>
+  <rdfs:label xml:lang="sk">Manžel</rdfs:label>
+  ...
+</owl:Class>
+\end{verbatim}
+
 
 \assignment{MH: Kedze cela Tvoja praca je o ontologiach a budes ich zrejme nejako zapisovat mozno by si mohol nieco povedat aj o jazykoch na zaspis ontologii, minimalen apson o jednom, s ktorym budes pracovat dalej (cize zrejme OWL)}
 
