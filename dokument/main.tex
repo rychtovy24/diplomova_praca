@@ -619,7 +619,7 @@ STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezp
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\part{Návrh riešenia}
+\part{Vlastný prínos}
 \chapter{Výskum a Analýza UCO}
 \assignment{MH: Takze si to vlastne sem cele presnul a v Casti I uz o tom nie je ani zmienka? Tu by to malo byt uvedene sposobom, ze tu ju podrobne pispiseme a zanalyzujeme... Cize malo by to byt v Casti II vedene ako analyza UCO, nie jej len popis\\
 MR: Done\\
@@ -819,7 +819,8 @@ Taktiež existuje trieda \textit{CWE}, ktorá je prepojená s triedou \textit{We
 TODO -- chcem sa pobavit s panom baloghon co by radil medzi ne z uco ontologie, nakolko sa nevidim tolko do tejto domeny aby som vedel povedat ktora do toho spada.
 
 
-\chapter{CVE}
+\chapter{Návrh ontológií}
+\section{CVE}
 Common Vulnerabilities and Exposures(CVE) je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
 
 
@@ -832,7 +833,7 @@ Každý jeden záznam má taktiež popis, ktorý musí obsahovať dostatok infor
 Záznamy majú aj zoznam referencií, ktoré sú používané ako externé zdroje k zraniteľnosti. Sú to externé odkazy s infomáciou o zdrojovom systéme. Tieto odkazy musia používať iba protokoly \textit{http}, \textit{ftp}, \textit{https}, alebo \textit{ftps}.
 
 
-\section{Ontológia}
+\subsection{Ontológia}
 Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje základné inforácie zraniteľnosti, podľa požiadaviek štandardu. Ako definíciu zraniteľnosti, používame jej URI, ktorá poskytuje prepoužitie a odkazovanie sa na ňu. Táto zraniteľnosť má taktiež svoj názov, ktorý reprezentujeme ako CVE identifikátor. Každá zraniteľnosť má svoj popis a zoznam referencií. Ako rozšírenie sme použili vlastnosť \textit{hasRefId}, ktorá definuje unikátny identifikátor, v referencovanom systéme. Tento parameter nie je povinný.
 
 \begin{figure}
@@ -844,7 +845,7 @@ Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje zákl
 
 
 
-\chapter{OVAL}
+\section{OVAL}
 Open Vulnerability and Assessment Language(OVAL) je štandard, ktorý umožňuje popísanie zraniteľností jednotlivých produktov (softvérov). Tieto informácie sú písané vo formáte XML. Obsahuje tri hlavné kroky posudzovania.
 
 
@@ -857,7 +858,7 @@ Druhé posudzovanie analyzuje systém podľa špecifikovaného nastavenia a zis�
 Posledný krok tvorí správu o výsledku tejto analýzy. Na výstupe je informácia o aktuálnom konfiguračnom nastavení systému.
 
 
-\section{Ontológia}
+\subsection{Ontológia}
 Pre našu ontológiu nie je potrebné reprezentovať všetky znalosti o OVAL-e. Vybrali sme si konkrétne časti, ktoré je potrebné publikovať v našich spravodajských dátach. 
 
 
@@ -899,11 +900,8 @@ Kritériá popisujúce test majú nasledujúce vlastnosti:
 
 
 
-\backmatter
-
-
-\part{Implementácia}
-\chapter{Dáta}
+\chapter{Implementácia a testovanie}
+\section{Dáta}
 Dáta, ktoré sme spracovávali pochádzajú z verejne dostupného zdroja štandardov OVAL a CVE. Tieto dáta mali pôvodne štruktúru XML, ktorá ale nebola písaná OWL syntaxov. Tieto dáta sme spracovali pomocou programovacieho jazyka Python. Jednotlivé triedy v nami navrhnutých ontológiách sme si implementovali a následne sme spracovali dané dátové súbory pomocou knižnice \textit{xml}. Po spasovaní dát sme tieto dáta definovali pomocou tripletov a následne ich zapísali pomocou knižnice \textit{rdflib} do súboru vo formáte \textit{turtle}. 
 
 
@@ -913,8 +911,7 @@ Tento formát sme vybrali najmä kôli menšiemu objemu dát, nakoľko bolo potr
 \section{Web}
 V spolupráci so študentami môjho konzultanta, sme vytvorili webovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka poskytuje zobrazenie CVE a OVAL dát, kde je možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
 
-\part{Testovanie}
-\chapter{Konzistetnosť}
+\chapter{Testovanie}
 \section{Ontológia}
 postup a popis vyhodnocovania konzistentnosti TBox-u
 
@@ -922,13 +919,17 @@ postup a popis vyhodnocovania konzistentnosti TBox-u
 postup a popis vyhodnocovania konzistentnosti ABox-u
 
 
-\part{Výsledky práce}
-\chapter{Zhrnutie}
+\chapter{Záver}
+\section{Zhrnutie}
 Co sme dosiahli, ako je nase riesenie splnene v porovnani s CTI modelom
 
 
-\chapter{Záver}
-co sme dosiahli v praci, navrhy na vylepsenia
+\section{Prínos}
+co sme dosiahli v praci
+
+
+\section{Budúce pokračovanie}
+navrhy na vylepsenia
 
 \nocite{*}
 \bibliographystyle{alpha}
