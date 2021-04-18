@@ -27,8 +27,8 @@
 \hbadness=10000
 
 % TODO NOTES
-%\usepackage{todonotes}
-\usepackage[disable]{todonotes}
+\usepackage{todonotes}
+%\usepackage[disable]{todonotes}
 \input{todos}
 \setstretch{1.5}
 %\renewcommand\baselinestretch{1.5} % riadkovanie jeden a pol
@@ -203,7 +203,8 @@ Vďaka takejto reprezentácii dát je možné písať pravidlá, ktoré má dan�
 
 
 \assignment{MH: \UP Toto trochu povrchne: (1) Ucelom SW nie je vyssia pouzitelnost webu (to je nepresne), ale je to lepsia pristupnost informacii publikovanych na webe pre strojove spracovanie. (2) Ak chces popisovat vrstvy SW podla tohto diagramu, bolo by dobre keby si popisal vsetky vrstvy -- U XML by som sa obmedzil na to, ze je to proste dobry format pre textovu reprezentaciu dat v suboroch a pre ich vymenu medzi softvermi -- toto vsak uz je dnes prekonane, uz vymiename SW data aj ako JSON, embedujeme ich do HTML5 (chcelo by to poznamku) -- O RDF a RDFS si vlastne nic uzitocne (z coho citatel nieco vyrozumie) nepovedal -- no a ostatne vrstvy si uplne preskocil\\
-MH: Toto si menil? Zda sa mi, ze trochu asi aj ano, ale o tych dalsich vrstvach si nic nenapisal}
+MH: Toto si menil? Zda sa mi, ze trochu asi aj ano, ale o tych dalsich vrstvach si nic nenapisal\\
+MR: Popisane su uz aj dalsie vrstvy, mali by byt uz hotove}
 
 
 
@@ -217,16 +218,17 @@ podme v nich aj data zverenjnovat}
 
 \minor{MH: Inak ked uz si sa rozhodol pisat po slovensky, mal by si pouzivat aj
 slovensku terminologiu (co je celkom peklo) -- ale teda Linked Data su
-\emph{prepojene data}, LD network je \emph{siet prepojenych dat} -- ludia to takto pouzivaju}
+\emph{prepojene data}, LD network je \emph{siet prepojenych dat} -- ludia to takto pouzivaju\\
+MR: premenovane}
 
-Linked Data \cite{linkeddata} je metóda zverjňovania štrukturovaných dát. Ich hlavným cieľom je poprepájať existujúce databázy (primárne písané v RDF formáte), medzi rôznymi údajmi a umožniť ľuďom zdielať štrukturované dáta na webe pomocou HTML. Časť vízie do budúcna je, aby sa Internet stal globálnou databázou. Princípy Linked Data prvýkrát načrtol Tim Berners-Lee. Popísal 4 pravidlá pre zverejňovanie dát na webe:
+Linked Data \cite{linkeddata} alebo prepojené dáta, je metóda zverejňovania štrukturovaných dát. Ich hlavným cieľom je poprepájať existujúce databázy (primárne písané v RDF formáte), medzi rôznymi údajmi a umožniť ľuďom zdielať štrukturované dáta na webe pomocou HTML. Časť vízie do budúcna je, aby sa Internet stal globálnou databázou. Princípy prepojených dát prvýkrát načrtol Tim Berners-Lee. Popísal 4 pravidlá pre zverejňovanie dát na webe:
 \begin{enumerate}
   \item používať URI ako názvy objektov, ktoré sú identifikátormi informácie, jej umiestnenia a ďalších vlastnotí,
   \item používať HTTP URI, aby si ich ľudia vedeli pozrieť,
   \item uvádzať informácie o tom, čo názov identifikuje pri vyhľadávaní pomocou otvorených štandardov, ako sú napríklad RDF alebo SPARQL,
   \item pri publikovaní údajov na webe, zahrnúť odkazy aj na iné URI, aby sa dalo objavovať viac vecí.
 \end{enumerate}
-Sú známe aj ako Linked Data princípy.
+Sú známe aj ako Princípy prepojených dát.
 
 \assignment{MH: Tu mi chyba informacia, ze sa tato inciativa ujala, a ze vdaka
 tomu vznikla na webe tzv. siet prepojenych dat, ktora obsahuje obrovske mnozstvo
