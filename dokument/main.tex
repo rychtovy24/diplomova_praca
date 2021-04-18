@@ -461,9 +461,6 @@ Pre triedu vieme definovať aj slovný popis a názov. Tento názov vieme defino
 \assignment{MH: Kedze cela Tvoja praca je o ontologiach a budes ich zrejme nejako zapisovat mozno by si mohol nieco povedat aj o jazykoch na zaspis ontologii, minimalen apson o jednom, s ktorym budes pracovat dalej (cize zrejme OWL)}
 
 
-\section{Deskripčná logika}
-zakladna syntax ktoru budeme pouzivat neskor na popisanie nasej ontologie
-
 \chapter{Existujúce ontologické riešenia}
 Množstvo kyber útokov v dnešnej dobe narastá závratnou rýchlosťou, čo značí že dnešné spôsoby a metódy ochrany nie sú dostatočné a preto je potrebné sa zamyslieť nad novými spôsobmi ochrany. Jeden z prístupov by mohol byť založený práve na ontológiách. Ontológie a systémy postavené nad nimi majú výhodu sémantiky, ktorá je schopná rozlišovať situácie kedy je počítačový systém normálny alebo škodlivý.
 
@@ -822,6 +819,10 @@ TODO -- chcem sa pobavit s panom baloghon co by radil medzi ne z uco ontologie, 
 
 
 \chapter{Návrh ontológií}
+V predchádzajúcej časti sme si podrobnejšie predstavili vybranú časť UCO ontológie. Ukázali sme si, aké časti z CTI modelu spĺňa a aké dáta jednotlivé okruhy reprezentujú. Touto podrobnejšou anlýzou sme zistili, ktoré dáta ešte nepokrývajú alebo sa nemapujú na už existujúce dáta. 
+
+
+V tejto kapitole si ukážeme databázy CVE a OVAL, ktoré predstavujú z CTI modelu časť Zraniteľnosť. Predstavíme si nami vytvorené ontológie, ich mapovania a vlastnosti jednotlivých objektov.
 \section{CVE}
 Common Vulnerabilities and Exposures(CVE) je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
 
@@ -903,6 +904,10 @@ Kritériá popisujúce test majú nasledujúce vlastnosti:
 
 
 \chapter{Implementácia a testovanie}
+V kapitole Návrh ontológií sme si predstavili nami vytvorené ontológie z už existujúcich databáz CVE a OVAL.
+
+
+V tejto kapitole si ukážeme ako sme na tieto ontológie namapovali už existujúce dáta, ako sme tieto dáta migrovali a ako ich reprezentujeme na webe. 
 \section{Dáta}
 Dáta, ktoré sme spracovávali pochádzajú z verejne dostupného zdroja štandardov OVAL a CVE. Tieto dáta mali pôvodne štruktúru XML, ktorá ale nebola písaná OWL syntaxov. Tieto dáta sme spracovali pomocou programovacieho jazyka Python. Jednotlivé triedy v nami navrhnutých ontológiách sme si implementovali a následne sme spracovali dané dátové súbory pomocou knižnice \textit{xml}. Po spasovaní dát sme tieto dáta definovali pomocou tripletov a následne ich zapísali pomocou knižnice \textit{rdflib} do súboru vo formáte \textit{turtle}. 
 
@@ -914,14 +919,43 @@ Tento formát sme vybrali najmä kôli menšiemu objemu dát, nakoľko bolo potr
 V spolupráci so študentami môjho konzultanta, sme vytvorili webovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka poskytuje zobrazenie CVE a OVAL dát, kde je možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
 
 \chapter{Testovanie}
-\section{Ontológia}
-postup a popis vyhodnocovania konzistentnosti TBox-u
+V predchádzajúcej kapitole sme si popísali ako sme dáta migrovali a mapovali na nami vytvorenú databázu. Taktiež sme si popísali webovú stránku, ktorú sme vytvárali v spolupráci so študentami z FEI STU.
+
+
+V tejto kapitole sa budeme venovať testovaniu našej vygenerovanej ontológie a dopytovanie sa nad nami importovanými dátami. Ukážeme si rôzne testy použiteľnosti a ukážky SPARQL dopytov.
+
+
+\section{Testy použiteľnosti}
+\subsection{Test použiteľnosti 1}
+\subsubsection*{Názov}
+CVE podľa platformy
+
+\subsubsection*{Zadanie}
+Podľa zadanej platformy, nájdi v databáze všetky CVE objekty, ktoré súvisia s danou platformou. Na výstupe vráť ich URI definíciu s názvom CVE záznamu.
+
+\subsubsection*{Dopyt}
+\begin{verbatim}
+PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
+PREFIX platform: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
+
+SELECT ?cve ?title
+WHERE {
+  ?cve a cve:CVE.
+  ?cve main:hasTitle ?title.
+  ?oval a oval:.
+  ?oval main:hasCVE ?cve.
+  ?oval main:affectedPlatform platform:Microsoft_Windows_8
+}
+\end{verbatim}
 
 \section{Dáta}
 postup a popis vyhodnocovania konzistentnosti ABox-u
 
 
 \chapter{Záver}
+V predchádzajúcej kapitole sme si overili, že naše dáta sú konzistentné a ukázali sme si príklady použiteľnosti našej ontológie. V tejto záverečnej kapitole si zhrnieme, čo sme spravili, aký celkový prínos má naša práca pre publikovanie sémantických spravodajských dát o bezpečnostných hrozbách, ako aj možné rozšírenia našej ontológie.
 \section{Zhrnutie}
 Co sme dosiahli, ako je nase riesenie splnene v porovnani s CTI modelom
 
