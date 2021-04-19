@@ -918,15 +918,15 @@ Tento formát sme vybrali najmä kôli menšiemu objemu dát, nakoľko bolo potr
 \section{Web}
 V spolupráci so študentami môjho konzultanta, sme vytvorili webovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka poskytuje zobrazenie CVE a OVAL dát, kde je možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
 
-\chapter{Testovanie}
-V predchádzajúcej kapitole sme si popísali ako sme dáta migrovali a mapovali na nami vytvorenú databázu. Taktiež sme si popísali webovú stránku, ktorú sme vytvárali v spolupráci so študentami z FEI STU.
+\section{Testovanie}
+V predchádzajúcich častiach sme si popísali ako sme dáta migrovali a mapovali na nami vytvorenú ontológiu. Taktiež sme si popísali webovú stránku, ktorú sme vytvárali v spolupráci so študentami z FEI STU, ktorá slúži na zobrazovanie našich dát.
 
 
 V tejto kapitole sa budeme venovať testovaniu našej vygenerovanej ontológie a dopytovanie sa nad nami importovanými dátami. Ukážeme si rôzne testy použiteľnosti a ukážky SPARQL dopytov.
 
 
-\section{Testy použiteľnosti}
-\subsection{Test použiteľnosti 1}
+\subsection{Testy použiteľnosti}
+\subsubsection{Test použiteľnosti 1}
 \subsubsection*{Názov}
 CVE podľa platformy
 
@@ -951,7 +951,7 @@ WHERE {
 \end{verbatim}
 
 
-\subsection{Test použiteľnosti 2}
+\subsubsection{Test použiteľnosti 2}
 \subsubsection*{Názov}
 OVAL záznamy, ktoré ovplyvňujú iba platformu.
 
@@ -980,7 +980,7 @@ WHERE {
 \end{verbatim}
 
 
-\subsection{Test použiteľnosti 3}
+\subsubsection{Test použiteľnosti 3}
 \subsubsection*{Názov}
 Frekvenčná tabuľka CVE záznamov.
 
@@ -1006,9 +1006,9 @@ ORDER BY DESC(?count)
 \end{verbatim}
 
 
-\subsection{Test použiteľnosti 4}
+\subsubsection{Test použiteľnosti 4}
 \subsubsection*{Názov}
-
+Cve záznamy ovplyvňujúce viac operačných systémov.
 
 \subsubsection*{Zadanie}
 Nájdi také CVE záznamy, ktoré ovplyvňujú rovnaký produkt na rôznych operačných systémoch. Na výstup vráť URI a názov CVE záznamu, produkt ktorý ovplyvňuje a URI operačných systémov.
