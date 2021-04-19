@@ -162,53 +162,48 @@ class OVAL:
 
     
 
-PLATFORM = "asa"
-PLATFORM = "ios"
-PLATFORM = "iosxe"
-PLATFORM = "macos"
-PLATFORM = "pixos"
-PLATFORM = "unix"
-PLATFORM = "windows"
-tree = ET.parse(PLATFORM+'.xml')
-root = tree.getroot()
-oval_dic = {}
-count = 0
-for child in root:
-    if child.tag.find('}definitions') < 0:
-        continue
-    for definition in child:
-        if definition.tag.find('}definition') < 0:
+PLATFORMS = ["asa", "ios", "iosxe", "macos", "pixos", "unix", "windows"]
+for platform in PLATFORMS:
+    tree = ET.parse(platform+'.xml')
+    root = tree.getroot()
+    oval_dic = {}
+    count = 0
+    for child in root:
+        if child.tag.find('}definitions') < 0:
             continue
-        if definition.attrib['class'] == 'inventory':
-            continue
-        oval_dic[definition.attrib['id']] = OVAL(definition)
-        count += 1
-        #if count > 100:
-            #break
+        for definition in child:
+            if definition.tag.find('}definition') < 0:
+                continue
+            if definition.attrib['class'] == 'inventory':
+                continue
+            oval_dic[definition.attrib['id']] = OVAL(definition)
+            count += 1
+            #if count > 100:
+                #break
 
-print(count)
+    print(count)
 
-graph = Graph()
-graph.bind('cve', CVE_NAMESPACE)
+    graph = Graph()
+    graph.bind('cve', CVE_NAMESPACE)
 
-for key in families:
-    families[key].write(graph)
-    families[key].write_other(graph)
+    for key in families:
+        families[key].write(graph)
+        families[key].write_other(graph)
 
-for key in products:
-    products[key].write(graph)
-    
-for key in platforms:
-    platforms[key].write(graph)
+    for key in products:
+        products[key].write(graph)
+        
+    for key in platforms:
+        platforms[key].write(graph)
 
-for key in oval_dic:
-    oval_dic[key].write_OVAL(graph)
+    for key in oval_dic:
+        oval_dic[key].write_OVAL(graph)
 
 
-    
+        
 
-with open('oval_generate_data_'+PLATFORM+'.rdf', 'w', encoding="utf-8") as f:
-    print(graph.serialize(format="turtle").decode("utf-8"), file=f)
+    with open('oval_generate_data_'+platform+'.rdf', 'w', encoding="utf-8") as f:
+        print(graph.serialize(format="turtle").decode("utf-8"), file=f)
 
     
 

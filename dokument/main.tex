@@ -950,6 +950,92 @@ WHERE {
 }
 \end{verbatim}
 
+
+\subsection{Test použiteľnosti 2}
+\subsubsection*{Názov}
+OVAL záznamy, ktoré ovplyvňujú iba platformu.
+
+\subsubsection*{Zadanie}
+Vráť mi všetky OVAL záznamy, ktoré ovplyvňujú všeobecne platformu a žiaden konkrétny produkt pre danú platformu. Na výstupe mi pošli ich URI OVAL záznamu, názov, URI a názov operačnénho systému a URI a názov platformy.
+
+\subsubsection*{Dopyt}
+\begin{verbatim}
+PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?oval ?title ?family ?familyName ?platform ?platformName
+WHERE {
+  ?oval a oval:.
+  ?oval main:hasTitle ?title.
+  ?oval main:affectedFamily ?family.
+  ?family rdfs:label ?familyName.
+  ?oval main:affectedPlatform ?platform.
+  ?platform rdfs:label ?platformName.
+  NOT EXISTS {
+    ?oval main:affectedProduct ?product.
+  }
+}
+\end{verbatim}
+
+
+\subsection{Test použiteľnosti 3}
+\subsubsection*{Názov}
+Frekvenčná tabuľka CVE záznamov.
+
+\subsubsection*{Zadanie}
+Získaj všetky CVE záznamy, zoradené podľa toho, ako často sú využívané ako referencia v OVAL záznamoch. Zoraď ich podľa využívanosti od najväčšej a na výstup vráť URI a názov CVE záznamu s počtom OVAL definícií, v ktorých sú použité.
+
+\subsubsection*{Dopyt}
+\begin{verbatim}
+PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
+PREFIX platform: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
+
+SELECT ?cve ?title (COUNT(?oval) as ?count)
+WHERE {
+  ?cve a cve:CVE.
+  ?cve main:hasTitle ?title.
+  ?oval a oval:.
+  ?oval main:hasCVE ?cve.
+} 
+GROUP BY ?cve ?title
+ORDER BY DESC(?count)
+\end{verbatim}
+
+
+\subsection{Test použiteľnosti 4}
+\subsubsection*{Názov}
+
+
+\subsubsection*{Zadanie}
+Nájdi také CVE záznamy, ktoré ovplyvňujú rovnaký produkt na rôznych operačných systémoch. Na výstup vráť URI a názov CVE záznamu, produkt ktorý ovplyvňuje a URI operačných systémov.
+
+\subsubsection*{Dopyt}
+\begin{verbatim}
+PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
+PREFIX platform: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
+
+SELECT ?cve ?title ?product ?family1 ?family2
+WHERE {
+  ?cve a cve:CVE.
+  ?cve main:hasTitle ?title.
+  ?oval1 a oval:.
+  ?oval1 main:hasCVE ?cve.
+  ?oval1 main:affectedProduct ?product.
+  ?oval1 main:affectedFamily ?family1.
+  ?oval2 a oval:.
+  ?oval2 main:hasCVE ?cve.
+  ?oval2 main:affectedProduct ?product.
+  ?oval2 main:affectedFamily ?family2.
+  FILTER (?family1 != ?family2).
+} 
+\end{verbatim}
+
 \section{Dáta}
 postup a popis vyhodnocovania konzistentnosti ABox-u
 

@@ -1,12 +1,48 @@
 PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix owl: <http://www.w3.org/2002/07/owl#>
+PREFIX platform: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
 
-SELECT ?cve ?title ?oval ?ovalTitle
+SELECT ?cve ?title
 WHERE {
-  ?cve a <https://cve.mitre.org/about/terminology.html#CVE>.
+  ?cve a cve:CVE.
   ?cve main:hasTitle ?title.
-  ?oval a <https://oval.mitre.org/language/version5.11/OVAL>.
+  ?oval a oval:.
   ?oval main:hasCVE ?cve.
-  ?oval main:hasTitle ?ovalTitle
+  ?oval main:affectedPlatform platform:Microsoft_Windows_8
 }
+
+
+PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?oval ?title ?family ?familyName ?platform ?platformName
+WHERE {
+  ?oval a oval:.
+  ?oval main:hasTitle ?title.
+  ?oval main:affectedFamily ?family.
+  ?family rdfs:label ?familyName.
+  ?oval main:affectedPlatform ?platform.
+  ?platform rdfs:label ?platformName.
+  NOT EXISTS {
+    ?oval main:affectedProduct ?product.
+  }
+}
+
+
+PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
+PREFIX platform: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/platform#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
+
+SELECT ?cve ?title (COUNT(?oval) as ?count)
+WHERE {
+  ?cve a cve:CVE.
+  ?cve main:hasTitle ?title.
+  ?oval a oval:.
+  ?oval main:hasCVE ?cve.
+} 
+GROUP BY ?cve ?title
+ORDER BY DESC(?count)
