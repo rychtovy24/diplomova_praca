@@ -12,6 +12,20 @@ WHERE {
   ?oval main:affectedPlatform platform:Microsoft_Windows_8
 }
 
+PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
+PREFIX product: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology/product#>
+PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
+PREFIX oval:<https://oval.mitre.org/language/version5.11/OVAL>
+
+SELECT ?cve ?title
+WHERE {
+  ?cve a cve:CVE.
+  ?cve main:hasTitle ?title.
+  ?oval a oval:.
+  ?oval main:hasCVE ?cve.
+  ?oval main:affectedProduct product:GitHub_Enterprise
+}
+
 
 PREFIX main: <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#>
 PREFIX cve: <https://cve.mitre.org/about/terminology.html#>
