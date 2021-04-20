@@ -920,9 +920,6 @@ Dáta, ktoré sme spracovávali pochádzajú z verejne dostupného zdroja štand
 Tento formát sme vybrali najmä kôli menšiemu objemu dát, nakoľko bolo potrebných viac optimalizácií pre generovanie. Ale aj po tejto optimalizácii sme nevedeli spracovať dané záznamy, preto sme sa  rozhodli ich rozdeliť. CVE dáta sme spracovali tak, že sme ich rozdelili podľa rokov vytvorenia. OVAL dáta sme rozdelili podľa operaného systému, ktorého sa týkajú. Po zapísaní časti dát, sme túto časť premazali.
 
 
-\section{Web}
-V spolupráci so študentami môjho konzultanta, sme vytvorili webovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka poskytuje zobrazenie CVE a OVAL dát, kde je možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
-
 \section{Testovanie}
 V predchádzajúcich častiach sme si popísali ako sme dáta migrovali a mapovali na nami vytvorenú ontológiu. Taktiež sme si popísali webovú stránku, ktorú sme vytvárali v spolupráci so študentami z FEI STU, ktorá slúži na zobrazovanie našich dát.
 
@@ -930,8 +927,9 @@ V predchádzajúcich častiach sme si popísali ako sme dáta migrovali a mapova
 V tejto kapitole sa budeme venovať testovaniu našej vygenerovanej ontológie a dopytovanie sa nad nami importovanými dátami. Ukážeme si rôzne testy použiteľnosti a ukážky SPARQL dopytov.
 
 
-\subsection{Testy použiteľnosti}
-\subsubsection{Test použiteľnosti 1}
+\subsection{Príklady použitia}
+\subsection*{Príklad 1}
+\label{sec:priklad1}
 \subsubsection*{Názov}
 CVE podľa platformy
 
@@ -958,7 +956,8 @@ WHERE {
 \end{verbatim}
 
 
-\subsubsection{Test použiteľnosti 2}
+\subsection*{Príklad 2}
+\label{sec:priklad2}
 \subsubsection*{Názov}
 OVAL záznamy, ktoré ovplyvňujú iba platformu.
 
@@ -987,8 +986,12 @@ WHERE {
 }
 \end{verbatim}
 
+\subsubsection*{Výstup}
+Záznamov, ktoré spĺňajú dané zadanie sme identifikovali z takmer 20 000 oval záznamoch 9 065. Tým sme získali určitú predstavu o počte OVAL záznamoch, ktoré všeobecne ovplyvňujú iba plaformy operačných systémov.
 
-\subsubsection{Test použiteľnosti 3}
+
+\subsection*{Príklad 3}
+\label{sec:priklad3}
 \subsubsection*{Názov}
 Frekvenčná tabuľka CVE záznamov.
 
@@ -1016,12 +1019,19 @@ ORDER BY DESC(?count)
 \end{verbatim}
 
 
-\subsubsection{Test použiteľnosti 4}
+\subsubsection*{Výstup}
+Najviac používaný CVE záznam v OVAL záznamoch bol odkazovaný 12 krát. Zvyšné záznamy boli vždy odkazované aspoň 1 krát, čiže sme zistili že každý CVE záznam je podrobnejšie popísaný v OVAL záznamoch. Neexistuje záznam, ktorbý by nebol spracovaný v OVAL databáze.
+
+
+\subsection*{Príklad 4}
+\label{sec:priklad4}
 \subsubsection*{Názov}
 Cve záznamy ovplyvňujúce viac operačných systémov.
 
+
 \subsubsection*{Zadanie}
 Nájdi také CVE záznamy, ktoré ovplyvňujú rovnaký produkt na rôznych operačných systémoch. Na výstup vráť URI a názov CVE záznamu, produkt ktorý ovplyvňuje a URI operačných systémov.
+
 
 \subsubsection*{Dopyt}
 \begin{verbatim}
@@ -1047,6 +1057,22 @@ WHERE {
   FILTER (?family1 != ?family2).
 } 
 \end{verbatim}
+
+
+\subsubsection*{Výstup}
+Počet CVE záznamov, ktoré ovplyvňujú viac ako jeden operačný systém je z 204 144 CVE záznamov 146.
+
+
+
+\section{Web}
+V spolupráci so študentami môjho konzultanta, sme vytvorili webovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka bude skúžiť na zobrazenie CVE a OVAL dát, kde bude možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
+
+
+Takiež sa v nej budú dať prezerať dáta o jednotlivých operačných systémoch, ich platformách a produktoch. Na týchto stránkach budú informácie o jednotlivých OVAL a CVE záznamoch, ktoré sa týkajú daného predmetu.
+
+
+Základná stránka pre každý OVAL a CVE objekt bude zobrazovať všetky dáta, ktoré má v databáze definované na prvej úrovni t.j., dáta kde daný objekt figuruje ako predmet v trojici. 
+
 
 \section{Dáta}
 postup a popis vyhodnocovania konzistentnosti ABox-u
