@@ -1082,21 +1082,36 @@ postup a popis vyhodnocovania konzistentnosti ABox-u
 
 
 \chapter{Záver}
-V predchádzajúcej kapitole sme si overili, že naše dáta sú konzistentné a ukázali sme si príklady použiteľnosti našej ontológie. V tejto záverečnej kapitole si zhrnieme, čo sme spravili, aký celkový prínos má naša práca pre publikovanie sémantických spravodajských dát o bezpečnostných hrozbách, ako aj možné rozšírenia našej ontológie.
+V predchádzajúcej kapitole sme si overili, že naše dáta sú konzistentné a ukázali sme si príklady použiteľnosti našej ontológie. Na záver si zhrnieme, čo sme spravili, aký celkový prínos má naša práca pre publikovanie sémantických spravodajských dát o bezpečnostných hrozbách, ako aj možné rozšírenia našej ontológie a dát.
 \section{Zhrnutie}
 \overview{MH: urobili sme to a to... Zosaumarizovat}
-Co sme dosiahli, ako je nase riesenie splnene v porovnani s CTI modelom
+V tejto práci sme vykonali podrobnú analýzu a vyhodnotenie už existujúceho ontologického riešenia pre spravodajské dáta o bezpečnostných hrozbách vzhľadom na CTI model. Následne sme zhodnotili, aké časti nie sú dostatočne zapracované v tejto ontológii a túto časť sme rozšírili o ontológiu, ako aj o dáta z verejných databázových riešení OVAL a CVE. 
+
+
+Dáta v jednotlivých databázových riešeniach sme zanalyzovali, na základe týchto dát sme vytvorili ontologické riešenie, ktoré pokrývalo všetky dáta relevantné pre publikovanie a tieto vybraté dáta sme importovali a zmapovali na naše ontologické riešenia. Nad týmito dátami sme následne vytvorili rôzne analýzy a prípady použitia na popis, čo sa v nmi navrhnutých ontológiách dá zistiť.
 
 
 \section{Prínos}
 \overview{MH: Aky vyznam ma nasa praca, na co to bolo dobre, co vdaka tom
 sa teraz vie, da lahsie vypocitat, zistit, zintegrovat}
-co sme dosiahli v praci
+Pomocou ontologického riešenia, časti z domény kybernetickej bezpečnosti, sa nám podarilo vyjadriť tieto dáta vo jednotnej forme, prepojiť naše riešenie s už existujúcim štandardom repreznetovania znalostí v doméne kybernetickej bezpečnosti ako aj jej rozšírenie o časť zraniteľnosti a ich podrobný popis. Podarilo sa nám premapovať existujúce OVAL a CVE dáta na naše ontologické riešenie a poprepájať tieto dáta medzi sebou.
+
+
+Vďaka tomu, vieme tieto dáta reprezentovať vo forme, ktorá je prepoužiteľná a strojovo čitateľná. Hocikto sa môže na naše dáta odkazovať, opätovne ich využiť alebo rozšíriť. Naša práca taktiež dokáže pomôcť pri prevencii a ochrane pred kybernetickými hrozbami. 
+
+
+Na základe nami importnutých dát vieme tvoriť rôzne štatistické analýzy, ľahšie zisťovať prepojenia medzi jednotlivými zraniteľnosťami a odvodzovať spojenia napríklad medzi platformamy a CVE záznamami.
 
 
 \section{Budúce pokračovanie}
 \overview{MH: Kde vidime priestor, ze co by s tym niekto mohol robit, dalsie mozne vylepsenia}
-navrhy na vylepsenia
+V našej ontológii sme nespracovali časť databázy z už existujúcej OVAL databázy. Táto databáza obsahuje ešte ku každému záznamu sadu testov, ktoré popisujú proces zisťovania, či je dané zariadenie nachylné ná kybernetický útok. V ontológii už sú naimportované mapovania na tieto testy. Samotné testy predstavujú množinu dát, ktoré sú pospájané logickými operandami. Každý test predstavuje rôzne typy príkazov, ktoré vyhodnocuje na rôzne typy výsledkov.
+
+
+Možným pokračovaním je aj možnosť rozšíriť ontológiu UCO o ďalšie mapovania na už existujúce databázy, kde môžu už mať ontologické riešenie alebo takéto ontologické riešenie bude potrebné vytvoriť. Následne extrahovať relevantné dáta z takejto databázy a pokúsiť sa namapovať ich na nami naimportované dáta.
+
+
+Nad nami vygenerovanými dátami sa pokúsiť urobiť ďalšie analýzy, ktoré dokážu napomôcť pri prevencii pred kybernetickými útokmi.
 
 \nocite{*}
 \bibliographystyle{alpha}
