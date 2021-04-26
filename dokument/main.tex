@@ -842,6 +842,13 @@ Common Vulnerabilities and Exposures(CVE) je databáza všetkých chýb zabezpe�
 Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie oddelenej pomlčkami. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje  zraniteľnosť z roku 2020 v databáze CVE s identifikátorom v danom roku 0035. Podľa množstva záznamov za daný rok, sa odvíja počet cifier na definovanie identifikátora zraniteľnosti. Napríklad v roku 1999 kedy sa začala databáza CVE napĺňať, dosahoval počet zraniteľností ročne 1 600 záznamov, kdežto za rok 2020 to bolo 36 282 záznamov.
 
 
+\begin{figure}[!hb]
+\makebox[\textwidth]{\includegraphics[scale=0.7]{images/cve-ontology}}
+\label{fig:cveOnto}
+\caption{CVE ontológia}
+\end{figure}
+
+
 Každý jeden záznam má taktiež popis, ktorý musí obsahovať dostatok informácií o tom, na ktoré systémy má daná zranitenosť vplyv, pokiaľ sa vzťahuje aj na konkrétnu verziu, tak aj táto verzia by mala byť uvedená. Musí obsahovať aj infomácie o type zraniteľnosti, jej príčinu a dopad. Daný popis musí byť napísaný v angličtine.
 
 
@@ -850,12 +857,6 @@ Záznamy majú aj zoznam referencií, ktoré sú používané ako externé zdroj
 
 Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje základné informácie zraniteľnosti, podľa požiadaviek štandardu. Ako definíciu zraniteľnosti, používame jej URI, ktorá poskytuje prepoužitie a odkazovanie sa na ňu. Táto zraniteľnosť má taktiež svoj názov, ktorý reprezentujeme ako CVE identifikátor. Každá zraniteľnosť má svoj popis a zoznam referencií. Ako rozšírenie sme použili vlastnosť \textit{hasRefId}, ktorá definuje unikátny identifikátor, v referencovanom systéme. Tento parameter nie je povinný.
 
-\begin{figure}[!hb]
-\makebox[\textwidth]{\includegraphics[scale=0.7]{images/cve-ontology}}
-\label{fig:cveOnto}
-\caption{CVE ontológia}
-
-\end{figure}
 
 
 
@@ -892,6 +893,9 @@ Každý OVAL objekt je reprezentovaný pomocou URN \textit{oval:org.cisecurity:\
 \begin{itemize}
 \item \textbf{def} -- jedná sa o záznam definujúci zraniteľnosť
 \item \textbf{tst} -- záznam, ktorý definuje test
+\item \textbf{var} -- záznam definujúci množinu verzií platformy alebo produktu
+\item \textbf{obj} -- príkaz, ktorý je potrebný spustiť v konzole
+\item \textbf{ste} -- objekt, popisujúci výstup z konzoly s definovanou operáciou na kontrolu ako je regulárny výraz, porovnanie alebo výber z množiny verzií
 \end{itemize}
 Samotný záznam sa skladá z:
 \begin{itemize}
