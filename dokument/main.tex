@@ -222,10 +222,6 @@ Text uvedený nižšie popisuje niekoľko technológií, ktoré sú potrebné pr
 premostenie od SW -- linked data bola iniciativa, ze ked uz SW formaty mame,
 podme v nich aj data zverenjnovat}
 
-\minor{MH: Inak ked uz si sa rozhodol pisat po slovensky, mal by si pouzivat aj
-slovensku terminologiu (co je celkom peklo) -- ale teda Linked Data su
-\emph{prepojene data}, LD network je \emph{siet prepojenych dat} -- ludia to takto pouzivaju\\
-MR: premenovane}
 
 Linked Data \cite{linkeddata} alebo prepojené dáta, je metóda zverejňovania štrukturovaných dát. Ich hlavným cieľom je poprepájať existujúce databázy (primárne písané v RDF formáte), medzi rôznymi údajmi a umožniť ľuďom zdielať štrukturované dáta na webe pomocou HTML. Časť vízie do budúcna je, aby sa Internet stal globálnou databázou. Princípy prepojených dát prvýkrát načrtol Tim Berners-Lee. Popísal 4 pravidlá pre zverejňovanie dát na webe:
 \begin{enumerate}
@@ -356,15 +352,13 @@ MR: Urcite by som ich spomenul nakolko existuje urcite vela duplicitnych dat a j
 
 \section{Využitie ontológií}
 
-\minor{MH: $\downarrow$ Asi by som sa neodvazoval tvrdit to co pises v prvej vete. Ak zoberieme ako ranne vyuzitie napr. SNOMED, nie je to pravda, kedze sa vyuzival v medicinskej praxi. S druhou vetou mozno nesuhlasit. Kto je bezny pouzivatel? Nikomu takemu sa nerozsirila do pocitaca nejaka ontologia (ze by o tom vedel)\ldots \\ MR: dodefinoval som to ako bezne pouzivane aplikacie.}
 Ontológie sa začali využívať najmä v organizáciách, ktoré sa šoecializovali na umelú inteligenciu. Neskôr sa to rozšírilo aj do bežne používaných aplikácií. Napríklad firma Amazon používa ontológie na kategorizovanie tovaru v ich elektronickom obchode.
+
+\assignment{MH: $\uparrow$ Vies to dolozit nejakou referenciou? Skade mas tu informaciu...}
 
 
 %Na zápis týchto ontológií sa používa niekoľko jazykov, kde najznámejším je asi Resource Description Framework (RDF), ktorý je rpimárne určený na využitie vo webových stránkach, pre hľadanie informácií strojmi. 
 Ontológie si našli uplatnenie aj v medicínskej oblasti a to napríklad SNOMED, čo je najväčším viacjazyčným medicínskym slovníkom na svete. 
-
-\assignment{MH: $\uparrow$ Tu chces asi pisat o vyuziti ontologii, takze zmienka o jazyku RDF sem nepatri, navyse RDF nie je jazyk na zapis ontologii (tym je RDFS) a o RDF su uz pisal vyssie}
-
 
 Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google, kde ako bočný panel sú zobrazené informácie o vyhľadávanom objekte (~\ref{fig:semantic_web}). Tieto dáta je možné zobraziť preto, lebo výsledkom takéhoto panelu je vyhľadávanie informácií na webovej stránke, ktorá obsahuje sémantické dáta.
 
@@ -375,14 +369,15 @@ Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google
 \end{figure}
 
 
-\minor{MH: $\uparrow$ SNOMED a Google spominas dobre, a v druhom pripade si nespomenuk ziadnu ontologiu a pritom ju dobre pozname (Schema.org)}
+\minor{MH: $\uparrow$ SNOMED a Google spominas dobre, a v druhom pripade si nespomenul ziadnu ontologiu a pritom ju dobre pozname (Schema.org)}
 
 Na získavanie dát zo sémantických webov a z RDF úložísk sú využívané SPARQL dopyty, ktoré sa posielajú na endpointy úložiska. Tieto následne vrátia výstupnú tabuľku, podľa dopytu.
 
 \assignment{MH: $\uparrow$ toto mi sem opat nesedi, zrejme tomu chces venovat nejaku kratku podsekciu skor v predchadzajucej kapitole (?)\\MR: ja som ju tam mal len predtym si mi pisal ze si si este nie isty ci nas to bude zaujimat, tak som to vratil do predchadzajucej casti\\
 MH (21.4.): OK, len stale tu pises zakladne informacie o Syntaxi SPARQL, to tu zrejme
 nema byt\\
-MR: okej upravil som}
+MR: okej upravil som\\
+MH (26.4.): Asi stale nerozumiem ako ta posledna cast o datach a SPARQL suvisi s touto sekciou... Proste nejak zrazu prepnes na data a SPARQL od konlretnych ontologii, ktore si vmenuval, chyba premostenie}
 
 
 \section{Syntax ontológií}
@@ -636,7 +631,8 @@ STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezp
 \assignment{MH: Takze si to vlastne sem cele presnul a v Casti I uz o tom nie je ani zmienka? Tu by to malo byt uvedene sposobom, ze tu ju podrobne pispiseme a zanalyzujeme... Cize malo by to byt v Casti II vedene ako analyza UCO, nie jej len popis\\
 MR: Done\\
 MH: Namiesto $\downarrow$ \uv{popiseme a budeme porovnavat} napise \uv{podrobne analyzujeme a vyhodnocujeme vzhladom na}.. Nech je to este jasnejsie.\\
-MR: Done}
+MR: Done\\
+MH: Len uz v prvej vete ide o UCO? Ano, nie je to jasne, ked je tam len citacia. Tiez by tu mohol byt jej nazov, nie len skratka. Dotretice: pozor na tie merzey okolo zatvoriek, aj hranatych, teda aj citacii...}
 
 V tejto časti podrobne analyzujeme a vyhodnocujeme ontológiu\citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme vyhodnocovať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami a či sú ich vlastnosti a hierarchia dostatočné. 
 
