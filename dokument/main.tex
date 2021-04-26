@@ -686,7 +686,7 @@ Každý útočník má nejaké meno (hasTitle) a je priradený k existujúcim in
 \caption{Tabuľka vlastností popisujúcej časť \textbf{Identita} z CTI modelu.}
 \label{tab:template}
 \end{table}
-\begin{figure}
+\begin{figure}[!hb]
 \makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Attacker}}
 \label{fig:ucoIdentita}
 \caption{UCO ontológia -- časť Identita}
@@ -721,7 +721,7 @@ MH: Ano, ale je to tu take vlepene, citatel nechape, preco prave tu uvadzas taku
 \caption{Tabuľka vlastností popisujúcej časť \textbf{Útok} z CTI modelu.}
 \label{tab:template}
 \end{table}
-\begin{figure}
+\begin{figure}[!hb]
 \makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Attack}}
 \label{fig:ucoUtok}
 \caption{UCO ontológia -- časť Útok}
@@ -777,7 +777,7 @@ MH: Ano, ale je to tu take vlepene, citatel nechape, preco prave tu uvadzas taku
 \caption{Tabuľka vlastností popisujúcej časť \textbf{Slabina} z CTI modelu.}
 \label{tab:template}
 \end{table}
-\begin{figure}
+\begin{figure}[!hb]
 \makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Vulnerability}}
 \label{fig:ucoSlabiny}
 \caption{UCO ontológia -- časť Slabiny}
@@ -836,22 +836,21 @@ V predchádzajúcej časti sme si podrobnejšie predstavili vybranú časť UCO 
 
 V tejto kapitole si ukážeme databázy CVE a OVAL, ktoré predstavujú z CTI modelu časť Zraniteľnosť. Predstavíme si nami vytvorené ontológie, ich mapovania a vlastnosti jednotlivých objektov.
 \section{CVE}
-Common Vulnerabilities and Exposures(CVE) je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
+Common Vulnerabilities and Exposures(CVE) je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto organizácie dostanú pridelenú množinu CVE záznamov pre daný rok, ktorú môžu postupne napĺňať rôznymi zraniteľnosťami, ktoré objavia. CVE záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
 
 
-Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje nejakú zraniteľnosť z roku 2020 v databáze CVE.
+Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie oddelenej pomlčkami. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje  zraniteľnosť z roku 2020 v databáze CVE s identifikátorom v danom roku 0035. Podľa množstva záznamov za daný rok, sa odvíja počet cifier na definovanie identifikátora zraniteľnosti. Napríklad v roku 1999 kedy sa začala databáza CVE napĺňať, dosahoval počet zraniteľností ročne 1 600 záznamov, kdežto za rok 2020 to bolo 36 282 záznamov.
 
 
-Každý jeden záznam má taktiež popis, ktorý musí obsahovať dostatok informácií o tom, na ktoré systémy má daná zranitenosť vplyv, pokiaľ sa vzťahuje aj na konkrétnu verziu, tak aj táto verzia by mla byť uvedená. Musí obsahovať aj infomácie o type zraniteľnosti, jej príčinu a dopad. Daný popis musí byť napísaný v angličtine.
+Každý jeden záznam má taktiež popis, ktorý musí obsahovať dostatok informácií o tom, na ktoré systémy má daná zranitenosť vplyv, pokiaľ sa vzťahuje aj na konkrétnu verziu, tak aj táto verzia by mala byť uvedená. Musí obsahovať aj infomácie o type zraniteľnosti, jej príčinu a dopad. Daný popis musí byť napísaný v angličtine.
 
 
 Záznamy majú aj zoznam referencií, ktoré sú používané ako externé zdroje k zraniteľnosti. Sú to externé odkazy s infomáciou o zdrojovom systéme. Tieto odkazy musia používať iba protokoly \textit{http}, \textit{ftp}, \textit{https}, alebo \textit{ftps}.
 
 
-\subsection{Ontológia}
-Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje základné inforácie zraniteľnosti, podľa požiadaviek štandardu. Ako definíciu zraniteľnosti, používame jej URI, ktorá poskytuje prepoužitie a odkazovanie sa na ňu. Táto zraniteľnosť má taktiež svoj názov, ktorý reprezentujeme ako CVE identifikátor. Každá zraniteľnosť má svoj popis a zoznam referencií. Ako rozšírenie sme použili vlastnosť \textit{hasRefId}, ktorá definuje unikátny identifikátor, v referencovanom systéme. Tento parameter nie je povinný.
+Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje základné informácie zraniteľnosti, podľa požiadaviek štandardu. Ako definíciu zraniteľnosti, používame jej URI, ktorá poskytuje prepoužitie a odkazovanie sa na ňu. Táto zraniteľnosť má taktiež svoj názov, ktorý reprezentujeme ako CVE identifikátor. Každá zraniteľnosť má svoj popis a zoznam referencií. Ako rozšírenie sme použili vlastnosť \textit{hasRefId}, ktorá definuje unikátny identifikátor, v referencovanom systéme. Tento parameter nie je povinný.
 
-\begin{figure}
+\begin{figure}[!hb]
 \makebox[\textwidth]{\includegraphics[scale=0.7]{images/cve-ontology}}
 \label{fig:cveOnto}
 \caption{CVE ontológia}
@@ -873,14 +872,16 @@ Druhé posudzovanie analyzuje systém podľa špecifikovaného nastavenia a zis�
 Posledný krok tvorí správu o výsledku tejto analýzy. Na výstupe je informácia o aktuálnom konfiguračnom nastavení systému.
 
 
-\subsection{Ontológia}
 Pre našu ontológiu nie je potrebné reprezentovať všetky znalosti o OVAL-e. Vybrali sme si konkrétne časti, ktoré je potrebné publikovať v našich spravodajských dátach. 
 
 
-V ontológii reprezentujeme všeobecné informácie popisujúce a definujúce OVAL záznamy, ich vzťahy s jednotlivými operačnými systémami, ich verziami a produktami. Zahŕňame aj informácie o externých zdrojoch pre záznamy. Taktiež predpripravíme ontológiu na reprezentovanie kritérií, ktoré predstavujú logické testy. Tieto testy majú v sebe aj výrokovú logiku reprezentovanú pomocou logických operátorov AND a OR, kde je možné definovať viacúrovňové logické výrazy.
+V ontológii reprezentujeme všeobecné informácie popisujúce a definujúce OVAL záznamy, ich vzťahy s jednotlivými operačnými systémami, ich verziami a produktami. Nakoľko vieme že jednotlivé operačné systémy majú rôzne verzie, vieme aj tieto dáta napävno spájať. Zahŕňame aj informácie o externých zdrojoch pre záznamy. Túto vlastnosť prepoužívame z vyššie definovanej časti \textbf{6.1 CVE}. Oproti CVE ale tieto dáta nemajú popis. Túto vlastnosť ale ponecháme, kôli možnému rozšíreniu. OVAL záznami sa taktiež referencujú na rôzne CVE záznamy, ktoré podrobnejšie popisujú. V našej ontológii takýto typ referencie budeme popisovať špecifickou vlastnosťou.
 
 
-\begin{figure}
+Taktiež predpripravíme ontológiu na reprezentovanie kritérií, ktoré predstavujú logické testy. Tieto testy majú v sebe aj výrokovú logiku reprezentovanú pomocou logických operátorov AND a OR, kde je možné definovať viacúrovňové logické výrazy. Jednotlivé kritéria majú stručný popis a obšírnejší popis, kde sú definované jednotlivými testami alebo ďalšími OVAL záznamami.
+
+
+\begin{figure}[!hb]
 \makebox[\textwidth]{\includegraphics[scale=0.7]{images/oval-ontology}}
 \label{fig:ovalOnto}
 \caption{OVAL ontológia}
@@ -901,9 +902,8 @@ Samotný záznam sa skladá z:
 \item \textit{affectedProduct} -- ktorý produkt ovplyvňuje
 \item \textit{hasReference} -- odkaz na externý zdroj informácií súvisiaci so záznamom
 \item \textit{hasCriteria} -- zoznam logických testov potrebených na zistenie či daný záznam ovplyvňuje systém
+\item \textit{hasCVE} -- CVE objekt, ktorý popisuje daný OVAL záznam
 \end{itemize}
-
-
 Kritériá popisujúce test majú nasledujúce vlastnosti:
 \begin{itemize}
 \item hasAndCriteria -- logické pravidlo spojené s rodičom AND operátorom
@@ -944,6 +944,7 @@ CVE podľa platformy
 Podľa zadanej platformy, nájdi v databáze všetky CVE objekty, ktoré súvisia s danou platformou. Na výstupe vráť ich URI definíciu s názvom CVE záznamu.
 
 \subsubsection*{Dopyt}
+\begin{small}
 \begin{verbatim}
 PREFIX main: <http://www.semanticweb.org/rycht/ontologies
   /cyber_security_ontology#>
@@ -961,6 +962,7 @@ WHERE {
   ?oval main:affectedPlatform platform:Some_platform
 }
 \end{verbatim}
+\end{small}
 
 
 \subsubsection*{Výstup}
@@ -976,6 +978,7 @@ OVAL záznamy, ktoré ovplyvňujú iba platformu.
 Vráť mi všetky OVAL záznamy, ktoré ovplyvňujú všeobecne platformu a žiaden konkrétny produkt pre danú platformu. Na výstupe mi pošli ich URI OVAL záznamu, názov, URI a názov operačnénho systému a URI a názov platformy.
 
 \subsubsection*{Dopyt}
+\begin{small}
 \begin{verbatim}
 PREFIX main: <http://www.semanticweb.org/rycht/ontologies
   /cyber_security_ontology#>
@@ -996,6 +999,7 @@ WHERE {
   }
 }
 \end{verbatim}
+\end{small}
 
 \subsubsection*{Výstup}
 Záznamov, ktoré spĺňajú dané zadanie sme identifikovali z takmer 20 000 oval záznamoch 9 065. Tým sme získali určitú predstavu o počte OVAL záznamoch, ktoré všeobecne ovplyvňujú iba plaformy operačných systémov.
@@ -1010,6 +1014,7 @@ Frekvenčná tabuľka CVE záznamov.
 Získaj všetky CVE záznamy, zoradené podľa toho, ako často sú využívané ako referencia v OVAL záznamoch. Zoraď ich podľa využívanosti od najväčšej a na výstup vráť URI a názov CVE záznamu s počtom OVAL definícií, v ktorých sú použité.
 
 \subsubsection*{Dopyt}
+\begin{small}
 \begin{verbatim}
 PREFIX main: <http://www.semanticweb.org/rycht/ontologies
   /cyber_security_ontology#>
@@ -1028,6 +1033,7 @@ WHERE {
 GROUP BY ?cve ?title
 ORDER BY DESC(?count)
 \end{verbatim}
+\end{small}
 
 
 \subsubsection*{Výstup}
@@ -1045,6 +1051,7 @@ Nájdi také CVE záznamy, ktoré ovplyvňujú rovnaký produkt na rôznych oper
 
 
 \subsubsection*{Dopyt}
+\begin{small}
 \begin{verbatim}
 PREFIX main: <http://www.semanticweb.org/rycht/ontologies
   /cyber_security_ontology#>
@@ -1068,6 +1075,7 @@ WHERE {
   FILTER (?family1 != ?family2).
 } 
 \end{verbatim}
+\end{small}
 
 
 \subsubsection*{Výstup}
@@ -1075,8 +1083,8 @@ Počet CVE záznamov, ktoré ovplyvňujú viac ako jeden operačný systém je z
 
 
 
-\section{Web}
-V spolupráci so študentami môjho konzultanta, sme vytvorili webovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka bude skúžiť na zobrazenie CVE a OVAL dát, kde bude možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
+\section{Internetová stránka}
+V spolupráci so študentami môjho konzultanta, sme vytvorili internetovú stránku, založenú na našej ontológii a našich vygenerovaných dátach. Táto stránka bude skúžiť na zobrazenie CVE a OVAL dát, kde bude možné tieto dáta prezerať a vyhľadávať. Pomocou SPARQL dopytov sa vyhľadávajú jednotlivé dáta a ich konkrétne informácie.
 
 
 Takiež sa v nej budú dať prezerať dáta o jednotlivých operačných systémoch, ich platformách a produktoch. Na týchto stránkach budú informácie o jednotlivých OVAL a CVE záznamoch, ktoré sa týkajú daného predmetu.
@@ -1084,9 +1092,6 @@ Takiež sa v nej budú dať prezerať dáta o jednotlivých operačných systém
 
 Základná stránka pre každý OVAL a CVE objekt bude zobrazovať všetky dáta, ktoré má v databáze definované na prvej úrovni t.j., dáta kde daný objekt figuruje ako predmet v trojici. 
 
-
-\section{Dáta}
-postup a popis vyhodnocovania konzistentnosti ABox-u
 
 
 \chapter{Záver}
