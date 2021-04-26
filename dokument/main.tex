@@ -152,6 +152,7 @@ Konzultant: & \mfconsultant
 
 \chapter*{Poďakovanie}\label{chap:thank_you}
 Touto cestou by som sa chcel v prvom rade poďakovať môjmu školiteľovi doc. RNDr. Martinovi Homolovi, PhD. za jeho cenné rady a usmernenia, ktoré mi veľmi pomohli pri riešení tejto diplomovej práce. 
+\assignment{MH: Nezabudni podakovat sa aj Stefanovi. Inak tu tituly mozes vypustit, my dvaja si ozaj na to nepotrpime ;)}
 \vfill\eject 
 % koniec podakovania
 
@@ -1102,25 +1103,37 @@ Základná stránka pre každý OVAL a CVE objekt bude zobrazovať všetky dáta
 
 
 \chapter{Záver}
+\overview{MH: $\downarrow$ V kapitole Zaver nie je toto zhrnutie uz nutne, lepsie
+by bolo tuto cast dat prec, a zrusit podnadpis 8.1 a zacat (bez podnadpisu) tym
+zhrnutim - to sa tu uz proste akosi ocakava. Zvaz aj ci tie dalsie dve seckie nedas s hviezdickou, alebo ako paragraph}
 V predchádzajúcej kapitole sme si overili, že naše dáta sú konzistentné a ukázali sme si príklady použiteľnosti našej ontológie. Na záver si zhrnieme, čo sme spravili, aký celkový prínos má naša práca pre publikovanie sémantických spravodajských dát o bezpečnostných hrozbách, ako aj možné rozšírenia našej ontológie a dát.
 \section{Zhrnutie}
-\overview{MH: urobili sme to a to... Zosaumarizovat}
 V tejto práci sme vykonali podrobnú analýzu a vyhodnotenie už existujúceho ontologického riešenia pre spravodajské dáta o bezpečnostných hrozbách vzhľadom na CTI model. Následne sme zhodnotili, aké časti nie sú dostatočne zapracované v tejto ontológii a túto časť sme rozšírili o ontológiu, ako aj o dáta z verejných databázových riešení OVAL a CVE. 
 
 
+\assignment{MH $\uparrow$ preskumal a zhodnotil si \emph{viacero} ontlogickych
+rieseni, nie len jedno. Nasledne si analyzoval jedno vybrane -- UCO -- a
+identfikoval si, ze v nom chyba este to a to... (CVE a OVAL, mozes napisat aj
+na naco su potrebne)...}
+
 Dáta v jednotlivých databázových riešeniach sme zanalyzovali, na základe týchto dát sme vytvorili ontologické riešenie, ktoré pokrývalo všetky dáta relevantné pre publikovanie a tieto vybraté dáta sme importovali a zmapovali na naše ontologické riešenia. Nad týmito dátami sme následne vytvorili rôzne analýzy a prípady použitia na popis, čo sa v nmi navrhnutých ontológiách dá zistiť.
 
+\assignment{MH $\uparrow$ Tu alebo mozno (aj) v prinose, nejak nam ty z toho vypadol CTI model, ktory sme pouzili ako referencny, a vyhodnotili sme UCO vzhladom na tento model, a to rozsirenie sme tiez robili na zaklade toho, co bolo este potrebne reprezentovat podla CTI, nie? Tym padom v prinose mozeme povedat, ze nasa ontologia je uplnejsia vzhladom na CTI, co je ak iste velmi vitane... (Ale mozem byt aj ja mimo, ty do toho vidis lepsie...)}
 
 \section{Prínos}
-\overview{MH: Aky vyznam ma nasa praca, na co to bolo dobre, co vdaka tom
-sa teraz vie, da lahsie vypocitat, zistit, zintegrovat}
 Pomocou ontologického riešenia, časti z domény kybernetickej bezpečnosti, sa nám podarilo vyjadriť tieto dáta vo jednotnej forme, prepojiť naše riešenie s už existujúcim štandardom repreznetovania znalostí v doméne kybernetickej bezpečnosti ako aj jej rozšírenie o časť zraniteľnosti a ich podrobný popis. Podarilo sa nám premapovať existujúce OVAL a CVE dáta na naše ontologické riešenie a poprepájať tieto dáta medzi sebou.
 
+Vďaka tomu, vieme tieto dáta reprezentovať vo forme, ktorá je prepoužiteľná a
+strojovo čitateľná. Hocikto sa môže na naše dáta odkazovať, opätovne ich využiť
+alebo rozšíriť. 
 
-Vďaka tomu, vieme tieto dáta reprezentovať vo forme, ktorá je prepoužiteľná a strojovo čitateľná. Hocikto sa môže na naše dáta odkazovať, opätovne ich využiť alebo rozšíriť. Naša práca taktiež dokáže pomôcť pri prevencii a ochrane pred kybernetickými hrozbami. 
+\assignment{MH: $\uparrow$ Napis nie len reprezentovat, ale aj publikovat na webe, v sieti LOD... To je predsa jeden z nasich cielov}
 
-
+Naša práca taktiež dokáže pomôcť pri prevencii a ochrane pred
+kybernetickými hrozbami. 
 Na základe nami importnutých dát vieme tvoriť rôzne štatistické analýzy, ľahšie zisťovať prepojenia medzi jednotlivými zraniteľnosťami a odvodzovať spojenia napríklad medzi platformamy a CVE záznamami.
+
+\assignment{MH: $\uparrow$ Tato posledna cast je najviac vagna, ake \uv{rozne} analyzy, vies vyt viac konkretnejsi a zakorenit na napr. v tych pripadoch pouzitia?}
 
 
 \section{Budúce pokračovanie}
@@ -1130,8 +1143,18 @@ V našej ontológii sme nespracovali časť databázy z už existujúcej OVAL da
 
 Možným pokračovaním je aj možnosť rozšíriť ontológiu UCO o ďalšie mapovania na už existujúce databázy, kde môžu už mať ontologické riešenie alebo takéto ontologické riešenie bude potrebné vytvoriť. Následne extrahovať relevantné dáta z takejto databázy a pokúsiť sa namapovať ich na nami naimportované dáta.
 
+\assignment{MH: $\uparrow$ Ked to takto napises, tak si nahral komissi aby sa
+ta spytala, ze preco si to nespracoval, a ci si to nahodou nemal uronit v ramci
+svojich cielov tiez. Zvaz nejaku formulaciu, ze OVAL databaza obsahuje este aj
+taketo data, ale na ich spojenie s nasou databazou by bolo potrebne hlbsie
+preskumat logicku semantiku ich \uv{proprietarneho} jazyka, alebo nieco podobne -- z
+toho potom bude jasne aj co je ta praca, ktoru by bolo este potrebne v
+nadvaznosti urobit (a ze je to netrivialne). Uvodzovky na \uv{proprietarny} som dal preto, lebo ten standard je zrejme verejny, ale nekoresponduje s existujucimi standardmi v oblasti ontologii}
 
 Nad nami vygenerovanými dátami sa pokúsiť urobiť ďalšie analýzy, ktoré dokážu napomôcť pri prevencii pred kybernetickými útokmi.
+
+\assignment{MH: $\uparrow$ Opat, toto je velmi velmi vagne, a moze to budit dojem, ze ani nam samym to nie je uplne jasne.}
+\assignment{MH: $\uparrow$ No a co mi tu uplne chyba, je spomenut sirsi kontext projektu ORBIS, vdaka ktoremu na zaklade Tvojej ontologie vznikde semaniticky repozitar, do ktoreho skutocne budu tie data naimportovane a zverejnene.}
 
 \nocite{*}
 \bibliographystyle{alpha}
