@@ -365,15 +365,23 @@ Ontológie si našli uplatnenie aj v medicínskej oblasti a to napríklad SNOMED
 \assignment{MH: $\uparrow$ Tu chces asi pisat o vyuziti ontologii, takze zmienka o jazyku RDF sem nepatri, navyse RDF nie je jazyk na zapis ontologii (tym je RDFS) a o RDF su uz pisal vyssie}
 
 
-Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google, kde ako bočný panel sú zobrazené informácie o vyhľadávanom objekte (obrázok nižšie). Tieto dáta je možné zobraziť preto, lebo výsledkom takéhoto panelu je vyhľadávanie informácií na webovej stránke, ktorá obsahuje sémantické dáta.
+Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google, kde ako bočný panel sú zobrazené informácie o vyhľadávanom objekte (~\ref{fig:semantic_web}). Tieto dáta je možné zobraziť preto, lebo výsledkom takéhoto panelu je vyhľadávanie informácií na webovej stránke, ktorá obsahuje sémantické dáta.
+
+\begin{figure}[h]
+\makebox[\textwidth]{\includegraphics[keepaspectratio=true,scale=0.7]{images/onto_screen}}
+\label{fig:semantic_web}
+\caption{Príklad bočného panelu vo vyhľadávači Google.}
+\end{figure}
+
 
 \minor{MH: $\uparrow$ SNOMED a Google spominas dobre, a v druhom pripade si nespomenuk ziadnu ontologiu a pritom ju dobre pozname (Schema.org)}
 
-Na získavanie dát zo sémantických webov a z RDF úložísk sú využívane SPARQL dopyty. Syntax jazyku SPARQL je veľmi podobná klasickému SQL jazyku, kde aj SPARQL umožňuje okrem dopytovania aj vkladanie, editáciu a vymazávanie dát.
+Na získavanie dát zo sémantických webov a z RDF úložísk sú využívané SPARQL dopyty, ktoré sa posielajú na endpointy úložiska. Tieto následne vrátia výstupnú tabuľku, podľa dopytu.
 
 \assignment{MH: $\uparrow$ toto mi sem opat nesedi, zrejme tomu chces venovat nejaku kratku podsekciu skor v predchadzajucej kapitole (?)\\MR: ja som ju tam mal len predtym si mi pisal ze si si este nie isty ci nas to bude zaujimat, tak som to vratil do predchadzajucej casti\\
 MH (21.4.): OK, len stale tu pises zakladne informacie o Syntaxi SPARQL, to tu zrejme
-nema byt}
+nema byt\\
+MR: okej upravil som}
 
 
 \section{Syntax ontológií}
@@ -680,7 +688,7 @@ Každý útočník má nejaké meno (hasTitle) a je priradený k existujúcim in
 \end{table}
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Attacker}}
-\label{fig:semantic_web}
+\label{fig:ucoIdentita}
 \caption{UCO ontológia -- časť Identita}
 \end{figure}
 
@@ -715,7 +723,7 @@ MH: Ano, ale je to tu take vlepene, citatel nechape, preco prave tu uvadzas taku
 \end{table}
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Attack}}
-\label{fig:semantic_web}
+\label{fig:ucoUtok}
 \caption{UCO ontológia -- časť Útok}
 \end{figure}
 
@@ -771,7 +779,7 @@ MH: Ano, ale je to tu take vlepene, citatel nechape, preco prave tu uvadzas taku
 \end{table}
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{diagramy/Vulnerability}}
-\label{fig:semantic_web}
+\label{fig:ucoSlabiny}
 \caption{UCO ontológia -- časť Slabiny}
 \minor{MH: CVE -> CWE?}
 \end{figure}
@@ -845,7 +853,7 @@ Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje zákl
 
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{images/cve-ontology}}
-\label{fig:semantic_web}
+\label{fig:cveOnto}
 \caption{CVE ontológia}
 
 \end{figure}
@@ -874,7 +882,7 @@ V ontológii reprezentujeme všeobecné informácie popisujúce a definujúce OV
 
 \begin{figure}
 \makebox[\textwidth]{\includegraphics[scale=0.7]{images/oval-ontology}}
-\label{fig:semantic_web}
+\label{fig:ovalOnto}
 \caption{OVAL ontológia}
 \end{figure}
 
