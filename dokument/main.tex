@@ -383,90 +383,167 @@ MH (26.4.): Asi stale nerozumiem ako ta posledna cast o datach a SPARQL suvisi s
 MR: jop, uz chapem, odstranil som tu cast}
 
 
-\section{Syntax ontológií}
-Popis moznosti
-
-\subsection{Web Ontology Language}
+\section{Web Ontology Language}
 Jazyk Web Ontology Language alebo OWL slúži na vytváranie a definovanie inštancií webových ontológií. Poskytuje nástroje na popis tried, vlastností a ich samotných inštancií. Oproti klasickým jazykom poskytje možnosť, špecifikovať logické vlastnosti jednotlivých objektov vyskytujúcich sa v ontológií, to znamená, že dokáže popísať aj fakty, ktoré v ontológií nie sú definované priamo, ale sú spojené logickými vlastnosťami. Napríklad, ak máme osoby Janka, Martin a Jozef, kde Janka je rodičom Martina a Jozef je rodičom Janky, pomocou OWL vieme definovať že Jozef je starým rodičom Martina, pričom nepotrebujeme vlastnosť popisujúcu tento vzťah priamo.
 
 \assignment{MH: $\uparrow$ Tomuto nerozumiem}
 
 
-\subsection{Druhy OWL}
-Jazyk OWL poskztuje 3 podjazyky, ktoré sú použitľné v rôznych situáciách.
+%\subsection{Druhy OWL}
+%Jazyk OWL poskytuje 3 podjazyky, ktoré sú použitľné v rôznych situáciách.
 
 
-OWL Lite poskytuje definície na tvorbu hierarchického rozdelenia objektov a jednoduché obmedzenia. Jednoduchými obmedzeniami sa myslí napríklad obmedzenie kardinálnej vlastnosti a to iba na hodnoty 0 a 1. 
+%OWL 2 EL je odporúčaný pre ontológie, ktoré definujú veľké množstvo tried a/alebo vlastností. Podporuje základné definície tried, disjunktné triedy, ekvivalenciu vlastností a tried, tranzitivitu vlastností, reflexné objekty, obmedzenie domény a rozsahu objektov. Taktiež dokáže definovať obmedzenia tried ako existenciálne obmedzenie, obmedzenie týkajúce práve jedného objektu alebo hodnoty z viacerých.
 
 
-OWL DL 
+%OWL 2 QL
 
 
-OWL Full
+%OWL 2 RL je zameraný na aplikácie, ktoré potrebujú škálovateľnosť uvažovania bez toho, aby obetovali expresívnu silu jazyka. 
 
 
-Každý, kto sa rozhodne vyvýjať ontológiu použitím OWL, by mal zvážiť, ktorý typ je najlepší pre danú ontológiu. Najmä treba zvážiť aké obmedzenia je potrebné pre ich ontológiu definovať. 
+%Každý, kto sa rozhodne vyvýjať ontológiu použitím OWL, by mal zvážiť, ktorý typ je najlepší pre danú ontológiu. Najmä treba zvážiť aké obmedzenia je potrebné pre ich ontológiu definovať. 
 
 
 \subsection{Syntax}
 \assignment{MH: (1) Man syntax je zrozumitelnejsia (2) moc daleko si nedosiel... Na zac. sa detailne venujeme nie prilis podstatnym veciam}
-Normovaná syntax OWL jazyka je RDF/XML. OWL je jazyk, ktorý rozširuje jazyk RDF. 
+Na popis jednotlivých možností budeme používať Manchester syntax, ktorá poskytuje zrozumiteľnejšiu syntax pre čitateľa.
 
 
-Základná časť každej ontológie by mala obsahovať menný priestor, kde si definujeme množinu slovníkov používaných v našej ontológií.
+Ako prvé si zadefinujeme priradenia objektov ku jednotlivým triedam. Objekty môžu mať pridelených viac tried.
 \begin{verbatim}
-<rdf: RDF
-  xmlns     = "http://www.semanticweb.org/example"
-  xmlns:rdf = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:rdfs= "http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:owl = "http://www.w3.org/2002/07/owl#"
->
-\end{verbatim}
-Prvá deklarácia definuje menný priestor našej ontológie. Zvyšné deklarácie definujú ďalšie slovníky použité v ontológii.
-
-
-Po vytvorení menného priestoru si potrebujeme všeobecne definovať našu vlastnú ontológiu. V tejto definícii sa nachádzajú informácie ako komentár k ontológii a názov ontológii a taktiež vieme definovať rôzne ontológie, ktoré budú súčasťou ontológie.
-\begin{verbatim}
-<owl:Ontology rdf:about = ""> 
-  <rdfs:comment>Príklad ontológie OWL o osobách</rdfs:comment>
-  <owl:priorVersion 
-     rdf:resource = "http://www.semanticweb.org/example/1.15" /> 
-  <owl:import rdf:resource = "http://www.semanticweb.org/food" /> 
-  <rdfs:label>Ontológia osôb</rdfs:label> 
-<owl:Ontology>
+ClassAssertation( :Osoba :Janka )
+ClassAssertation( :Žena :Janka )
+ClassAssertation( :Osoba :Martin )
+ClassAssertation( :Muž :Martin )
+ClassAssertation( :Osoba :Jozef )
+ClassAssertation( :Muž :Jozef )
 \end{verbatim}
 
 
-Vlastnosť \textit{owl:import} pridá externú ontológiu do našej pomocou definovaného zdroja cez vlastnosť \textit{rdf:resource}. Pomocou owl:priorVersion vieme definovať verziovanie ontológií.
-
-
-Ďalej si potrebujeme vedieť definovať triedy v ontológii. Na to nám slúži element owl:Class, v ktorom vieme zadeklarovať definíciu danej triedy pomocou vlastnosti rdf:ID.
+Ako si možeme všimnúť vyššie, Janke sme museli priradiť dve triedy. Týmto triedam ale vieme vytvoriť hierarchickú štruktúru.
 \begin{verbatim}
-<owl:Class rdf:ID = "Muž" />
-<owl:Class rdf:ID = "Žena" />
+SubClassOf( :Žena :Osoba )
+SubClassOf( :Matka :Žena )
 \end{verbatim}
 
 
-Hierachické usporiadanie tried vieme ďalej definovať pomocou vlastnosti rdfs:subClassOf, ktorej definujeme jej nadtriedu pomocou vlastnosti rdf:resource. Týchto nadtried vieme definovať viac.
+Niekedy môžeme mať dve rôzne definície tried, ktoré ale predstavujú tú istú osobu. Takéto triedy sa volaú ekvivaletné a vieme ich definovať nasledovne:
 \begin{verbatim}
-<owl:Class rdf:ID = "Manžel">
-  <rdfs:subClassOf rdf:resource = "Muž">
-  ...
-</owl:Class>
+EquivalentClasses( :Človek :Osoba )
 \end{verbatim}
 
 
-Pre triedu vieme definovať aj slovný popis a názov. Tento názov vieme definovať v rôznych jazykoch použitím vlastnosti xml:lang. Vlastnosť rdfs:label definuje pre bežného človeka ľahko čitateľný názov triedy. Najčastejšie sa využíva táto vlastnosť pri prezentačných nástrojoch ontológií.
-
-
+Ďalej si vieme zadefinovať vlastnosti objektov. Tieto vlastnosti vieme definovať buď pozitívne, čiže objekt danú vlastnosť má alebo negatívne, objekt danú vlastnosť s druhým objektom mať nemôže.
 \begin{verbatim}
-<owl:Class rdf:ID = "Manžel">
-  <rdfs:subClassOf rdf:resource = "Muž">
-  <rdfs:label xml:lang="en">Husband</rdfs:label>
-  <rdfs:label xml:lang="sk">Manžel</rdfs:label>
-  ...
-</owl:Class>
+ObjectPropertyAssertion( :jeMatkou :Janka :Martin )
+ObjectPropertyAssertion( :jeOtcom :Jozef :Janka )
+
+NegativeObjectPropertyAssertion( :jeOtcom :Jozef :Martin )
 \end{verbatim}
+
+
+Veľmi podobne vieme definovať aj dátové priradenia k jednotlivým objektom.
+\begin{verbatim}
+DataPropertyAssertion( :máVek :Janka "38"^^xsd:integer )
+
+NegativeDataPropertyAssertion( :máVek :Jozef "10"^^xsd:integer )
+\end{verbatim}
+
+
+Tieto vlastnosti môžu mať taktiež hierarchickú štruktúru.
+\begin{verbatim}
+SubObjectPropertyOf( :jeMatkou :jeRodičom )
+SubObjectPropertyOf( :jeOtcom :jeRodičom )
+\end{verbatim}
+
+
+Týmto vlastnostiam vieme definovať ich domény a rozsah, ktoré definujú aké hodnoty môžu jednotlivé vlastnosti nadobúdaťa a z akým objektom môžu byť tieto vlastnosti pridelené.
+\begin{verbatim}
+ObjectPropertyDomain( :jeRodičom :Osoba )
+ObjectPropertyRange( :jeRodičom :Osoba )
+ObjectPropertyDomain( :jeMatkou :Žena )
+ObjectPropertyRange( :jeMatkou :Osoba )
+ObjectPropertyDomain( :jeOtcom :Muž )
+ObjectPropertyRange( :jeOtcom :Osoba )
+
+DataPropertyDomain( :máVek :Osoba ) 
+DataPropertyRange( :máVek xsd:nonNegativeInteger ) 
+\end{verbatim}
+
+
+Ďalej vieme definovať inverznosť vlastností. Napríklad pokiaľ máme vlastnosť je rodičom, jej inverzná vlastnosť je je dieťatom.
+\begin{verbatim}
+InverseObjectProperties( :jeRodičom :jeDieťaťom )
+InverseObjectProperties( :jeMatkou :máMatku )
+InverseObjectProperties( :jeOtcom :máOtca )
+\end{verbatim}
+
+
+Niektoré vlastnosti by sme nechceli definovať iba jednosmerne ale aj obojsmerne. Takouto vlastnosťou sa myslí symetrická vlastnosť.
+\begin{verbatim}
+SymmetricObjectProperty( :jePríbuzný )
+\end{verbatim}
+
+
+Jazyk OWL poskytuje definície rôznych obmedzení. Ako prvou si spomenieme disjunktnosť jednotlivých tried, kde jednotlivé objekty nemôžu patriť do oboch tried zároveň.
+\begin{verbatim}
+DisjointClasses( :Muž :Žena )
+\end{verbatim}
+
+
+Ďalším obmedzením je definovanie či je konkrétny objekt tým istým alebo iným objektom.
+\begin{verbatim}
+DifferentIndividuals( :Janka :Martin )
+DifferentIndividuals( :Janka :Jozef )
+
+SameIndividual( :Martin :Maťo )
+\end{verbatim}
+
+
+Taktiež vieme definovať objekty, ktoré spadajú pod rovnakú triedu, pokiaľ spĺňajú určité vlastnosti. Napríklad, Všetky ženy, ktoré sú zároveň rodičom, sú aj Matkou. Vieme povedať aj to, že všetky objekty, ktoré sú buď matkou alebo otcom, sú zároveň aj rodičom.
+\begin{verbatim}
+EquivalentClasses(
+  :Matka 
+  ObjectIntersectionOf( :Žena :Rodič )
+) 
+
+EquivalentClasses(
+  :Rodič 
+  ObjectUnionOf( :Matka :Otec )
+) 
+\end{verbatim}
+
+
+Ďalej vieme definovať existenčné obmedzenia na objekt a vlastnosti. Napríklad, každý rodič musí mať dieťa.
+\begin{verbatim}
+EquivalentClasses(
+  :Rodič 
+  ObjectSomeValuesFrom( :jeRodičom :Osoba )
+)
+\end{verbatim}
+
+
+Podobne ako existenčné si vieme definovať aj všeobecné obmedzenie. Napríklad rodiča, ktorý ma iba chlapcov si zadefinujeme nasledovne:
+\begin{verbatim}
+EquivalentClasses(
+  :RodičIbaChlapci 
+  ObjectAllValuesFrom( :jeRodičom :Muž )
+)
+\end{verbatim}
+
+
+V príklade vyššie nám ale toto obmedzenie nezaručuje, že daný rodič musí mať dieťa. Na takéto zabezpečenie sa využíva existenčné a všeobecné obmedzenie zároveň. Týmto obmedzením hovoríme že musí mať minimálne jedno dieťa, ktoré je chlapcom a zároveň všetky jeho deti sú chlapci.
+\begin{verbatim}
+EquivalentClasses(
+  :RodičIbaChlapci 
+  ObjectIntersectionOf(
+    ObjectAllValuesFrom( :jeRodičom :Muž )
+    ObjectSomeValuesFrom( :jeRodičom :Muž )
+  )
+)
+\end{verbatim}
+
 
 
 \assignment{MH: Kedze cela Tvoja praca je o ontologiach a budes ich zrejme nejako zapisovat mozno by si mohol nieco povedat aj o jazykoch na zaspis ontologii, minimalen apson o jednom, s ktorym budes pracovat dalej (cize zrejme OWL)}
