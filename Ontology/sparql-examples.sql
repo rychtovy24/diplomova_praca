@@ -81,3 +81,9 @@ WHERE {
   ?oval2 main:affectedFamily ?family2.
   FILTER (?family1 != ?family2).
 } 
+
+SELECT ?cve ?title
+WHERE {
+  ?cve a <https://cve.mitre.org/about/terminology.html#CVE>.
+  ?cve <http://www.semanticweb.org/rycht/ontologies/cyber_security_ontology#hasTitle> ?title.
+}
