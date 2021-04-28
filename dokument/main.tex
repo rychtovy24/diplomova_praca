@@ -173,10 +173,10 @@ An abstract in english language
 \overview{Backgroud}
 V dnešnej počítačovej dobe sa stále viac a viac vyskytujú kybernetické útoky na firmy, organizácie, štáty alebo aj konkrétne osoby. Tieto útoky často ani nemusia pochádzať od skúsených útočníkov. Vďaka rôznym fóram a video návodom, môže byť útočník takmer ktokoľvek. Firmy a štátne inštitúcie sa týmto útokom snažia zabraňovať pomocou počítačovej bezpečnosti.
 
-
+\assignment{MH: $\uparrow$ Pozor, toto nema byt nejaka vseobecna rozpravka. To ze kyberneticke utoky su realna hrozba to predsa kazdy vie, to mozes vynechat. Bolo by lepsie zacat od toho, ze aby sa im dalo lepsie zabranovat, organizacie publikuju data o utorkoch, zranitelnostiach, atd. Napisat nejaky sumar o tychto standardoch, aj s citaciami. Uplne tu opat chyba CTI model, na ktory my v praci referujeme...}
 \overview{Problem}
 Na úspešné zabraňovanie je ale potrebné, mať dobre definované zdieľané dáta, ktoré v dostatočnej miere dokážu popísať útok, typ útoku, jeho ciele, využité zraniteľnosti systémov, atď. Takéto štandardy už existujú, ale prevažne sú nedostatočne obsiahle a neumožňujú ich zdieľanie, rozšírenie a použitie.
-
+\assignment{MH: $\uparrow$ Toto je prilis zjednodusene, nie je to s tymi standardmi az take zle, niekto kto sa v nich vyzna by mohol namietat. Keby sa ti to podarilo zlepsit, tak potom toto $\downarrow$ premostenie na ontologie je celkom fajn, ale dalo by sa este malo zlepsit (najma: dorozumiet sme sa uz so snahou vedeli aj predtym)}
 
 Z tohoto dôvodu sa začalo uvažovať o ontologických riešeniach, ktoré dokážu poskytnúť jednotný slovník, s ktorého pomocou sa vedia rôzne firmy, organizácie, štáty alebo osoby dorozumievať medzi sebou. Vedia si medzi sebou vymieňať dáta, ktorým rozumie každá strana a rozširovať dáta bez toho, aby sa stratila základná stavba dát.
 
@@ -382,6 +382,8 @@ Ontológie sa začali využívať najmä v organizáciách, ktoré sa špecializ
 %Na zápis týchto ontológií sa používa niekoľko jazykov, kde najznámejším je asi Resource Description Framework (RDF), ktorý je rpimárne určený na využitie vo webových stránkach, pre hľadanie informácií strojmi. 
 Ontológie si našli uplatnenie aj v medicínskej oblasti a to napríklad SNOMED, čo je najväčším viacjazyčným medicínskym slovníkom na svete. 
 
+\assignment{MH: Cituj SNOMED, najdi vhodny zdroj cez Google Scholar}
+
 Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google, kde ako bočný panel sú zobrazené informácie o vyhľadávanom objekte (~\ref{fig:semantic_web}). Tieto dáta je možné zobraziť preto, lebo výsledkom takéhoto panelu je vyhľadávanie informácií na webovej stránke, ktorá obsahuje sémantické dáta.
 
 \begin{figure}[h]
@@ -390,20 +392,9 @@ Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google
 \caption{Príklad bočného panelu vo vyhľadávači Google.}
 \end{figure}
 
-
 Schema.org \cite{schemaOrg} je taktiež ontologickým riešením, ktorej cieľom je vytvárať, udržiavať a propagovať schémy štrukturovaných údajov na internete, internetových stránkach alebo e-mailových správach. Poskytuje zdieľanú slovnú zásobu, ktorú môžu tvorcovia internetových stránok používať na označenie a popis jednotlivých elementov na stránke. Týmto popisom rozumejú vyhľadávacie nástroje ako Google, Microsoft a Yahoo!. Viac ako 10 miliónov internetových stránok používa Schema.org na popisovanie svojich stránok a e-mailových správ.
 
-
-\minor{MH: $\uparrow$ SNOMED a Google spominas dobre, a v druhom pripade si nespomenul ziadnu ontologiu a pritom ju dobre pozname (Schema.org)\\
-MR: spomenute}
-
-\assignment{MH: $\uparrow$ toto mi sem opat nesedi, zrejme tomu chces venovat nejaku kratku podsekciu skor v predchadzajucej kapitole (?)\\MR: ja som ju tam mal len predtym si mi pisal ze si si este nie isty ci nas to bude zaujimat, tak som to vratil do predchadzajucej casti\\
-MH (21.4.): OK, len stale tu pises zakladne informacie o Syntaxi SPARQL, to tu zrejme
-nema byt\\
-MR: okej upravil som\\
-MH (26.4.): Asi stale nerozumiem ako ta posledna cast o datach a SPARQL suvisi s touto sekciou... Proste nejak zrazu prepnes na data a SPARQL od konlretnych ontologii, ktore si vmenuval, chyba premostenie\\
-MR: jop, uz chapem, odstranil som tu cast}
-
+\assignment{MH: $\uparrow$ mozes referenvovat aj priamo web, ale odnorny clanok o Schema.org je: Guha, R.V., Brickley, D. and Macbeth, S., 2016. Schema. org: evolution of structured data on the web. Communications of the ACM, 59(2), pp.44-51.}
 
 \section{Web Ontology Language}
 Jazyk Web Ontology Language alebo OWL slúži na vytváranie a definovanie inštancií webových ontológií. Poskytuje nástroje na popis tried, vlastností a ich samotných inštancií. Oproti klasickým jazykom poskytje možnosť, špecifikovať logické vlastnosti jednotlivých objektov vyskytujúcich sa v ontológií, to znamená, že dokáže popísať aj fakty, ktoré v ontológií nie sú definované priamo, ale sú spojené logickými vlastnosťami. Napríklad, ak máme osoby Janka, Martin a Jozef, kde Janka je rodičom Martina a Jozef je rodičom Janky, pomocou OWL vieme definovať že Jozef je starým rodičom Martina, pričom nepotrebujeme vlastnosť popisujúcu tento vzťah priamo.
@@ -431,6 +422,7 @@ Jazyk Web Ontology Language alebo OWL slúži na vytváranie a definovanie inšt
 \assignment{MH: (1) Man syntax je zrozumitelnejsia (2) moc daleko si nedosiel... Na zac. sa detailne venujeme nie prilis podstatnym veciam}
 Na popis jednotlivých možností budeme používať Manchester syntax, ktorá poskytuje zrozumiteľnejšiu syntax pre čitateľa.
 
+\assignment{MH: $\uparrow$ Toto nie je Man syntax, toto je tzv. Functional Style Syntax}
 
 Ako prvé si zadefinujeme priradenia objektov ku jednotlivým triedam. Objekty môžu mať pridelených viac tried.
 \begin{verbatim}
@@ -455,6 +447,8 @@ Niekedy môžeme mať dve rôzne definície tried, ktoré ale predstavujú tú i
 EquivalentClasses( :Človek :Osoba )
 \end{verbatim}
 
+\assignment{MH: $\uparrow$ nepredstavuju \emph{tu istu osobu} ale tu istu triedu, entitu, koncept, ... Tu isty osobu by mohli predstavovat 2 individualy}
+
 
 Ďalej si vieme zadefinovať vlastnosti objektov. Tieto vlastnosti vieme definovať buď pozitívne, čiže objekt danú vlastnosť má alebo negatívne, objekt danú vlastnosť s druhým objektom mať nemôže.
 \begin{verbatim}
@@ -478,6 +472,8 @@ Tieto vlastnosti môžu mať taktiež hierarchickú štruktúru.
 SubObjectPropertyOf( :jeMatkou :jeRodičom )
 SubObjectPropertyOf( :jeOtcom :jeRodičom )
 \end{verbatim}
+
+\assignment{MH: $\uparrow$ \uv{Tieto vlasntosti}? Hovoril si nieco o vlastnostiach? Vlastne si o nich nic dokopy nepovedal... Heirarchu roli a vztah podvlasntnosti treba lepsie vysvetlit}
 
 
 Týmto vlastnostiam vieme definovať ich domény a rozsah, ktoré definujú aké hodnoty môžu jednotlivé vlastnosti nadobúdaťa a z akým objektom môžu byť tieto vlastnosti pridelené.
@@ -545,6 +541,7 @@ EquivalentClasses(
 )
 \end{verbatim}
 
+\assignment{MH: $\updownarrow$ obmedzenia treba aj vysvetlit. Ty si to vysypal z rukava, predpokladas, ze citatel uz vie co to je, aku to ma semantiku, a len si uviedol syntax... Treba vyscvetlit. Vseobecne obmedzenie skor nazyvame hodnotove obmedzenie}
 
 Podobne ako existenčné si vieme definovať aj všeobecné obmedzenie. Napríklad rodiča, ktorý ma iba chlapcov si zadefinujeme nasledovne:
 \begin{verbatim}
@@ -568,7 +565,7 @@ EquivalentClasses(
 
 
 
-\assignment{MH: Kedze cela Tvoja praca je o ontologiach a budes ich zrejme nejako zapisovat mozno by si mohol nieco povedat aj o jazykoch na zaspis ontologii, minimalen apson o jednom, s ktorym budes pracovat dalej (cize zrejme OWL)}
+\assignment{MH: Toto nema nejake vhodne ukoncenie. Konci odseknutim. Aspon povedz, ze OWL ma este dalsie uzitocne konstruktu a nejake priklady este vymenuj bez vacsieho vysvetlvoania, napr. cardianlity restrictions, nominaly, ...}
 
 
 \chapter{Existujúce ontologické riešenia}
