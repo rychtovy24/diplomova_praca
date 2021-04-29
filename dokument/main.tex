@@ -171,17 +171,27 @@ An abstract in english language
 \chapter{Úvod}\label{chap:intro}
 
 \overview{Backgroud}
-V dnešnej počítačovej dobe sa stále viac a viac vyskytujú kybernetické útoky na firmy, organizácie, štáty alebo aj konkrétne osoby. Tieto útoky často ani nemusia pochádzať od skúsených útočníkov. Vďaka rôznym fóram a video návodom, môže byť útočník takmer ktokoľvek. Firmy a štátne inštitúcie sa týmto útokom snažia zabraňovať pomocou počítačovej bezpečnosti.
+V dnešnej počítačovej dobe sa stále viac a viac vyskytujú kybernetické útoky na firmy, organizácie, štáty alebo aj konkrétne osoby. Aby sa týmto útokom dalo predísť, jednotlivé organizácie publikujú dáta o týchto útokoch, využitých zraniteľnostiach atď. Vďaka týmto nazhromaždeným dátam sa pokúšajú zabraňovať daným útokom. 
 
-\assignment{MH: $\uparrow$ Pozor, toto nema byt nejaka vseobecna rozpravka. To ze kyberneticke utoky su realna hrozba to predsa kazdy vie, to mozes vynechat. Bolo by lepsie zacat od toho, ze aby sa im dalo lepsie zabranovat, organizacie publikuju data o utorkoch, zranitelnostiach, atd. Napisat nejaky sumar o tychto standardoch, aj s citaciami. Uplne tu opat chyba CTI model, na ktory my v praci referujeme...}
+
+\assignment{MH: $\uparrow$ Pozor, toto nema byt nejaka vseobecna rozpravka. To ze kyberneticke utoky su realna hrozba to predsa kazdy vie, to mozes vynechat. Bolo by lepsie zacat od toho, ze aby sa im dalo lepsie zabranovat, organizacie publikuju data o utorkoch, zranitelnostiach, atd. Napisat nejaky sumar o tychto standardoch, aj s citaciami. Uplne tu opat chyba CTI model, na ktory my v praci referujeme...\\
+MR: zmenena prva cast, ten uvod by som nechal, vnesiem citatela do toho ze sa pojednava o utokoch na ktory nasleduju dalsie vety. lepsi uvod ma nenapada, lebo inak by som to musel priamo pisat\\
+MR: CTI model som spomenul v odseku nizsie}
 \overview{Problem}
-Na úspešné zabraňovanie je ale potrebné, mať dobre definované zdieľané dáta, ktoré v dostatočnej miere dokážu popísať útok, typ útoku, jeho ciele, využité zraniteľnosti systémov, atď. Takéto štandardy už existujú, ale prevažne sú nedostatočne obsiahle a neumožňujú ich zdieľanie, rozšírenie a použitie.
-\assignment{MH: $\uparrow$ Toto je prilis zjednodusene, nie je to s tymi standardmi az take zle, niekto kto sa v nich vyzna by mohol namietat. Keby sa ti to podarilo zlepsit, tak potom toto $\downarrow$ premostenie na ontologie je celkom fajn, ale dalo by sa este malo zlepsit (najma: dorozumiet sme sa uz so snahou vedeli aj predtym)}
+Na úspešné zabraňovanie je ale potrebné, mať dobre definované zdieľané dáta, ktoré v dostatočnej miere dokážu popísať útok, typ útoku, jeho ciele, využité zraniteľnosti systémov, atď. Na základe týchto požiadaviek vznikol CTI model \citep{MavroeidisB17}, ktorý celú doménu rozdeľuje na rôzne časti a každú časť definuje a popisuje aké informácie by mala obsahovať. 
+
+
+Veľa takýchto riešení už existuje, ako napríklad CVE\citep{cve}, OVAL\citep{oval}, CAPEC\citep{capec}, STIX\citep{stix} a mnohé ďalšie. Tieto štandardy ale popisujú len časť domény a nie sú dostatočne poprepájané. Je náročnejšie dohľadávať si všetky informácie o útoku. Týmto štandardom chýba najmä jednoduché prepojenie, zdieľanie a rozširovanie.
+
+
+\assignment{MH: $\uparrow$ Toto je prilis zjednodusene, nie je to s tymi standardmi az take zle, niekto kto sa v nich vyzna by mohol namietat. Keby sa ti to podarilo zlepsit, tak potom toto $\downarrow$ premostenie na ontologie je celkom fajn, ale dalo by sa este malo zlepsit (najma: dorozumiet sme sa uz so snahou vedeli aj predtym)\\
+MR: upravene}
 
 Z tohoto dôvodu sa začalo uvažovať o ontologických riešeniach, ktoré dokážu poskytnúť jednotný slovník, s ktorého pomocou sa vedia rôzne firmy, organizácie, štáty alebo osoby dorozumievať medzi sebou. Vedia si medzi sebou vymieňať dáta, ktorým rozumie každá strana a rozširovať dáta bez toho, aby sa stratila základná stavba dát.
 
 
 \overview{Proposed solution/contribution}
+
 \assignment{MH: TODO}
 \overview{Roadmap}
 V prvej časti práce sa budeme venovať základným pojmom, ktoré je potrebné pochopiť pri publikovaní dát na internete, tomu čo sú to ontológie a čo poskytujú, ukážeme si model, na základe ktorého vyhodnocujeme ontologické riešenie a popíšeme si už nejaké existujúce ontologické riešenia publikovania bezpečnostných hrozieb.
@@ -932,7 +942,7 @@ V predchádzajúcej časti sme si podrobnejšie predstavili vybranú časť UCO 
 
 V tejto kapitole si ukážeme databázy CVE a OVAL, ktoré predstavujú z CTI modelu časť Zraniteľnosť. Predstavíme si nami vytvorené ontológie, ich mapovania a vlastnosti jednotlivých objektov.
 \section{CVE}
-Common Vulnerabilities and Exposures(CVE) je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto organizácie dostanú pridelenú množinu CVE záznamov pre daný rok, ktorú môžu postupne napĺňať rôznymi zraniteľnosťami, ktoré objavia. CVE záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
+Common Vulnerabilities and Exposures(CVE)\citep{cve} je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto organizácie dostanú pridelenú množinu CVE záznamov pre daný rok, ktorú môžu postupne napĺňať rôznymi zraniteľnosťami, ktoré objavia. CVE záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
 
 
 Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie oddelenej pomlčkami. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje  zraniteľnosť z roku 2020 v databáze CVE s identifikátorom v danom roku 0035. Podľa množstva záznamov za daný rok, sa odvíja počet cifier na definovanie identifikátora zraniteľnosti. Napríklad v roku 1999 kedy sa začala databáza CVE napĺňať, dosahoval počet zraniteľností ročne 1 600 záznamov, kdežto za rok 2020 to bolo 36 282 záznamov.
@@ -957,7 +967,7 @@ Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje zákl
 
 
 \section{OVAL}
-Open Vulnerability and Assessment Language(OVAL) je štandard, ktorý umožňuje popísanie zraniteľností jednotlivých produktov (softvérov). Tieto informácie sú písané vo formáte XML. Obsahuje tri hlavné kroky posudzovania.
+Open Vulnerability and Assessment Language(OVAL)\citep{oval} je štandard, ktorý umožňuje popísanie zraniteľností jednotlivých produktov (softvérov). Tieto informácie sú písané vo formáte XML. Obsahuje tri hlavné kroky posudzovania.
 
 
 Prvým krokom sú základné informácie o systémoch, ako napríklad o aký operačný systém sa jedná, ktoré jeho verzie ohrozuje a aké konkrétne produkty sú ohrozené, pokiaľ je splnená konfigurácia rôznych systémov. Taktiež obsahuje rôzne odkazy na ďaľšie informácie o jednotlivých zraniteľnostiach. 
