@@ -1213,22 +1213,26 @@ Základná stránka pre každý OVAL a CVE objekt bude zobrazovať všetky dáta
 V tejto práci sme vykonali analýzu rôznych existujúcich ontologických riešení v
 oblasti publikovania spravodajských dát o bezpečnostných hrozbách. Nakoniec sme
 sa zamerali na ontologické riešenie UCO, ktoré sme najprv vyhodnotili vzhľadom
-na CTI model. Následne sme zhodnotili, aké časti nie sú dostatočne zapracované
+na CTI model, ktorý definuje oblasti, ktoré je potrebné zaznamenávať. Tieto oblasti aj bližšie definuje a popisuje. Následne sme zhodnotili, aké časti nie sú dostatočne zapracované
 v tejto ontológii a túto časť sme rozšírili o ontológiu, ako aj o dáta z
 verejných databázových riešení OVAL a CVE, ktoré popisujú zraniteľnosti
 operačných systémov, ich platforiem a produktov.
 
 \assignment{MH $\uparrow$ Ten CTI model trochu uved vysvetli, ked ho prvy raz spominas v zavere,
-pre pripad, ze niekto zacne citat od zaveru (komisia)}
+pre pripad, ze niekto zacne citat od zaveru (komisia)\\
+MR: rozpisany}
 
 Týmto rozšírením sme získali úplnejšiu ontológiu, ktorá vo väčšej miere pokrýva CTI model, ktorý bol naším referenčným modelom.
 
-Dáta v jednotlivých databázových riešeniach sme zanalyzovali, na základe týchto dát sme vytvorili ontologické riešenie, ktoré pokrývalo všetky dáta relevantné pre publikovanie a tieto vybraté dáta sme importovali a zmapovali na naše ontologické riešenia. Nad týmito dátami sme následne vytvorili rôzne analýzy a prípady použitia na popis, čo sa v nami navrhnutých ontológiách dá zistiť.
+
+Dáta v jednotlivých databázových riešeniach sme zanalyzovali, na základe týchto dát sme vytvorili ontologické riešenie, ktoré pokrývalo všetky dáta relevantné pre publikovanie a tieto vybraté dáta sme zmapovali na naše ontologické riešenia. Nad týmito dátami sme následne vytvorili rôzne analýzy a prípady použitia na popis, čo sa v nami navrhnutých ontológiách dá zistiť.
+
 
 \assignment{MH $\uparrow$ Este tie data, dost sa tu tym ohanas, ze si ich importoval,
 ale ich komplexne naimportovanie a zhromazdenie a publikovanie je future work stefanovych
 studentov, nie? Mozno to chcel len malinko inak podat/upresnit... Ty predsa len nejake data
-s prilohami odovzdas, ano?}
+s prilohami odovzdas, ano?\\
+MR: ano odovzdam ukazku dat, nechal som tu iba mapovanie, import som vyhodil, to je pravda, to ja riesit nebudem}
 
 \section*{Prínos}
 Pomocou ontologického riešenia, časti z domény kybernetickej bezpečnosti, sa nám podarilo vyjadriť tieto dáta vo jednotnej forme, prepojiť naše riešenie s už existujúcim štandardom repreznetovania znalostí v doméne kybernetickej bezpečnosti ako aj jej rozšírenie o časť zraniteľnosti a ich podrobný popis. Podarilo sa nám premapovať existujúce OVAL a CVE dáta na naše ontologické riešenie a poprepájať tieto dáta medzi sebou.
@@ -1240,23 +1244,29 @@ Naša práca taktiež dokáže pomôcť pri prevencii a ochrane pred
 kybernetickými hrozbami. Vďaka dátam, ktoré sme importovali do našej ontológie, vieme vyhodnocovať jednotlivé zraniteľnosti pre operačné systémy, platformi a produkty a taktiež vieme povedať, aké všetky produkty ovplyvňuje CVE alebo OVAL záznam. Vieme identifikovať záznamy, ktoré sa týkajú iba platforiem všeobecne, alebo také, ktoré sa využívajú najčastejšie.
 
 
+Táto práca je zároveň súčasťou projektu ORBIS (APVV-19-0220) v rámci ktorého vzniká dátové úložisko o bezpečnostných hrozbách a internetová stránka na ich prezeranie. Tento projekt sa stavia aj na základe nami vytvorenej ontológie a využije ju ako základ, ktorý sa postupne bude rozrastať o ďalšie ontologické riešenia.
+
+
 \section*{Budúce pokračovanie}
 \overview{MH: Kde vidime priestor, ze co by s tym niekto mohol robit, dalsie mozne vylepsenia}
 OVAL databáza poskytuje aj popis jednotlivých sád testov, podmocou ktorých sa vyhodnocuje, či je systém ohrozený alebo nie. Na spojenie týchto dát s našou ontológiou by bolo potrebné hlbšie preskúmať logickú sémantiku ich jazyka. V našej ontológii už sú predpripravené mapovania na tieto testy.
 
 
-Možným pokračovaním je aj možnosť rozšíriť ontológiu UCO o ďalšie mapovania na už existujúce databázy, kde môžu už mať ontologické riešenie alebo takéto ontologické riešenie bude potrebné vytvoriť. Následne extrahovať relevantné dáta z takejto databázy a pokúsiť sa namapovať ich na nami naimportované dáta.
+Možným pokračovaním je aj možnosť rozšíriť ontológiu UCO o ďalšie mapovania na už existujúce databázy, kde môžu už mať ontologické riešenie alebo takéto ontologické riešenie bude potrebné vytvoriť. Následne extrahovať relevantné dáta z takejto databázy a pokúsiť sa namapovať ich na nami naimportované dáta. Takýmito dátami môžu byť napríklad dáta, ktoré poskytuje databáza ATT\&{}CK\citep{attck}, kde je zahrnutá znalosť o taktikách a technikách útoku.
 
-\assignment{MH: $\uparrow$ Zahadne \uv{dalsie databazy}, uved aspon nejaky priklad, ak vies}
+\assignment{MH: $\uparrow$ Zahadne \uv{dalsie databazy}, uved aspon nejaky priklad, ak vies\\
+MR: dodana ATT\&{}CK\citep{attck}}
 
-Nad nami vygenerovanými dátami je možné urobiť ďalšie analýzy, ktoré by mohli napomôcť pri prevencii pred kybernetickými útokmi.
+
 
 \assignment{MH: $\uparrow$ Opat, toto je velmi velmi vagne, a moze to budit dojem, ze ani nam samym to nie je uplne jasne.\\
 MR: ina formulacia zaveru\\
-MH: Tato posledna veta je stale rovnako vagna, ake dalsie analyzy?}
+MH: Tato posledna veta je stale rovnako vagna, ake dalsie analyzy?\\
+MR: tie analyzy sa tazko popisuju, kedze nikdy nevies co ti z analyzy moze vypadnut, nechal som to radsej tak a vymazal to}
 \assignment{MH: $\uparrow$ No a co mi tu uplne chyba, je spomenut sirsi kontext projektu ORBIS, vdaka ktoremu na zaklade Tvojej ontologie vznikde semaniticky repozitar, do ktoreho skutocne budu tie data naimportovane a zverejnene.\\
 MH (new): Ty si sa ale ani nepokusil napisat nieco o tom ako na tvoju pravu nadvazuju studenti z FEI. Ked to napises, tak sa tam odvolaj na to, ze \uv{Tato praca (ako Tvoja) je sucastou sirsieho
-projektu ORBIS (APVV-19-0220), v ramci ktoreho vznika aj datove ulozisko...}, ktore stavia na Tvojej ontologu, a vyuzije ju tak a tak, a jeho cielom a prinosom bude...}
+projektu ORBIS (APVV-19-0220), v ramci ktoreho vznika aj datove ulozisko...}, ktore stavia na Tvojej ontologu, a vyuzije ju tak a tak, a jeho cielom a prinosom bude...\\
+MR: zapracovana cast ORBIS do prinosu prace}
 
 \nocite{*}
 \bibliographystyle{alpha}
