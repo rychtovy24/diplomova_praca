@@ -151,13 +151,13 @@ Konzultant: & \mfconsultant
 % koniec prehlasenia
 
 \chapter*{Poďakovanie}\label{chap:thank_you}
-Touto cestou by som sa chcel v prvom rade poďakovať môjmu školiteľovi Martinovi Homolovi a konzultantovi Štefanovi Baloghovi za ich cenné rady a usmernenia, ktoré mi veľmi pomohli pri riešení tejto diplomovej práce. 
+Touto cestou by som sa chcel v prvom rade poďakovať môjmu školiteľovi, Martinovi Homolovi, a konzultantovi, Štefanovi Baloghovi, za ich cenné rady a usmernenia, ktoré mi veľmi pomohli pri riešení tejto diplomovej práce. 
 \assignment{MH: Nezabudni podakovat sa aj Stefanovi. Inak tu tituly mozes vypustit, my dvaja si ozaj na to nepotrpime ;)}
 \vfill\eject 
 % koniec podakovania
 
 \chapter*{Abstrakt}\label{chap:abstract_sk}
-V tejto práci riešime problematiku kybernetickej bezpečnosti pomocou využitia ontológií. Popíšeme si čo to vlastne taká ontológia je, aké sú jej výhody a využitia. Ukážeme si základný model, z ktorého vychádzame a ktorý rozdeľuje celú doménu do viacerých častí a predstavíme si niektoré existujúce riešenia. Na základe analýzy si určíme najlepšie ontologické riešenie a takto vybratú ontológiu rozšírime o niektoré časti, ktoré podľa daného modelu nespĺňa. Tieto časti popíšeme v našej vlatsnej ontológii podľa požiadaviek modelu a štandardov, ktoré na danú problematiku existujú, ale ešte nemajú ontologické riešenie. Pomocou nášho návrhu následne zmapujeme existujúce dáta a prepojíme ich.
+V tejto práci riešime problematiku kybernetickej bezpečnosti pomocou využitia ontológií. Popíšeme si, čo vôbec ontológia je, aké sú jej výhody a využitia. Ukážeme si základný model, z ktorého vychádzame, a ktorý rozdeľuje celú doménu do viacerých častí a predstavíme si niektoré existujúce riešenia. Na základe analýzy si určíme najlepšie ontologické riešenie a takto vybratú ontológiu rozšírime o niektoré časti, ktoré podľa daného modelu nespĺňa. Tieto časti popíšeme v našej vlatsnej ontológii podľa požiadaviek modelu a štandardov, ktoré na danú problematiku existujú, ale ešte nemajú ontologické riešenie. Pomocou nášho návrhu následne zmapujeme existujúce dáta a prepojíme ich.
 \\
 \\
 Kľúčové slová: Ontológia, Kybernetická bezpečnosť, Sieť prepojených dát
@@ -174,17 +174,17 @@ An abstract in english language
 \chapter{Úvod}\label{chap:intro}
 
 \overview{Backgroud}
-V dnešnej počítačovej dobe sa stále viac a viac vyskytujú kybernetické útoky na firmy, organizácie, štáty alebo aj konkrétne osoby. Aby sa týmto útokom dalo predísť, jednotlivé organizácie publikujú dáta o týchto útokoch, využitých zraniteľnostiach atď. Vďaka týmto nazhromaždeným dátam sa pokúšajú zabraňovať daným útokom. 
+V dnešnej počítačovej dobe sa stále viac vyskytujú kybernetické útoky na firmy, organizácie, štáty alebo aj konkrétne osoby. Aby sa týmto útokom dalo predísť, jednotlivé organizácie publikujú dáta o týchto útokoch, využitých zraniteľnostiach, atď. Vďaka týmto nazhromaždeným dátam sa pokúšajú zabraňovať podobným útokom. 
 
 
 \assignment{MH: $\uparrow$ Pozor, toto nema byt nejaka vseobecna rozpravka. To ze kyberneticke utoky su realna hrozba to predsa kazdy vie, to mozes vynechat. Bolo by lepsie zacat od toho, ze aby sa im dalo lepsie zabranovat, organizacie publikuju data o utorkoch, zranitelnostiach, atd. Napisat nejaky sumar o tychto standardoch, aj s citaciami. Uplne tu opat chyba CTI model, na ktory my v praci referujeme...\\
 MR: zmenena prva cast, ten uvod by som nechal, vnesiem citatela do toho ze sa pojednava o utokoch na ktory nasleduju dalsie vety. lepsi uvod ma nenapada, lebo inak by som to musel priamo pisat\\
 MR: CTI model som spomenul v odseku nizsie}
 \overview{Problem}
-Na úspešné zabraňovanie je ale potrebné, mať dobre definované zdieľané dáta, ktoré v dostatočnej miere dokážu popísať útok, typ útoku, jeho ciele, využité zraniteľnosti systémov, atď. Na základe týchto požiadaviek vznikol CTI model \citep{MavroeidisB17}, ktorý celú doménu rozdeľuje na rôzne časti a každú časť definuje a popisuje aké informácie by mala obsahovať. 
+Na úspešné odvracanie útokov je ale potrebné mať dobre definované zdieľané dáta, ktoré v dostatočnej miere dokážu popísať útok, typ útoku, jeho ciele, využité zraniteľnosti systémov, atď. Na základe týchto požiadaviek vznikol CTI model \citep{MavroeidisB17}, ktorý celú doménu rozdeľuje na rôzne časti a každú časť definuje a popisuje, aké informácie by mala obsahovať. 
 
 
-Veľa takýchto riešení už existuje, ako napríklad CVE\citep{cve}, OVAL\citep{oval}, CAPEC\citep{capec}, STIX\citep{stix} a mnohé ďalšie. Tieto štandardy ale popisujú len časť domény a nie sú dostatočne poprepájané. Je náročnejšie dohľadávať si všetky informácie o útoku. Týmto štandardom chýba najmä jednoduché prepojenie, zdieľanie a rozširovanie.
+Veľa takýchto riešení už existuje, ako napríklad CVE\citep{cve}, OVAL\citep{oval}, CAPEC\citep{capec}, STIX\citep{stix} a mnohé ďalšie. Tieto štandardy ale popisujú iba časť domény a nie sú dostatočne poprepájané. Je náročnejšie dohľadávať si všetky informácie o útoku. Týmto štandardom chýba najmä jednoduché prepojenie, zdieľanie a rozširovanie.
 
 
 \assignment{MH: $\uparrow$ Toto je prilis zjednodusene, nie je to s tymi standardmi az take zle, niekto kto sa v nich vyzna by mohol namietat. Keby sa ti to podarilo zlepsit, tak potom toto $\downarrow$ premostenie na ontologie je celkom fajn, ale dalo by sa este malo zlepsit (najma: dorozumiet sme sa uz so snahou vedeli aj predtym)\\
@@ -200,7 +200,7 @@ Naše riešenie obsahuje podrobnú analýzu už existujúceho čiastočného rie
 \assignment{MH: TODO\\
 MR: doplnene}
 \overview{Roadmap}
-V prvej časti práce sa budeme venovať základným pojmom, ktoré je potrebné pochopiť pri publikovaní dát na internete, tomu čo sú to ontológie a čo poskytujú, ukážeme si model, na základe ktorého vyhodnocujeme ontologické riešenie a popíšeme si už nejaké existujúce ontologické riešenia publikovania bezpečnostných hrozieb.
+V prvej časti práce sa budeme venovať základným pojmom, ktorým je potrebné porozumieť pri publikovaní dát na internete, tomu čo sú to ontológie a čo poskytujú, ukážeme si model, na základe ktorého vyhodnocujeme ontologické riešenie a popíšeme si niekoľko už existujúcich ontologických riešení publikovania bezpečnostných hrozieb.
 
 
 V druhej časti si predstavíme ontológiu, ktorú rozšírime o niektoré už existujúce štandardy, ktoré ale ešte nemajú ontologické riešenie. Popíšeme naše návrhy riešenia, import dát a možné príklady použitia.
@@ -334,7 +334,7 @@ SELECT ?predicate ?object WHERE {
 Príklad dopytu nad databázou uvedenou vyššie, spúšťame nad endpointom DBPedia a výsledok je len zlomkom z toho, čo nám skutočne vráti: Chceme získať všetky údaje o Bratislave.
 
 
-Okrem operácie SELECT poznáme aj ďalšie typy dopytov. ASK je dopyt, ktorý nám vracia pravdivostnú hodnotu pre daný dopyt. Vieme ním napríklad zistiť či sa v našom grafe nachádza mesto Bratislava. Taktiež poznáme dopyt DESCRIBE, ktorý vracia RDF graf opisujúci jednotlivé vlatnosti výsledných hodnôt dopytu. Ako posledný typ dopytu je CONSTRUCT, ktorý vracia nový RDF graf podľa predlohy vytvorenej v hlave dopytu.
+Okrem operácie SELECT poznáme aj ďalšie typy dopytov. ASK je dopyt, ktorý nám vracia pravdivostnú hodnotu pre daný dopyt. Vieme ním napríklad zistiť, či sa v našom grafe nachádza mesto Bratislava. Taktiež poznáme dopyt DESCRIBE, ktorý vracia RDF graf opisujúci jednotlivé vlatnosti výsledných hodnôt dopytu. Ako posledný typ dopytu je CONSTRUCT, ktorý vracia nový RDF graf podľa predlohy vytvorenej v hlave dopytu.
 
 \chapter{Ontológie}
 
@@ -374,7 +374,7 @@ Ontológia sa skladá zo základných stavebných prvkov \textit{Trieda}, \texti
 \textbf{Vzťahy} sú najpodstatnejšou súčasťou ontológie. Poskytujú prepájanie jednotlivých entít. Je to jednosmerné spojenie, ktoré určuje vzťah, v akom sú dve dané triedy. Tým vznikne triplet \textit{trieda:vzťah:trieda}. Medzi triplet sa radí aj trojica \textit{trieda:atribút:hodnota}. Väzby sa zvyknú definovať aj inverzne. Z logického hľadiska sú vzťahy axiómami. Pokiaľ máme triedu \textit{Krajina} a \textit{Hlavné mesto}, tak by vzťah mohol vyzerať nasledovne: Krajina:má:Hlavné mesto.
 
 
-\textbf{TBox} je množina definícií tried a ich vzťahov medzi nimi. V množine je obsiahnutá znalosť taxonómie tried, taktiež v nej môže byť zadefinovaná disjunktnosť jednotlivých tried, vymenovanie konkrétnych entít obsiahnutých v danej triede, reštrickie pre jednotlivé triedy a ich vzťahy
+\textbf{TBox} je množina definícií tried a ich vzťahov medzi nimi. V množine je obsiahnutá znalosť taxonómie tried, taktiež v nej môže byť zadefinovaná disjunktnosť jednotlivých tried, vymenovanie konkrétnych entít obsiahnutých v danej triede, reštrickie pre jednotlivé triedy a ich vzťahy.
 
 
 \textbf{ABox} je množina znalostí o jednotlivých entitách.
@@ -413,7 +413,7 @@ Schema.org \cite{schemaOrg} je taktiež ontologickým riešením, ktorej cieľom
 \assignment{MH: $\uparrow$ mozes referenvovat aj priamo web, ale odnorny clanok o Schema.org je: Guha, R.V., Brickley, D. and Macbeth, S., 2016. Schema. org: evolution of structured data on the web. Communications of the ACM, 59(2), pp.44-51.}
 
 \section{Web Ontology Language}
-Jazyk Web Ontology Language alebo OWL slúži na vytváranie a definovanie inštancií webových ontológií. Poskytuje nástroje na popis tried, vlastností a ich samotných inštancií. Oproti klasickým jazykom poskytje možnosť, špecifikovať logické vlastnosti jednotlivých objektov vyskytujúcich sa v ontológií, to znamená, že dokáže popísať aj fakty, ktoré v ontológií nie sú definované priamo, ale sú spojené logickými vlastnosťami. Napríklad, ak máme osoby Janka, Martin a Jozef, kde Janka je rodičom Martina a Jozef je rodičom Janky, pomocou OWL vieme definovať že Jozef je starým rodičom Martina, pričom nepotrebujeme vlastnosť popisujúcu tento vzťah priamo.
+Jazyk Web Ontology Language alebo OWL slúži na vytváranie a definovanie inštancií webových ontológií. Poskytuje nástroje na popis tried, vlastností a ich samotných inštancií. Oproti klasickým jazykom poskytje možnosť, špecifikovať logické vlastnosti jednotlivých objektov vyskytujúcich sa v ontológií, čo znamená, že dokáže popísať aj fakty, ktoré v ontológií nie sú definované priamo, ale sú spojené logickými vlastnosťami. Napríklad, ak máme osoby Janka, Martin a Jozef, kde Janka je rodičom Martina a Jozef je rodičom Janky, pomocou OWL vieme definovať, že Jozef je starým rodičom Martina, pričom nepotrebujeme vlastnosť popisujúcu tento vzťah priamo.
 
 \assignment{MH: $\uparrow$ Tomuto nerozumiem}
 
@@ -440,7 +440,7 @@ Na popis jednotlivých možností budeme používať Manchester syntax, ktorá p
 
 \assignment{MH: $\uparrow$ Toto nie je Man syntax, toto je tzv. Functional Style Syntax}
 
-Ako prvé si zadefinujeme priradenia objektov ku jednotlivým triedam. Objekty môžu mať pridelených viac tried.
+Ako prvé si zadefinujeme priradenia objektov k jednotlivým triedam. Objekty môžu mať pridelených viac tried.
 \begin{verbatim}
 ClassAssertation( :Osoba :Janka )
 ClassAssertation( :Žena :Janka )
@@ -458,7 +458,7 @@ SubClassOf( :Matka :Žena )
 \end{verbatim}
 
 
-Niekedy môžeme mať dve rôzne definície tried, ktoré ale predstavujú tú istú osobu. Takéto triedy sa volaú ekvivaletné a vieme ich definovať nasledovne:
+Niekedy môžeme mať dve rôzne definície tried, ktoré však predstavujú tú istú osobu. Takéto triedy sa volaú ekvivaletné a vieme ich definovať nasledovne:
 \begin{verbatim}
 EquivalentClasses( :Človek :Osoba )
 \end{verbatim}
@@ -466,7 +466,7 @@ EquivalentClasses( :Človek :Osoba )
 \assignment{MH: $\uparrow$ nepredstavuju \emph{tu istu osobu} ale tu istu triedu, entitu, koncept, ... Tu isty osobu by mohli predstavovat 2 individualy}
 
 
-Ďalej si vieme zadefinovať vlastnosti objektov. Tieto vlastnosti vieme definovať buď pozitívne, čiže objekt danú vlastnosť má alebo negatívne, objekt danú vlastnosť s druhým objektom mať nemôže.
+Ďalej si vieme zadefinovať vlastnosti objektov. Tieto vlastnosti vieme definovať buď pozitívne, kedy objekt danú vlastnosť má, alebo negatívne, kedy objekt danú vlastnosť s druhým objektom mať nemôže.
 \begin{verbatim}
 ObjectPropertyAssertion( :jeMatkou :Janka :Martin )
 ObjectPropertyAssertion( :jeOtcom :Jozef :Janka )
@@ -492,7 +492,7 @@ SubObjectPropertyOf( :jeOtcom :jeRodičom )
 \assignment{MH: $\uparrow$ \uv{Tieto vlasntosti}? Hovoril si nieco o vlastnostiach? Vlastne si o nich nic dokopy nepovedal... Heirarchu roli a vztah podvlasntnosti treba lepsie vysvetlit}
 
 
-Týmto vlastnostiam vieme definovať ich domény a rozsah, ktoré definujú aké hodnoty môžu jednotlivé vlastnosti nadobúdaťa a z akým objektom môžu byť tieto vlastnosti pridelené.
+Týmto vlastnostiam vieme definovať ich domény a rozsah, ktoré definujú, aké hodnoty môžu jednotlivé vlastnosti nadobúdať, a s akým objektom môžu byť tieto vlastnosti pridelené.
 \begin{verbatim}
 ObjectPropertyDomain( :jeRodičom :Osoba )
 ObjectPropertyRange( :jeRodičom :Osoba )
@@ -526,7 +526,7 @@ DisjointClasses( :Muž :Žena )
 \end{verbatim}
 
 
-Ďalším obmedzením je definovanie či je konkrétny objekt tým istým alebo iným objektom.
+Ďalším obmedzením je definovanie, či je konkrétny objekt tým istým alebo iným objektom.
 \begin{verbatim}
 DifferentIndividuals( :Janka :Martin )
 DifferentIndividuals( :Janka :Jozef )
@@ -535,7 +535,7 @@ SameIndividual( :Martin :Maťo )
 \end{verbatim}
 
 
-Taktiež vieme definovať objekty, ktoré spadajú pod rovnakú triedu, pokiaľ spĺňajú určité vlastnosti. Napríklad, Všetky ženy, ktoré sú zároveň rodičom, sú aj Matkou. Vieme povedať aj to, že všetky objekty, ktoré sú buď matkou alebo otcom, sú zároveň aj rodičom.
+Taktiež vieme definovať objekty, ktoré spadajú pod rovnakú triedu, pokiaľ spĺňajú určité vlastnosti. Napríklad, všetky ženy, ktoré sú zároveň rodičom, sú aj matkou. Vieme povedať aj to, že všetky objekty, ktoré sú buď matkou alebo otcom, sú zároveň aj rodičom.
 \begin{verbatim}
 EquivalentClasses(
   :Matka 
@@ -559,7 +559,7 @@ EquivalentClasses(
 
 \assignment{MH: $\updownarrow$ obmedzenia treba aj vysvetlit. Ty si to vysypal z rukava, predpokladas, ze citatel uz vie co to je, aku to ma semantiku, a len si uviedol syntax... Treba vyscvetlit. Vseobecne obmedzenie skor nazyvame hodnotove obmedzenie}
 
-Podobne ako existenčné si vieme definovať aj všeobecné obmedzenie. Napríklad rodiča, ktorý ma iba chlapcov si zadefinujeme nasledovne:
+Podobne ako existenčné, si vieme definovať aj všeobecné obmedzenie. Napríklad rodiča, ktorý ma iba chlapcov si zadefinujeme nasledovne:
 \begin{verbatim}
 EquivalentClasses(
   :RodičIbaChlapci 
@@ -568,7 +568,7 @@ EquivalentClasses(
 \end{verbatim}
 
 
-V príklade vyššie nám ale toto obmedzenie nezaručuje, že daný rodič musí mať dieťa. Na takéto zabezpečenie sa využíva existenčné a všeobecné obmedzenie zároveň. Týmto obmedzením hovoríme že musí mať minimálne jedno dieťa, ktoré je chlapcom a zároveň všetky jeho deti sú chlapci.
+V príklade vyššie nám však toto obmedzenie nezaručuje, že daný rodič musí mať dieťa. Na takéto zabezpečenie sa využíva existenčné a všeobecné obmedzenie zároveň. Týmto obmedzením hovoríme, že musí mať minimálne jedno dieťa, ktoré je chlapcom a zároveň všetky jeho deti sú chlapci.
 \begin{verbatim}
 EquivalentClasses(
   :RodičIbaChlapci 
@@ -585,29 +585,29 @@ EquivalentClasses(
 
 
 \chapter{Existujúce ontologické riešenia}
-Množstvo kyber útokov v dnešnej dobe narastá závratnou rýchlosťou, čo značí že dnešné spôsoby a metódy ochrany nie sú dostatočné a preto je potrebné sa zamyslieť nad novými spôsobmi ochrany. Jeden z prístupov by mohol byť založený práve na ontológiách. Ontológie a systémy postavené nad nimi majú výhodu sémantiky, ktorá je schopná rozlišovať situácie kedy je počítačový systém normálny alebo škodlivý.
+Množstvo kyber útokov v dnešnej dobe narastá závratnou rýchlosťou, čo značí, že dnešné spôsoby a metódy ochrany nie sú dostatočné, a preto je potrebné sa zamyslieť nad novými spôsobmi ochrany. Jeden z prístupov by mohol byť založený práve na ontológiách. Ontológie a systémy postavené nad nimi majú výhodu sémantiky, ktorá je schopná rozlišovať situácie kedy je počítačový systém normálny alebo škodlivý.
 
 
-Problém s ktorým sa ale potýkame je ten, že neexistuje jednotný formát zápisu údajov. Väčšina nástrojov ktoré v dnešnej dobe existujú, majú vlastné štandardy. Keďže tieto štandardy sú prevažne rozdielne, nedá sa ich prepájať a využívať efektívne. Tneto problém by mohol byť taktiež vyriešený vďaka ontologickému riešeniu. Tým pádom by sme vedeli mať také dáta, ktoré dokážu stroje nielen prečítať, ale zároveň aj pochopiť. 
+Problém, s ktorým sa však potýkame je ten, že neexistuje jednotný formát zápisu údajov. Väčšina nástrojov, ktoré v dnešnej dobe existujú, majú vlastné štandardy. Keďže tieto štandardy sú prevažne rozdielne, nedá sa ich prepájať a využívať efektívne. Tento problém by mohol byť taktiež vyriešený vďaka ontologickému riešeniu. Tým pádom by sme vedeli mať také dáta, ktoré dokážu stroje nielen prečítať, ale zároveň aj pochopiť. 
  
 
-Ontologiký prístup taktiež poskytuje jednoduchšiu rozšíriteľnosť už existujúcej ontológie a tým sa dá vytvárať presnejší popis záznamov.
+Ontologiký prístup taktiež poskytuje jednoduchšiu rozšíriteľnosť už existujúcej ontológie, a tým sa dá vytvárať presnejší popis záznamov.
 
 
-Vďaka URI reprezentácií jednotlivých entít, ktoré sú používané ako identifikátory jednotlivých objektov, nemôže nastať problém nepochopenia dát ako k tomu môže doochádzať v ľudskej reči. Napríklad ak by sme povedali slovo \textit{koruna}, nikto nevie, či máme na mysli korunu stromov alebo kráľovskú korunu. Avšak vďaka atribútom vieme toto slovo lepšie pochoiť, keďže nám ho atribúty bližšie definujú.
+Vďaka URI reprezentácií jednotlivých entít, ktoré sú používané ako identifikátory jednotlivých objektov, nemôže nastať problém nepochopenia dát, ako k tomu môže doochádzať v ľudskej reči. Napríklad ak by sme povedali slovo \textit{koruna}, nikto nevie, či máme na mysli korunu stromov alebo kráľovskú korunu. Avšak vďaka atribútom vieme toto slovo lepšie pochoiť, keďže nám ho atribúty bližšie definujú.
 
 \minor{MH: $\uparrow$ Tento text sa skor hodi do uvodu, pripadne cast do casti kde opisujes ontologie. Tuto kapitolu by som ocakaval, ze otvoris nejak zhruba odtialto $\downarrow$ (Akoze toto $\uparrow$ sa uz citatel (mal) dovediet niekde predtym a je zbytocne to tu opakovat\ldots)}
 
-V súčastosti existuje veľa rôznych štandardov a ontologických riešení pre doménu kzber bezpečnosti, avšak veľa z nich už ani nie je vyvýjaných. Organizácie, ktoré vyvýjali tieto ontológie, buď stratili o ďalší vývoj záujem, alebo už len nezverejňujú svoje pokroky v danej doméne, teda prešli na closed-source systém.
+V súčastosti existuje veľa rôznych štandardov a ontologických riešení pre doménu kyber bezpečnosti, avšak veľa z nich už ani nie je vyvýjaných. Organizácie, ktoré vyvýjali tieto ontológie, buď stratili o ďalší vývoj záujem, alebo už len nezverejňujú svoje pokroky v danej doméne, teda prešli na closed-source systém.
 
 
-V nasledujúcich kapitolách si povieme niečo o zaužívaných štandardoch, základnom modeli, z ktorého vychádzame a podľa, ktorého posudzujeme, či je daná ontológia dobrá. Taktiež rozoberieme existujúce riešenia v doméne kyber bezpečnosti.
+V nasledujúcich kapitolách si povieme niečo o zaužívaných štandardoch, základnom modeli, z ktorého vychádzame a podľa ktorého posudzujeme, či je daná ontológia dobrá. Taktiež rozoberieme existujúce riešenia v doméne kyber bezpečnosti.
 
 \section{CTI model}
 Cyber Threat Intelligance model \citep{MavroeidisB17} (CTI model) má za cieľ objasňovať rôzne typy informácií, ktoré potrebujú organizácie zhromažďovať o kybernetických hrozbách. Cieľom modelu je jednotne definovať a podrobne popísať okruhy v danej doméne. Výhodou takéhoto modelu je zlepšenie schopností pri prevencii, detekcii a reakcii na bezpečnostné hrozby.
 
 
-Tento model bol vyvinutý so zámerom, aby slúžil ako predloha pre ontologické riešenia, nakoľko autori zahrnuli fakt, že ontologické riešenia sú najlepšie pri publikovaní a zdieľaní dát a sú strojovo čitateľné vďaka typu reprezentácie.
+Tento model bol vyvinutý so zámerom, aby slúžil ako predloha pre ontologické riešenia, nakoľko autori zahrnuli fakt, že ontologické riešenia sú najlepšie pri publikovaní a zdieľaní dát, a sú strojovo čitateľné vďaka typu reprezentácie.
 
 
 Model zahŕňa informácie o autorovi útoku, motivácie a ciele útoku, stratégiu akou je útok vedený, aké technológie a postupy používa, ktorým základným vzorcom útoku sa riadi, aké slabiny jednotlivé útoky využili, aké atomické indikátory dokážu predpovedať útok a akú cieľovú skupinu útok postihuje.
@@ -638,7 +638,7 @@ Kampaň popisuje samtotný útok z dvoch pohľadov. Netechnický, ktorý je repr
 Stratégia predstavuje netechnický popis útoku na hornej úrovni. Pokiaľ si zoberieme nejakého útočníka, tak tento útočník zvyčajne dosahuje ciele útoku viacerými spôsobmi a stratégia definuje, čo a ako je potrebné pozorovať.
 
 \subsection{Zraniteľnosť}
-Zraniteľnosti definujú slabiny systému. Tieto slabiny môžu byť definované rôznymi stavmi zariadenia ako napríklad, ktoré systémy bežia, ale môžu predstavovať aj nastavenia rôznych aplikácií, napríklad rôzne prístupové nastavenia a povolenia pre webové prehliadače. Taktiež môžu popisovať rôzne funkcie, ktoré umožňujú vykonávať jednotlivé systémy, ako napríklad spúšťanie rôznych príkazov ktoré ovplyvňujú a menia systémové nastavenia zariadenie.
+Zraniteľnosti definujú slabiny systému. Tieto slabiny môžu byť definované rôznymi stavmi zariadenia, ako napríklad, ktoré systémy bežia, ale môžu predstavovať aj nastavenia rôznych aplikácií, napríklad rôzne prístupové nastavenia a povolenia pre webové prehliadače. Taktiež môžu popisovať rôzne funkcie, ktoré umožňujú vykonávať jednotlivé systémy, ako napríklad spúšťanie rôznych príkazov ktoré ovplyvňujú a menia systémové nastavenia zariadenie.
 
 \subsubsection{TTP}
 Taktiky, techniky a procedúry (TTP) sa zamieravajú na dáta čitateľné strojmi. Popisujú spôsoby útoku z hľadiska toho čo chcú dosiahnuť a ako to robia.
@@ -647,7 +647,7 @@ Taktiky, techniky a procedúry (TTP) sa zamieravajú na dáta čitateľné stroj
 \textbf{Vzorec útoku} je jedným z hľadisiek TTP. Definuje akým spôsobom je útok použitý. Napríklad sa tu nachádzajú rôzne úpravy názvov súborov, rôzne prenastavenie časovania a stavov zariadenia, atď. 
 
 
-\textbf{Malware} je taktiež hľadisko z TTP. Definuje typ softvéru, ktorý sa vkladá do systému s úmyslom poškodiť cieľ útoku z hľadiska dôvernosti, integrity alebo dostupnosti. Medzi typické malware patrí vírus, trójsky kôň, červ, metódy tajných vstupov, spyware atď.
+\textbf{Malware} je taktiež hľadisko z TTP. Definuje typ softvéru, ktorý sa vkladá do systému s úmyslom poškodiť cieľ útoku z hľadiska dôvernosti, integrity alebo dostupnosti. Medzi typické malware patrí vírus, trójsky kôň, červ, metódy tajných vstupov, spyware, atď.
 
 
 Každý okruh z TTP využíva niektoré zraniteľnosti systémov.
@@ -657,7 +657,7 @@ Každý okruh z TTP využíva niektoré zraniteľnosti systémov.
 Indikátory predstavujú množinu rôznych vlastností zariadenia, kedy je zariadenie náchylné na útok. Tieto indikátory popisujú rôzne nastavenia zariadenia, jeho technické parametre alebo nainštalovaný softvér a vďaka nemu sú schopné definovať rôzne útoky.
 
 
-\textbf{Atomické indikátory} sú najpremenlivejšie ukazovatele, nakoľko sa po čase menia. Napríklad ak niektoré útoky prebiehajú z určitej IP adresy, tak táto adresa sa môže časom zmeniť. Tieto typy dát môžu pomáhať pri identifikovaní útočníka iba v určitom čase.
+\textbf{Atomické indikátory} sú najpremenlivejšie ukazovatele, nakoľko sa po čase menia. Napríklad, ak niektoré útoky prebiehajú z určitej IP adresy, tak táto adresa sa môže časom zmeniť. Tieto typy dát môžu pomáhať pri identifikovaní útočníka iba v určitom čase.
 
 
 \subsection{Nástroj}
@@ -688,7 +688,7 @@ Aj keď je STIX najkomplexnejším štandardom a zjednocuje všetky informácie 
 
 %\minor{MH: $\uparrow$ \emph{uvazovanie v ontologiach} nie je spravny slovensky vyraz pre reasoning -- skus napr. \emph{inferencia}}
 
-Okrem týchto štandardov obsahuje aj mapovanie na všeobecné databázy ako sú Google Knowledge Graph, DBPedia a Yago. Vďaka týmto mapovaniam je možné mať prístup k verejným databázam z rôznych domén záujmu.
+Okrem týchto štandardov obsahuje aj mapovanie na všeobecné databázy, ako sú Google Knowledge Graph, DBPedia a Yago. Vďaka týmto mapovaniam je možné mať prístup k verejným databázam z rôznych domén záujmu.
 
 
 Základnými triedami, využívanými v UCO sú: 
@@ -714,27 +714,27 @@ Vývojári extrahovali dáta z National Vulnerability Database (NVD), ktorá je 
 
 
 \section{Integrated Cyber Analysis System}
-Integrated Cyber Analysis System\citep{salem2015enabling} alebo ICAS je ontológia vytvorená pre TAPIO (Targeted Attack Premonition using Integrated Operational data) nástroj, ktorý je schopný extrahovať dáta z počítačov v jednej sieti do jedného sémantického grafu a tým zjednoduší a urýchli prácu bezpečnostným tímom pri vyhľadávaní ohrození systému, čím by sa zvýšila prehľadnosť dát a tiež znížil dopad útoku. 
+Integrated Cyber Analysis System\citep{salem2015enabling} alebo ICAS je ontológia vytvorená pre TAPIO (Targeted Attack Premonition using Integrated Operational data) nástroj, ktorý je schopný extrahovať dáta z počítačov v jednej sieti do jedného sémantického grafu, a tým zjednoduší a urýchli prácu bezpečnostným tímom pri vyhľadávaní ohrození systému, čím by sa zvýšila prehľadnosť dát a tiež znížil dopad útoku. 
 
 
 Samotná ontológia ICAS je veľmi komplexnou, nakoľko obsahuje približne 30 podontológií, kde každá sa špecializuje na inú oblasť v doméne informačnej bezpečnosti.
 
 \minor{MH: $\uparrow$ vieme povedat, ze ci nejaka cast z toho je relevantna pre nas}
 
-Nástroj TAPIO spolu s ontológiou ICAS bol vyvýjaný organizáciou DAPRA, ale dátum poslednej úpravy bol v roku 2017, čiže podobne ako UCO sa jedná o projekt ktorý už nie je aktuálny.
+Nástroj TAPIO spolu s ontológiou ICAS bol vyvýjaný organizáciou DAPRA, ale dátum poslednej úpravy bol v roku 2017, teda podobne ako UCO sa jedná o projekt, ktorý už nie je aktuálny.
 
 \assignment{MH: $\uparrow$ Tu by som bol opatrnejsi, tvrdit, ze nieco nie je aktualne, lebo posledny update bol pred 3 rokmi je zvlastne. Co ked pred troma rokmi to dotiahli uz do dokonalosti a teraz uz len pouzivaju?}
 
 \section{STUCCO}
-STUCCO \citep{stucco}, ktorej autorom je Iannacone at al. je ontológiou, ktorá je určená na prácu so znalostnými grafovými databázami. Jej základ tvoria scenáre použitia ľudskými používateľmi alebo automatizovanými strojmi. Obsahuje dáta z 13 rôznych štruktúr, ktoré majú rôzne formáty a ktoré sú uložené v rôznych typoch databáz. 
+STUCCO \citep{stucco}, ktorej autorom je Iannacone at al., je ontológiou, ktorá je určená na prácu so znalostnými grafovými databázami. Jej základ tvoria scenáre použitia ľudskými používateľmi alebo automatizovanými strojmi. Obsahuje dáta z 13 rôznych štruktúr, ktoré majú rôzne formáty, a ktoré sú uložené v rôznych typoch databáz. 
 
 
-STUCCO obsahuje dáta z nasledovných kategórií do ktorých je rozdelená bezpečnostná doména. 
+STUCCO obsahuje dáta z nasledovných kategórií, do ktorých je rozdelená bezpečnostná doména. 
 \begin{itemize}
 \item Identita -- predstavuje totožnosť a vlastnosti útočníka.
-\item Taktika technika a procedúry (TPP) -- Popisuje čo daný útok robí a ako to robí.
+\item Taktika technika a procedúry (TPP) -- Popisuje, čo daný útok robí a ako to robí.
 \item Nástroje -- Aké nástroje sú potrebné pre úspešné vykonaie útoku.
-\item Atomické indikátory -- Sem môžu spadať súbory, IP adresy, doménové mená atď. Nanešťastie tieto dáta majú krátku životnosť nakoľko sa stále menia.
+\item Atomické indikátory -- Sem môžu spadať súbory, IP adresy, doménové mená atď. Nanešťastie tieto dáta majú krátku životnosť, nakoľko sa stále menia.
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -749,7 +749,7 @@ MH: Namiesto $\downarrow$ \uv{popiseme a budeme porovnavat} napise \uv{podrobne 
 MR: Done\\
 MH: Len uz v prvej vete ide o UCO? Ano, nie je to jasne, ked je tam len citacia. Tiez by tu mohol byt jej nazov, nie len skratka. Dotretice: pozor na tie merzey okolo zatvoriek, aj hranatych, teda aj citacii...}
 
-V tejto časti podrobne analyzujeme a vyhodnocujeme ontológiu\citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme vyhodnocovať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami a či sú ich vlastnosti a hierarchia dostatočné. 
+V tejto časti podrobne analyzujeme a vyhodnocujeme ontológiu\citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme vyhodnocovať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami, a či sú ich vlastnosti a hierarchia dostatočné. 
 
 
 \section{Model}
@@ -771,7 +771,7 @@ Pokiaľ UCO ontológia využíva už existujúcu triedu z inej ontológie, zadef
 %
 \minor{MH: Mozno by sme mohli na obrazku tie triedy z inych ontologii nejako lepsie vyznacit? Je blbost vyrobit vacsi obdlznikovity biely tvar s nadpisom STIX zapuzdujuci veci zo STIXU (hoc by tam bola aj len 1 trieda)?}
 %
-Každý útočník má nejaké meno (hasTitle) a je priradený k existujúcim incidentom reprezentovaných triedou \textit{Incident} priradených vlastnoťou \textit{hasRelatedIncident}. Má aj určitú mieru doveryhodnosti (hasConfidenceType). Každý útočník má priradené nejaké zavedené postupy a stratégie pri útoku, ktoré sú inštanciou triedy \textit{Campaign} priradené vlastnosťou \textit{hasAssociatedCampaign}.
+Každý útočník má nejaké meno (hasTitle) a je priradený k existujúcim incidentom reprezentovaných triedou \textit{Incident} priradených vlastnoťou \textit{hasRelatedIncident}. Má aj určitú mieru dôveryhodnosti (hasConfidenceType). Každý útočník má priradené nejaké zavedené postupy a stratégie pri útoku, ktoré sú inštanciou triedy \textit{Campaign} priradené vlastnosťou \textit{hasAssociatedCampaign}.
 %
 \minor{MH: $\updownarrow$ chyba premostenie na tabulku vlasntosti, mozno aj viac ich popisat v texte (?)}
 %\minor{MH: $\updownarrow$ Naduzivas \texttt{\textbackslash\textbackslash}}
@@ -805,7 +805,7 @@ Každý útočník má nejaké meno (hasTitle) a je priradený k existujúcim in
 \end{figure}
 
 
-\textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémov alebo známych malwaroch. Nakoľko vďaka jazyku OWL vieme definovať napríklad inverzné vlastnosti je žiadúce aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
+\textbf{Útok} máme reprezentovaný triedou \textit{Attack}, ktorá má viaceré pravidlá na splnenie. Musí mať minimálne jeden význam (\textit{Means}) a minimálne jeden následok (\textit{Consequence}) útoku. Samotný význam je ekvivaletný s triedou TTP, ktorá popisuje samotný útok pomocou informácií o vzoroch útoku, využívaní slabín systémov alebo známych malwaroch. Nakoľko vďaka jazyku OWL vieme definovať napríklad inverzné vlastnosti, je žiadúce, aby sa táto vlastnosť využívala. Pre vlastnoť \textit{hasAttacker} to žiaľ nie je zadefinované a určite by to bolo vhodné zadefinovať.\\
 %
 \assignment{MH: $\uparrow$ Tu zasa strasne skaces, viac vysvetluj... Kde sa vzalo TTP? Tiez pises, ze \emph{hasAttacker} nie je definovane, ale v tabulke to je...\\
 MR: tym som povedal ze nie je zadefinovana ziadna inverzna vlastnost k vlastnosti \textit{hasAttacker}\\
@@ -951,7 +951,7 @@ V tejto kapitole si ukážeme databázy CVE a OVAL, ktoré predstavujú z CTI mo
 Common Vulnerabilities and Exposures(CVE)\citep{cve} je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto organizácie dostanú pridelenú množinu CVE záznamov pre daný rok, ktorú môžu postupne napĺňať rôznymi zraniteľnosťami, ktoré objavia. CVE záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
 
 
-Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie oddelenej pomlčkami. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje  zraniteľnosť z roku 2020 v databáze CVE s identifikátorom v danom roku 0035. Podľa množstva záznamov za daný rok, sa odvíja počet cifier na definovanie identifikátora zraniteľnosti. Napríklad v roku 1999 kedy sa začala databáza CVE napĺňať, dosahoval počet zraniteľností ročne 1 600 záznamov, kdežto za rok 2020 to bolo 36 282 záznamov.
+Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie oddelenej pomlčkami. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje  zraniteľnosť z roku 2020 v databáze CVE s identifikátorom v danom roku 0035. Podľa množstva záznamov za daný rok, sa odvíja počet cifier na definovanie identifikátora zraniteľnosti. Napríklad v roku 1999, kedy sa začala databáza CVE napĺňať, dosahoval počet zraniteľností ročne 1 600 záznamov, kdežto za rok 2020 to bolo 36 282 záznamov.
 
 
 \begin{figure}[!hb]
@@ -961,7 +961,7 @@ Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \texti
 \end{figure}
 
 
-Každý jeden záznam má taktiež popis, ktorý musí obsahovať dostatok informácií o tom, na ktoré systémy má daná zranitenosť vplyv, pokiaľ sa vzťahuje aj na konkrétnu verziu, tak aj táto verzia by mala byť uvedená. Musí obsahovať aj infomácie o type zraniteľnosti, jej príčinu a dopad. Daný popis musí byť napísaný v angličtine.
+Každý jeden záznam má taktiež popis, ktorý musí obsahovať dostatok informácií o tom, na ktoré systémy má daná zranitenosť vplyv, pokiaľ sa vzťahuje aj na konkrétnu verziu, aj táto verzia by mala byť uvedená. Musí obsahovať aj infomácie o type zraniteľnosti, jej príčinu a dopad. Daný popis musí byť napísaný v angličtine.
 
 
 Záznamy majú aj zoznam referencií, ktoré sú používané ako externé zdroje k zraniteľnosti. Sú to externé odkazy s infomáciou o zdrojovom systéme. Tieto odkazy musia používať iba protokoly \textit{http}, \textit{ftp}, \textit{https}, alebo \textit{ftps}.
@@ -979,7 +979,7 @@ Open Vulnerability and Assessment Language(OVAL)\citep{oval} je štandard, ktor�
 Prvým krokom sú základné informácie o systémoch, ako napríklad o aký operačný systém sa jedná, ktoré jeho verzie ohrozuje a aké konkrétne produkty sú ohrozené, pokiaľ je splnená konfigurácia rôznych systémov. Taktiež obsahuje rôzne odkazy na ďaľšie informácie o jednotlivých zraniteľnostiach. 
 
 
-Druhé posudzovanie analyzuje systém podľa špecifikovaného nastavenia a zisťuje či je daný systém ohrozený alebo nie. 
+Druhé posudzovanie analyzuje systém podľa špecifikovaného nastavenia a zisťuje, či je daný systém ohrozený alebo nie. 
 
 
 Posledný krok tvorí správu o výsledku tejto analýzy. Na výstupe je informácia o aktuálnom konfiguračnom nastavení systému.
@@ -1157,7 +1157,7 @@ ORDER BY DESC(?count)
 
 
 \subsubsection*{Výstup}
-Najviac používaný CVE záznam v OVAL záznamoch bol odkazovaný 12 krát. Zvyšné záznamy boli vždy odkazované aspoň 1 krát, čiže sme zistili že každý CVE záznam je podrobnejšie popísaný v OVAL záznamoch. Neexistuje záznam, ktorbý by nebol spracovaný v OVAL databáze.
+Najviac používaný CVE záznam v OVAL záznamoch bol odkazovaný 12 krát. Zvyšné záznamy boli vždy odkazované aspoň 1 krát, teda sme zistili, že každý CVE záznam je podrobnejšie popísaný v OVAL záznamoch. Neexistuje záznam, ktorbý by nebol spracovaný v OVAL databáze.
 
 
 \subsection*{Príklad 4}
@@ -1210,7 +1210,7 @@ V spolupráci so študentami môjho konzultanta, sme vytvorili internetovú str�
 Takiež sa v nej budú dať prezerať dáta o jednotlivých operačných systémoch, ich platformách a produktoch. Na týchto stránkach budú informácie o jednotlivých OVAL a CVE záznamoch, ktoré sa týkajú daného predmetu.
 
 
-Základná stránka pre každý OVAL a CVE objekt bude zobrazovať všetky dáta, ktoré má v databáze definované na prvej úrovni t.j., dáta kde daný objekt figuruje ako predmet v trojici. 
+Základná stránka pre každý OVAL a CVE objekt bude zobrazovať všetky dáta, ktoré má v databáze definované na prvej úrovni t.j. dáta, kde daný objekt figuruje ako predmet v trojici. 
 
 
 
@@ -1241,9 +1241,9 @@ s prilohami odovzdas, ano?\\
 MR: ano odovzdam ukazku dat, nechal som tu iba mapovanie, import som vyhodil, to je pravda, to ja riesit nebudem}
 
 \section*{Prínos}
-Pomocou ontologického riešenia, časti z domény kybernetickej bezpečnosti, sa nám podarilo vyjadriť tieto dáta vo jednotnej forme, prepojiť naše riešenie s už existujúcim štandardom repreznetovania znalostí v doméne kybernetickej bezpečnosti ako aj jej rozšírenie o časť zraniteľnosti a ich podrobný popis. Podarilo sa nám premapovať existujúce OVAL a CVE dáta na naše ontologické riešenie a poprepájať tieto dáta medzi sebou.
+Pomocou ontologického riešenia, časti z domény kybernetickej bezpečnosti, sa nám podarilo vyjadriť tieto dáta vo jednotnej forme, prepojiť naše riešenie s už existujúcim štandardom repreznetovania znalostí v doméne kybernetickej bezpečnosti, ako aj jej rozšírenie o časť zraniteľnosti a ich podrobný popis. Podarilo sa nám premapovať existujúce OVAL a CVE dáta na naše ontologické riešenie a poprepájať tieto dáta medzi sebou.
 
-Vďaka tomu, vieme tieto dáta reprezentovať a publikovať na webe, v sieti prepojených dát vo forme, ktorá je prepoužiteľná a
+Vďaka tomu vieme tieto dáta reprezentovať a publikovať na webe, v sieti prepojených dát vo forme, ktorá je prepoužiteľná a
 strojovo čitateľná. Hocikto sa môže na naše dáta odkazovať, opätovne ich využiť alebo rozšíriť. 
 
 Naša práca taktiež dokáže pomôcť pri prevencii a ochrane pred
