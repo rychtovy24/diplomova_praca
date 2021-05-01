@@ -157,8 +157,9 @@ Touto cestou by som sa chcel v prvom rade poďakovať môjmu školiteľovi Marti
 % koniec podakovania
 
 \chapter*{Abstrakt}\label{chap:abstract_sk}
-V tejto práci riešime problematiku kybernetickej bezpečnosti pomocou využitia ontológií. Popíšeme si čo to vlastne taká ontológia je, aké sú jej výhody a využitia. Ukážeme si základný model, z ktorého vychádzame a ktorý rozdeľuje celú doménu do viacerých častí a predstavíme si niektoré existujúce riešenia. Na základe analýzy si určíme najlepšie ontologické riešenie a takto vybratú ontológiu rozšírime o niektoré časti, ktoré podľa daného modelu nespĺňa. Tieto časti popíšeme v našej vlatsnej ontológii podľa požiadaviek modelu a štandardov, ktoré na danú problematiku existujú, ale ešte nemajú ontologické riešenie. Pomocou nášho návrhu následne zmapujeme existujúce dáta a prepojíme ich.
-\\
+V tejto práci riešime problematiku kybernetickej bezpečnosti pomocou využitia ontológií. Popíšeme si čo to vlastne taká ontológia je, aké sú jej výhody a využitia. Ukážeme si základný model, z ktorého vychádzame a ktorý rozdeľuje celú doménu do viacerých častí a predstavíme si niektoré existujúce riešenia. Na základe analýzy si určíme najlepšie ontologické riešenie a takto vybratú ontológiu rozšírime o niektoré časti, ktoré podľa daného modelu nespĺňa. Tieto časti popíšeme v našej vlastnej ontológii podľa požiadaviek modelu a štandardov, ktoré na danú problematiku existujú, ale ešte nemajú ontologické riešenie. Pomocou nášho návrhu následne zmapujeme existujúce dáta a prepojíme ich.
+\assignment{MH: $\uparrow$ OK, celkom dobre na prvy pokus. Nepis ale zovialne "popiseme si", "ukazeme si". Okrem toho tu vetu "popiseme si..." tu mozes aj vyhodit... To je jasne, ze pospises potrebny background. Co by sa tu ale este malo spomenut su usecasy, a mozno aj dlasie pokracovanie prace, ze v buducnosti na baze navrhnutej ontologie vznikne repozitar, v ktorom budu data realne publikovane... Pozor tiez na preklepy (jeden som opravil).. Spell checkni celu pracu}
+~\\
 \\
 Kľúčové slová: Ontológia, Kybernetická bezpečnosť, Sieť prepojených dát
 
@@ -177,9 +178,8 @@ An abstract in english language
 V dnešnej počítačovej dobe sa stále viac a viac vyskytujú kybernetické útoky na firmy, organizácie, štáty alebo aj konkrétne osoby. Aby sa týmto útokom dalo predísť, jednotlivé organizácie publikujú dáta o týchto útokoch, využitých zraniteľnostiach atď. Vďaka týmto nazhromaždeným dátam sa pokúšajú zabraňovať daným útokom. 
 
 
-\assignment{MH: $\uparrow$ Pozor, toto nema byt nejaka vseobecna rozpravka. To ze kyberneticke utoky su realna hrozba to predsa kazdy vie, to mozes vynechat. Bolo by lepsie zacat od toho, ze aby sa im dalo lepsie zabranovat, organizacie publikuju data o utorkoch, zranitelnostiach, atd. Napisat nejaky sumar o tychto standardoch, aj s citaciami. Uplne tu opat chyba CTI model, na ktory my v praci referujeme...\\
-MR: zmenena prva cast, ten uvod by som nechal, vnesiem citatela do toho ze sa pojednava o utokoch na ktory nasleduju dalsie vety. lepsi uvod ma nenapada, lebo inak by som to musel priamo pisat\\
-MR: CTI model som spomenul v odseku nizsie}
+\assignment{MH: $\uparrow$ Dobre, fajn; akurat keby si to este mohol podopriet 
+nejakou citaciou na nejaku pracu, ktora hovori o takomto zhromazdovani, alebo na na nejaku prehladovu sutudiu. Nieco o tych CIRToch mozno... Pripadne aj viac citacii... Mozes kusit pohladat Google Scholarom (?)}
 \overview{Problem}
 Na úspešné zabraňovanie je ale potrebné, mať dobre definované zdieľané dáta, ktoré v dostatočnej miere dokážu popísať útok, typ útoku, jeho ciele, využité zraniteľnosti systémov, atď. Na základe týchto požiadaviek vznikol CTI model \citep{MavroeidisB17}, ktorý celú doménu rozdeľuje na rôzne časti a každú časť definuje a popisuje aké informácie by mala obsahovať. 
 
@@ -187,18 +187,21 @@ Na úspešné zabraňovanie je ale potrebné, mať dobre definované zdieľané 
 Veľa takýchto riešení už existuje, ako napríklad CVE\citep{cve}, OVAL\citep{oval}, CAPEC\citep{capec}, STIX\citep{stix} a mnohé ďalšie. Tieto štandardy ale popisujú len časť domény a nie sú dostatočne poprepájané. Je náročnejšie dohľadávať si všetky informácie o útoku. Týmto štandardom chýba najmä jednoduché prepojenie, zdieľanie a rozširovanie.
 
 
-\assignment{MH: $\uparrow$ Toto je prilis zjednodusene, nie je to s tymi standardmi az take zle, niekto kto sa v nich vyzna by mohol namietat. Keby sa ti to podarilo zlepsit, tak potom toto $\downarrow$ premostenie na ontologie je celkom fajn, ale dalo by sa este malo zlepsit (najma: dorozumiet sme sa uz so snahou vedeli aj predtym)\\
-MR: upravene}
+\assignment{MH: $\uparrow$ OK, obsahovo fajn. Nezabudni, ze pred zatvorkou je
+medzera, aj pred hranatou, a tym padom aj pred citaciou -- s tym mas problem aj
+inde. Mozno by si ty mohol tie skratky aj rozpisat.}
 
 Z tohoto dôvodu sa začalo uvažovať o ontologických riešeniach, ktoré dokážu poskytnúť jednotný slovník, s ktorého pomocou sa vedia rôzne firmy, organizácie, štáty alebo osoby dorozumievať medzi sebou. Vedia si medzi sebou vymieňať dáta, ktorým rozumie každá strana a rozširovať dáta bez toho, aby sa stratila základná stavba dát.
 
+\assignment{MH: $\uparrow$ Opat, nejake citace... Ak uz sa zacalo uvazovat, tak
+uz nejake prace su... Ved aj mi na nich staviame, tak len sem daj tie
+citacie...}
 
 \overview{Proposed solution/contribution}
 Naše riešenie obsahuje podrobnú analýzu už existujúceho čiastočného riešenia UCO vyhodnoteného na CTI model. Na základe analýzy, naša práca obsahuje navrhnuté ontologické riešenie pre časť domény definovanú v CTI modeli ako zraniteľnosť a prepojenie s už existujúcimi neontologickými riešeniami CVE a OVAL. Ďalej obsahuje popis migrácie a zmapovanie existujúcich dát na nami vygenerovanú ontológiu.
 
+\assignment{MH: $\uparrow$ Vysvetli a cituj UCO, ostatne uz je citovane (a snad teda bude aj vysvetlene) vyssie}
 
-\assignment{MH: TODO\\
-MR: doplnene}
 \overview{Roadmap}
 V prvej časti práce sa budeme venovať základným pojmom, ktoré je potrebné pochopiť pri publikovaní dát na internete, tomu čo sú to ontológie a čo poskytujú, ukážeme si model, na základe ktorého vyhodnocujeme ontologické riešenie a popíšeme si už nejaké existujúce ontologické riešenia publikovania bezpečnostných hrozieb.
 
@@ -1226,7 +1229,8 @@ operačných systémov, ich platforiem a produktov.
 
 \assignment{MH $\uparrow$ Ten CTI model trochu uved vysvetli, ked ho prvy raz spominas v zavere,
 pre pripad, ze niekto zacne citat od zaveru (komisia)\\
-MR: rozpisany}
+MR: rozpisany\\
+MH: Myslel som rozpisat skratku, ale to vysvetlenie je tiez fajn...}
 
 Týmto rozšírením sme získali úplnejšiu ontológiu, ktorá vo väčšej miere pokrýva CTI model, ktorý bol naším referenčným modelom.
 
@@ -1234,17 +1238,13 @@ Týmto rozšírením sme získali úplnejšiu ontológiu, ktorá vo väčšej mi
 Dáta v jednotlivých databázových riešeniach sme zanalyzovali, na základe týchto dát sme vytvorili ontologické riešenie, ktoré pokrývalo všetky dáta relevantné pre publikovanie a tieto vybraté dáta sme zmapovali na naše ontologické riešenia. Nad týmito dátami sme následne vytvorili rôzne analýzy a prípady použitia na popis, čo sa v nami navrhnutých ontológiách dá zistiť.
 
 
-\assignment{MH $\uparrow$ Este tie data, dost sa tu tym ohanas, ze si ich importoval,
-ale ich komplexne naimportovanie a zhromazdenie a publikovanie je future work stefanovych
-studentov, nie? Mozno to chcel len malinko inak podat/upresnit... Ty predsa len nejake data
-s prilohami odovzdas, ano?\\
-MR: ano odovzdam ukazku dat, nechal som tu iba mapovanie, import som vyhodil, to je pravda, to ja riesit nebudem}
-
 \section*{Prínos}
 Pomocou ontologického riešenia, časti z domény kybernetickej bezpečnosti, sa nám podarilo vyjadriť tieto dáta vo jednotnej forme, prepojiť naše riešenie s už existujúcim štandardom repreznetovania znalostí v doméne kybernetickej bezpečnosti ako aj jej rozšírenie o časť zraniteľnosti a ich podrobný popis. Podarilo sa nám premapovať existujúce OVAL a CVE dáta na naše ontologické riešenie a poprepájať tieto dáta medzi sebou.
 
 Vďaka tomu, vieme tieto dáta reprezentovať a publikovať na webe, v sieti prepojených dát vo forme, ktorá je prepoužiteľná a
 strojovo čitateľná. Hocikto sa môže na naše dáta odkazovať, opätovne ich využiť alebo rozšíriť. 
+
+\assignment{MH: $\uparrow$ Az teraz som si vsimol, ze mas jednopismenkove slova na konci riadku. To nie je v slovencine OK, pouzi nedelitelnu medzeru (v LaTeXu znak tilda). Treba fixnut vsade v celej praci}
 
 Naša práca taktiež dokáže pomôcť pri prevencii a ochrane pred
 kybernetickými hrozbami. Vďaka dátam, ktoré sme importovali do našej ontológie, vieme vyhodnocovať jednotlivé zraniteľnosti pre operačné systémy, platformi a produkty a taktiež vieme povedať, aké všetky produkty ovplyvňuje CVE alebo OVAL záznam. Vieme identifikovať záznamy, ktoré sa týkajú iba platforiem všeobecne, alebo také, ktoré sa využívajú najčastejšie.
@@ -1252,6 +1252,9 @@ kybernetickými hrozbami. Vďaka dátam, ktoré sme importovali do našej ontol�
 
 Táto práca je zároveň súčasťou projektu ORBIS (APVV-19-0220) v rámci ktorého vzniká dátové úložisko o bezpečnostných hrozbách a internetová stránka na ich prezeranie. Tento projekt sa stavia aj na základe nami vytvorenej ontológie a využije ju ako základ, ktorý sa postupne bude rozrastať o ďalšie ontologické riešenia.
 
+\assignment{MH: $\uparrow$ Najma, co si nenapisal, ze Tvoju ontologiu pouzie na
+repreznetaciu dat v tom ulozisku. Tiez, toto je praca, ktora na teba nadvazuje,
+tak by som to dal do Buduceho pokracovania, aj ked uz sa siastocne deje...}
 
 \section*{Budúce pokračovanie}
 \overview{MH: Kde vidime priestor, ze co by s tym niekto mohol robit, dalsie mozne vylepsenia}
