@@ -157,14 +157,14 @@ Touto cestou by som sa chcel v prvom rade poďakovať môjmu školiteľovi, Mart
 % koniec podakovania
 
 \chapter*{Abstrakt}\label{chap:abstract_sk}
-V tejto práci riešime problematiku kybernetickej bezpečnosti pomocou využitia ontológií. Popíšeme si čo to vlastne taká ontológia je, aké sú jej výhody a využitia. Ukážeme si základný model, z ktorého vychádzame a ktorý rozdeľuje celú doménu do viacerých častí a predstavíme si niektoré existujúce riešenia. Na základe analýzy si určíme najlepšie ontologické riešenie a takto vybratú ontológiu rozšírime o niektoré časti, ktoré podľa daného modelu nespĺňa. Tieto časti popíšeme v našej vlastnej ontológii podľa požiadaviek modelu a štandardov, ktoré na danú problematiku existujú, ale ešte nemajú ontologické riešenie. Pomocou nášho návrhu následne zmapujeme existujúce dáta a prepojíme ich.
+V tejto práci riešime problematiku kybernetickej bezpečnosti pomocou využitia ontológií. Ukážeme si čo to vlastne taká ontológia je, aké sú jej výhody a využitia. Ukážeme si základný model, z ktorého vychádzame a ktorý rozdeľuje celú doménu do viacerých častí a predstavíme si niektoré existujúce riešenia. Na základe analýzy si určíme najlepšie ontologické riešenie a takto vybratú ontológiu rozšírime o niektoré časti, ktoré podľa daného modelu nespĺňa. Tieto časti popíšeme v našej vlastnej ontológii podľa požiadaviek modelu a štandardov, ktoré na danú problematiku existujú, ale ešte nemajú ontologické riešenie. Pomocou nášho návrhu následne zmapujeme existujúce dáta a prepojíme ich, ukážeme si aj prípady použitia, čo nami vytvorená ontológia poskytuje. Naša práca taktiež slúži ako základ pre vznikajúci repozitár, v ktorom budú dáta reálne publikované.
 \assignment{MH: $\uparrow$ OK, celkom dobre na prvy pokus. Nepis ale zovialne "popiseme si", "ukazeme si". Okrem toho tu vetu "popiseme si..." tu mozes aj vyhodit... To je jasne, ze pospises potrebny background. Co by sa tu ale este malo spomenut su usecasy, a mozno aj dlasie pokracovanie prace, ze v buducnosti na baze navrhnutej ontologie vznikne repozitar, v ktorom budu data realne publikovane... Pozor tiez na preklepy (jeden som opravil).. Spell checkni celu pracu}
 ~\\
 \\
 Kľúčové slová: Ontológia, Kybernetická bezpečnosť, Sieť prepojených dát
 
 \chapter*{Abstract}\label{chap:abstract_en}
-An abstract in english language
+In this graduattion we write about the issue of cyber security through the use of ontologies. We will show what such an ontology is, what are its advantages and uses. We will show the basic model on which we are based and which divides the whole domain into several parts and imagine some existing solutions. Based on the analysis, we determined the best ontological solutions and expand the selected ontology with any parts that it doesn\'{}t meet according to the model. We will describe these parts in our own ontology according to the requirements of the model and standards that exist for the given issue, but don\'{}t have an ontological solution at this moment. With the help of our suggestion, we will analyze the existing data and connect them and also we will describe use cases that the ontology we created provides. Our work is also used as a basis for emerging repositary in which the data will be actually published.
 % koniec abstraktov
 
 \tableofcontents
@@ -184,7 +184,7 @@ nejakou citaciou na nejaku pracu, ktora hovori o takomto zhromazdovani, alebo na
 Na úspešné odvracanie útokov je ale potrebné mať dobre definované zdieľané dáta, ktoré v dostatočnej miere dokážu popísať útok, typ útoku, jeho ciele, využité zraniteľnosti systémov, atď. Na základe týchto požiadaviek vznikol CTI model \citep{MavroeidisB17}, ktorý celú doménu rozdeľuje na rôzne časti a každú časť definuje a popisuje, aké informácie by mala obsahovať. 
 
 
-Veľa takýchto riešení už existuje, ako napríklad CVE\citep{cve}, OVAL\citep{oval}, CAPEC\citep{capec}, STIX\citep{stix} a mnohé ďalšie. Tieto štandardy ale popisujú iba časť domény a nie sú dostatočne poprepájané. Je náročnejšie dohľadávať si všetky informácie o útoku. Týmto štandardom chýba najmä jednoduché prepojenie, zdieľanie a rozširovanie.
+Veľa takýchto riešení už existuje, ako napríklad Common Vulnerabilities and Exposures (CVE) \citep{cve}, Open Vulnerability and Assessment Language (OVAL) \citep{oval}, Common Attack Pattern Enumeration and Classification (CAPEC) \citep{capec}, Structured Threat Information eXpression (STIX) \citep{stix} a mnohé ďalšie. Tieto štandardy ale popisujú iba časť domény a nie sú dostatočne poprepájané. Je náročnejšie dohľadávať si všetky informácie o útoku. Týmto štandardom chýba najmä jednoduché prepojenie, zdieľanie a rozširovanie.
 
 
 \assignment{MH: $\uparrow$ OK, obsahovo fajn. Nezabudni, ze pred zatvorkou je
@@ -198,7 +198,7 @@ uz nejake prace su... Ved aj mi na nich staviame, tak len sem daj tie
 citacie...}
 
 \overview{Proposed solution/contribution}
-Naše riešenie obsahuje podrobnú analýzu už existujúceho čiastočného riešenia UCO vyhodnoteného na CTI model. Na základe analýzy, naša práca obsahuje navrhnuté ontologické riešenie pre časť domény definovanú v CTI modeli ako zraniteľnosť a prepojenie s už existujúcimi neontologickými riešeniami CVE a OVAL. Ďalej obsahuje popis migrácie a zmapovanie existujúcich dát na nami vygenerovanú ontológiu.
+Naše riešenie obsahuje podrobnú analýzu už existujúceho čiastočného riešenia Unified Cybersecurity Ontology (UCO) \citep{ucoSource}  vyhodnoteného na~CTI model. Na základe analýzy, naša práca obsahuje navrhnuté ontologické riešenie pre časť domény definovanú v CTI modeli ako zraniteľnosť a~prepojenie s už existujúcimi neontologickými riešeniami CVE a OVAL. Ďalej obsahuje popis migrácie a zmapovanie existujúcich dát na~nami vygenerovanú ontológiu.
 
 \assignment{MH: $\uparrow$ Vysvetli a cituj UCO, ostatne uz je citovane (a snad teda bude aj vysvetlene) vyssie}
 
@@ -399,11 +399,12 @@ Ontológie sa začali využívať najmä v organizáciách, ktoré sa špecializ
 
 
 %Na zápis týchto ontológií sa používa niekoľko jazykov, kde najznámejším je asi Resource Description Framework (RDF), ktorý je rpimárne určený na využitie vo webových stránkach, pre hľadanie informácií strojmi. 
-Ontológie si našli uplatnenie aj v medicínskej oblasti a to napríklad SNOMED, čo je najväčším viacjazyčným medicínskym slovníkom na svete. 
+Ontológie si našli uplatnenie aj v medicínskej oblasti a to napríklad SNOMED \citep{snomed}, čo je najväčším viacjazyčným medicínskym slovníkom na svete. 
 
-\assignment{MH: Cituj SNOMED, najdi vhodny zdroj cez Google Scholar}
+\assignment{MH: Cituj SNOMED, najdi vhodny zdroj cez Google Scholar\\
+MR: citovane}
 
-Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google, kde ako bočný panel sú zobrazené informácie o vyhľadávanom objekte (~\ref{fig:semantic_web}). Tieto dáta je možné zobraziť preto, lebo výsledkom takéhoto panelu je vyhľadávanie informácií na webovej stránke, ktorá obsahuje sémantické dáta.
+Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google, kde ako bočný panel sú zobrazené informácie o vyhľadávanom objekte (Obr. 3.1). Tieto dáta je možné zobraziť preto, lebo výsledkom takéhoto panelu je vyhľadávanie informácií na webovej stránke, ktorá obsahuje sémantické dáta.
 
 \begin{figure}[h]
 \makebox[\textwidth]{\includegraphics[keepaspectratio=true,scale=0.7]{images/onto_screen}}
@@ -413,10 +414,11 @@ Taktiež sa s ním stretávame každodenne pri vyhľadávaní na stránke Google
 
 Schema.org \cite{schemaOrg} je taktiež ontologickým riešením, ktorej cieľom je vytvárať, udržiavať a propagovať schémy štrukturovaných údajov na internete, internetových stránkach alebo e-mailových správach. Poskytuje zdieľanú slovnú zásobu, ktorú môžu tvorcovia internetových stránok používať na označenie a popis jednotlivých elementov na stránke. Týmto popisom rozumejú vyhľadávacie nástroje ako Google, Microsoft a Yahoo!. Viac ako 10 miliónov internetových stránok používa Schema.org na popisovanie svojich stránok a e-mailových správ.
 
-\assignment{MH: $\uparrow$ mozes referenvovat aj priamo web, ale odnorny clanok o Schema.org je: Guha, R.V., Brickley, D. and Macbeth, S., 2016. Schema. org: evolution of structured data on the web. Communications of the ACM, 59(2), pp.44-51.}
+\assignment{MH: $\uparrow$ mozes referenvovat aj priamo web, ale odnorny clanok o Schema.org je: Guha, R.V., Brickley, D. and Macbeth, S., 2016. Schema. org: evolution of structured data on the web. Communications of the ACM, 59(2), pp.44-51.\\
+MR: citovany clanok}
 
 \section{Web Ontology Language}
-Jazyk Web Ontology Language alebo OWL slúži na vytváranie a definovanie inštancií webových ontológií. Poskytuje nástroje na popis tried, vlastností a ich samotných inštancií. Oproti klasickým jazykom poskytje možnosť, špecifikovať logické vlastnosti jednotlivých objektov vyskytujúcich sa v ontológií, čo znamená, že dokáže popísať aj fakty, ktoré v ontológií nie sú definované priamo, ale sú spojené logickými vlastnosťami. Napríklad, ak máme osoby Janka, Martin a Jozef, kde Janka je rodičom Martina a Jozef je rodičom Janky, pomocou OWL vieme definovať, že Jozef je starým rodičom Martina, pričom nepotrebujeme vlastnosť popisujúcu tento vzťah priamo.
+Jazyk Web Ontology Language \citep{owl2} alebo OWL slúži na vytváranie a definovanie inštancií webových ontológií. Poskytuje nástroje na popis tried, vlastností a ich samotných inštancií. Oproti klasickým jazykom poskytje možnosť, špecifikovať logické vlastnosti jednotlivých objektov vyskytujúcich sa v ontológií, čo znamená, že dokáže popísať aj fakty, ktoré v ontológií nie sú definované priamo, ale sú spojené logickými vlastnosťami. Napríklad, ak máme osoby Janka, Martin a Jozef, kde Janka je rodičom Martina a Jozef je rodičom Janky, pomocou OWL vieme definovať, že Jozef je starým rodičom Martina, pričom nepotrebujeme vlastnosť popisujúcu tento vzťah priamo.
 
 \assignment{MH: $\uparrow$ Tomuto nerozumiem}
 
@@ -461,7 +463,7 @@ SubClassOf( :Matka :Žena )
 \end{verbatim}
 
 
-Niekedy môžeme mať dve rôzne definície tried, ktoré však predstavujú tú istú osobu. Takéto triedy sa volaú ekvivaletné a vieme ich definovať nasledovne:
+Niekedy môžeme mať dve rôzne definície tried, ktoré však predstavujú tú istú triedu. Takéto triedy sa volajú ekvivaletné a vieme ich definovať nasledovne:
 \begin{verbatim}
 EquivalentClasses( :Človek :Osoba )
 \end{verbatim}
@@ -486,7 +488,7 @@ NegativeDataPropertyAssertion( :máVek :Jozef "10"^^xsd:integer )
 \end{verbatim}
 
 
-Tieto vlastnosti môžu mať taktiež hierarchickú štruktúru.
+Vlastnosti je matkou a je otcom spája jedna spoločná vlastnosť je rodičom, kde tieto vlastnosti môžeme definovať hierarchicky.
 \begin{verbatim}
 SubObjectPropertyOf( :jeMatkou :jeRodičom )
 SubObjectPropertyOf( :jeOtcom :jeRodičom )
@@ -583,8 +585,11 @@ EquivalentClasses(
 \end{verbatim}
 
 
+OWL má ešte ďalšie užitočné konštrukty, ako napríklad určovanie mohutnosti, kde je možné definovať minimálnu, maximálnu a presnú, ďalej má obmedzenie, ktoré definuje množinu možných hodnôt, ktoré vlastnosť môže nadobudnúť. Poskytuje aj asymetrické, reflexívne, ireflexívne a tranzitívne definície pre vlastnosti.
 
-\assignment{MH: Toto nema nejake vhodne ukoncenie. Konci odseknutim. Aspon povedz, ze OWL ma este dalsie uzitocne konstruktu a nejake priklady este vymenuj bez vacsieho vysvetlvoania, napr. cardianlity restrictions, nominaly, ...}
+
+\assignment{MH: Toto nema nejake vhodne ukoncenie. Konci odseknutim. Aspon povedz, ze OWL ma este dalsie uzitocne konstruktu a nejake priklady este vymenuj bez vacsieho vysvetlvoania, napr. cardianlity restrictions, nominaly, ...\\
+MR: dopisane dalsie moznosti}
 
 
 \chapter{Existujúce ontologické riešenia}
@@ -752,7 +757,7 @@ MH: Namiesto $\downarrow$ \uv{popiseme a budeme porovnavat} napise \uv{podrobne 
 MR: Done\\
 MH: Len uz v prvej vete ide o UCO? Ano, nie je to jasne, ked je tam len citacia. Tiez by tu mohol byt jej nazov, nie len skratka. Dotretice: pozor na tie merzey okolo zatvoriek, aj hranatych, teda aj citacii...}
 
-V tejto časti podrobne analyzujeme a vyhodnocujeme ontológiu\citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme vyhodnocovať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami, a či sú ich vlastnosti a hierarchia dostatočné. 
+V tejto časti podrobne analyzujeme a vyhodnocujeme ontológiu \citep{ucoSource}, ktorú sme si vybrali pre ďalší vývoj a budeme vyhodnocovať UCO ontológiu vzhľadom na CTI model. Pre túto prácu sú pre nás najpodstatnejšie časti Identita, Útok, Kampaň (Stratégia a TTP), Slabina, Indikátor a Nástroj. Na tieto oblasti sa zameriame v nasledujúcich kapitolách, vyhodnotíme, či sú v ontológii popísané dostatočne, či sú prepájané s už existujúcimi ontológiami, a či sú ich vlastnosti a hierarchia dostatočné. 
 
 
 \section{Model}
@@ -951,7 +956,7 @@ V predchádzajúcej časti sme si podrobnejšie predstavili vybranú časť UCO 
 
 V tejto kapitole si ukážeme databázy CVE a OVAL, ktoré predstavujú z CTI modelu časť Zraniteľnosť. Predstavíme si nami vytvorené ontológie, ich mapovania a vlastnosti jednotlivých objektov.
 \section{CVE}
-Common Vulnerabilities and Exposures(CVE)\citep{cve} je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto organizácie dostanú pridelenú množinu CVE záznamov pre daný rok, ktorú môžu postupne napĺňať rôznymi zraniteľnosťami, ktoré objavia. CVE záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
+Common Vulnerabilities and Exposures(CVE) \citep{cve} je databáza všetkých chýb zabezpečenia v oblasti kybernetickej bezpečnosti. Jej úlohou je identifikovať, definovať a katagolizovať tieto chyby, ďalej zraniteľnosti. Každá zraniteľnosť má vlastný záznam, ktorý prechádza fázami v databáze. Zraniteľnosť je najprv objavená, potom pridelená a nakoniec zverejnená. Zverejňovať tieto zraniteľnosti môžu iba tí, ktorí majú partnerstvo s programom CVE. Tieto organizácie dostanú pridelenú množinu CVE záznamov pre daný rok, ktorú môžu postupne napĺňať rôznymi zraniteľnosťami, ktoré objavia. CVE záznamy sú následne používané pri komunikácii a riešení rôznych bezpečnostných hrozieb, aby sa zabezpečilo rovnaké chápanie problému, ktoré bolo konzistentne definované v CVE.  
 
 
 Tieto záznamy majú svoje identifikátory, ktoré sa skladajú z prefixu \textit{CVE}, následne obsahujú rok objavenia a nakoniec unikátny identifikátor v rámci tejto trojkombinácie oddelenej pomlčkami. Napríklad identifikátor \textit{CVE-2020-0035} predstavuje  zraniteľnosť z roku 2020 v databáze CVE s identifikátorom v danom roku 0035. Podľa množstva záznamov za daný rok, sa odvíja počet cifier na definovanie identifikátora zraniteľnosti. Napríklad v roku 1999, kedy sa začala databáza CVE napĺňať, dosahoval počet zraniteľností ročne 1 600 záznamov, kdežto za rok 2020 to bolo 36 282 záznamov.
@@ -976,7 +981,7 @@ Na základe týchto informácií sme vytvorili ontológiu, ktorá obsahuje zákl
 
 
 \section{OVAL}
-Open Vulnerability and Assessment Language(OVAL)\citep{oval} je štandard, ktorý umožňuje popísanie zraniteľností jednotlivých produktov (softvérov). Tieto informácie sú písané vo formáte XML. Obsahuje tri hlavné kroky posudzovania.
+Open Vulnerability and Assessment Language(OVAL) \citep{oval} je štandard, ktorý umožňuje popísanie zraniteľností jednotlivých produktov (softvérov). Tieto informácie sú písané vo formáte XML. Obsahuje tri hlavné kroky posudzovania.
 
 
 Prvým krokom sú základné informácie o systémoch, ako napríklad o aký operačný systém sa jedná, ktoré jeho verzie ohrozuje a aké konkrétne produkty sú ohrozené, pokiaľ je splnená konfigurácia rôznych systémov. Taktiež obsahuje rôzne odkazy na ďaľšie informácie o jednotlivých zraniteľnostiach. 
@@ -1250,7 +1255,7 @@ Naša práca taktiež dokáže pomôcť pri prevencii a ochrane pred
 kybernetickými hrozbami. Vďaka dátam, ktoré sme importovali do našej ontológie, vieme vyhodnocovať jednotlivé zraniteľnosti pre operačné systémy, platformi a produkty a taktiež vieme povedať, aké všetky produkty ovplyvňuje CVE alebo OVAL záznam. Vieme identifikovať záznamy, ktoré sa týkajú iba platforiem všeobecne, alebo také, ktoré sa využívajú najčastejšie.
 
 
-Táto práca je zároveň súčasťou projektu ORBIS (APVV-19-0220) v rámci ktorého vzniká dátové úložisko o bezpečnostných hrozbách a internetová stránka na ich prezeranie. Tento projekt sa stavia aj na základe nami vytvorenej ontológie a využije ju ako základ, ktorý sa postupne bude rozrastať o ďalšie ontologické riešenia.
+Táto práca je zároveň súčasťou projektu ORBIS (APVV-19-0220), v rámci ktorého vzniká dátové úložisko o bezpečnostných hrozbách a internetová stránka na ich prezeranie. Tento projekt sa stavia aj na základe nami vytvorenej ontológie a využije ju ako základ, ktorý sa postupne bude rozrastať o ďalšie ontologické riešenia.
 
 \assignment{MH: $\uparrow$ Najma, co si nenapisal, ze Tvoju ontologiu pouzie na
 repreznetaciu dat v tom ulozisku. Tiez, toto je praca, ktora na teba nadvazuje,
@@ -1261,7 +1266,7 @@ tak by som to dal do Buduceho pokracovania, aj ked uz sa siastocne deje...}
 OVAL databáza poskytuje aj popis jednotlivých sád testov, podmocou ktorých sa vyhodnocuje, či je systém ohrozený alebo nie. Na spojenie týchto dát s našou ontológiou by bolo potrebné hlbšie preskúmať logickú sémantiku ich jazyka. V našej ontológii už sú predpripravené mapovania na tieto testy.
 
 
-Možným pokračovaním je aj možnosť rozšíriť ontológiu UCO o ďalšie mapovania na už existujúce databázy, kde môžu už mať ontologické riešenie alebo takéto ontologické riešenie bude potrebné vytvoriť. Následne extrahovať relevantné dáta z takejto databázy a pokúsiť sa namapovať ich na nami naimportované dáta. Takýmito dátami môžu byť napríklad dáta, ktoré poskytuje databáza ATT\&{}CK\citep{attck}, kde je zahrnutá znalosť o taktikách a technikách útoku.
+Možným pokračovaním je aj možnosť rozšíriť ontológiu UCO o ďalšie mapovania na už existujúce databázy, kde môžu už mať ontologické riešenie alebo takéto ontologické riešenie bude potrebné vytvoriť. Následne extrahovať relevantné dáta z takejto databázy a pokúsiť sa namapovať ich na nami naimportované dáta. Takýmito dátami môžu byť napríklad dáta, ktoré poskytuje databáza ATT\&{}CK \citep{attck}, kde je zahrnutá znalosť o taktikách a technikách útoku.
 
 \assignment{MH: $\uparrow$ Zahadne \uv{dalsie databazy}, uved aspon nejaky priklad, ak vies\\
 MR: dodana ATT\&{}CK\citep{attck}}
